@@ -1,7 +1,5 @@
 # BOTkit project
 
-
-
 ## Table of Contents
 
 1. [Overview](#overview)
@@ -16,12 +14,11 @@
 
 ### Intro
 
-
 ### Figma
 
 The design prototype for this project was created using Figma. You can view the Figma prototypes at the following link:
 
-- [Figma prototypes](https://www.figma.com/file/5UIFfrDRjW8sKKGPIagksv/BOTkit-Admin-panel-(Copy)?type=design&node-id=26%3A24906&mode=design&t=VMlQktDhQFNIbB1c-1)
+- [Figma prototypes](<https://www.figma.com/file/5UIFfrDRjW8sKKGPIagksv/BOTkit-Admin-panel-(Copy)?type=design&node-id=26%3A24906&mode=design&t=VMlQktDhQFNIbB1c-1>)
 
 ### Images
 
@@ -34,7 +31,6 @@ BOTkit project is hosted on GitHub Pages.
 - [https://private-lazy-val.github.io/botkit/](https://private-lazy-val.github.io/botkit/)
 
 ### Contributors
-
 
 ## Technologies
 

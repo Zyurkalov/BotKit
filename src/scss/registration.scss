@@ -1,0 +1,249 @@
+@import "variables";
+@import "common";
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+input,
+button,
+fieldset,
+textarea {
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $ff-primary;
+  font-size: $fs-base;
+  font-weight: $fw-400;
+  line-height: 1.5;
+  font-style: normal;
+  background: linear-gradient(to bottom, $clr-white 46.5%, $clr-gray 0%);
+  color: $clr-primary-dark;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100vw;
+  padding: 40px 34px 0;
+}
+
+.header__logo {
+  margin: 0 auto 20px;
+}
+
+.header__h2 {
+  margin-bottom: 30px;
+  font-family: $ff-secondary;
+  font-size: $fs-h2;
+  font-weight: $fw-500;
+  line-height: 1.1;
+}
+
+.main {
+  width: 100%;
+}
+
+.window {
+  max-width: 770px;
+  margin: 0 auto;
+  width: 100%;
+  height: 619px;
+  color: $clr-white;
+  overflow: hidden;
+}
+
+.outer-wrapper {
+  background-color: $clr-primary-light;
+  padding-top: 50px;
+  border-radius: 30px;
+}
+
+.outer-wrapper__h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: $ff-secondary;
+  font-size: 20px;
+  font-weight: $fw-600;
+  line-height: 1.3;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons-container__icons {
+  display: flex;
+  flex-shrink: 0;
+  gap: 40px;
+  background-color: $clr-icon-background;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.icons-container__button {
+  padding: 0;
+}
+
+.separator {
+  background-color: $clr-primary-medium;
+  padding: 3px 25px;
+  border-radius: 15px;
+  width: fit-content;
+  position: relative;
+  margin: 10px auto 0;
+  transform: translateY(15px);
+  z-index: 1;
+}
+
+.separator__text {
+  font-size: $fs-base;
+  font-weight: $fw-700;
+  letter-spacing: 0.5px;
+}
+
+.inner-wrapper {
+  background-color: $clr-primary-medium;
+  border-radius: 30px;
+  padding: 60px 50px 40px;
+  position: relative;
+}
+
+.inner-wrapper__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 20px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 670px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  border-bottom: 1px solid $clr-low-opacity;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  max-width: 325px;
+  color: $clr-white;
+}
+
+.form__submit {
+  margin: 50px 0;
+  padding: 20px 42px;
+  border-radius: 12px;
+  background-color: $clr-accent;
+  font-family: $ff-secondary;
+  font-size: 18px;
+  font-weight: $fw-600;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $clr-primary-dark;
+}
+
+input::placeholder {
+  color: $clr-low-opacity;
+  font-family: $ff-primary;
+  font-size: $fs-base;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+input[required] {
+  background-image: url(../images/asterisk.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+}
+
+.form__input[name="password"] {
+  background-image: url(../images/asterisk.svg), url(../images/eye-off.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    right center,
+    right 20px center;
+}
+
+/* Alternative actions*/
+.alternative-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alternative-actions__text {
+  font-size: $fs-small;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.alternative-actions__button {
+  text-decoration: underline;
+  font-weight: $fw-600;
+  font-size: $fs-small;
+  letter-spacing: 0.3px;
+  color: $clr-white;
+}
