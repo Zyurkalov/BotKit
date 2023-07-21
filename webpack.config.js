@@ -7,6 +7,11 @@ module.exports = {
   entry: {
     main: "./src/index.js",
     registration: "./src/js/registration.js",
+    ui_kit_buttons: "./src/js/ui-kit/ui-kit-buttons.js",
+    ui_kit_fields: "./src/js/ui-kit/ui-kit-fields.js",
+    ui_kit_components: "./src/js/ui-kit/ui-kit-components.js",
+    ui_kit_icons: "./src/js/ui-kit/ui-kit-icons.js",
+    ui_kit_navigation: "./src/js/ui-kit/ui-kit-navigation.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -64,6 +69,61 @@ module.exports = {
         "pages",
         "ui-kit",
         "ui-kit-navigation-page.html",
+      ),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/ui-kit/ui-kit-buttons.html",
+      chunks: ["ui_kit_buttons"],
+      template: path.resolve(
+        __dirname,
+        "src",
+        "pages",
+        "ui-kit",
+        "ui-kit-buttons.html",
+      ),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/ui-kit/ui-kit-fields.html",
+      chunks: ["ui_kit_fields"],
+      template: path.resolve(
+        __dirname,
+        "src",
+        "pages",
+        "ui-kit",
+        "ui-kit-fields.html",
+      ),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/ui-kit/ui-kit-components.html",
+      chunks: ["ui_kit_components"],
+      template: path.resolve(
+        __dirname,
+        "src",
+        "pages",
+        "ui-kit",
+        "ui-kit-components.html",
+      ),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/ui-kit/ui-kit-icons.html",
+      chunks: ["ui_kit_icons"],
+      template: path.resolve(
+        __dirname,
+        "src",
+        "pages",
+        "ui-kit",
+        "ui-kit-icons.html",
+      ),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/ui-kit/ui-kit-navigation.html",
+      chunks: ["ui-kit-navigation"],
+      template: path.resolve(
+        __dirname,
+        "src",
+        "pages",
+        "ui-kit",
+        "ui-kit-navigation.html",
       ),
     }),
     new CleanWebpackPlugin(),
