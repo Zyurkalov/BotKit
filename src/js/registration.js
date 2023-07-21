@@ -13,7 +13,7 @@ function kotik(
   gsdrg,
   sdfsdf,
   aaaaa,
-  dddd,
+  ddddd,
   ss,
   eee,
   ff,
