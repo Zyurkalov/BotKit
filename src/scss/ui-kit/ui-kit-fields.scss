@@ -130,24 +130,14 @@
 
 .page__container {
   display: flex;
-  align-items: center;
   position: relative;
-}
-
-.page__preview {
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .page__overlay {
   position: absolute;
-  width: 32px;
-  height: 32px;
   border-radius: 50%;
   inset: 0;
   background-color: transparent;
-  opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +148,7 @@
   background-image: url("../../images/check.svg");
   height: 23px;
   width: 23px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
   opacity: 0;
@@ -180,15 +170,17 @@
   .page__checkmark {
     opacity: 1;
   }
+
   .page__overlay {
-    background-color: variables.$clr-primary-medium;
+    background-color: rgba(36, 60, 187, 0.5);
   }
 }
 
 .page_disabled {
-  .page__overlay {
+  .page__preview {
     opacity: 0.5;
   }
+
   .page__checkmark {
     cursor: default;
   }
