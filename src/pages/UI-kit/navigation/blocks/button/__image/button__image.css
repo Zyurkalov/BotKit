@@ -1,0 +1,8 @@
+.button__image {
+  stroke: var(--clr-primary-gray);
+  margin: 0 15px;
+}
+
+.button:focus .button__image {
+  stroke: var(--clr-primary-medium);
+}

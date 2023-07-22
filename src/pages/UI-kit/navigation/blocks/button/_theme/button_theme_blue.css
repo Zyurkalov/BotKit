@@ -1,0 +1,19 @@
+.button_theme_blue {
+  background-color: var(--clr-primary-medium);
+  color: var(--clr-white);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-small);
+}
+
+.button_theme_blue:hover {
+  background-color: #435CDB;
+}
+
+.button_theme_blue:active {
+  background-color: var(--clr-primary-light);
+}
+
+.button_theme_blue:disabled {
+  background-color: var(--clr-blue-disabled);
+}

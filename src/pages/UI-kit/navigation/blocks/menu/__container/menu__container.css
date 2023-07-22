@@ -1,0 +1,9 @@
+.menu__container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-gray);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px 8px;
+}

@@ -1,0 +1,18 @@
+@import url(../../../vendor/normalize.css); /* поменять путь */
+@import url(./blocks/root.css);
+
+@import url(./blocks/temp.css);
+
+@import url(./blocks/page/page.css);
+
+@import url(./blocks/menu/menu.css);
+@import url(./blocks/menu/__container/menu__container.css);
+@import url(./blocks/menu/__logo/menu__logo.css);
+@import url(./blocks/menu/__items/menu__items.css);
+@import url(./blocks/menu/__item/menu__item.css);
+
+@import url(./blocks/button/button.css);
+@import url(./blocks/button/_theme/button_theme_blue.css);
+@import url(./blocks/button/_theme/button_theme_gray.css);
+@import url(./blocks/button/__image/button__image.css);
+@import url(./blocks/button/__text/button__text.css);
