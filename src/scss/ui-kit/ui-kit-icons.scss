@@ -48,7 +48,7 @@
     padding: 0;
     width: 60%;
     height: 60%;
-    background-color: $clr-validation-error;
+    background-color: variables.$clr-validation-error;
     border-radius: 50%;
 
     color: #FFF;
@@ -90,7 +90,7 @@
     height: 100%;
     border-radius: 50%;
 
-    background-color: $clr-secondary-gray;
+    background-color: variables.$clr-secondary-gray;
 }
 
 .button-avatar__bg_img {
@@ -151,23 +151,23 @@
 }
 
 .button-elem__bg-blue {
-    background-color: $clr-primary-medium;
+    background-color: variables.$clr-primary-medium;
 }
 
 .button-elem__bg-grey {
-    background-color: $clr-secondary-gray;
+    background-color: variables.$clr-secondary-gray;
 }
 
 .button-elem__bg-disable {
-    background-color: $clr-primary-gray;
+    background-color: variables.$clr-primary-gray;
 }
 
 .button-elem__bg-green {
-    background-color: $clr-accent;
+    background-color: variables.$clr-accent;
 }
 
 .button-elem_disable {
-    background-color: $clr-secondary-gray;
+    background-color: variables.$clr-secondary-gray;
 }
 
 .social-media {
@@ -217,7 +217,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: $clr-primary-medium;
+    background-color: variables.$clr-primary-medium;
 
     position: absolute;
     top: 0;
@@ -225,7 +225,7 @@
 }
 
 .social-media__bg_inactive {
-    background-color: $clr-primary-gray;
+    background-color: variables.$clr-primary-gray;
 }
 
 /*FACEBOOK---------------------------------------------------------------*/
