@@ -7,6 +7,11 @@ module.exports = {
   entry: {
     main: "./src/index.js",
     registration: "./src/js/registration.js",
+    add_bot: "./src/js/add-bot.js",
+    chat: "./src/js/chat.js",
+    dashboard: "./src/js/dashboard.js",
+    mailing_list: "./src/js/mailing-list.js",
+    pp: "./src/js/pp.js",
     ui_kit_buttons: "./src/js/ui-kit/ui-kit-buttons.js",
     ui_kit_fields: "./src/js/ui-kit/ui-kit-fields.js",
     ui_kit_components: "./src/js/ui-kit/ui-kit-components.js",
@@ -59,6 +64,31 @@ module.exports = {
       filename: "./pages/registration.html",
       chunks: ["registration"],
       template: path.resolve(__dirname, "src", "pages", "registration.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/add-bot.html",
+      chunks: ["add_bot"],
+      template: path.resolve(__dirname, "src", "pages", "add-bot.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/chat.html",
+      chunks: ["chat"],
+      template: path.resolve(__dirname, "src", "pages", "chat.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/dashboard.html",
+      chunks: ["dashboard"],
+      template: path.resolve(__dirname, "src", "pages", "dashboard.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/mailing-list.html",
+      chunks: ["mailing_list"],
+      template: path.resolve(__dirname, "src", "pages", "mailing-list.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./pages/pp.html",
+      chunks: ["pp"],
+      template: path.resolve(__dirname, "src", "pages", "pp.html"),
     }),
     new HtmlWebpackPlugin({
       filename: "./pages/ui-kit/ui-kit-navigation-page.html",
