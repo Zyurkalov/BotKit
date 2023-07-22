@@ -22,7 +22,8 @@
   margin-bottom: 57px;
 }
 
-.fields-constructor__label {
+/* Введите код доступа */
+.access-key__label {
   font-family: variables.$ff-primary;
   font-size: 12px;
   font-style: normal;
@@ -31,11 +32,11 @@
   letter-spacing: 0.3px;
   color: rgba(6, 12, 35, 0.5);
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 200px 1fr;
   align-items: center;
 }
 
-.fields-constructor__input {
+.access-key__input {
   width: 100%;
   max-width: 580px;
   height: 65px;
@@ -47,59 +48,50 @@
   font-family: variables.$ff-primary;
   font-size: 13px;
   font-style: normal;
-  font-weight: variables.$fw-400;
+  font-weight: variables.$fw-600;
   line-height: 1.5;
   letter-spacing: 0.3px;
   color: variables.$clr-primary-dark;
 }
 
-.fields-constructor__input::placeholder {
+.access-key__input::placeholder {
   font-family: variables.$ff-primary;
   font-size: variables.$fs-small;
   font-style: normal;
   font-weight: variables.$fw-600;
   line-height: 1.5;
   letter-spacing: 0.3px;
-}
-
-.fields-constructor__input_default::placeholder {
   color: variables.$clr-primary-gray;
 }
 
-.fields-constructor__input_hover::placeholder {
+.access-key__input:hover::placeholder {
   color: variables.$clr-gray-3;
 }
 
-.fields-constructor__input_filled::placeholder {
-  color: variables.$clr-primary-dark;
-}
-
-.fields-constructor__input_incorrect {
+.access-key__input_incorrect {
   border: 1px solid variables.$clr-validation-error;
 }
 
-.fields-constructor__input_incorrect::placeholder {
-  color: variables.$clr-primary-gray;
-}
-
-.fields-constructor__input_disabled::placeholder {
+.access-key__input_disabled::placeholder {
   color: variables.$clr-secondary-focus;
 }
 
-.field-constructor__upload-page::placeholder {
-  text-align: center;
+.access-key__input_disabled:hover::placeholder {
+  color: variables.$clr-secondary-focus;
 }
 
-.field-constructor__upload-page::placeholder::before {
-  content: url("../../images/add.svg");
+/* Загрузка страницы */
+.row:first-of-type {
+  margin-top: 30px;
 }
 
-.fields-constructor__page-container {
+.row {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
 }
 
-.fields-constructor__page-state {
+.row__name {
   font-family: variables.$ff-primary;
   font-size: 12px;
   font-style: normal;
@@ -109,18 +101,95 @@
   color: rgba(6, 12, 35, 0.5);
 }
 
-.fields-constructor__page {
+.page {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  font-family: variables.$ff-primary;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  color: variables.$clr-primary-dark;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
   background: variables.$clr-secondary-gray;
   width: 100%;
   max-width: 180px;
   height: 52px;
   border-radius: 50px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+
+  &.page_disabled {
+    color: variables.$clr-gray-2;
+    cursor: default;
+  }
 }
 
-.fields-constructor__page-overlay_disabled {
+.page__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.page__preview {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page__overlay {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  inset: 0;
+  background-color: transparent;
   opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s linear;
 }
 
-.fields-constructor__selected {
+.page__checkmark {
+  background-image: url("../../images/check.svg");
+  height: 23px;
+  width: 23px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.page:hover {
+  color: variables.$clr-primary-medium;
+
+  &.page_disabled {
+    color: variables.$clr-gray-2;
+    cursor: default;
+  }
+}
+
+.page_active {
+  color: variables.$clr-primary-medium;
   background: variables.$clr-blue-disabled;
+
+  .page__checkmark {
+    opacity: 1;
+  }
+  .page__overlay {
+    background-color: variables.$clr-primary-medium;
+  }
+}
+
+.page_disabled {
+  .page__overlay {
+    opacity: 0.5;
+  }
+  .page__checkmark {
+    cursor: default;
+  }
 }
