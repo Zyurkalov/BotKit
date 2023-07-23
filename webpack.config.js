@@ -2,17 +2,25 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const glob = require("glob");
+
+const entry = {
+  main: "./src/index.js",
+  registration: "./src/js/registration.js",
+  add_bot: "./src/js/add_bot.js",
+  chat: "./src/js/chat.js",
+  dashboard: "./src/js/dashboard.js",
+  mailing_list: "./src/js/mailing_list.js",
+  pp: "./src/js/pp.js",
+  ui_kit_buttons: "./src/js/ui-kit/ui_kit_buttons.js",
+  ui_kit_fields: "./src/js/ui-kit/ui_kit_fields.js",
+  ui_kit_components: "./src/js/ui-kit/ui_kit_components.js",
+  ui_kit_icons: "./src/js/ui-kit/ui_kit_icons.js",
+  ui_kit_navigation: "./src/js/ui-kit/ui_kit_navigation.js",
+};
 
 module.exports = {
-  entry: {
-    main: "./src/index.js",
-    registration: "./src/js/registration.js",
-    ui_kit_buttons: "./src/js/ui-kit/ui-kit-buttons.js",
-    ui_kit_fields: "./src/js/ui-kit/ui-kit-fields.js",
-    ui_kit_components: "./src/js/ui-kit/ui-kit-components.js",
-    ui_kit_icons: "./src/js/ui-kit/ui-kit-icons.js",
-    ui_kit_navigation: "./src/js/ui-kit/ui-kit-navigation.js",
-  },
+  entry,
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
@@ -55,76 +63,19 @@ module.exports = {
       template: "./src/index.html",
       chunks: ["main"],
     }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/registration.html",
-      chunks: ["registration"],
-      template: path.resolve(__dirname, "src", "pages", "registration.html"),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/ui-kit/ui-kit-navigation-page.html",
-      chunks: ["main"],
-      template: path.resolve(
-        __dirname,
-        "src",
-        "pages",
-        "ui-kit",
-        "ui-kit-navigation-page.html",
-      ),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/ui-kit/ui-kit-buttons.html",
-      chunks: ["ui_kit_buttons"],
-      template: path.resolve(
-        __dirname,
-        "src",
-        "pages",
-        "ui-kit",
-        "ui-kit-buttons.html",
-      ),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/ui-kit/ui-kit-fields.html",
-      chunks: ["ui_kit_fields"],
-      template: path.resolve(
-        __dirname,
-        "src",
-        "pages",
-        "ui-kit",
-        "ui-kit-fields.html",
-      ),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/ui-kit/ui-kit-components.html",
-      chunks: ["ui_kit_components"],
-      template: path.resolve(
-        __dirname,
-        "src",
-        "pages",
-        "ui-kit",
-        "ui-kit-components.html",
-      ),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/ui-kit/ui-kit-icons.html",
-      chunks: ["ui_kit_icons"],
-      template: path.resolve(
-        __dirname,
-        "src",
-        "pages",
-        "ui-kit",
-        "ui-kit-icons.html",
-      ),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./pages/ui-kit/ui-kit-navigation.html",
-      chunks: ["ui-kit-navigation"],
-      template: path.resolve(
-        __dirname,
-        "src",
-        "pages",
-        "ui-kit",
-        "ui-kit-navigation.html",
-      ),
+    // Dynamically generate HtmlWebpackPlugin instances for each HTML file
+    ...glob.sync("./src/pages/**/*.html").map((file) => {
+      let filePath = path.parse(file);
+      // Get the relative path from src/pages to the file
+      let relativePath = path.relative("./src/pages", filePath.dir);
+      let fileName = filePath.name;
+      let chunkName = Object.keys(entry).find((key) => key === fileName);
+      return new HtmlWebpackPlugin({
+        template: file,
+        // Keep the original subdirectory structure
+        filename: `./pages/${relativePath}/${fileName}.html`,
+        chunks: chunkName ? [chunkName] : [],
+      });
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "./css/[name].css" }),
