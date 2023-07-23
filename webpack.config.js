@@ -117,7 +117,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: "./pages/ui-kit/ui-kit-navigation.html",
-      chunks: ["ui-kit-navigation"],
+      chunks: ["ui_kit_navigation"],
       template: path.resolve(
         __dirname,
         "src",
