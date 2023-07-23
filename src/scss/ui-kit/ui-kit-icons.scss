@@ -39,7 +39,7 @@
 
 /*если нужно сменить цвет логотипа на белый*/
 .template-icon_invert {
-    filter: invert() grayscale() brightness(3);
+    filter: invert(100%) grayscale(100%) brightness(3);
 }
 
 /*колокольчик. Если оповещении нет - удаляем этот класс*/
@@ -96,7 +96,7 @@
 .button-avatar__bg_img {
     background-position: center;
     background-size: contain;
-    background-image: url(../../../images/avatar/circle.png);
+    background-image: url('../../images/avatar/circle.png');
 }
 
 .button-elem {
@@ -195,7 +195,7 @@
 }
 
 .social-media__img_google {
-    filter: grayscale() brightness(4);
+    filter: grayscale(100%) brightness(4);
 }
 
 .bot-icon {
