@@ -32,6 +32,7 @@ h3 {
   letter-spacing: 1px;
   font-family: variables.$ff-secondary;
   text-transform: uppercase;
+  padding: 0;
 }
 .common-button_color_blue {
   background-color: variables.$clr-primary-medium;
@@ -39,6 +40,7 @@ h3 {
 }
 .common-button_color_blue:hover {
   background-color: variables.$clr-icon-hover;
+  cursor: pointer;
 }
 .common-button_color_blue:active {
   background-color: variables.$clr-primary-light;
@@ -58,6 +60,7 @@ h3 {
   background-color: variables.$clr-primary-medium;
   border-radius: 50%;
   border: none;
+  padding: 0;
 }
 /* Кнопка круглая синяя */
 .button-elem-round_color_blue {
@@ -67,6 +70,7 @@ h3 {
 }
 .button-elem-round:hover {
   background-color: variables.$clr-icon-hover;
+  cursor: pointer;
 }
 .button-elem-round:active {
   background-color: variables.$clr-primary-light;
@@ -85,9 +89,11 @@ h3 {
   border: none;
   background-color: variables.$clr-accent;
   color: variables.$clr-primary-dark;
+  padding: 0;
 }
 .common-button_color_green:hover {
   background-color: variables.$clr-accent-focus;
+  cursor: pointer;
 }
 .common-button_color_green:active {
   background-color: variables.$clr-accent;
@@ -112,9 +118,13 @@ h3 {
   letter-spacing: 1px;
   font-family: variables.$ff-secondary;
   text-transform: uppercase;
+  padding: 0;
 }
 .button-elem-instruction::after {
   content: "ОСТАНОВИТЬ";
+}
+.button-elem-instruction:hover {
+  cursor: pointer;
 }
 .button-elem-instruction:hover::after {
   content: "ОСТАНОВИТЬ";
@@ -140,6 +150,10 @@ h3 {
   border: none;
   border-radius: 10px;
   background-color: transparent;
+  padding: 0;
+}
+.button-elem-copy:hover {
+  cursor: pointer;
 }
 .button-elem-copy:hover svg path {
   stroke: variables.$clr-primary-medium;
@@ -165,13 +179,10 @@ h3 {
   border-radius: 185px;
   background-color: variables.$clr-secondary-gray;
   border: none;
-}
-.answering-machine__button-icon {
-  width: 88px;
-  height: 88px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 0;
+  background-image: url("../../images/button-icons/answering-machine.svg");
+  background-repeat: no-repeat;
+  background-size: 88px 88px;
 }
 .answering-machine__button-plus {
   height: 24px;
@@ -190,32 +201,37 @@ h3 {
   letter-spacing: 0.3px;
   color: variables.$clr-primary-dark;
 }
-.answering-machine__button:hover {
+.answering-machine:hover {
+  cursor: pointer;
+}
+.answering-machine:hover .answering-machine__button {
   background-color: variables.$clr-white;
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+  cursor: pointer;
 }
-.answering-machine__button:hover .answering-machine__plus svg path {
+.answering-machine:hover .answering-machine__plus svg path {
   stroke: variables.$clr-primary-medium;
 }
-// .answering-machine__button:hover .answering-machine__caption {
-//   color: variables.$clr-primary-medium;
-// }
-.answering-machine__button:active {
+.answering-machine:hover .answering-machine__caption {
+  color: variables.$clr-primary-medium;
+}
+.answering-machine:active .answering-machine__button {
   background-color: variables.$clr-white;
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
 }
-.answering-machine__button:active .answering-machine__plus svg path {
+.answering-machine:active .answering-machine__plus svg path {
   stroke: variables.$clr-icon-hover;
 }
-// .answering-machine__button:active .answering-machine__caption {
-//   color: variables.$clr-icon-hover;
-// }
-.answering-machine__button:disabled {
+.answering-machine:active .answering-machine__caption {
+  color: variables.$clr-icon-hover;
+}
+.answering-machine_type_disabled {
+  pointer-events: none;
   opacity: 0.5;
 }
-// .answering-machine__button:disabled  .answering-machine__caption_disabled {
-//   color: variables.$clr-primary-gray;
-// }
+.answering-machine__button:disabled .answering-machine__caption {
+  color: variables.$clr-primary-gray;
+}
 
 /* Кнопка бот Facebook */
 .button-fb {
@@ -224,6 +240,7 @@ h3 {
   border: none;
   border-radius: 30px;
   background-color: variables.$clr-gray;
+  padding: 0;
 }
 .button-fb__caption {
   margin: 13px 0 0 0;
@@ -233,6 +250,9 @@ h3 {
   line-height: 21px;
   letter-spacing: 0.3px;
   color: variables.$clr-primary-dark;
+}
+.button-fb:hover {
+  cursor: pointer;
 }
 .button-fb:hover svg rect {
   fill: variables.$clr-blue;
@@ -257,6 +277,7 @@ h3 {
 .panel-add-bot {
   width: 296px;
   height: 172px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -284,6 +305,9 @@ h3 {
   line-height: 20.8px;
   letter-spacing: 0.5px;
   color: variables.$clr-gray-3;
+}
+.panel-add-bot:hover {
+  cursor: pointer;
 }
 .panel-add-bot:hover svg path {
   stroke: variables.$clr-primary-medium;
@@ -319,20 +343,19 @@ h3 {
   overflow: hidden;
   width: 579px;
   height: 76px;
-  border: 2px;
-  border-color: variables.$clr-secondary-focus;
+  padding: 0;
+  border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-color: variables.$clr-white;
+  background-image: url("../../images/button-icons/button-tutorial_ellipse_grey.svg");
+  background-repeat: no-repeat;
 }
 .button-tutorial__icon {
-  width: 173px;
-  height: 173px;
+  width: 65px;
+  height: 46px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  background-repeat: no-repeat;
-  background-size: 65px 46px;
-  background-position: center;
+  top: 17px;
+  left: 32px;
 }
 .button-tutorial__text {
   font-family: variables.$ff-primary;
@@ -342,15 +365,34 @@ h3 {
   line-height: 21px;
   letter-spacing: 0.3px;
 }
+.button-tutorial:hover {
+  border: none;
+  background-image: url("../../images/button-icons/button-tutorial_ellipse_green.svg");
+  box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
+  cursor: pointer;
+}
+.button-tutorial:hover .button-tutorial__icon {
+  filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
+}
+.button-tutorial:active .button-tutorial__text {
+  color: variables.$clr-xiketic-press;
+}
+.button-tutorial:disabled {
+  pointer-events: none;
+}
+.button-tutorial:disabled .button-tutorial__text {
+  color: variables.$clr-primary-gray;
+}
 
 /* Кнопка блок сообщений */
 .button-block-message {
+  width: 196px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  width: 196px;
-  height: 64px;
+  padding: 0;
   border: none;
   border-radius: 10px;
   color: variables.$clr-primary-dark;
@@ -366,6 +408,7 @@ h3 {
 .button-block-message:hover {
   background-color: variables.$clr-secondary-gray;
   color: variables.$clr-primary-medium;
+  cursor: pointer;
 }
 .button-block-message:hover svg line {
   stroke: variables.$clr-primary-medium;
@@ -391,6 +434,7 @@ h3 {
 }
 .button-elem-round_color_green:hover {
   background-color: variables.$clr-accent-focus;
+  cursor: pointer;
 }
 .button-elem-round_color_green:active {
   background-color: variables.$clr-accent;
