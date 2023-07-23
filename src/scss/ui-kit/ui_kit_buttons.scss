@@ -1,2 +1,101 @@
 @use "../variables";
 @use "../common";
+
+.constructor {
+  margin: 370px 99px;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-600);
+  font-size: 32px;
+  }
+
+  .container__linear {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-400);
+    font-size: 12px;
+    list-style-type: none;
+    margin: 44px 0 0 0;
+  }
+  .container__linear-text-condition {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    align-items: center;
+    gap: 70px;
+  }
+  .container__linear-phone-delete {
+  display: grid;
+  grid-template-columns: 144px 55px 0px;
+  align-items: center;
+  }
+
+  .constructor__button {
+    background-color: var(--clr-btn-gray);
+    border: 0;
+    cursor: pointer;
+  }
+
+  .constructor-button-tab {
+    width: 95px;
+    height: 35px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .constructor__button-content {
+    background-image: url('../../images/videoDefault.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 56px;
+    height: 52px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.3s;
+  }
+  .content-hover {
+    background-image: url('../../images/videoHover.svg');
+  }
+  .content-disabled{
+    background-image: url('../../images/videoDisabled.svg');
+  }
+
+  .constructor-button-addCondition {
+    width: 264px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    padding: 0 0 0 12px;
+  }
+
+  .constructor__text-tab {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-600);
+    font-size: 13px;
+  }
+  .tab-hover {
+    color: var(--clr-primary-medium);
+  }
+  .btn-pressed{
+    background-color: var(--clr-btn-dark-gray);
+  }
+
+  .constructor__text-condition {
+    color: #8392AB;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+    font-size: 13px;
+  }
+  .condition-hover {
+    color: var(--clr-primary-medium);
+  }
+  .btn-disabled{
+    color: var(--clr-disabled);
+  }
+
+  .constructor__text {
+    text-align: center;
+    margin: 0;
+  }
