@@ -1,2 +1,305 @@
 @use "../variables";
 @use "../common";
+
+.component {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* component тут для стилизации страницы. Не обращаем внимание */
+
+.template-icon {
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    object-fit: none;
+    display: inline-block;
+}
+
+.template-icon_36x36 {
+    width: 36px;
+    height: 36px;
+}
+
+.template-icon_40x40 {
+    width: 40px;
+    height: 40px;
+}
+
+.template-icon_pos-rel {
+    position: relative;
+}
+
+.template-icon_pos-abs {
+    position: absolute;
+}
+
+/*если нужно сменить цвет логотипа на белый*/
+.template-icon_invert {
+    filter: invert(100%) grayscale(100%) brightness(3);
+}
+
+/*колокольчик. Если оповещении нет - удаляем этот класс*/
+.template-icon__count {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: 60%;
+    background-color: variables.$clr-validation-error;
+    border-radius: 50%;
+
+    color: #FFF;
+    text-align: center;
+    line-height: 135%;
+    font-size: 10px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*шрифт нужно сменить*/
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.template-icon_add-bot {
+    width: 65px;
+    height: 46px;
+}
+
+.template-icon_avatar {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.button-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-avatar__bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    background-color: variables.$clr-secondary-gray;
+}
+
+.button-avatar__bg_img {
+    background-position: center;
+    background-size: contain;
+    background-image: url('../../images/avatar/circle.png');
+}
+
+.button-elem {
+    margin: 0;
+    padding: 0;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.button-elem_32x32 {
+    width: 32px;
+    height: 32px;
+}
+
+.button-elem__img-bg {
+    margin: 0;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    position: absolute;
+}
+
+.button-elem__img-bg_opacity {
+    opacity: 50%;
+}
+
+/* если нужно развернуть иконку / кнопку*/
+.button-elem_rotate90 {
+    rotate: -90deg;
+}
+
+/* меняем цвет фона через модификаторы*/
+.button-elem__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+}
+.button-elem__bg-opacity {
+    opacity: 50%;
+}
+
+.button-elem__bg-blue {
+    background-color: variables.$clr-primary-medium;
+}
+
+.button-elem__bg-grey {
+    background-color: variables.$clr-secondary-gray;
+}
+
+.button-elem__bg-disable {
+    background-color: variables.$clr-primary-gray;
+}
+
+.button-elem__bg-green {
+    background-color: variables.$clr-accent;
+}
+
+.button-elem_disable {
+    background-color: variables.$clr-secondary-gray;
+}
+
+.social-media {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+}
+
+.social-media__img {
+    outline-color: none;
+    outline-style: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.social-media__img_google {
+    filter: grayscale(100%) brightness(4);
+}
+
+.bot-icon {
+    margin: 0;
+    padding: 0;
+    min-width: 104px;
+    min-height: 104px;
+    border-radius: 100%;
+
+    outline-color: none;
+    outline-style: none;
+    mask-repeat: round;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.social-media__bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: variables.$clr-primary-medium;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.social-media__bg_inactive {
+    background-color: variables.$clr-primary-gray;
+}
+
+/*FACEBOOK---------------------------------------------------------------*/
+
+.social-media:hover .social-media__bg_facebook {
+    background-color: #2D88FF;
+}
+
+/*TELEGRAM---------------------------------------------------------------*/
+.social-media:hover .social-media__bg_telegram {
+    background-color: #2AABEE;
+}
+
+/*YOUTUBE----------------------------------------------------------------*/
+.social-media:hover .social-media__bg_youtube {
+    background-color: #FF0000;
+}
+
+/*VK---------------------------------------------------------------------*/
+.social-media:hover .social-media__bg_vk {
+    cursor: pointer;
+    background-color: #2787F5;
+}
+
+/*INSTA------------------------------------------------------------------*/
+.social-media:hover .social-media__bg_insta {
+    background: radial-gradient(100.29% 100.29% at 32.50% 97.50%, #FFDC80 0%, #FCAF45 18.39%, #F06856 38.02%, #E1306C 51.04%, #833AB4 83.85%, #405DE6 99.99%);
+}
+
+/*TWITTER----------------------------------------------------------------*/
+.social-media:hover .social-media__bg_twitter {
+    background-color: #1DA1F2;
+}
+
+/*WEB--------------------------------------------------------------------*/
+.social-media:hover .social-media__bg_web {
+    background-color: #435CDB;
+}
+
+/*OK---------------------------------------------------------------------*/
+.social-media:hover .social-media__bg_odnoklassniki {
+    background-color: #EE8208;
+}
+
+/*MAILRU-----------------------------------------------------------------*/
+.social-media:hover .social-media__bg_mailru {
+    background-color: #005FF9;
+}
+
+/*YANDEX-----------------------------------------------------------------*/
+.social-media:hover .social-media__bg_yandex {
+    background-color: #FC3F1D;
+}
+
+/*GOOGLE-----------------------------------------------------------------*/
+.social-media:hover .social-media__bg_google {
+    background-color: rgba(248, 249, 251, 1);
+}
+
+.social-media:hover .social-media__img_google {
+    filter: grayscale(0) brightness(1);
+}
+
+/*VIBER------------------------------------------------------------------*/
+.social-media:hover .social-media__bg_viber {
+    background-color: #7360F2;
+}
+
+/*ALISA------------------------------------------------------------------*/
+.social-media:hover .social-media__bg_alisa {
+    background: linear-gradient(180deg, #6326FF 0%, #B326FF 100%);
+}
+
+/*WHATSAPP---------------------------------------------------------------*/
+.social-media:hover .social-media__bg_whatsapp {
+    background-color: #3CBB28;
+}
