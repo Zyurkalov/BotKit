@@ -1,0 +1,187 @@
+@use "../variables";
+@use "../common";
+
+.body {
+  padding: 0 30px;
+}
+
+.fields-common {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.fields-common__h2 {
+  font-family: variables.$ff-secondary;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: variables.$clr-black;
+  margin-bottom: 57px;
+}
+
+/* Введите код доступа */
+.access-key__label {
+  font-family: variables.$ff-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: variables.$fw-400;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: rgba(6, 12, 35, 0.5);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+}
+
+.access-key__input {
+  width: 100%;
+  max-width: 580px;
+  height: 65px;
+  padding: 22px 24px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 10px;
+  background: variables.$clr-gray;
+  font-family: variables.$ff-primary;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: variables.$clr-primary-dark;
+}
+
+.access-key__input::placeholder {
+  font-family: variables.$ff-primary;
+  font-size: variables.$fs-small;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: variables.$clr-primary-gray;
+}
+
+.access-key__input:hover::placeholder {
+  color: variables.$clr-gray-3;
+}
+
+.access-key__input_incorrect {
+  border: 1px solid variables.$clr-validation-error;
+}
+
+.access-key__input_disabled::placeholder {
+  color: variables.$clr-secondary-focus;
+}
+
+.access-key__input_disabled:hover::placeholder {
+  color: variables.$clr-secondary-focus;
+}
+
+/* Загрузка страницы */
+.row:first-of-type {
+  margin-top: 30px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+}
+
+.row__name {
+  font-family: variables.$ff-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: variables.$fw-400;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: rgba(6, 12, 35, 0.5);
+}
+
+.page {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  font-family: variables.$ff-primary;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  color: variables.$clr-primary-dark;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  background: variables.$clr-secondary-gray;
+  width: 100%;
+  max-width: 180px;
+  height: 52px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+
+  &.page_disabled {
+    color: variables.$clr-gray-2;
+    cursor: default;
+  }
+}
+
+.page__container {
+  display: flex;
+  position: relative;
+}
+
+.page__overlay {
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s linear;
+}
+
+.page__checkmark {
+  background-image: url("../../images/check.svg");
+  height: 23px;
+  width: 23px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.page:hover {
+  color: variables.$clr-primary-medium;
+
+  &.page_disabled {
+    color: variables.$clr-gray-2;
+    cursor: default;
+  }
+}
+
+.page_active {
+  color: variables.$clr-primary-medium;
+  background: variables.$clr-blue-disabled;
+
+  .page__checkmark {
+    opacity: 1;
+  }
+
+  .page__overlay {
+    background-color: rgba(36, 60, 187, 0.5);
+  }
+}
+
+.page_disabled {
+  .page__preview {
+    opacity: 0.5;
+  }
+
+  .page__checkmark {
+    cursor: default;
+  }
+}
