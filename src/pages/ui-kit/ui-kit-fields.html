@@ -111,7 +111,75 @@
       <!-- Component 2 -->
       <section class="fields-constructor">
         <h2>Component 2</h2>
-        <!-- Include example of component 2 -->
+        <section class="first_fields">
+          <input type="text" id="field" class="constructor__input constructor__input-text"
+            data-error-message="Вы ввели неправильное значение" placeholder="Введите ответ">
+          <span class="constructor__input_text-error"></span>
+  
+          <br>
+  
+          <button class="constructor__button constructor__button-text"
+            data-error-message="Вы ввели неправильное значение">Кнопка</button>
+          <span class="constructor__button_text-error"></span>
+        </section>
+        <br>
+  
+        <section class="addPhone">
+          <h2>Add phone</h2>
+  
+          <div class="helperPanel">
+            <div class="helperPanel__container helperPanel__container_vl">
+              <button class="helperPanel__iconButton helperPanel__iconButton_addPhone"></button>
+            </div>
+            <div class="helperPanel__container">
+              <button class="helperPanel__iconButton helperPanel__iconButton_deletePhone"></button>
+            </div>
+          </div>
+  
+          <br>
+  
+          <div>
+            <div class="inputContainer inputContainer_activeInput">
+              <label class="inputContainer__label">Ответ</label>
+              <input type="text" id="field"
+                class="constructor__input constructor__input-text inputContainer__input_addPhone"
+                data-error-message="Ошибка" placeholder="Запросить телефон">
+              <div class="inputContainer__addIcon"></div>
+            </div>
+            <span class="constructor__input_text-error">Ошибка</span>
+          </div>
+  
+        </section>
+  
+        <section class="addLink">
+          <h2>Add link</h2>
+  
+          <div class="helperPanel">
+            <div class="helperPanel__container helperPanel__container_vl">
+              <button class="helperPanel__iconButton helperPanel__iconButton_addLink"></button>
+            </div>
+            <div class="helperPanel__container">
+              <button class="helperPanel__iconButton helperPanel__iconButton_deleteLink"></button>
+            </div>
+          </div>
+  
+          <br>
+  
+          <div>
+            <div class="inputContainer inputContainer_activeInput">
+              <label class="inputContainer__label inputContainer__label_addLink">Ответ</label>
+  
+              <div class="inputContainer_elementContain inputContainer_elementContain_active">
+                <input type="text" id="field"
+                  class="constructor__input constructor__input-text inputContainer__input_addLink"
+                  data-error-message="Ошибка" placeholder="Запросить телефон">
+                <button class='inputContainer__button inputContainer__button_active '>Добавить</button>
+              </div>
+              <div class="inputContainer__addIcon"></div>
+            </div>
+            <span class="inputContainer__input_text-error"></span>
+          </div>
+        </section>
       </section>
     </main>
   </body>

@@ -185,3 +185,273 @@
     cursor: default;
   }
 }
+
+
+/*--------------------------------------------------------*/
+
+.constructor__input {
+  padding: 10px 8px;
+  width: 215px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  background: variables.$clr-secondary-gray;
+
+
+  outline: none;
+
+}
+
+.constructor__input-text {
+  color:  variables.$clr-primary-dark;
+  font-size: 13px;
+  font-weight: variable.$fw-400;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  font-family: variables.$ff-primary;
+}
+
+::placeholder {
+
+  color: variables.$clr-gray-2;
+}
+
+
+
+/*Error input*/
+
+.constructor__input_text-error {
+  font-family: variables.$ff-primary;
+  opacity: 0;
+  display: block;
+  margin: 0;
+  color: variables.$clr-validation-error;
+  font-size: 10px;
+  font-weight: variable.$fw-400;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+}
+
+
+.constructor__input_text-error_active {
+  opacity: 1;
+}
+
+.constructor__input-error {
+  border: 1px solid variables.$clr-validation-error;
+}
+
+
+/*Disable*/
+
+.constructor__input_disable {
+  background: variables.$clr-secondary-gray;
+  color: variables.$clr-secondary-cultured;
+}
+
+
+/*Button*/
+
+.constructor__button {
+  padding: 10px 8px;
+  width: 231px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: variables.$clr-secondary-gray;
+}
+
+.constructor__button-text {
+  color: variables.$clr-gray-2;
+  font-size: 13px;
+  font-weight: variable.$fw-400;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  font-family: variables.$ff-primary;
+}
+
+.constructor__button-text:hover {
+  color: variables.$clr-primary-dark;
+}
+
+/*Error*/
+
+.constructor__button_text-error {
+  font-family: variables.$ff-primary;
+  opacity: 0;
+  display: block;
+  margin: 0;
+  color: variables.$clr-validation-error;
+  font-size: 10px;
+  font-weight: variable.$fw-400;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+}
+
+
+.constructor__button_text-error_active {
+  opacity: 1;
+}
+
+
+/*Disable*/
+
+.constructor__button_disable {
+  background: variables.$clr-secondary-focus;
+  color: variables.$clr-secondary-cultured;
+}
+
+
+/*Add Phone*/
+
+.helperPanel {
+  display: flex;
+  background-color: variables.$clr-white;
+  width: 96px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+  justify-content: center;
+}
+
+.helperPanel__iconButton {
+  border: none;
+  height: 24px;
+  width: 24px;
+  background: no-repeat;
+}
+
+.helperPanel__container_vl {
+
+  border-right: 1px solid variables.$clr-secondary-gray;
+}
+
+.helperPanel__container {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.helperPanel__iconButton_addPhone {
+  background-image: url('./../../images/askPhone.svg');
+}
+
+.helperPanel__iconButton_deletePhone {
+  background-image: url('./../../images/delete.svg');
+}
+
+
+/*PhoneInput*/
+
+
+
+.inputContainer__label {
+  display: block;
+  width: 100%;
+  font-family: variables.$ff-primary;
+  color: variables.$clr-primary-dark;
+  font-size: 13px;
+  font-weight: variable.$fw-400;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+}
+
+.inputContainer__label_inactive {  /*выключение label*/
+  color: variables.$clr-gray-3;
+}
+
+.inputContainer {
+  padding: 10px 8px;
+  width: 215px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: variables.$clr-secondary-gray;
+  border: 1px solid variables.$clr-accent-press;
+  position: relative;
+
+}
+
+.inputContainer__addIcon { 
+  display: none;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-image: url('./../../images/greenButtonAddLink.svg');
+  top: 15px;
+  right: -5px;
+}
+
+.inputContainer__addIcon_active { //включение зеленой кнопки (значение DEFAUL)
+  display: block;
+}
+
+
+.inputContainer_activeInput {  //включение доп инпута
+
+  padding: 8px 12px;
+  width: 207px;
+  height: 40px;
+  border: none;
+
+}
+
+.inputContainer__input_addPhone {
+  margin-top: 2px;
+  width: 100%;
+  height: auto;
+  padding: 0;
+
+}
+
+/*LinkIput*/
+
+.helperPanel__iconButton_addLink {
+  background-image: url('./../../images/askUrl.svg');
+}
+
+.helperPanel__iconButton_deleteLink {
+  background-image: url('./../../images/delete.svg');
+}
+
+.inputContainer__label_addLink {
+  text-align: center;
+}
+
+.inputContainer__input_addLink {
+  margin-top: 2px;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.inputContainer_elementContain {
+  display: none;
+
+}
+
+.inputContainer_elementContain_active { //включение input и button
+  display: flex;
+  align-items: center;
+}
+
+.inputContainer__button {
+  display: none;
+}
+
+.inputContainer__button_active {  //включение кнопки добавить
+  display: block;
+  margin: 2px 0 0 16px;
+  border: none;
+  background: none;
+  color: variables.$clr-primary-medium;
+  font-family: variables.$ff-primary;
+  font-size: 12px;
+  font-weight: variable.$fw-400;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  padding: 0;
+}
