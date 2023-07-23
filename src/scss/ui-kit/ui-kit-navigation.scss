@@ -1,2 +1,108 @@
-@use "../variables";
-@use "../common";
+@import "../variables";
+@import "../common";
+
+body {
+  margin: 0;
+  font-family: $ff-primary, $ff-secondary;
+}
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 63px 0 41px;
+  height: 72px;
+  border-bottom: 1px solid $clr-secondary-focus;
+}
+.navigation__menu {
+  position: absolute;
+  left: 0;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/nav_menu.svg");
+}
+
+.navigation__tarif-info {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 8px;
+  justify-content: space-between;
+  padding-right: 24px;
+  height: 29px;
+  align-self: center;
+  border-right: 1px solid $clr-secondary-focus;
+}
+.navigation__text {
+  font-weight: $fw-400;
+  color: $clr-primary-dark;
+  font-size: $fs-base;
+  line-height: 24px;
+  margin: 0;
+  align-self: center;
+}
+.navigation__text_spanned {
+  font-weight: $fw-700;
+}
+.navigation__bell-container {
+  display: flex;
+  position: relative;
+}
+.navigation__icon {
+  width: 24px;
+  height: 24px;
+  align-self: center;
+}
+.navigation__notificated {
+  background-image: url("../../images/nav_bell_notification.svg");
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: 15px;
+  right: -1px;
+  text-align: center;
+  font-size: $fs-tiny;
+  line-height: 14px;
+  vertical-align: middle;
+  font-weight: $fw-600;
+  color: $clr-white;
+}
+.navigation__user-section {
+  align-items: center;
+  display: grid;
+  grid-template-columns: min-content min-content max-content;
+  gap: 32px;
+  padding-left: 16px;
+}
+.navigation__user-info {
+  display: flex;
+  align-items: center;
+}
+.navigation__user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid $clr-secondary-gray;
+}
+.navigation__arrow-down {
+  padding-left: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  height: 50px;
+  margin: 48px 63px 0 41px;
+  border-top: 1px solid $clr-secondary-focus;
+  display: flex;
+  align-items: center;
+}
+
+.footer__text {
+  margin: 0;
+  padding-left: 40px;
+  font-weight: $fw-400;
+  color: $clr-primary-dark;
+  font-size: $fs-base;
+  line-height: 24px;
+}
