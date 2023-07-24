@@ -87,8 +87,6 @@ svg {
   }
 }
 
-
-
 .card {
   flex-shrink: 0;
   width: 296px;
@@ -186,7 +184,7 @@ svg {
   padding: 8px 0;
 
   &-img {
-    opacity: .4;
+    opacity: 0.4;
     margin-right: 16px;
   }
 
@@ -200,16 +198,16 @@ svg {
     font-weight: variables.$fw-400;
     line-height: 150%; /* 19.5px */
     letter-spacing: 0.3px;
-    opacity: .8;
+    opacity: 0.8;
 
     &:first-child,
     &:nth-last-child(2) {
-    border-bottom: 1px solid variables.$clr-secondary-cultured;
-    padding-bottom: 16px;
+      border-bottom: 1px solid variables.$clr-secondary-cultured;
+      padding-bottom: 16px;
     }
 
     &:hover,
-    &:hover>.card__actions-img {
+    &:hover > .card__actions-img {
       cursor: pointer;
       opacity: 1;
       background-color: variables.$clr-secondary-gray;
@@ -244,7 +242,7 @@ svg {
   }
 
   &-img_inactive {
-    opacity: .4;
+    opacity: 0.4;
     &:hover {
       cursor: auto;
     }
@@ -311,4 +309,3 @@ svg {
     }
   }
 }
-

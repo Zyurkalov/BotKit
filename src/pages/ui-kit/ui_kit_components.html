@@ -1,180 +1,259 @@
 <!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="<%=require('../../../favicon.ico')%>"
+    />
+    <title>Components</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="icon" type="image/svg+xml" href="<%=require('../../../favicon.ico')%>" />
-  <title>Components</title>
-</head>
+  <header class="header">
+    <h1>Components UI Kit</h1>
+  </header>
 
-<header class="header">
-  <h1>Components UI Kit</h1>
-</header>
-
-<body class="body">
-  <main class="main">
-    <!-- Component 1 -->
-    <ul>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Добавление бота - название шагов</h2>
-          <div class="steps">
-            <span class="step">1</span>
-            <span class="step">Шаг</span>
-            <span class="step">></span>
-            <span class="step step-name">Ключ доступа</span>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Мои боты - карточка</h2>
-          <div class="card">
-            <div class="card__icons">
-              <img class="card__icon" src="<%=require('../../images/social-icons/telegram.svg')%>" alt="">
-              <img class="card__icon" src="<%=require('../../images/more.svg')%>" alt="">
+  <body class="body">
+    <main class="main">
+      <!-- Component 1 -->
+      <ul>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Добавление бота - название шагов</h2>
+            <div class="steps">
+              <span class="step">1</span>
+              <span class="step">Шаг</span>
+              <span class="step">></span>
+              <span class="step step-name">Ключ доступа</span>
             </div>
-            <div class="card__name">Салон красоты </div>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Информер / всплывающая подсказка - сверху</h2>
-          <div class="helper">
-            <div class="helper__board">Helper</div>
-            <div class="helper__pointer"></div>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Информер / всплывающая подсказка - слева</h2>
-          <div class="helper helper_aside">
-            <div class="helper__board">Helper</div>
-            <div class="helper__pointer helper__pointer_aside"></div>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Информер </h2>
-          <div class="helper">
-            <div class="helper__board helper__board_large">Сcылка скопирована</div>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Список действий More - открывается из карточки Мои боты</h2>
-          <div class="popup">
-            <ul class="list card__actions">
-              <li class="card__action"><img class="card__actions-img" src="<%=require('../../images/copy-bot.svg')%>"
-                  alt="">Копировать
-                бота</li>
-              <li class="card__action"><img class="card__actions-img" src="<%=require('../../images/share.svg')%>"
-                  alt="">Общий
-                доступ</li>
-              <li class="card__action"><img class="card__actions-img" src="<%=require('../../images/edit.svg')%>"
-                  alt="">Редактировать
-              </li>
-              <li class="card__action"><img class="card__actions-img" src="<%=require('../../images/link.svg')%>"
-                  alt="">Получить
-                ссылку</li>
-              <li class="card__action"><img class="card__actions-img" src="<%=require('../../images/info.svg')%>"
-                  alt="">Информация
-              </li>
-              <li class="card__action"><img class="card__actions-img"
-                  src="<%=require('../../images/notifications-setting.svg')%>" alt="">Настройка
-                уведомлений</li>
-              <li class="card__action"><img class="card__actions-img" src="<%=require('../../images/trash.svg')%>"
-                  alt="">Удалить
-              </li>
-
-            </ul>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Список действий Настройки аккаунта</h2>
-          <div class="popup">
-            <ul class="list account__actions">
-              <li class="account__action"><img class="account__actions-img"
-                  src="<%=require('../../images/settings.svg')%>" alt="">Настройки аккаунта</li>
-              <li class="account__action"><img class="account__actions-img"
-                  src="<%=require('../../images/payment.svg')%>" alt="">Подписка и платежи</li>
-              <li class="account__action"><img class="account__actions-img"
-                  src="<%=require('../../images/log-out.svg')%>" alt="">Выйти
-              </li>
-            </ul>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Рассылки - панель редактора текста</h2>
-          <div class="popup">
-            <ul class="list text__actions">
-              <li class="text__action"><img class="text__actions-img" src="<%=require('../../images/bold.svg')%>"
-                  alt=""></li>
-              <li class="text__action"><img class="text__actions-img" src="<%=require('../../images/italic.svg')%>"
-                  alt="">
-              </li>
-              <li class="text__action"><img class="text__actions-img" src="<%=require('../../images/code.svg')%>"
-                  alt="">
-              </li>
-              <li class="text__action"><img class="text__actions-img text__actions-img_inactive"
-                  src="<%=require('../../images/trash.svg')%>" alt="">
-              </li>
-            </ul>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Список выбора простой текст</h2>
-          <div class="popup">
-            <ul class="list calendar__actions">
-              <li class="calendar__action">Без повтора</li>
-              <li class="calendar__action">Каждый день</li>
-              <li class="calendar__action">Каждую неделю</li>
-              <li class="calendar__action">Каждую каждый месяц</li>
-              <li class="calendar__action">Каждую каждый год</li>
-              <li class="calendar__action">Свой вариант</li>
-            </ul>
-          </div>
-        </section>
-      </li>
-      <li class="list">
-        <section class="section">
-          <h2 class="section__title">Поле с выпадающим списком</h2>
-          <div class="popup">
-            <div class="selector">Переменная
-              <div class="selector__button-arrow selector__button-arrow_up"></div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Мои боты - карточка</h2>
+            <div class="card">
+              <div class="card__icons">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/social-icons/telegram.svg')%>"
+                  alt=""
+                />
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/more.svg')%>"
+                  alt=""
+                />
+              </div>
+              <div class="card__name">Салон красоты</div>
             </div>
-            <ul class="list selector__items">
-              <li class="selector__item">Переменная 1</li>
-              <li class="selector__item">Переменная 2</li>
-              <li class="selector__item">Переменная 3</li>
-              <li class="selector__item">Переменная 4</li>
-              <li class="selector__item">Переменная 5</li>
-            </ul>
-          </div>
-        </section>
-      </li>
-    </ul>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">
+              Информер / всплывающая подсказка - сверху
+            </h2>
+            <div class="helper">
+              <div class="helper__board">Helper</div>
+              <div class="helper__pointer"></div>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">
+              Информер / всплывающая подсказка - слева
+            </h2>
+            <div class="helper helper_aside">
+              <div class="helper__board">Helper</div>
+              <div class="helper__pointer helper__pointer_aside"></div>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Информер</h2>
+            <div class="helper">
+              <div class="helper__board helper__board_large">
+                Сcылка скопирована
+              </div>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">
+              Список действий More - открывается из карточки Мои боты
+            </h2>
+            <div class="popup">
+              <ul class="list card__actions">
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/copy-bot.svg')%>"
+                    alt=""
+                  />Копировать бота
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/share.svg')%>"
+                    alt=""
+                  />Общий доступ
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/edit.svg')%>"
+                    alt=""
+                  />Редактировать
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/link.svg')%>"
+                    alt=""
+                  />Получить ссылку
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/info.svg')%>"
+                    alt=""
+                  />Информация
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/notifications-setting.svg')%>"
+                    alt=""
+                  />Настройка уведомлений
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/trash.svg')%>"
+                    alt=""
+                  />Удалить
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Список действий Настройки аккаунта</h2>
+            <div class="popup">
+              <ul class="list account__actions">
+                <li class="account__action">
+                  <img
+                    class="account__actions-img"
+                    src="<%=require('../../images/settings.svg')%>"
+                    alt=""
+                  />Настройки аккаунта
+                </li>
+                <li class="account__action">
+                  <img
+                    class="account__actions-img"
+                    src="<%=require('../../images/payment.svg')%>"
+                    alt=""
+                  />Подписка и платежи
+                </li>
+                <li class="account__action">
+                  <img
+                    class="account__actions-img"
+                    src="<%=require('../../images/log-out.svg')%>"
+                    alt=""
+                  />Выйти
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Рассылки - панель редактора текста</h2>
+            <div class="popup">
+              <ul class="list text__actions">
+                <li class="text__action">
+                  <img
+                    class="text__actions-img"
+                    src="<%=require('../../images/bold.svg')%>"
+                    alt=""
+                  />
+                </li>
+                <li class="text__action">
+                  <img
+                    class="text__actions-img"
+                    src="<%=require('../../images/italic.svg')%>"
+                    alt=""
+                  />
+                </li>
+                <li class="text__action">
+                  <img
+                    class="text__actions-img"
+                    src="<%=require('../../images/code.svg')%>"
+                    alt=""
+                  />
+                </li>
+                <li class="text__action">
+                  <img
+                    class="text__actions-img text__actions-img_inactive"
+                    src="<%=require('../../images/trash.svg')%>"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Список выбора простой текст</h2>
+            <div class="popup">
+              <ul class="list calendar__actions">
+                <li class="calendar__action">Без повтора</li>
+                <li class="calendar__action">Каждый день</li>
+                <li class="calendar__action">Каждую неделю</li>
+                <li class="calendar__action">Каждую каждый месяц</li>
+                <li class="calendar__action">Каждую каждый год</li>
+                <li class="calendar__action">Свой вариант</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li class="list">
+          <section class="section">
+            <h2 class="section__title">Поле с выпадающим списком</h2>
+            <div class="popup">
+              <div class="selector">
+                Переменная
+                <div
+                  class="selector__button-arrow selector__button-arrow_up"
+                ></div>
+              </div>
+              <ul class="list selector__items">
+                <li class="selector__item">Переменная 1</li>
+                <li class="selector__item">Переменная 2</li>
+                <li class="selector__item">Переменная 3</li>
+                <li class="selector__item">Переменная 4</li>
+                <li class="selector__item">Переменная 5</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+      </ul>
 
-    <!-- Component 2 -->
-    <section class="component-2">
-      <h2>Component 2</h2>
-      <!-- Include examples of component 2 -->
-    </section>
+      <!-- Component 2 -->
+      <section class="component-2">
+        <h2>Component 2</h2>
+        <!-- Include examples of component 2 -->
+      </section>
 
-    <!-- And so on, up to component N... -->
-  </main>
-</body>
-
+      <!-- And so on, up to component N... -->
+    </main>
+  </body>
 </html>
