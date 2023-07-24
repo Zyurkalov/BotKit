@@ -37,17 +37,17 @@ h3 {
 .common-button_color_blue {
   background-color: variables.$clr-primary-medium;
   color: variables.$clr-white;
-}
-.common-button_color_blue:hover {
-  background-color: variables.$clr-icon-hover;
-  cursor: pointer;
-}
-.common-button_color_blue:active {
-  background-color: variables.$clr-primary-light;
-}
-.common-button_color_blue:disabled {
-  background-color: variables.$clr-blue-disabled;
-  pointer-events: none;
+  &:hover {
+    background-color: variables.$clr-icon-hover;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: variables.$clr-primary-light;
+  }
+  &:disabled {
+    background-color: variables.$clr-blue-disabled;
+    pointer-events: none;
+  }
 }
 
 /* Кнопка круглая - общие настройки для круглых кнопок */
@@ -61,23 +61,23 @@ h3 {
   border-radius: 50%;
   border: none;
   padding: 0;
+  &:hover {
+    background-color: variables.$clr-icon-hover;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: variables.$clr-primary-light;
+  }
+  &:disabled {
+    background-color: variables.$clr-blue-disabled;
+    pointer-events: none;
+  }
 }
 /* Кнопка круглая синяя */
 .button-elem-round_color_blue {
   height: 46px;
   width: 46px;
   background-color: variables.$clr-primary-medium;
-}
-.button-elem-round:hover {
-  background-color: variables.$clr-icon-hover;
-  cursor: pointer;
-}
-.button-elem-round:active {
-  background-color: variables.$clr-primary-light;
-}
-.button-elem-round:disabled {
-  background-color: variables.$clr-blue-disabled;
-  pointer-events: none;
 }
 
 /* Кнопка добавить бота зеленая */
@@ -90,17 +90,17 @@ h3 {
   background-color: variables.$clr-accent;
   color: variables.$clr-primary-dark;
   padding: 0;
-}
-.common-button_color_green:hover {
-  background-color: variables.$clr-accent-focus;
-  cursor: pointer;
-}
-.common-button_color_green:active {
-  background-color: variables.$clr-accent;
-}
-.common-button_color_green:disabled {
-  background-color: variables.$clr-accent-press;
-  pointer-events: none;
+  &:hover {
+    background-color: variables.$clr-accent-focus;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: variables.$clr-accent;
+  }
+  &:disabled {
+    background-color: variables.$clr-accent-press;
+    pointer-events: none;
+  }
 }
 
 /* Кнопка с инструкциями остановить/возобновить */
@@ -119,28 +119,28 @@ h3 {
   font-family: variables.$ff-secondary;
   text-transform: uppercase;
   padding: 0;
-}
-.button-elem-instruction::after {
-  content: "ОСТАНОВИТЬ";
-}
-.button-elem-instruction:hover {
-  cursor: pointer;
-}
-.button-elem-instruction:hover::after {
-  content: "ОСТАНОВИТЬ";
-  color: variables.$clr-primary-medium;
-}
-.button-elem-instruction:active::after {
-  content: "ВОЗОБНОВИТЬ";
-  color: variables.$clr-primary-medium;
-}
-.button-elem-instruction:disabled {
-  background-color: variables.$clr-secondary-gray;
-  pointer-events: none;
-}
-.button-elem-instruction:disabled::after {
-  content: "ОСТАНОВИТЬ";
-  color: variables.$clr-gray-3;
+  &::after {
+    content: "ОСТАНОВИТЬ";
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover::after {
+    content: "ОСТАНОВИТЬ";
+    color: variables.$clr-primary-medium;
+  }
+  &:active::after {
+    content: "ВОЗОБНОВИТЬ";
+    color: variables.$clr-primary-medium;
+  }
+  &:disabled {
+    background-color: variables.$clr-secondary-gray;
+    pointer-events: none;
+  }
+  &:disabled::after {
+    content: "ОСТАНОВИТЬ";
+    color: variables.$clr-gray-3;
+  }
 }
 
 /* Кнопка элемент copy */
@@ -151,86 +151,90 @@ h3 {
   border-radius: 10px;
   background-color: transparent;
   padding: 0;
-}
-.button-elem-copy:hover {
-  cursor: pointer;
-}
-.button-elem-copy:hover svg path {
-  stroke: variables.$clr-primary-medium;
-}
-.button-elem-copy:active {
-  background-color: variables.$clr-blue-disabled;
-}
-.button-elem-copy:active svg path {
-  stroke: variables.$clr-primary-medium;
-}
-.button-elem-copy:disabled {
-  pointer-events: none;
-}
-.button-elem-copy:disabled svg path {
-  stroke: variables.$clr-secondary-cultured;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover svg path {
+    stroke: variables.$clr-primary-medium;
+  }
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+  &:active svg path {
+    stroke: variables.$clr-primary-medium;
+  }
+  &:disabled {
+    pointer-events: none;
+  }
+  &:disabled svg path {
+    stroke: variables.$clr-secondary-cultured;
+  }
 }
 
 /* Кнопка бот автоответчик */
-.answering-machine__button {
-  width: 188px;
-  height: 88px;
-  position: relative;
-  border-radius: 185px;
-  background-color: variables.$clr-secondary-gray;
-  border: none;
-  padding: 0;
-  background-image: url("../../images/bot-icon/answering-machine.svg");
-  background-repeat: no-repeat;
-  background-size: 88px 88px;
-}
-.answering-machine__button-plus {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  top: 32px;
-  left: 132px;
-}
-.answering-machine__caption {
-  margin: 16px 0 0 0;
-  padding: 0;
-  font-family: variables.$ff-primary;
-  font-size: variables.$fs-small;
-  font-weight: variables.$fw-600;
-  line-height: 21px;
-  letter-spacing: 0.3px;
-  color: variables.$clr-primary-dark;
-}
-.answering-machine:hover {
-  cursor: pointer;
-}
-.answering-machine:hover .answering-machine__button {
-  background-color: variables.$clr-white;
-  box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
-  cursor: pointer;
-}
-.answering-machine:hover .answering-machine__plus svg path {
-  stroke: variables.$clr-primary-medium;
-}
-.answering-machine:hover .answering-machine__caption {
-  color: variables.$clr-primary-medium;
-}
-.answering-machine:active .answering-machine__button {
-  background-color: variables.$clr-white;
-  box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
-}
-.answering-machine:active .answering-machine__plus svg path {
-  stroke: variables.$clr-icon-hover;
-}
-.answering-machine:active .answering-machine__caption {
-  color: variables.$clr-icon-hover;
-}
-.answering-machine_type_disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
-.answering-machine__button:disabled .answering-machine__caption {
-  color: variables.$clr-primary-gray;
+.answering-machine {
+  &__button {
+    width: 188px;
+    height: 88px;
+    position: relative;
+    border-radius: 185px;
+    background-color: variables.$clr-secondary-gray;
+    border: none;
+    padding: 0;
+    background-image: url("../../images/bot-icon/answering-machine.svg");
+    background-repeat: no-repeat;
+    background-size: 88px 88px;
+    &-plus {
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 32px;
+      left: 132px;
+    }
+  }
+  &__caption {
+    margin: 16px 0 0 0;
+    padding: 0;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    color: variables.$clr-primary-dark;
+  }
+  &:hover {
+    cursor: pointer;
+    & .answering-machine__button {
+      background-color: variables.$clr-white;
+      box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+      cursor: pointer;
+    }
+    & .answering-machine__plus svg path {
+      stroke: variables.$clr-primary-medium;
+    }
+    & .answering-machine__caption {
+      color: variables.$clr-primary-medium;
+    }
+  }
+  &:active {
+    & .answering-machine__button {
+      background-color: variables.$clr-white;
+      box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+    }
+    & .answering-machine__plus svg path {
+      stroke: variables.$clr-icon-hover;
+    }
+    & .answering-machine__caption {
+      color: variables.$clr-icon-hover;
+    }
+  }
+  &_type_disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    & .answering-machine__caption {
+      color: variables.$clr-primary-gray;
+    }
+  }
 }
 
 /* Кнопка бот Facebook */
@@ -241,36 +245,61 @@ h3 {
   border-radius: 30px;
   background-color: variables.$clr-gray;
   padding: 0;
+  &__caption {
+    margin: 13px 0 0 0;
+    padding: 0;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    color: variables.$clr-primary-dark;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .button-fb:hover svg rect {
+    fill: variables.$clr-blue;
+  }
+  &:active svg rect {
+    fill: variables.$clr-blue;
+  }
+  .button-fb:active {
+    box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+  }
+  &:disabled {
+    pointer-events: none;
+    & .button-fb__caption {
+      color: variables.$clr-gray-3;
+    }
+  }
+  &:disabled svg rect {
+    fill: variables.$clr-primary-gray;
+  }
 }
-.button-fb__caption {
-  margin: 13px 0 0 0;
+
+/* Кнопка бот Фото */
+.button-photo {
+  height: 124px;
+  width: 124px;
+  border: none;
+  border-radius: 30px;
+  background-color: variables.$clr-gray;
   padding: 0;
-  font-family: variables.$ff-primary;
-  font-size: variables.$fs-small;
-  line-height: 21px;
-  letter-spacing: 0.3px;
-  color: variables.$clr-primary-dark;
-}
-.button-fb:hover {
-  cursor: pointer;
-}
-.button-fb:hover svg rect {
-  fill: variables.$clr-blue;
-}
-.button-fb:active svg rect {
-  fill: variables.$clr-blue;
-}
-.button-fb:active {
-  box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
-}
-.button-fb:disabled {
-  pointer-events: none;
-}
-.button-fb:disabled svg rect {
-  fill: variables.$clr-primary-gray;
-}
-.button-fb:disabled .button-fb__caption {
-  color: variables.$clr-gray-3;
+  &__caption {
+    margin: 13px 0 0 0;
+    padding: 0;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    color: variables.$clr-primary-dark;
+  }
+  &_active {
+    box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+    cursor: pointer;
+  }
 }
 
 /* Кнопка-панель добавить бота */
@@ -286,52 +315,53 @@ h3 {
   border: none;
   border-radius: 30px;
   background-color: variables.$clr-secondary-gray;
-}
-.panel-add-bot__circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 46px;
-  height: 46px;
-  border: 2px solid variables.$clr-gray-3;
-  border-radius: 50%;
-}
-.panel-add-bot__text {
-  margin: 0 auto;
-  padding: 0;
-  font-family: variables.$ff-secondary;
-  font-size: var(--fs-base);
-  font-weight: variables.$fw-600;
-  line-height: 20.8px;
-  letter-spacing: 0.5px;
-  color: variables.$clr-gray-3;
-}
-.panel-add-bot:hover {
-  cursor: pointer;
-}
-.panel-add-bot:hover svg path {
-  stroke: variables.$clr-primary-medium;
-}
-.panel-add-bot:hover .panel-add-bot__circle {
-  border: 2px solid variables.$clr-primary-medium;
-}
-.panel-add-bot:hover .panel-add-bot__text {
-  color: variables.$clr-primary-medium;
-}
-.panel-add-bot:active {
-  background-color: variables.$clr-blue-disabled;
-}
-.panel-add-bot:disabled {
-  pointer-events: none;
-}
-.panel-add-bot:disabled svg path {
-  stroke: variables.$clr-primary-gray;
-}
-.panel-add-bot:disabled .panel-add-bot__circle {
-  border: 2px solid variables.$clr-primary-gray;
-}
-.panel-add-bot:disabled .panel-add-bot__text {
-  color: variables.$clr-primary-gray;
+  &__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border: 2px solid variables.$clr-gray-3;
+    border-radius: 50%;
+  }
+  &__text {
+    margin: 0 auto;
+    padding: 0;
+    font-family: variables.$ff-secondary;
+    font-size: var(--fs-base);
+    font-weight: variables.$fw-600;
+    line-height: 20.8px;
+    letter-spacing: 0.5px;
+    color: variables.$clr-gray-3;
+  }
+  &:hover {
+    cursor: pointer;
+    & svg path {
+      stroke: variables.$clr-primary-medium;
+    }
+    & .panel-add-bot__circle {
+      border: 2px solid variables.$clr-primary-medium;
+    }
+    & .panel-add-bot__text {
+      color: variables.$clr-primary-medium;
+    }
+  }
+
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+  &:disabled {
+    pointer-events: none;
+    & svg path {
+      stroke: variables.$clr-primary-gray;
+    }
+    & .panel-add-bot__circle {
+      border: 2px solid variables.$clr-primary-gray;
+    }
+    & .panel-add-bot__text {
+      color: variables.$clr-primary-gray;
+    }
+  }
 }
 
 /* Кнопка пошаговая инструкция */
@@ -349,45 +379,46 @@ h3 {
   background-color: variables.$clr-white;
   background-image: url("../../images/button-tutorial_ellipse_grey.svg");
   background-repeat: no-repeat;
-}
-.button-tutorial__icon {
-  width: 65px;
-  height: 46px;
-  position: absolute;
-  top: 17px;
-  left: 32px;
-}
-.button-tutorial__text {
-  font-family: variables.$ff-primary;
-  color: variables.$clr-primary-dark;
-  font-size: variables.$fs-small;
-  font-weight: variables.$fw-600;
-  line-height: 21px;
-  letter-spacing: 0.3px;
-}
-.button-tutorial:hover {
-  border: none;
-  background-image: url("../../images/button-tutorial_ellipse_green.svg");
-  box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
-  cursor: pointer;
-}
-/* используется фильтр на img */
-.button-tutorial:hover .button-tutorial__icon {
-  filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
-}
-.button-tutorial:active .button-tutorial__text {
-  color: variables.$clr-xiketic-press;
-}
-.button-tutorial:disabled {
-  pointer-events: none;
-}
-/* используется фильтр на img */
-.button-tutorial:disabled .button-tutorial__icon {
-  opacity: 50%;
-  filter: grayscale(15%);
-}
-.button-tutorial:disabled .button-tutorial__text {
-  color: variables.$clr-primary-gray;
+  &__icon {
+    width: 65px;
+    height: 46px;
+    position: absolute;
+    top: 17px;
+    left: 32px;
+  }
+  &__text {
+    font-family: variables.$ff-primary;
+    color: variables.$clr-primary-dark;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+  }
+  &:hover {
+    border: none;
+    background-image: url("../../images/button-tutorial_ellipse_green.svg");
+    box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
+    cursor: pointer;
+    & .button-tutorial__icon {
+      filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
+    }
+  }
+
+  &:active {
+    & .button-tutorial__text {
+      color: variables.$clr-xiketic-press;
+    }
+  }
+  &:disabled {
+    pointer-events: none;
+    & .button-tutorial__icon {
+      opacity: 50%;
+      filter: grayscale(15%);
+    }
+    & .button-tutorial__text {
+      color: variables.$clr-primary-gray;
+    }
+  }
 }
 
 /* Кнопка блок сообщений */
@@ -403,32 +434,32 @@ h3 {
   border-radius: 10px;
   color: variables.$clr-primary-dark;
   background-color: transparent;
-}
-.button-block-message__text {
-  font-size: variables.$fs-small;
-  font-weight: variables.$fw-600;
-  font-family: variables.$ff-primary;
-  line-height: 21px;
-  letter-spacing: 0.3px;
-}
-.button-block-message:hover {
-  background-color: variables.$clr-secondary-gray;
-  color: variables.$clr-primary-medium;
-  cursor: pointer;
-}
-.button-block-message:hover svg line {
-  stroke: variables.$clr-primary-medium;
-}
-.button-block-message:hover svg path {
-  stroke: variables.$clr-primary-medium;
-}
-.button-block-message:active {
-  background-color: variables.$clr-blue-disabled;
-}
-.button-block-message:disabled {
-  background-color: variables.$clr-white;
-  color: variables.$clr-gray-2;
-  pointer-events: none;
+  &__text {
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    font-family: variables.$ff-primary;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+  }
+  &:hover {
+    background-color: variables.$clr-secondary-gray;
+    color: variables.$clr-primary-medium;
+    cursor: pointer;
+    & svg line {
+      stroke: variables.$clr-primary-medium;
+    }
+    & svg path {
+      stroke: variables.$clr-primary-medium;
+    }
+  }
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+  &:disabled {
+    background-color: variables.$clr-white;
+    color: variables.$clr-gray-2;
+    pointer-events: none;
+  }
 }
 
 /* Кнопка круглая зеленая */
@@ -437,17 +468,17 @@ h3 {
   height: 66px;
   background-color: variables.$clr-accent;
   box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
-}
-.button-elem-round_color_green:hover {
-  background-color: variables.$clr-accent-focus;
-  cursor: pointer;
-}
-.button-elem-round_color_green:active {
-  background-color: variables.$clr-accent;
-}
-.button-elem-round_color_green:disabled {
-  background-color: variables.$clr-accent-press;
-}
-.button-elem-round_color_green:disabled svg g {
-  opacity: 0.5;
+  &:hover {
+    background-color: variables.$clr-accent-focus;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: variables.$clr-accent;
+  }
+  &:disabled {
+    background-color: variables.$clr-accent-press;
+    & svg g {
+      opacity: 0.5;
+    }
+  }
 }
