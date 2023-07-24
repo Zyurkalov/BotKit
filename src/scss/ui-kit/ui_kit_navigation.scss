@@ -1,9 +1,9 @@
-@import "../variables";
-@import "../common";
+@use "../variables";
+@use "../common";
 
 body {
   margin: 0;
-  font-family: $ff-primary, $ff-secondary;
+  font-family: variables.$ff-primary, variables.$ff-secondary;
 }
 .navigation {
   position: relative;
@@ -11,7 +11,7 @@ body {
   flex-direction: row-reverse;
   margin: 0 63px 0 41px;
   height: 72px;
-  border-bottom: 1px solid $clr-secondary-focus;
+  border-bottom: 1px solid variables.$clr-secondary-focus;
 }
 .navigation__menu {
   position: absolute;
@@ -30,18 +30,18 @@ body {
   padding-right: 24px;
   height: 29px;
   align-self: center;
-  border-right: 1px solid $clr-secondary-focus;
+  border-right: 1px solid variables.$clr-secondary-focus;
 }
 .navigation__text {
-  font-weight: $fw-400;
-  color: $clr-primary-dark;
-  font-size: $fs-base;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-base;
   line-height: 24px;
   margin: 0;
   align-self: center;
 }
 .navigation__text_spanned {
-  font-weight: $fw-700;
+  font-weight: variables.$fw-500;
 }
 .navigation__bell-container {
   display: flex;
@@ -60,18 +60,18 @@ body {
   bottom: 15px;
   right: -1px;
   text-align: center;
-  font-size: $fs-tiny;
+  font-size: variables.$fs-tiny;
   line-height: 14px;
   vertical-align: middle;
-  font-weight: $fw-600;
-  color: $clr-white;
+  font-weight: variables.$fw-600;
+  color: variables.$clr-white;
 }
 .navigation__user-section {
   align-items: center;
   display: grid;
   grid-template-columns: min-content min-content max-content;
   gap: 32px;
-  padding-left: 16px;
+  margin-left: 16px;
 }
 .navigation__user-info {
   display: flex;
@@ -82,10 +82,10 @@ body {
   height: 36px;
   border-radius: 50%;
   margin-right: 12px;
-  border: 2px solid $clr-secondary-gray;
+  border: 2px solid variables.$clr-secondary-gray;
 }
 .navigation__arrow-down {
-  padding-left: 12px;
+  margin-left: 12px;
   width: 24px;
   height: 24px;
 }
@@ -93,16 +93,16 @@ body {
 .footer {
   height: 50px;
   margin: 48px 63px 0 41px;
-  border-top: 1px solid $clr-secondary-focus;
+  border-top: 1px solid variables.$clr-secondary-focus;
   display: flex;
   align-items: center;
 }
 
 .footer__text {
   margin: 0;
-  padding-left: 40px;
-  font-weight: $fw-400;
-  color: $clr-primary-dark;
-  font-size: $fs-base;
+  margin-left: 40px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-base;
   line-height: 24px;
 }
