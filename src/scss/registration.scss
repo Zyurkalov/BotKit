@@ -50,7 +50,11 @@ svg {
   font-weight: variables.$fw-400;
   line-height: 1.5;
   font-style: normal;
-  background: linear-gradient(to bottom, variables.$clr-white 46.5%, variables.$clr-gray 0%);
+  background: linear-gradient(
+    to bottom,
+    variables.$clr-white 46.5%,
+    variables.$clr-gray 0%
+  );
   color: variables.$clr-primary-dark;
 }
 
