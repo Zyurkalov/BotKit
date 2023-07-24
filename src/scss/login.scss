@@ -1,0 +1,38 @@
+@use "variables";
+@use "common";
+
+.header {
+  display: flex;
+}
+
+.header__title {
+  margin: 0 auto;
+}
+
+.form_type_login {
+}
+
+.passw-recovery {
+  margin: 0 auto;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.passw-recovery__link {
+  color: variables.$clr-white;
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.3px;
+  text-decoration-line: underline;
+}
+.form__submit_size_m {
+  width: 260px;
+}

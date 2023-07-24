@@ -7,6 +7,7 @@ const glob = require("glob");
 const entry = {
   main: "./src/index.js",
   registration: "./src/js/registration.js",
+  login: "./src/js/login.js",
   add_bot: "./src/js/add_bot.js",
   chat: "./src/js/chat.js",
   dashboard: "./src/js/dashboard.js",
