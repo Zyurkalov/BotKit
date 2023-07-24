@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/svg+xml" href="<%=require('../../favicon.ico')%>" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="<%=require('../../favicon.ico')%>"
+    />
     <title>Bot Kits</title>
   </head>
   <body class="body">
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="<%=require('../images/logo.svg')%>" alt="лого" width="149" height="35" />
+        <img
+          class="header__logo"
+          src="<%=require('../images/logo.svg')%>"
+          alt="лого"
+          width="149"
+          height="35"
+        />
         <h2 class="header__h2">Регистрация</h2>
       </header>
 
@@ -21,18 +31,38 @@
             <div class="icons-container">
               <div class="icons-container__icons">
                 <button class="icons-container__button" type="submit">
-                  <img src="<%=require('../images/social-icons/google.svg')%>" alt="gmail" width="40" height="40" />
+                  <img
+                    src="<%=require('../images/social-icons/google.svg')%>"
+                    alt="gmail"
+                    width="40"
+                    height="40"
+                  />
                 </button>
                 <button class="icons-container__button" type="submit">
-                  <img src="<%=require('../images/social-icons/yandex.svg')%>" alt="яндекс" width="40" height="40" />
+                  <img
+                    src="<%=require('../images/social-icons/yandex.svg')%>"
+                    alt="яндекс"
+                    width="40"
+                    height="40"
+                  />
                 </button>
                 <button class="icons-container__button" type="submit">
-                  <img src="<%=require('../images/social-icons/mailru.svg')%>" alt="мэил ру" width="40" height="40" />
+                  <img
+                    src="<%=require('../images/social-icons/mailru.svg')%>"
+                    alt="мэил ру"
+                    width="40"
+                    height="40"
+                  />
                 </button>
               </div>
               <div class="icons-container__icons">
                 <button class="icons-container__button" type="submit">
-                  <img src="<%=require('../images/social-icons/vk.svg')%>" alt="вконтакте" width="40" height="40" />
+                  <img
+                    src="<%=require('../images/social-icons/vk.svg')%>"
+                    alt="вконтакте"
+                    width="40"
+                    height="40"
+                  />
                 </button>
                 <button class="icons-container__button" type="submit">
                   <img
@@ -69,11 +99,25 @@
               <form action="/" class="form" name="registration-form" novalidate>
                 <fieldset class="form__input-container">
                   <label class="form__field">
-                    <input type="text" class="form__input" id="username" name="username" placeholder="Имя" required />
+                    <input
+                      type="text"
+                      class="form__input"
+                      id="username"
+                      name="username"
+                      placeholder="Имя"
+                      required
+                    />
                     <span class="form__input-error name-input-error"></span>
                   </label>
                   <label class="form__field">
-                    <input type="email" class="form__input" id="email" name="email" placeholder="E-mail" required />
+                    <input
+                      type="email"
+                      class="form__input"
+                      id="email"
+                      name="email"
+                      placeholder="E-mail"
+                      required
+                    />
                     <span class="form__input-error url-input-error"></span>
                   </label>
                   <label class="form__field">
@@ -88,16 +132,27 @@
                     <span class="form__input-error password-input-error"></span>
                   </label>
                   <label class="form__field">
-                    <input type="tel" class="form__input" id="phone" name="phone" placeholder="Телефон" required />
+                    <input
+                      type="tel"
+                      class="form__input"
+                      id="phone"
+                      name="phone"
+                      placeholder="Телефон"
+                      required
+                    />
                     <span class="form__input-error phone-input-error"></span>
                   </label>
                 </fieldset>
-                <button type="submit" class="form__submit">Создать аккаунт</button>
+                <button type="submit" class="form__submit">
+                  Создать аккаунт
+                </button>
               </form>
 
               <div class="alternative-actions">
                 <p class="alternative-actions__text">Уже прошли регистрацию?</p>
-                <button type="submit" class="alternative-actions__button">Войти</button>
+                <button type="submit" class="alternative-actions__button">
+                  Войти
+                </button>
               </div>
               <img
                 class="inner-wrapper__img"
