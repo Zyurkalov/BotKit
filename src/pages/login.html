@@ -21,122 +21,122 @@
           width="149"
           height="35"
         />
-        <h2 class="header__title">Вход</h2>
-        <main class="main">
-          <div class="window">
-            <div class="inner-wrapper">
-              <form
-                action="/"
-                class="form form_type_login"
-                name="login-form"
-                novalidate
-              >
-                <label class="form__field">
-                  <input
-                    type="email"
-                    class="form__input"
-                    id="email"
-                    name="email"
-                    placeholder="E-mail"
-                    required
-                  />
-                  <span class="form__input-error url-input-error"></span>
-                </label>
-                <label class="form__field">
-                  <input
-                    type="password"
-                    class="form__input"
-                    id="password"
-                    name="password"
-                    placeholder="Пароль"
-                    required
-                  />
-                  <span class="form__input-error password-input-error"></span>
-                </label>
+        <h2 class="header__h2 header__h2_type_login">Вход</h2>
+      </header>
+      <main class="main">
+        <div class="window">
+          <div class="inner-wrapper">
+            <form
+              action="/"
+              class="form form_type_login"
+              name="login-form"
+              novalidate
+            >
+              <label class="form__field">
+                <input
+                  type="email"
+                  class="form__input"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
+                <span class="form__input-error url-input-error"></span>
+              </label>
+              <label class="form__field">
+                <input
+                  type="password"
+                  class="form__input"
+                  id="password"
+                  name="password"
+                  placeholder="Пароль"
+                  required
+                />
+                <span class="form__input-error password-input-error"></span>
+              </label>
 
-                <ul class="passw-recovery">
-                  <li class="passw-recovery__item">
-                    <a class="passw-recovery__link" href="#"> Забыли пароль?</a>
-                  </li>
-                  <li class="passw-recovery__item">
-                    <a class="passw-recovery__link" href="#">Регистрация</a>
-                  </li>
-                </ul>
-                <button type="submit" class="form__submit form__submit_size_m">
-                  Войти
-                </button>
-              </form>
-              <div class="separator">
-                <span class="separator__text">Быстрый вход</span>
-              </div>
-              <div class="outer-wrapper">
-                <div class="icons-container">
-                  <div class="icons-container__icons">
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/google.svg')%>"
-                        alt="gmail"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/yandex.svg')%>"
-                        alt="яндекс"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/mailru.svg')%>"
-                        alt="мэил ру"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                  </div>
-                  <div class="icons-container__icons">
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/vk.svg')%>"
-                        alt="вконтакте"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/odnoklassniki.svg')%>"
-                        alt="одноклассники"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/facebook.svg')%>"
-                        alt="facebook"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                    <button class="icons-container__button" type="submit">
-                      <img
-                        src="<%=require('../images/social-icons/telegram.svg')%>"
-                        alt="телеграм"
-                        width="40"
-                        height="40"
-                      />
-                    </button>
-                  </div>
+              <ul class="passw-recovery">
+                <li class="passw-recovery__item">
+                  <a class="passw-recovery__link" href="#"> Забыли пароль?</a>
+                </li>
+                <li class="passw-recovery__item">
+                  <a class="passw-recovery__link" href="#">Регистрация</a>
+                </li>
+              </ul>
+              <button type="submit" class="form__submit form__submit_size_m">
+                Войти
+              </button>
+            </form>
+            <div class="separator">
+              <span class="separator__text">Быстрый вход</span>
+            </div>
+            <div class="outer-wrapper">
+              <div class="icons-container">
+                <div class="icons-container__icons">
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/google.svg')%>"
+                      alt="gmail"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/yandex.svg')%>"
+                      alt="яндекс"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/mailru.svg')%>"
+                      alt="мэил ру"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
+                </div>
+                <div class="icons-container__icons">
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/vk.svg')%>"
+                      alt="вконтакте"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/odnoklassniki.svg')%>"
+                      alt="одноклассники"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/facebook.svg')%>"
+                      alt="facebook"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
+                  <button class="icons-container__button" type="submit">
+                    <img
+                      src="<%=require('../images/social-icons/telegram.svg')%>"
+                      alt="телеграм"
+                      width="40"
+                      height="40"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </main>
-      </header>
+        </div>
+      </main>
     </div>
   </body>
 </html>
