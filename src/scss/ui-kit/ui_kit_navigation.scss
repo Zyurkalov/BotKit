@@ -1,5 +1,6 @@
 @use "../variables";
 @use "../common";
+@use "./ui_kit_icons.scss";
 
 body {
   margin: 0;
@@ -19,7 +20,7 @@ body {
   align-self: center;
   width: 24px;
   height: 24px;
-  background-image: url("../../images/nav_menu.svg");
+  background-image: url("../../images/template-icon/24x24/add_block/menu_grey.svg");
 }
 
 .navigation__tarif-info {
@@ -43,29 +44,6 @@ body {
 }
 .navigation__text_spanned {
   font-weight: variables.$fw-500;
-}
-.navigation__bell-container {
-  display: flex;
-  position: relative;
-}
-.navigation__icon {
-  width: 24px;
-  height: 24px;
-  align-self: center;
-}
-.navigation__notificated {
-  background-image: url("../../images/nav_bell_notification.svg");
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  bottom: 15px;
-  right: -1px;
-  text-align: center;
-  font-size: variables.$fs-tiny;
-  line-height: 14px;
-  vertical-align: middle;
-  font-weight: variables.$fw-600;
-  color: variables.$clr-white;
 }
 .navigation__user-section {
   align-items: center;

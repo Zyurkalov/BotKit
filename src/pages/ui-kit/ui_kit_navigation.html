@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="<%=require('../../../favicon.ico')%>"
-    />
+    <link rel="icon" type="image/svg+xml" href="<%=require('../../../favicon.ico')%>" />
     <title>Navigation</title>
   </head>
   <body>
@@ -18,30 +14,26 @@
     <nav class="navigation">
       <div class="navigation__menu"></div>
       <div class="navigation__user-section">
-        <div class="navigation__bell-container">
+        <div class="template-icon template-icon_pos-rel">
+          <p class="template-icon__count">2</p>
           <img
-            alt="колокол"
-            class="navigation__icon"
-            src="<%=require('../../images/nav_bell.svg')%>"
+            class="template-icon__ding"
+            src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
+            alt=""
           />
-          <div class="navigation__notificated">1</div>
         </div>
         <img
-          alt="Помощь"
-          class="navigation__icon"
-          src="<%=require('../../images/nav_help.svg')%>"
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
+          alt="помощь"
         />
         <div class="navigation__user-info">
-          <img
-            alt="Аватар"
-            class="navigation__user-avatar"
-            src="<%=require('../../images/nav_avatar.png')%>"
-          />
+          <img alt="Аватар" class="navigation__user-avatar" src="<%=require('../../images/avatar/circle.png')%>" />
           <p class="navigation__text">User Name</p>
           <img
             alt="Стрелка вниз"
             class="navigation__arrow-down"
-            src="<%=require('../../images/nav_arrow_down.svg')%>"
+            src="<%=require('../../images/template-icon/20x20/down.svg')%>"
           />
         </div>
       </div>
