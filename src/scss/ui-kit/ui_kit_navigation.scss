@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family: variables.$ff-primary, variables.$ff-secondary;
+  font-family: variables.$ff-primary;
 }
 .navigation {
   position: relative;
@@ -39,6 +39,7 @@ body {
   line-height: 24px;
   margin: 0;
   align-self: center;
+  font-family: variables.$ff-primary;
 }
 .navigation__text_spanned {
   font-weight: variables.$fw-500;
