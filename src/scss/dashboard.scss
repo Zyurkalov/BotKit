@@ -53,10 +53,8 @@ svg {
 }
 
 .main {
-  margin-left: 132px;
+  padding-left: 132px;
 }
-
-
 
 @mixin animation() {
   transition: all 0.3s ease-in-out;
