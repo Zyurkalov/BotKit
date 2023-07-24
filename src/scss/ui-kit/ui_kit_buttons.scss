@@ -371,6 +371,7 @@ h3 {
   box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
   cursor: pointer;
 }
+/* используется фильтр на img */
 .button-tutorial:hover .button-tutorial__icon {
   filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
 }
@@ -379,6 +380,11 @@ h3 {
 }
 .button-tutorial:disabled {
   pointer-events: none;
+}
+/* используется фильтр на img */
+.button-tutorial:disabled .button-tutorial__icon {
+  opacity: 50%;
+  filter: grayscale(15%);
 }
 .button-tutorial:disabled .button-tutorial__text {
   color: variables.$clr-primary-gray;
