@@ -1,5 +1,6 @@
 @use "../variables";
 @use "../common";
+@use "./ui_kit_icons.scss";
 
 @mixin animation() {
   transition: all 0.3s ease-in-out;
@@ -224,4 +225,88 @@
   transform: scale(-1, -1);
 
   @include animation();
+}
+
+body {
+  margin: 0;
+  font-family: variables.$ff-primary;
+}
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 63px 0 41px;
+  height: 72px;
+  border-bottom: 1px solid variables.$clr-secondary-focus;
+}
+.navigation__menu {
+  position: absolute;
+  left: 0;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/template-icon/24x24/add_block/menu_grey.svg");
+}
+
+.navigation__tarif-info {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 8px;
+  justify-content: space-between;
+  padding-right: 24px;
+  height: 29px;
+  align-self: center;
+  border-right: 1px solid variables.$clr-secondary-focus;
+}
+.navigation__text {
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-base;
+  line-height: 24px;
+  margin: 0;
+  align-self: center;
+  font-family: variables.$ff-primary;
+}
+.navigation__text_spanned {
+  font-weight: variables.$fw-500;
+}
+.navigation__user-section {
+  align-items: center;
+  display: grid;
+  grid-template-columns: min-content min-content max-content;
+  gap: 32px;
+  margin-left: 16px;
+}
+.navigation__user-info {
+  display: flex;
+  align-items: center;
+}
+.navigation__user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid variables.$clr-secondary-gray;
+}
+.navigation__arrow-down {
+  margin-left: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  height: 50px;
+  margin: 48px 63px 0 41px;
+  border-top: 1px solid variables.$clr-secondary-focus;
+  display: flex;
+  align-items: center;
+}
+
+.footer__text {
+  margin: 0;
+  margin-left: 40px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-base;
+  line-height: 24px;
 }
