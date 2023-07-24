@@ -9,8 +9,9 @@
   }
 
   .container__linear {
-    font-family: var(--ff-secondary);
-    font-weight: var(--fw-400);
+    font-family: variables.$ff-secondary;
+    font-weight: variables.$fw-400;
+    color: variables.$clr-primary-dark;
     font-size: 12px;
     list-style-type: none;
     margin: 44px 0 0 0;
@@ -28,7 +29,6 @@
   }
 
   .constructor__button {
-    background-color: var(--clr-btn-gray);
     border: 0;
     cursor: pointer;
   }
@@ -71,31 +71,52 @@
   }
 
   .constructor__text-tab {
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-600);
+    font-family: variables.$ff-primary;
+    font-weight: variables.$fw-600;
     font-size: 13px;
   }
   .tab-hover {
-    color: var(--clr-primary-medium);
+    color: variables.$clr-primary-medium;
   }
   .btn-pressed{
-    background-color: var(--clr-btn-dark-gray);
+    background-color: variables.$clr-blue-disabled;
   }
 
   .constructor__text-condition {
-    color: #8392AB;
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-400);
+    color: variables.$clr-gray-4;
+    font-family: variables.$ff-primary;
+    font-weight: variables.$fw-400;
     font-size: 13px;
   }
   .condition-hover {
-    color: var(--clr-primary-medium);
+    color: variables.$clr-primary-medium;
   }
   .btn-disabled{
-    color: var(--clr-disabled);
+    color: variables.$clr-primary-gray;
   }
 
   .constructor__text {
     text-align: center;
     margin: 0;
+  }
+
+  .constructor__button-default-grey {
+    background-color: variables.$clr-secondary-nofocus;
+  }
+
+  .constructor__button-video-default-grey {
+    background-color: variables.$clr-secondary-gray;
+  }
+
+  .constructor__button-condition-default-grey {
+    background-color: variables.$clr-gray;
+  }
+
+  .container__linear-shadow {
+    display: flex;
+    box-shadow: 0px 6px 16px 0px #15123314;
+    align-items: center;
+    width: 96px;
+    height: 40px;
+    justify-content: space-evenly;
   }
