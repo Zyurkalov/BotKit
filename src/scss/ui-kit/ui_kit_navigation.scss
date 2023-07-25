@@ -1,6 +1,5 @@
 @use "../variables";
 @use "../common";
-@use "./ui_kit_icons.scss";
 
 @mixin animation() {
   transition: all 0.3s ease-in-out;
@@ -14,174 +13,215 @@
 }
 
 .menu {
-  grid-area: nav;
+  display: block;
+  height: 900px;
+  width: 86px;
+  // width: 240px;
+  padding: 16px;
+  padding-right: 0;
   box-sizing: border-box;
-  min-width: 86px;
-  max-width: 240px;
-  width: 86px; // удалить
-  width: 240px;
-
-  @include animation();
+  transition: width 0.4s ease-in-out;
 
   &:hover {
-    width: 86px;
-
-    & .link_theme_blue {
-      padding: 0;
-      margin-left: 0;
-      border-radius: 50px;
-    }
-    & .link__image_reverse {
-      min-width: 24px;
-      margin: 11px;
-    }
-    & .link__text_reverse {
-      width: 0;
-    }
+    width: 240px;
   }
 }
 
-.menu__items {
-  margin: 16px;
-  margin-right: 0;
-  padding: 20px 12px;
-  height: calc(100% - 40px);
-  min-height: 868px;
-  list-style-type: none;
+.menu__container {
+  display: block;
+  height: 100%;
+  width: 100%;
   background-color: variables.$clr-gray;
   box-sizing: border-box;
   border-radius: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  padding: 20px 8px;
+}
+
+.menu__items {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style-type: none;
 }
 
 .menu__item {
   margin-bottom: 8px;
-  box-sizing: border-box;
-  height: 46px;
-  min-width: 46px;
 
-  &_logo {
-    margin: 0 0 28px 4px;
-    height: 34px;
-    background-image: url(../../images/logo.svg);
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 145px 34px;
-    overflow: hidden;
+  &_first {
+    margin-left: 8px;
+    margin-bottom: 28px;
   }
 
-  &_bot {
-    margin: 0 14px 48px 0;
+  &_second {
+    margin-left: 4px;
+    margin-bottom: 48px;
   }
+  // &:nth-child(1) {
+  //   margin-left: 8px;
+  //   margin-bottom: 28px;
+  // }
+
+  // &:nth-child(2) {
+  //   margin-left: 4px;
+  //   margin-bottom: 48px;
+  // }
 }
 
-.link {
-  height: 100%;
+.menu__logo {
+  background-image: url(../../images/logo.svg);
+  min-height: 34px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 145px 34px;
+  overflow: hidden;
+}
+
+.button {
+  height: 46px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  text-decoration: none;
   overflow: hidden;
+  // transition: padding .3s ease-in-out;
 
-  &__image {
-    stroke: variables.$clr-primary-gray;
-    margin: 11px;
-    min-width: 24px;
+  @include animation();
 
-    &_reverse {
-      width: 0;
-      min-width: 0;
-      margin: 0;
-      @include animation();
+  &_theme_gray {
+    padding: 0 4px;
+    background-color: transparent;
+    color: variables.$clr-primary-dark;
+    border-radius: 50px;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: variables.$ff-primary;
+    font-weight: variables.$fw-400;
+    font-size: variables.$fs-base;
+    letter-spacing: 0.2px;
+
+    &:focus {
+      & .button__image {
+        stroke: variables.$clr-primary-medium;
+      }
+
+      & .button__text {
+        color: variables.$clr-primary-medium;
+        font-weight: variables.$fw-600;
+      }
+
+      & .button__image_up {
+        transform: scale(1, 1);
+      }
+
+      & ~ .menu__items_second .button_menu_second {
+        height: 46px;
+        margin-top: 8px;
+      }
+    }
+
+    &:hover {
+      background-color: variables.$clr-secondary-gray;
+    }
+
+    &:active {
+      background-color: transparent;
     }
   }
 
-  &__text {
+  &_theme_blue {
     padding: 0;
-    margin: 0 5px 0 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: left;
+    border-radius: 50px;
+    background-color: variables.$clr-primary-medium;
+    color: variables.$clr-white;
+    font-family: variables.$ff-secondary;
+    font-weight: variables.$fw-600;
+    font-size: variables.$fs-small;
+    letter-spacing: 1px;
 
-    &_reverse {
-      margin: 0;
-      @include animation();
-    }
-  }
-
-  &_theme {
-    &_blue {
-      padding: 0 30px;
-      margin-left: 4px;
-      border-radius: 10px;
+    &:hover {
       background-color: variables.$clr-primary-medium;
-      color: variables.$clr-white;
-      font-family: variables.$ff-secondary;
-      font-weight: variables.$fw-600;
-      font-size: variables.$fs-small;
-      letter-spacing: 1px;
-      @include animation();
-
-      &:hover {
-        background-color: variables.$clr-icon-hover;
-      }
-
-      &:focus {
-        background-color: variables.$clr-primary-light;
-      }
     }
 
-    &_gray {
-      border-radius: 50px;
-      color: variables.$clr-primary-dark;
-      font-family: variables.$ff-primary;
-      font-weight: variables.$fw-400;
-      font-size: variables.$fs-base;
-      letter-spacing: 0.2px;
+    &:active {
+      background-color: variables.$clr-primary-light;
+    }
 
-      &:hover {
-        background-color: variables.$clr-secondary-gray;
-      }
-
-      &:focus {
-        & .link__image {
-          stroke: variables.$clr-primary-medium;
-        }
-
-        & .link__text {
-          color: variables.$clr-primary-medium;
-          font-weight: variables.$fw-600;
-        }
-      }
-
-      &:focus {
-        & .button__image {
-          stroke: variables.$clr-primary-medium;
-        }
-
-        & .button__text {
-          color: variables.$clr-primary-medium;
-          font-weight: variables.$fw-600;
-        }
-      }
+    &:disabled {
+      background-color: variables.$clr-blue-disabled;
     }
   }
 }
 
-// доработки меню второго уровня раздела мини-лендинг. Пока есть вопросы по реализации.
-.menu__second {
-  &_item {
-    // height: 0;
-    // margin: 0;
+.button__text {
+  padding: 0;
+  margin: 0;
+  max-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  text-align: left;
+
+  // transition: opacity .3s ease-in-out, max-width .3s ease-in-out;
+  @include animation();
+}
+
+.menu__container:hover .button__text {
+  opacity: 1;
+  max-width: 200px;
+  padding-left: 3px;
+}
+
+.button__image {
+  stroke: variables.$clr-primary-gray;
+  margin: 11px;
+  min-width: 24px;
+
+  // transition: opacity .3s ease-in-out, min-width .3s ease-in-out, width .3s ease-in-out, margin .3s ease-in-out;
+  @include animation();
+}
+
+.menu__container:hover .button_theme_blue .button__image {
+  opacity: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  width: 0;
+}
+.menu__container:hover .button_theme_blue .button__text {
+  padding: 0;
+}
+
+.menu__container:hover .button_theme_blue {
+  padding: 0 30px;
+  border-radius: 10px;
+  margin-left: 4px;
+}
+
+.button_menu_second {
+  padding-left: 52px;
+  height: 0;
+  margin-top: 0;
+}
+
+.menu__items_second {
+  & .menu__item {
+    margin-bottom: 0;
   }
-  &_text {
-    margin-left: 50px;
+
+  &:hover {
+    & .button_menu_second {
+      height: 46px;
+      margin-top: 8px;
+    }
   }
+}
+
+.button__image_up {
+  // margin-left: 5px;
+  transform: scale(-1, -1);
+
+  @include animation();
 }
