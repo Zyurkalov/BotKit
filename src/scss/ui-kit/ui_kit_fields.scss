@@ -9,7 +9,7 @@
 .grid {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(auto, 250px) minmax(auto, 250px);
 }
 
 .label {
