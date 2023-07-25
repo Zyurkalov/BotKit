@@ -1,12 +1,8 @@
 @use "../variables";
 @use "../common";
 
-img {
-  display: block;
-}
-
 .body {
-  padding: 0 30px;
+  padding: 30px;
   font-family: variables.$ff-secondary;
 }
 
@@ -27,6 +23,7 @@ img {
   display: grid;
   grid-template-columns: 200px 1fr;
   align-items: center;
+  position: relative;
 }
 
 .fields-common,
@@ -271,6 +268,7 @@ img {
 }
 
 .icon {
+  display: block;
   padding: 8px 12px;
 }
 
@@ -299,6 +297,17 @@ img {
   border: 1px solid variables.$clr-accent-press;
 }
 
-.field__input_border_green::after {
-  content: url("");
+.field__wrapper {
+  position: relative;
+  max-width: 231px;
+}
+
+.field__wrapper::before {
+  content: url("../../images/template-icon/conctructor/add-link-S.svg");
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: -5px;
+  top: 30%;
 }
