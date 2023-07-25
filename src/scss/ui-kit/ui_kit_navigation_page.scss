@@ -1,6 +1,10 @@
 @use "../variables";
 @use "../common";
 
+a {
+  text-decoration: none;
+}
+
 .body {
   padding: 0 15px;
   display: flex;
