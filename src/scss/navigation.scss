@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav {
   margin-top: 20px;
 }
@@ -16,20 +20,6 @@
 .li {
   list-style-type: none; /* Убираем маркеры */
   margin-bottom: 20px;
-}
-
-.title {
-  text-shadow:
-    1px 1px white,
-    2px 2px #777;
-  color: #333;
-  transition: all 1s;
-  &:hover {
-    text-shadow:
-      1px 1px white,
-      2px 2px rgb(111, 71, 255);
-    color: rgb(33, 20, 220);
-  }
 }
 
 .button-tutorial {
