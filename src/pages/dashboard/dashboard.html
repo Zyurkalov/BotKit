@@ -7,9 +7,9 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="<%=require('../../favicon.ico')%>"
+      href="<%=require('../../../favicon.ico')%>"
     />
-    <title>Add Bot</title>
+    <title>Dashboard</title>
   </head>
   <body class="body">
     <div class="page">
@@ -18,7 +18,7 @@
           <ul class="menu__items">
             <li class="menu__item menu__item_first">
               <div class="menu__logo">
-                <!-- <img  src="<%=require('../images/logo.svg')%>" alt="#"> -->
+                <!-- <img  src="<%=require('../../images/logo.svg')%>" alt="#"> -->
               </div>
             </li>
             <li class="menu__item menu__item_second">
@@ -259,7 +259,6 @@
           </ul>
         </div>
       </nav>
-      <!-- style из тегов удалить, они для наглядности -->
       <main class="main">
         <div class="navigation">
           <div class="navigation__menu"></div>
@@ -268,26 +267,26 @@
               <!-- <p class="template-icon__count">2</p> -->
               <img
                 class="template-icon__ding"
-                src="<%=require('../images/template-icon/24x24/common/notifications.svg')%>"
+                src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
                 alt=""
               />
             </div>
             <img
               class="template-icon"
-              src="<%=require('../images/template-icon/24x24/common/help.svg')%>"
+              src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
               alt="помощь"
             />
             <div class="navigation__user-info">
               <img
                 alt="Аватар"
                 class="navigation__user-avatar"
-                src="<%=require('../images/avatar/circle.png')%>"
+                src="<%=require('../../images/avatar/circle.png')%>"
               />
               <p class="navigation__text">User Name</p>
               <img
                 alt="Стрелка вниз"
                 class="navigation__arrow-down"
-                src="<%=require('../images/template-icon/20x20/down.svg')%>"
+                src="<%=require('../../images/template-icon/20x20/down.svg')%>"
               />
             </div>
           </div>
@@ -297,8 +296,16 @@
           </div>
         </div>
         <!-- style из тегов удалить, они для наглядности -->
-        <section class="add-bot" style="height: 35vw">
-          <h2>Section Добавить бота</h2>
+        <section class="templates" style="height: 200px">
+          <h2>Section Шаблоны</h2>
+        </section>
+        <!-- style из тегов удалить, они для наглядности -->
+        <section class="my-bots" style="height: 200px">
+          <h2>Section Мои Боты</h2>
+        </section>
+        <!-- style из тегов удалить, они для наглядности -->
+        <section class="faq" style="height: 200px">
+          <h2>Section F.A.Q</h2>
         </section>
       </main>
       <footer class="footer">

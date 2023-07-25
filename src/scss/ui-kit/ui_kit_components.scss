@@ -224,6 +224,7 @@ svg {
 
   .account__action {
     @extend .card__action;
+
     &:first-child {
       border-bottom: none;
     }
@@ -243,6 +244,7 @@ svg {
 
   &-img_inactive {
     opacity: 0.4;
+
     &:hover {
       cursor: auto;
     }
@@ -303,6 +305,7 @@ svg {
   .selector__item {
     @extend .card__action;
     padding: 7px 16px;
+
     &:first-child,
     &:nth-last-child(2) {
       border-bottom: none;

@@ -1,1 +1,1 @@
-import "../scss/dashboard.scss";
+import "../scss/dashboard/dashboard.scss";
