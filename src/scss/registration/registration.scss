@@ -1,5 +1,5 @@
-@use "variables";
-@use "common";
+@use "../variables";
+@use "../common";
 
 *,
 *::before,
@@ -217,14 +217,15 @@ input::placeholder {
 }
 
 input[required] {
-  background-image: url(../images/asterisk.svg);
+  background-image: url(../../images/asterisk.svg);
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
 }
 
 .form__input[name="password"] {
-  background-image: url(../images/asterisk.svg), url(../images/eye-off.svg);
+  background-image: url(../../images/asterisk.svg),
+    url(../../images/eye-off.svg);
   background-repeat: no-repeat, no-repeat;
   background-position:
     right center,
