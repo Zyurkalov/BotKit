@@ -12,22 +12,876 @@
     <title>Icons</title>
   </head>
 
-  <header class="header">
-    <h1>Icons UI Kit</h1>
-  </header>
+  <body class="body" style="width: 700px; margin: auto">
+    <header class="header">
+      <h1
+        style="
+          font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
+            sans-serif;
+          margin: 10px 0;
+        "
+      >
+        Icons UI Kit
+      </h1>
+    </header>
 
-  <body class="body">
+    <!-- На стили объявленные внутри HTML не обращаем внимание, они нужны лишь для стилизации страницы-->
+    <!-- Все необходимые для работы стили, вынесены в index.css-->
+
     <main class="main">
-      <!-- Component 1 -->
-      <section class="component-1">
-        <h2>Component 1</h2>
-        <!-- Include example of component 1 -->
+      <h2
+        style="
+          border-bottom: solid 2px rgb(185, 185, 185);
+          margin-bottom: 20px;
+          font-family: &quot;Open Sans&quot;, sans-serif;
+          color: #243cbb;
+          margin-top: 10px;
+        "
+      >
+        Component 1
+      </h2>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/cursor/pointing-hand.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/16x16/done.svg')%>"
+          alt="готово"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/16x16/update.svg')%>"
+          alt="обновить"
+        />
+
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/20x20/up.svg')%>"
+          alt="вверх"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+          alt="вниз"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/conctructor/add-link-S.svg')%>"
+          alt="добавить ссылку"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/conctructor/add-link-L.svg')%>"
+          alt="добавить ссылку"
+        />
+
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/radio_button/off.svg')%>"
+          alt="радиокнопка состояние: выбрано"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/radio_button/on.svg')%>"
+          alt="радиокнопка состояние: не выбрано"
+        />
       </section>
 
+      <section class="component" style="padding-bottom: 10px">
+        <!-- колокольчик-->
+        <div class="template-icon template-icon_pos-rel">
+          <p class="template-icon__count">2</p>
+          <img
+            class="template-icon__ding"
+            src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
+            alt=""
+          />
+        </div>
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
+          alt="помощь"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/close.svg')%>"
+          alt="закрыть"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
+          alt="дополнительно"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/user.svg')%>"
+          alt="пользователь"
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/copy.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/play.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/pause.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/slash.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/zap.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
+          alt=""
+        />
+      </section>
+
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/dashboard.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/constructor.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/mailing.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/lists.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/charts.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/dialogue.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/access.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/minilanding.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/crm.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/side_bar/exit.svg')%>"
+          alt=""
+        />
+      </section>
+
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/copy-bot.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/notifications-setting.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/info.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/drop_down/cloud.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/equal.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/equal-not.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/more.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/less.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/more-or-equal.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/less-or-equal.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/equal-without-case.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/in-line.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/in-line-without-case.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/not-in-line.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/variables/not-in-line-without-case.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/message-square.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/sliders.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/deeplink.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/table.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/headphones.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/api.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/credit-card.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/map-pin.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/git-branch.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/tag.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_block/menu.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/bracket.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/vertical.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/horizontal.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/ask-phone.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/url.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/arrow-up-circle.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_content/video.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_content/image.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_content/file.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_content/music.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_content/video.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/add_content/button.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/markdown/bold.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/markdown/italic.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/markdown/code.svg')%>"
+          alt=""
+        />
+
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/screen_navigation/plus.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/screen_navigation/minus.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/screen_navigation/fit.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/screen_navigation/full-screen.svg')%>"
+          alt=""
+        />
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/screen_navigation/page.svg')%>"
+          alt=""
+        />
+
+        <img
+          class="template-icon"
+          src="<%=require('../../images/template-icon/24x24/common/upload.svg')%>"
+          alt=""
+        />
+      </section>
+      <section class="component" style="padding-bottom: 10px">
+        <img
+          class="template-icon template-icon_36x36"
+          src="<%=require('../../images/template-icon/36x36/add.svg')%>"
+          alt="добавить"
+        />
+
+        <!-- примеры кнопок-->
+        <div class="button-elem">
+          <div class="button-elem__bg button-elem__bg-blue"></div>
+          <img
+            class="template-icon template-icon_pos-abs"
+            src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+            alt="проигрывать видео"
+          />
+        </div>
+        <div class="button-elem">
+          <div class="button-elem__bg button-elem__bg-blue"></div>
+          <img
+            class="template-icon template-icon_pos-abs"
+            src="<%=require('../../images/template-icon/24x24/common/document.svg')%>"
+            alt=""
+          />
+        </div>
+        <div class="button-elem button-elem_rotate90">
+          <div class="button-elem__bg button-elem__bg-grey"></div>
+          <img
+            class="template-icon template-icon_pos-abs"
+            src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+            alt=""
+          />
+        </div>
+        <div class="button-elem">
+          <div class="button-elem__bg button-elem__bg-disable"></div>
+          <img
+            class="template-icon template-icon_pos-abs template-icon_invert"
+            src="<%=require('../../images/template-icon/24x24/screen_navigation/plus.svg')%>"
+            alt=""
+          />
+        </div>
+        <div class="button-elem">
+          <div class="button-elem__bg button-elem__bg-green"></div>
+          <img
+            class="template-icon template-icon_pos-abs"
+            src="<%=require('../../images/template-icon/24x24/screen_navigation/plus.svg')%>"
+            alt="добавить"
+          />
+        </div>
+        <div class="button-elem">
+          <div class="button-elem__bg button-elem__bg-blue"></div>
+          <img
+            class="template-icon template-icon_invert"
+            src="<%=require('../../images/template-icon/24x24/screen_navigation/plus.svg')%>"
+            alt="добавить"
+          />
+        </div>
+      </section>
+
+      <section class="component" style="justify-content: space-between">
+        <div>
+          <img
+            class="template-icon template-icon_add-bot"
+            src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
+            alt="туториал"
+          />
+          <img
+            class="template-icon template-icon_add-bot"
+            src="<%=require('../../images/template-icon/add_bot/video.svg')%>"
+            alt="видео"
+          />
+          <!-- можно попробовать изменить цвет церез фильтр. Здесь я подобрал нужный цвет-->
+          <img
+            class="template-icon template-icon_add-bot"
+            style="filter: sepia(1) hue-rotate(100deg) saturate(3)"
+            src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
+            alt="видео"
+          />
+
+          <img
+            class="template-icon template-icon_add-bot"
+            style="
+              filter: sepia(1) hue-rotate(195deg) saturate(100) brightness(0.7);
+            "
+            src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
+            alt="видео"
+          />
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <div class="button-avatar">
+            <div class="button-avatar__bg"></div>
+            <img
+              class="template-icon template-icon_pos-abs"
+              src="<%=require('../../images/template-icon/24x24/common/user.svg')%>"
+              alt=""
+            />
+          </div>
+          <div class="button-avatar">
+            <div class="button-avatar__bg button-avatar__bg_img"></div>
+            <!-- "удалили" елемент-->
+            <!--<img class="template-icon template-icon_pos-abs" src="<%=require('../../images/template-icon/24x24/common/user.svg')%>" alt="">-->
+          </div>
+
+          <div style="margin: 0 20px"></div>
+
+          <div class="button-elem button-elem_32x32 button-elem_disable">
+            <div class="button-elem__bg button-elem__bg-grey"></div>
+            <img
+              class="button-elem__img-bg button-elem__img-bg_opacity"
+              src="<%=require('../../images/avatar/default.svg')%>"
+              alt=""
+            />
+            <!-- "удалили" елемент-->
+            <!-- <img class="template-icon template-icon_position template-icon_invert" src="<%=require('../../images/template-icon/24x24/common/check.svg')%>" alt="">-->
+          </div>
+          <div class="button-elem button-elem_32x32 button-elem_bg-blue">
+            <div class="button-elem__bg"></div>
+            <img
+              class="button-elem__img-bg"
+              src="<%=require('../../images/avatar/default.svg')%>"
+              alt=""
+            />
+            <!-- "удалили" елемент-->
+            <!-- <img class="template-icon template-icon_position template-icon_invert" src="<%=require('../../images/template-icon/24x24/common/check.svg')%>" alt="">-->
+          </div>
+          <div class="button-elem button-elem_32x32">
+            <div class="button-elem__bg button-elem__bg-blue"></div>
+            <img
+              class="button-elem__img-bg button-elem__img-bg_opacity"
+              src="<%=require('../../images/avatar/default.svg')%>"
+              alt=""
+            />
+            <img
+              class="template-icon template-icon_position template-icon_invert"
+              src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
       <!-- Component 2 -->
-      <section class="component-2">
-        <h2>Component 2</h2>
-        <!-- Include examples of component 2 -->
+      <h2
+        style="
+          border-bottom: solid 2px rgb(185, 185, 185);
+          margin-bottom: 20px;
+          font-family: &quot;Open Sans&quot;, sans-serif;
+          color: #243cbb;
+        "
+      >
+        Component 2
+      </h2>
+      <section
+        class="component"
+        style="justify-content: space-evenly; gap: 10px; padding-bottom: 20px"
+      >
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/answering-machine.svg')%>"
+          alt="бот автоответчик"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/food-delivery.svg')%>"
+          alt="доставка еды"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/demo-bot.svg')%>"
+          alt="демо бот"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/poll.svg')%>"
+          alt="опрос"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/lead-generation.svg')%>"
+          alt="лидогенерация"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/e-learning.svg')%>"
+          alt="онлайн школа"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/medical.svg')%>"
+          alt="медицина"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/tikets.svg')%>"
+          alt="билеты"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/internet-shoping.svg')%>"
+          alt="интернет магазин"
+        />
+
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/e-commerce.svg')%>"
+          alt="электронная коммерция"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/private-club.svg')%>"
+          alt="закрытый клуб"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/real-estate.svg')%>"
+          alt="недвижимость"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/beauty.svg')%>"
+          alt="красота"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/question.svg')%>"
+          alt="вопрос/ответ"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/entertainment.svg')%>"
+          alt="развлечения"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/banking.svg')%>"
+          alt="банкинг"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/carsharing.svg')%>"
+          alt="каршеринг"
+        />
+        <img
+          class="bot-icon"
+          src="<%=require('../../images/bot-icon/close-chatr.svg')%>"
+          alt="закрытый чат"
+        />
+
+        <div style="height: 20px; width: 100%"></div>
+
+        <!-- Обратите внимание, что картинка загружается лишь один раз.
+    В различных состояниях, у кнопки перерисовывается только background-color -->
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_facebook"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/facebook/default.svg')%>"
+            alt="феисбук"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_telegram"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/telegram/default.svg')%>"
+            alt="телеграм"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_youtube"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/youtube/default.svg')%>"
+            alt="ютуб"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_vk"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/vk/default.svg')%>"
+            alt="вконтакте"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_insta"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/insta/default.svg')%>"
+            alt="инстаграмм"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_twitter"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/twitter/default.svg')%>"
+            alt="твиттер"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_web"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/web/default.svg')%>"
+            alt="веб сайт"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_odnoklassniki"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/odnoklassniki/default.svg')%>"
+            alt="одноклассники"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_mailru"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/mailru/default.svg')%>"
+            alt="меил ру"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_yandex"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/yandex/default.svg')%>"
+            alt="яндекс"
+          />
+        </div>
+        <!-- У гугла путь к картинке отличается. Также в отличие от прочих, есть доп. модификатор на иконке img -->
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_google"></div>
+          <img
+            class="social-media__img social-media__img_google"
+            src="<%=require('../../images/social-icons/google/hover.svg')%>"
+            alt="гугл"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_viber"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/viber/default.svg')%>"
+            alt="вайбер"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_alisa"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/alisa/default.svg')%>"
+            alt="алиса"
+          />
+        </div>
+        <div class="social-media">
+          <div class="social-media__bg social-media__bg_whatsapp"></div>
+          <img
+            class="social-media__img"
+            src="<%=require('../../images/social-icons/whatsapp/default.svg')%>"
+            alt="ватсап"
+          />
+        </div>
       </section>
 
       <!-- And so on, up to component N... -->
