@@ -1,29 +1,22 @@
 @use "../variables";
 @use "../common";
 
+img {
+  display: block;
+}
+
 .body {
   padding: 0 30px;
-}
-
-.fields-common {
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
-}
-
-.fields-common__h2 {
   font-family: variables.$ff-secondary;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: variables.$fw-600;
-  line-height: 1.3;
-  letter-spacing: -0.2px;
-  color: variables.$clr-black;
-  margin-bottom: 57px;
 }
 
-/* Введите код доступа */
-.access-key__label {
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+}
+
+.label {
   font-family: variables.$ff-primary;
   font-size: 12px;
   font-style: normal;
@@ -36,6 +29,27 @@
   align-items: center;
 }
 
+.fields-common,
+.fields-constructor {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.fields-common__h2,
+.fields-constructor__h2 {
+  font-family: variables.$ff-secondary;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: variables.$clr-black;
+  margin-bottom: 20px;
+}
+
+// Common
+// Введите код доступа
 .access-key__input {
   width: 100%;
   max-width: 580px;
@@ -80,7 +94,17 @@
   color: variables.$clr-secondary-focus;
 }
 
-/* Загрузка страницы */
+.access-key__text_incorrect {
+  color: variables.$clr-validation-error;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: variables.$fw-400;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  max-width: 580px;
+}
+
+// Загрузка страниц
 .row:first-of-type {
   margin-top: 30px;
 }
@@ -194,4 +218,87 @@
   .page__checkmark {
     cursor: default;
   }
+}
+
+// Constructor
+.field__input {
+  width: 100%;
+  max-width: 231px;
+  height: 40px;
+  padding: 10px 8px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  background: variables.$clr-secondary-gray;
+  font-family: variables.$ff-primary;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: variables.$fw-400;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: variables.$clr-primary-dark;
+}
+
+.field__input::placeholder {
+  color: variables.$clr-gray-2;
+}
+
+.field__input_incorrect {
+  border: 1px solid variables.$clr-validation-error;
+}
+
+.field-text_incorrect {
+  color: variables.$clr-validation-error;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: variables.$fw-400;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  max-width: 580px;
+}
+
+.field__input_disabled {
+  color: variables.$clr-secondary-cultured;
+  cursor: default;
+}
+
+// Add phone
+.add-phone__container {
+  display: flex;
+  box-shadow: 0 6px 16px 0 variables.$box-shadow;
+  max-width: fit-content;
+  border-radius: 5px;
+}
+
+.icon {
+  padding: 8px 12px;
+}
+
+.button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: variables.$clr-white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icon__trash-bin {
+  border-left: 1px solid variables.$clr-secondary-gray;
+}
+
+// Add link
+.add-link__container {
+  display: flex;
+  box-shadow: 0 6px 16px 0 variables.$box-shadow;
+  max-width: fit-content;
+  border-radius: 5px;
+}
+
+.field__input_border_green {
+  border: 1px solid variables.$clr-accent-press;
+}
+
+.field__input_border_green::after {
+  content: url("");
 }
