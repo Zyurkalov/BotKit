@@ -18,6 +18,7 @@ const entry = {
   ui_kit_components: "./src/js/ui-kit/ui_kit_components.js",
   ui_kit_icons: "./src/js/ui-kit/ui_kit_icons.js",
   ui_kit_navigation: "./src/js/ui-kit/ui_kit_navigation.js",
+  ui_kit_navigation_page: "./src/js/ui-kit/ui_kit_navigation_page.js",
 };
 
 module.exports = {
