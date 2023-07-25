@@ -4,6 +4,7 @@
 body {
   margin: 100px;
 }
+
 section {
   display: grid;
   grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
@@ -11,6 +12,7 @@ section {
   align-items: center;
   margin-bottom: 20px;
 }
+
 h3 {
   font-size: 12px;
   color: #060c23;
@@ -34,16 +36,20 @@ h3 {
   text-transform: uppercase;
   padding: 0;
 }
+
 .common-button_color_blue {
   background-color: variables.$clr-primary-medium;
   color: variables.$clr-white;
+
   &:hover {
     background-color: variables.$clr-icon-hover;
     cursor: pointer;
   }
+
   &:active {
     background-color: variables.$clr-primary-light;
   }
+
   &:disabled {
     background-color: variables.$clr-blue-disabled;
     pointer-events: none;
@@ -61,18 +67,22 @@ h3 {
   border-radius: 50%;
   border: none;
   padding: 0;
+
   &:hover {
     background-color: variables.$clr-icon-hover;
     cursor: pointer;
   }
+
   &:active {
     background-color: variables.$clr-primary-light;
   }
+
   &:disabled {
     background-color: variables.$clr-blue-disabled;
     pointer-events: none;
   }
 }
+
 /* Кнопка круглая синяя */
 .button-elem-round_color_blue {
   height: 46px;
@@ -90,13 +100,16 @@ h3 {
   background-color: variables.$clr-accent;
   color: variables.$clr-primary-dark;
   padding: 0;
+
   &:hover {
     background-color: variables.$clr-accent-focus;
     cursor: pointer;
   }
+
   &:active {
     background-color: variables.$clr-accent;
   }
+
   &:disabled {
     background-color: variables.$clr-accent-press;
     pointer-events: none;
@@ -119,24 +132,30 @@ h3 {
   font-family: variables.$ff-secondary;
   text-transform: uppercase;
   padding: 0;
+
   &::after {
     content: "ОСТАНОВИТЬ";
   }
+
   &:hover {
     cursor: pointer;
   }
+
   &:hover::after {
     content: "ОСТАНОВИТЬ";
     color: variables.$clr-primary-medium;
   }
+
   &:active::after {
     content: "ВОЗОБНОВИТЬ";
     color: variables.$clr-primary-medium;
   }
+
   &:disabled {
     background-color: variables.$clr-secondary-gray;
     pointer-events: none;
   }
+
   &:disabled::after {
     content: "ОСТАНОВИТЬ";
     color: variables.$clr-gray-3;
@@ -151,21 +170,27 @@ h3 {
   border-radius: 10px;
   background-color: transparent;
   padding: 0;
+
   &:hover {
     cursor: pointer;
   }
+
   &:hover svg path {
     stroke: variables.$clr-primary-medium;
   }
+
   &:active {
     background-color: variables.$clr-blue-disabled;
   }
+
   &:active svg path {
     stroke: variables.$clr-primary-medium;
   }
+
   &:disabled {
     pointer-events: none;
   }
+
   &:disabled svg path {
     stroke: variables.$clr-secondary-cultured;
   }
@@ -184,6 +209,7 @@ h3 {
     background-image: url("../../images/bot-icon/answering-machine.svg");
     background-repeat: no-repeat;
     background-size: 88px 88px;
+
     &-plus {
       height: 24px;
       width: 24px;
@@ -192,6 +218,7 @@ h3 {
       left: 132px;
     }
   }
+
   &__caption {
     margin: 16px 0 0 0;
     padding: 0;
@@ -202,35 +229,44 @@ h3 {
     letter-spacing: 0.3px;
     color: variables.$clr-primary-dark;
   }
+
   &:hover {
     cursor: pointer;
+
     & .answering-machine__button {
       background-color: variables.$clr-white;
       box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
       cursor: pointer;
     }
+
     & .answering-machine__plus svg path {
       stroke: variables.$clr-primary-medium;
     }
+
     & .answering-machine__caption {
       color: variables.$clr-primary-medium;
     }
   }
+
   &:active {
     & .answering-machine__button {
       background-color: variables.$clr-white;
       box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
     }
+
     & .answering-machine__plus svg path {
       stroke: variables.$clr-icon-hover;
     }
+
     & .answering-machine__caption {
       color: variables.$clr-icon-hover;
     }
   }
+
   &_type_disabled {
     pointer-events: none;
     opacity: 0.5;
+
     & .answering-machine__caption {
       color: variables.$clr-primary-gray;
     }
@@ -245,6 +281,7 @@ h3 {
   border-radius: 30px;
   background-color: variables.$clr-gray;
   padding: 0;
+
   &__caption {
     margin: 13px 0 0 0;
     padding: 0;
@@ -255,24 +292,31 @@ h3 {
     letter-spacing: 0.3px;
     color: variables.$clr-primary-dark;
   }
+
   &:hover {
     cursor: pointer;
   }
+
   .button-fb:hover svg rect {
     fill: variables.$clr-blue;
   }
+
   &:active svg rect {
     fill: variables.$clr-blue;
   }
+
   .button-fb:active {
     box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
   }
+
   &:disabled {
     pointer-events: none;
+
     & .button-fb__caption {
       color: variables.$clr-gray-3;
     }
   }
+
   &:disabled svg rect {
     fill: variables.$clr-primary-gray;
   }
@@ -286,6 +330,7 @@ h3 {
   border-radius: 30px;
   background-color: variables.$clr-gray;
   padding: 0;
+
   &__caption {
     margin: 13px 0 0 0;
     padding: 0;
@@ -296,6 +341,7 @@ h3 {
     letter-spacing: 0.3px;
     color: variables.$clr-primary-dark;
   }
+
   &_active {
     box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
     cursor: pointer;
@@ -315,6 +361,7 @@ h3 {
   border: none;
   border-radius: 30px;
   background-color: variables.$clr-secondary-gray;
+
   &__circle {
     display: flex;
     justify-content: center;
@@ -324,6 +371,7 @@ h3 {
     border: 2px solid variables.$clr-gray-3;
     border-radius: 50%;
   }
+
   &__text {
     margin: 0 auto;
     padding: 0;
@@ -334,14 +382,18 @@ h3 {
     letter-spacing: 0.5px;
     color: variables.$clr-gray-3;
   }
+
   &:hover {
     cursor: pointer;
+
     & svg path {
       stroke: variables.$clr-primary-medium;
     }
+
     & .panel-add-bot__circle {
       border: 2px solid variables.$clr-primary-medium;
     }
+
     & .panel-add-bot__text {
       color: variables.$clr-primary-medium;
     }
@@ -350,14 +402,18 @@ h3 {
   &:active {
     background-color: variables.$clr-blue-disabled;
   }
+
   &:disabled {
     pointer-events: none;
+
     & svg path {
       stroke: variables.$clr-primary-gray;
     }
+
     & .panel-add-bot__circle {
       border: 2px solid variables.$clr-primary-gray;
     }
+
     & .panel-add-bot__text {
       color: variables.$clr-primary-gray;
     }
@@ -379,6 +435,7 @@ h3 {
   background-color: variables.$clr-white;
   background-image: url("../../images/button-tutorial_ellipse_grey.svg");
   background-repeat: no-repeat;
+
   &__icon {
     width: 65px;
     height: 46px;
@@ -386,6 +443,7 @@ h3 {
     top: 17px;
     left: 32px;
   }
+
   &__text {
     font-family: variables.$ff-primary;
     color: variables.$clr-primary-dark;
@@ -394,11 +452,13 @@ h3 {
     line-height: 21px;
     letter-spacing: 0.3px;
   }
+
   &:hover {
     border: none;
     background-image: url("../../images/button-tutorial_ellipse_green.svg");
     box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
     cursor: pointer;
+
     & .button-tutorial__icon {
       filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
     }
@@ -409,12 +469,15 @@ h3 {
       color: variables.$clr-xiketic-press;
     }
   }
+
   &:disabled {
     pointer-events: none;
+
     & .button-tutorial__icon {
       opacity: 50%;
       filter: grayscale(15%);
     }
+
     & .button-tutorial__text {
       color: variables.$clr-primary-gray;
     }
@@ -434,6 +497,7 @@ h3 {
   border-radius: 10px;
   color: variables.$clr-primary-dark;
   background-color: transparent;
+
   &__text {
     font-size: variables.$fs-small;
     font-weight: variables.$fw-600;
@@ -441,20 +505,25 @@ h3 {
     line-height: 21px;
     letter-spacing: 0.3px;
   }
+
   &:hover {
     background-color: variables.$clr-secondary-gray;
     color: variables.$clr-primary-medium;
     cursor: pointer;
+
     & svg line {
       stroke: variables.$clr-primary-medium;
     }
+
     & svg path {
       stroke: variables.$clr-primary-medium;
     }
   }
+
   &:active {
     background-color: variables.$clr-blue-disabled;
   }
+
   &:disabled {
     background-color: variables.$clr-white;
     color: variables.$clr-gray-2;
@@ -468,15 +537,19 @@ h3 {
   height: 66px;
   background-color: variables.$clr-accent;
   box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+
   &:hover {
     background-color: variables.$clr-accent-focus;
     cursor: pointer;
   }
+
   &:active {
     background-color: variables.$clr-accent;
   }
+
   &:disabled {
     background-color: variables.$clr-accent-press;
+
     & svg g {
       opacity: 0.5;
     }

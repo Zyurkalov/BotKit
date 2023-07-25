@@ -1,1 +1,1 @@
-import "../scss/registration.scss";
+import "../scss/registration/registration.scss";
