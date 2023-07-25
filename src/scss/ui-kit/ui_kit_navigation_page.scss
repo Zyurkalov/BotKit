@@ -1,5 +1,9 @@
-@use "variables";
-@use "common";
+@use "../variables";
+@use "../common";
+
+a {
+  text-decoration: none;
+}
 
 .body {
   padding: 0 15px;
@@ -7,10 +11,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-}
-
-a {
-  text-decoration: none;
 }
 
 .nav {
@@ -34,7 +34,7 @@ a {
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-color: variables.$clr-white;
-  background-image: url("../images/button-tutorial_ellipse_grey.svg");
+  background-image: url("../../images/button-tutorial_ellipse_grey.svg");
   background-repeat: no-repeat;
   &__icon {
     width: 65px;
@@ -53,7 +53,7 @@ a {
   }
   &:hover {
     border: none;
-    background-image: url("../images/button-tutorial_ellipse_green.svg");
+    background-image: url("../../images/button-tutorial_ellipse_green.svg");
     box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
     cursor: pointer;
     & .button-tutorial__icon {
