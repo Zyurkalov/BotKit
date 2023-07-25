@@ -1,2 +1,220 @@
 @use "variables";
 @use "common";
+
+@mixin animation() {
+  transition: all 0.3s ease-in-out;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: grid;
+  column-gap: 46px;
+  grid-template-columns: auto 1fr 0; //minmax(86px, 240px) 1fr
+  grid-template-rows: 72px 1fr 50px;
+  grid-template-areas:
+    "nav header ."
+    "nav main ."
+    "nav footer .";
+}
+
+.main {
+  grid-area: main;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.header {
+  grid-area: header;
+  box-sizing: border-box;
+  border-bottom: 1px solid variables.$clr-secondary-focus;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  grid-area: footer;
+  box-sizing: border-box;
+  border-top: 1px solid variables.$clr-secondary-cultured;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.menu {
+  grid-area: nav;
+  box-sizing: border-box;
+  min-width: 86px;
+  max-width: 240px;
+  width: 86px; // удалить
+  width: 240px;
+
+  @include animation();
+
+  &:hover {
+    width: 86px;
+
+    & .link_theme_blue {
+      padding: 0;
+      margin-left: 0;
+      border-radius: 50px;
+    }
+    & .link__image_reverse {
+      min-width: 24px;
+      margin: 11px;
+    }
+    & .link__text_reverse {
+      width: 0;
+    }
+  }
+}
+
+.menu__items {
+  margin: 16px;
+  margin-right: 0;
+  padding: 20px 12px;
+  height: calc(100% - 40px);
+  min-height: 868px;
+  list-style-type: none;
+  background-color: variables.$clr-gray;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.menu__item {
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  height: 46px;
+  min-width: 46px;
+
+  &_logo {
+    margin: 0 0 28px 4px;
+    height: 34px;
+    background-image: url(../images/logo.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 145px 34px;
+    overflow: hidden;
+  }
+
+  &_bot {
+    margin: 0 14px 48px 0;
+  }
+}
+
+.link {
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  overflow: hidden;
+
+  &__image {
+    stroke: variables.$clr-primary-gray;
+    margin: 11px;
+    min-width: 24px;
+
+    &_reverse {
+      width: 0;
+      min-width: 0;
+      margin: 0;
+      @include animation();
+    }
+  }
+
+  &__text {
+    padding: 0;
+    margin: 0 5px 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+
+    &_reverse {
+      margin: 0;
+      @include animation();
+    }
+  }
+
+  &_theme {
+    &_blue {
+      padding: 0 30px;
+      margin-left: 4px;
+      border-radius: 10px;
+      background-color: variables.$clr-primary-medium;
+      color: variables.$clr-white;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-600;
+      font-size: variables.$fs-small;
+      letter-spacing: 1px;
+
+      @include animation();
+
+      &:hover {
+        background-color: variables.$clr-icon-hover;
+      }
+
+      &:focus {
+        background-color: variables.$clr-primary-light;
+      }
+    }
+
+    &_gray {
+      border-radius: 50px;
+      color: variables.$clr-primary-dark;
+      font-family: variables.$ff-primary;
+      font-weight: variables.$fw-400;
+      font-size: variables.$fs-base;
+      letter-spacing: 0.2px;
+
+      &:hover {
+        background-color: variables.$clr-secondary-gray;
+      }
+
+      &:focus {
+        & .link__image {
+          stroke: variables.$clr-primary-medium;
+        }
+
+        & .link__text {
+          color: variables.$clr-primary-medium;
+          font-weight: variables.$fw-600;
+        }
+      }
+
+      &:focus {
+        & .button__image {
+          stroke: variables.$clr-primary-medium;
+        }
+
+        & .button__text {
+          color: variables.$clr-primary-medium;
+          font-weight: variables.$fw-600;
+        }
+      }
+    }
+  }
+}
+
+// доработки меню второго уровня раздела мини-лендинг. Пока есть вопросы по реализации.
+.menu__second {
+  &_item {
+    // height: 0;
+    // margin: 0;
+  }
+  &_text {
+    margin-left: 50px;
+  }
+}
