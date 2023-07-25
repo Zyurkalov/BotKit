@@ -1,5 +1,6 @@
 @use "variables";
 @use "common";
+// styles unique to index.html and ui-kit-navigation-page.html
 
 .body {
   padding: 0 15px;
@@ -7,19 +8,24 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-}
-
-a {
-  text-decoration: none;
+  font-family: variables.$ff-secondary;
 }
 
 .nav {
   margin-top: 20px;
 }
 
-.li {
+.nav__list {
+  padding: 0;
+}
+
+.nav__li {
   list-style-type: none; /* Убираем маркеры */
   margin-bottom: 20px;
+}
+
+.nav__link {
+  text-decoration: none;
 }
 
 .button-tutorial {
@@ -28,9 +34,10 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 579px;
+  width: 100%;
+  max-width: 579px;
+  padding: 27px 206px;
   height: 76px;
-  padding: 0;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-color: variables.$clr-white;
