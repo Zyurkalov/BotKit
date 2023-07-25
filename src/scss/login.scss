@@ -11,13 +11,35 @@
   padding-top: 10px;
 }
 
-.form_type_login {
+.outer-wrapper_type_login {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+
+.inner-wrapper_type_login {
+  padding: 60px 50px 0;
+}
+.login-form__input-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+}
+.form__field_size_l {
+  width: 100%;
+  max-width: 572px;
+}
+.form__input_size_l {
+  max-width: none;
 }
 
 .passw-recovery {
   margin: 0 auto;
   list-style-type: none;
-  padding-top: 41px;
+  padding-top: 21px;
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
@@ -38,4 +60,8 @@
 }
 .form__submit_size_m {
   width: 260px;
+  margin: 50px 0 15px;
+}
+.separator_type_login {
+  margin: 10px auto 55px;
 }
