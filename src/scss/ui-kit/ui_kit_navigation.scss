@@ -302,7 +302,9 @@ body {
 
 .ui-kit-footer {
   height: 50px;
-  margin: 48px 63px 0 41px;
+  margin-top: 48px;
+  width: 100%;
+  max-width: 1308px;
   border-top: 1px solid variables.$clr-secondary-focus;
   display: flex;
   align-items: center;
