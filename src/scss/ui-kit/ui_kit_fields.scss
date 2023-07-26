@@ -128,9 +128,18 @@
   }
 }
 
+.page__preview {
+  border-radius: 50%;
+}
+
 .page__container {
   display: flex;
   position: relative;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .page__overlay {
@@ -145,7 +154,8 @@
 }
 
 .page__checkmark {
-  background-image: url("../../images/check.svg");
+  background-image: url("../../images/template-icon/24x24/common/check.svg");
+  filter: invert(100%) grayscale(100%) brightness(3);
   height: 23px;
   width: 23px;
   background-color: rgba(0, 0, 0, 0);

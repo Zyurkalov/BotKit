@@ -41,6 +41,11 @@
     "core-js": "3.31.1",
     "glob": "^10.3.3"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   }
