@@ -1,25 +1,14 @@
 @use "../variables";
 @use "../common";
+@use "utils";
 
-.body {
-  padding: 30px;
-  font-family: variables.$ff-secondary;
-}
-
-.grid {
+.ui-kit-grid {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: minmax(auto, 250px) minmax(auto, 250px);
 }
 
-.label {
-  font-family: variables.$ff-primary;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: variables.$fw-400;
-  line-height: 1.5;
-  letter-spacing: 0.3px;
-  color: rgba(6, 12, 35, 0.5);
+.ui-kit-label {
   display: grid;
   grid-template-columns: 200px 1fr;
   align-items: center;
@@ -271,12 +260,7 @@
   padding: 8px 12px;
 }
 
-.button {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background: variables.$clr-white;
-  cursor: pointer;
+.ui-kit__button {
   border-radius: 5px;
 }
 

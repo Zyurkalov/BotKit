@@ -1,26 +1,17 @@
 @use "../variables";
 @use "../common";
+@use "utils";
 
-body {
-  padding: 30px;
-}
 .ui-kit-main {
   display: grid;
   grid-template-columns: 150px 1fr;
   row-gap: 30px;
 }
+
 .ui-kit-buttons {
   display: flex;
   justify-content: space-around;
   gap: 40px;
-}
-
-h3 {
-  font-size: 12px;
-  color: #060c23;
-  font-family: variables.$ff-primary;
-  line-height: 15.6px;
-  opacity: 0.5;
 }
 
 /* Кнопка добавить бота синяя */
@@ -286,13 +277,17 @@ h3 {
 }
 
 /* Кнопка бот Facebook */
-.button-fb {
+.button-social {
   height: 124px;
   width: 124px;
   border: none;
   border-radius: 30px;
   background-color: variables.$clr-gray;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__caption {
     margin: 13px 0 0 0;
@@ -324,39 +319,13 @@ h3 {
   &:disabled {
     pointer-events: none;
 
-    & .button-fb__caption {
+    & .button-social__caption {
       color: variables.$clr-gray-3;
     }
   }
 
   &:disabled svg rect {
     fill: variables.$clr-primary-gray;
-  }
-}
-
-/* Кнопка бот Фото */
-.button-photo {
-  height: 124px;
-  width: 124px;
-  border: none;
-  border-radius: 30px;
-  background-color: variables.$clr-gray;
-  padding: 0;
-
-  &__caption {
-    margin: 13px 0 0 0;
-    padding: 0;
-    font-family: variables.$ff-primary;
-    font-size: variables.$fs-small;
-    font-weight: variables.$fw-600;
-    line-height: 21px;
-    letter-spacing: 0.3px;
-    color: variables.$clr-primary-dark;
-  }
-
-  &_active {
-    box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
-    cursor: pointer;
   }
 }
 

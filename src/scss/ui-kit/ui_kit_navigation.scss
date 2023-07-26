@@ -1,6 +1,7 @@
 @use "../variables";
 @use "../common";
-@use "./ui_kit_icons.scss";
+@use "utils";
+@use "ui_kit_icons.scss";
 
 @mixin animation() {
   transition: all 0.3s ease-in-out;
@@ -234,36 +235,32 @@ body {
   font-family: variables.$ff-primary;
 }
 
-.navigation {
-  position: relative;
+.ui-kit-navigation {
   display: flex;
-  flex-direction: row-reverse;
-  margin: 0 63px 0 41px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1308px;
   height: 72px;
   border-bottom: 1px solid variables.$clr-secondary-focus;
 }
 
-.navigation__menu {
-  position: absolute;
-  left: 0;
-  align-self: center;
-  width: 24px;
-  height: 24px;
-  background-image: url("../../images/template-icon/24x24/add_block/menu_grey.svg");
+.ui-kit-navigation__right-container {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.navigation__tarif-info {
+.ui-kit-navigation__tarif-info {
   display: grid;
   grid-template-columns: min-content min-content;
   gap: 8px;
   justify-content: space-between;
-  padding-right: 24px;
+  padding-right: 16px;
   height: 29px;
   align-self: center;
   border-right: 1px solid variables.$clr-secondary-focus;
 }
 
-.navigation__text {
+.ui-kit-navigation__text {
   font-weight: variables.$fw-400;
   color: variables.$clr-primary-dark;
   font-size: variables.$fs-base;
@@ -273,46 +270,47 @@ body {
   font-family: variables.$ff-primary;
 }
 
-.navigation__text_spanned {
+.ui-kit-navigation__text_spanned {
   font-weight: variables.$fw-500;
 }
 
-.navigation__user-section {
+.ui-kit-navigation__user-section {
   align-items: center;
-  display: grid;
-  grid-template-columns: min-content min-content max-content;
+  display: flex;
   gap: 32px;
   margin-left: 16px;
 }
 
-.navigation__user-info {
+.ui-kit-navigation__user-info {
   display: flex;
   align-items: center;
 }
 
-.navigation__user-avatar {
+.ui-kit-navigation__user-avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 10px;
   border: 2px solid variables.$clr-secondary-gray;
 }
 
-.navigation__arrow-down {
+.ui-kit-navigation__arrow-down {
   margin-left: 12px;
   width: 24px;
   height: 24px;
 }
 
-.footer {
+.ui-kit-footer {
   height: 50px;
-  margin: 48px 63px 0 41px;
+  margin-top: 48px;
+  width: 100%;
+  max-width: 1308px;
   border-top: 1px solid variables.$clr-secondary-focus;
   display: flex;
   align-items: center;
 }
 
-.footer__text {
+.ui-kit-footer__text {
   margin: 0;
   margin-left: 40px;
   font-weight: variables.$fw-400;

@@ -12,35 +12,9 @@
     <title>Icons</title>
   </head>
 
-  <body class="body" style="width: 700px; margin: auto">
-    <header class="header">
-      <h1
-        style="
-          font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-            sans-serif;
-          margin: 10px 0;
-        "
-      >
-        Icons UI Kit
-      </h1>
-    </header>
-
-    <!-- На стили объявленные внутри HTML не обращаем внимание, они нужны лишь для стилизации страницы-->
-    <!-- Все необходимые для работы стили, вынесены в index.css-->
-
+  <body class="ui-kit-body">
     <main class="main">
-      <h2
-        style="
-          border-bottom: solid 2px rgb(185, 185, 185);
-          margin-bottom: 20px;
-          font-family: &quot;Open Sans&quot;, sans-serif;
-          color: #243cbb;
-          margin-top: 10px;
-        "
-      >
-        Component 1
-      </h2>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/cursor/pointing-hand.svg')%>"
@@ -90,7 +64,7 @@
         />
       </section>
 
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <!-- колокольчик-->
         <div class="template-icon template-icon_pos-rel">
           <p class="template-icon__count">2</p>
@@ -167,7 +141,7 @@
         />
       </section>
 
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/side_bar/dashboard.svg')%>"
@@ -220,7 +194,7 @@
         />
       </section>
 
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
@@ -282,7 +256,7 @@
           alt=""
         />
       </section>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/variables/equal.svg')%>"
@@ -339,7 +313,7 @@
           alt=""
         />
       </section>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/add_block/message-square.svg')%>"
@@ -396,7 +370,7 @@
           alt=""
         />
       </section>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/constructor/bracket.svg')%>"
@@ -438,7 +412,7 @@
           alt=""
         />
       </section>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/add_content/video.svg')%>"
@@ -470,7 +444,7 @@
           alt=""
         />
       </section>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon"
           src="<%=require('../../images/template-icon/24x24/markdown/bold.svg')%>"
@@ -519,7 +493,7 @@
           alt=""
         />
       </section>
-      <section class="component" style="padding-bottom: 10px">
+      <section class="component">
         <img
           class="template-icon template-icon_36x36"
           src="<%=require('../../images/template-icon/36x36/add.svg')%>"
@@ -577,7 +551,7 @@
         </div>
       </section>
 
-      <section class="component" style="justify-content: space-between">
+      <section class="component">
         <div>
           <img
             class="template-icon template-icon_add-bot"
@@ -658,21 +632,8 @@
           </div>
         </div>
       </section>
-      <!-- Component 2 -->
-      <h2
-        style="
-          border-bottom: solid 2px rgb(185, 185, 185);
-          margin-bottom: 20px;
-          font-family: &quot;Open Sans&quot;, sans-serif;
-          color: #243cbb;
-        "
-      >
-        Component 2
-      </h2>
-      <section
-        class="component"
-        style="justify-content: space-evenly; gap: 10px; padding-bottom: 20px"
-      >
+
+      <section class="component">
         <img
           class="bot-icon"
           src="<%=require('../../images/bot-icon/answering-machine.svg')%>"
@@ -883,8 +844,6 @@
           />
         </div>
       </section>
-
-      <!-- And so on, up to component N... -->
     </main>
   </body>
 </html>
