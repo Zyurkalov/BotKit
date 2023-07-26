@@ -1,122 +1,652 @@
 @use "../variables";
 @use "../common";
+@use "utils";
+
+.ui-kit-main {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  row-gap: 30px;
+}
+
+.ui-kit-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+/* Кнопка добавить бота синяя */
+.common-button {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  line-height: 18.76px;
+  letter-spacing: 1px;
+  font-family: variables.$ff-secondary;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.common-button_color_blue {
+  background-color: variables.$clr-primary-medium;
+  color: variables.$clr-white;
+
+  &:hover {
+    background-color: variables.$clr-icon-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: variables.$clr-primary-light;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-blue-disabled;
+    pointer-events: none;
+  }
+}
+
+/* Кнопка круглая - общие настройки для круглых кнопок */
+.button-elem-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 46px;
+  background-color: variables.$clr-primary-medium;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    background-color: variables.$clr-icon-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: variables.$clr-primary-light;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-blue-disabled;
+    pointer-events: none;
+  }
+}
+
+/* Кнопка круглая синяя */
+.button-elem-round_color_blue {
+  height: 46px;
+  width: 46px;
+  background-color: variables.$clr-primary-medium;
+}
+
+/* Кнопка добавить бота зеленая */
+.common-button_color_green {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  background-color: variables.$clr-accent;
+  color: variables.$clr-primary-dark;
+  padding: 0;
+
+  &:hover {
+    background-color: variables.$clr-accent-focus;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: variables.$clr-accent;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-accent-press;
+    pointer-events: none;
+  }
+}
+
+/* Кнопка с инструкциями остановить/возобновить */
+.button-elem-instruction {
+  display: block;
+  width: 100%;
+  max-width: 151px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  background-color: variables.$clr-secondary-focus;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  line-height: 18.76px;
+  letter-spacing: 1px;
+  font-family: variables.$ff-secondary;
+  text-transform: uppercase;
+  padding: 0;
+
+  &::after {
+    content: "ОСТАНОВИТЬ";
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover::after {
+    content: "ОСТАНОВИТЬ";
+    color: variables.$clr-primary-medium;
+  }
+
+  &:active::after {
+    content: "ВОЗОБНОВИТЬ";
+    color: variables.$clr-primary-medium;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-secondary-gray;
+    pointer-events: none;
+  }
+
+  &:disabled::after {
+    content: "ОСТАНОВИТЬ";
+    color: variables.$clr-gray-3;
+  }
+}
+
+/* Кнопка элемент copy */
+.button-elem-copy {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover svg path {
+    stroke: variables.$clr-primary-medium;
+  }
+
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+
+  &:active svg path {
+    stroke: variables.$clr-primary-medium;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:disabled svg path {
+    stroke: variables.$clr-secondary-cultured;
+  }
+}
+
+/* Кнопка бот автоответчик */
+.answering-machine {
+  width: 100%;
+  max-width: 188px;
+  height: 125px;
+  &__button {
+    width: 100%;
+    max-width: 188px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 185px;
+    background-color: variables.$clr-secondary-gray;
+    border: none;
+    padding: 0;
+    background-image: url("../../images/bot-icon/answering-machine.svg");
+    background-repeat: no-repeat;
+    background-size: 88px 88px;
+    position: relative;
+
+    &-plus {
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 32px;
+      right: 22%;
+    }
+  }
+
+  &__caption {
+    margin: 16px 0 0 0;
+    padding: 0;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    color: variables.$clr-primary-dark;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    & .answering-machine__button {
+      background-color: variables.$clr-white;
+      box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+      cursor: pointer;
+    }
+
+    & .answering-machine__plus svg path {
+      stroke: variables.$clr-primary-medium;
+    }
+
+    & .answering-machine__caption {
+      color: variables.$clr-primary-medium;
+    }
+  }
+
+  &:active {
+    & .answering-machine__button {
+      background-color: variables.$clr-white;
+      box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+    }
+
+    & .answering-machine__plus svg path {
+      stroke: variables.$clr-icon-hover;
+    }
+
+    & .answering-machine__caption {
+      color: variables.$clr-icon-hover;
+    }
+  }
+
+  &_type_disabled {
+    pointer-events: none;
+    opacity: 0.5;
+
+    & .answering-machine__caption {
+      color: variables.$clr-primary-gray;
+    }
+  }
+}
+
+/* Кнопка бот Facebook */
+.button-social {
+  height: 124px;
+  width: 124px;
+  border: none;
+  border-radius: 30px;
+  background-color: variables.$clr-gray;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__caption {
+    margin: 13px 0 0 0;
+    padding: 0;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-600;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    color: variables.$clr-primary-dark;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover svg rect {
+    fill: variables.$clr-blue;
+  }
+
+  &:active svg rect {
+    fill: variables.$clr-blue;
+  }
+
+  &:active {
+    box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    & .button-social__caption {
+      color: variables.$clr-gray-3;
+    }
+  }
+
+  &:disabled svg rect {
+    fill: variables.$clr-primary-gray;
+  }
+}
+
+/* Кнопка-панель добавить бота */
+.panel-add-bot {
+  width: 100%;
+  max-width: 296px;
+  height: 172px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 30px;
+  background-color: variables.$clr-secondary-gray;
+
+  &__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border: 2px solid variables.$clr-gray-3;
+    border-radius: 50%;
+  }
+
+  &__text {
+    margin: 0 auto;
+    padding: 0;
+    font-family: variables.$ff-secondary;
+    font-size: var(--fs-base);
+    font-weight: variables.$fw-600;
+    line-height: 20.8px;
+    letter-spacing: 0.5px;
+    color: variables.$clr-gray-3;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    & svg path {
+      stroke: variables.$clr-primary-medium;
+    }
+
+    & .panel-add-bot__circle {
+      border: 2px solid variables.$clr-primary-medium;
+    }
+
+    & .panel-add-bot__text {
+      color: variables.$clr-primary-medium;
+    }
+  }
+
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    & svg path {
+      stroke: variables.$clr-primary-gray;
+    }
+
+    & .panel-add-bot__circle {
+      border: 2px solid variables.$clr-primary-gray;
+    }
+
+    & .panel-add-bot__text {
+      color: variables.$clr-primary-gray;
+    }
+  }
+}
+
+/* Кнопка пошаговая инструкция */
+.button-tutorial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 579px;
+  height: 76px;
+  border: 2px solid variables.$clr-secondary-focus;
+  border-radius: 10px;
+  background-color: variables.$clr-white;
+  background-image: url("../../images/button-tutorial_ellipse_grey.svg");
+  background-repeat: no-repeat;
+
+  &__icon {
+    width: 65px;
+    height: 46px;
+    position: absolute;
+    top: 17px;
+    left: 32px;
+  }
+  font-family: variables.$ff-primary;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+
+  &:hover {
+    border: none;
+    background-image: url("../../images/button-tutorial_ellipse_green.svg");
+    box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
+    cursor: pointer;
+
+    & .button-tutorial__icon {
+      filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
+    }
+  }
+
+  &:active {
+    color: variables.$clr-xiketic-press;
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    & .button-tutorial__icon {
+      opacity: 50%;
+      filter: grayscale(15%);
+    }
+
+    & .button-tutorial__text {
+      color: variables.$clr-primary-gray;
+    }
+  }
+}
+
+/* Кнопка блок сообщений */
+.button-block-message {
+  width: 100%;
+  max-width: 196px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  color: variables.$clr-primary-dark;
+  background-color: transparent;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  font-family: variables.$ff-primary;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+
+  &:hover {
+    background-color: variables.$clr-secondary-gray;
+    color: variables.$clr-primary-medium;
+    cursor: pointer;
+
+    & svg line {
+      stroke: variables.$clr-primary-medium;
+    }
+
+    & svg path {
+      stroke: variables.$clr-primary-medium;
+    }
+  }
+
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-white;
+    color: variables.$clr-gray-2;
+    pointer-events: none;
+  }
+}
+
+/* Кнопка круглая зеленая */
+.button-elem-round_color_green {
+  width: 66px;
+  height: 66px;
+  background-color: variables.$clr-accent;
+  box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+
+  &:hover {
+    background-color: variables.$clr-accent-focus;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: variables.$clr-accent;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-accent-press;
+
+    & svg g {
+      opacity: 0.5;
+    }
+  }
+}
 
 .constructor {
   margin: 370px 99px;
   font-family: variables.$ff-secondary;
   font-weight: variables.$fw-600;
   font-size: 32px;
-  }
+}
 
-  .container__linear {
-    font-family: variables.$ff-secondary;
-    font-weight: variables.$fw-400;
-    color: variables.$clr-primary-dark;
-    font-size: 12px;
-    list-style-type: none;
-    margin: 44px 0 0 0;
-  }
-  .container__linear-text-condition {
-    display: grid;
-    grid-template-columns: repeat(4, 70px);
-    align-items: center;
-    gap: 70px;
-  }
-  .container__linear-phone-delete {
+.container__linear {
+  font-family: variables.$ff-secondary;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  font-size: 12px;
+  list-style-type: none;
+  margin: 44px 0 0 0;
+}
+.container__linear-text-condition {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  align-items: center;
+  gap: 70px;
+}
+.container__linear-phone-delete {
   display: grid;
   grid-template-columns: 144px 55px 0px;
   align-items: center;
-  }
+}
 
-  .constructor__button {
-    border: 0;
-    cursor: pointer;
-  }
+.constructor__button {
+  border: 0;
+  cursor: pointer;
+}
 
-  .constructor-button-tab {
-    width: 95px;
-    height: 35px;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
+.constructor-button-tab {
+  width: 95px;
+  height: 35px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
 
-  .constructor__button-content {
-    background-image: url('../../images/videoDefault.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 56px;
-    height: 52px;
-    border-radius: 10px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    transition: 0.3s;
-  }
-  .content-hover {
-    background-image: url('../../images/videoHover.svg');
-  }
-  .content-disabled{
-    background-image: url('../../images/videoDisabled.svg');
-  }
+.constructor__button-content {
+  background-image: url("../../images/videoDefault.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+.content-hover {
+  background-image: url("../../images/videoHover.svg");
+}
+.content-disabled {
+  background-image: url("../../images/videoDisabled.svg");
+}
 
-  .constructor-button-addCondition {
-    width: 264px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-radius: 10px;
-    padding: 0 0 0 12px;
-  }
+.constructor-button-addCondition {
+  width: 264px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 0 0 0 12px;
+}
 
-  .constructor__text-tab {
-    font-family: variables.$ff-primary;
-    font-weight: variables.$fw-600;
-    font-size: 13px;
-  }
-  .tab-hover {
-    color: variables.$clr-primary-medium;
-  }
-  .btn-pressed{
-    background-color: variables.$clr-blue-disabled;
-  }
+.constructor__text-tab {
+  font-family: variables.$ff-primary;
+  font-weight: variables.$fw-600;
+  font-size: 13px;
+}
+.tab-hover {
+  color: variables.$clr-primary-medium;
+}
+.btn-pressed {
+  background-color: variables.$clr-blue-disabled;
+}
 
-  .constructor__text-condition {
-    color: variables.$clr-gray-4;
-    font-family: variables.$ff-primary;
-    font-weight: variables.$fw-400;
-    font-size: 13px;
-  }
-  .condition-hover {
-    color: variables.$clr-primary-medium;
-  }
-  .btn-disabled{
-    color: variables.$clr-primary-gray;
-  }
+.constructor__text-condition {
+  color: variables.$clr-gray-4;
+  font-family: variables.$ff-primary;
+  font-weight: variables.$fw-400;
+  font-size: 13px;
+}
+.condition-hover {
+  color: variables.$clr-primary-medium;
+}
+.btn-disabled {
+  color: variables.$clr-primary-gray;
+}
 
-  .constructor__text {
-    text-align: center;
-    margin: 0;
-  }
+.constructor__text {
+  text-align: center;
+  margin: 0;
+}
 
-  .constructor__button-default-grey {
-    background-color: variables.$clr-secondary-nofocus;
-  }
+.constructor__button-default-grey {
+  background-color: variables.$clr-secondary-nofocus;
+}
 
-  .constructor__button-video-default-grey {
-    background-color: variables.$clr-secondary-gray;
-  }
+.constructor__button-video-default-grey {
+  background-color: variables.$clr-secondary-gray;
+}
 
-  .constructor__button-condition-default-grey {
-    background-color: variables.$clr-gray;
-  }
+.constructor__button-condition-default-grey {
+  background-color: variables.$clr-gray;
+}
 
-  .container__linear-shadow {
-    display: flex;
-    box-shadow: 0px 6px 16px 0px #15123314;
-    align-items: center;
-    width: 96px;
-    height: 40px;
-    justify-content: space-evenly;
-  }
+.container__linear-shadow {
+  display: flex;
+  box-shadow: 0px 6px 16px 0px #15123314;
+  align-items: center;
+  width: 96px;
+  height: 40px;
+  justify-content: space-evenly;
+}

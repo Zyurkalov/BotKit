@@ -1,1 +1,1 @@
-import "../scss/add_bot.scss";
+import "../scss/add-bot/add_bot.scss";

@@ -1,5 +1,7 @@
-@use "variables";
-@use "common";
+@use "../variables";
+@use "../common";
+@use "../ui-kit/ui_kit_navigation.scss";
+@use "../ui-kit/ui_kit_buttons.scss";
 
 *::before,
 *::after {
@@ -13,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 h1,
@@ -25,16 +28,13 @@ h4 {
 img,
 svg {
   height: auto;
-  max-width: 100%;
   display: block;
 }
 
 .body {
+  margin: 0;
   position: relative;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  height: 100%;
   font-family: variables.$ff-primary;
   font-size: variables.$fs-base;
   font-weight: variables.$fw-400;
@@ -47,22 +47,30 @@ svg {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-  padding: 40px 34px 0;
+  min-height: 100%;
+  width: 100%;
 }
 
 .main {
-  width: 100%;
-  padding-left: 132px;
+  max-width: 1308px;
+  padding: 32px 63px 0 132px;
+  flex: 1 1 auto;
 }
 
-.nav-side {
+.menu {
   position: absolute;
-  align-self: flex-start;
-  height: 100vw;
-  margin: 0;
-  writing-mode: vertical-lr; 
-  text-orientation: upright; 
+}
+
+.ui-kit-navigation {
+  margin-left: 132px;
+}
+
+.ui-kit-footer {
+  margin-left: 132px;
+}
+
+.main {
+  padding: 0 63px 0 132px;
+  display: flex;
+  justify-content: space-between;
 }
