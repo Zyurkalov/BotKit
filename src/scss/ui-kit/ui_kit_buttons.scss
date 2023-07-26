@@ -4,12 +4,12 @@
 body {
   padding: 30px;
 }
-main {
+.ui-kit-main {
   display: grid;
   grid-template-columns: 150px 1fr;
   row-gap: 30px;
 }
-section {
+.ui-kit-buttons {
   display: flex;
   justify-content: space-around;
   gap: 40px;
