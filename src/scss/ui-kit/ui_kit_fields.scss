@@ -83,11 +83,11 @@
   border: 1px solid variables.$clr-validation-error;
 }
 
-.access-key__input_disabled::placeholder {
+.access-key__input:disabled::placeholder {
   color: variables.$clr-secondary-focus;
 }
 
-.access-key__input_disabled:hover::placeholder {
+.access-key__input:disabled:hover::placeholder {
   color: variables.$clr-secondary-focus;
 }
 
@@ -254,9 +254,8 @@
   max-width: 580px;
 }
 
-.field__input_disabled {
+.field__input:disabled::placeholder {
   color: variables.$clr-secondary-cultured;
-  cursor: default;
 }
 
 // Add phone
@@ -302,12 +301,18 @@
   max-width: 231px;
 }
 
-.field__wrapper::before {
-  content: url("../../images/template-icon/conctructor/add-link-S.svg");
+.field__border-decoration {
   display: block;
+  background-image: url("../../images/template-icon/conctructor/add-link-S.svg");
   width: 10px;
   height: 10px;
   position: absolute;
-  right: -5px;
-  top: 30%;
+  right: -2%;
+  top: 40%;
+}
+
+.field__border-decoration:hover {
+  background-image: url("../../images/template-icon/conctructor/add-link-L.svg");
+  background-size: 10px 10px;
+  cursor: pointer;
 }
