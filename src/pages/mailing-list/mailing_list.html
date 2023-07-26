@@ -13,6 +13,41 @@
   </head>
   <body class="body">
     <div class="page">
+      <div class="navigation">
+        <div class="navigation__menu"></div>
+        <div class="navigation__user-section">
+          <div class="template-icon template-icon_pos-rel">
+            <!-- <p class="template-icon__count">2</p> -->
+            <img
+              class="template-icon__ding"
+              src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
+              alt=""
+            />
+          </div>
+          <img
+            class="template-icon"
+            src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
+            alt="помощь"
+          />
+          <div class="navigation__user-info">
+            <img
+              alt="Аватар"
+              class="navigation__user-avatar"
+              src="<%=require('../../images/avatar/circle.png')%>"
+            />
+            <p class="navigation__text">User Name</p>
+            <img
+              alt="Стрелка вниз"
+              class="navigation__arrow-down"
+              src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+            />
+          </div>
+        </div>
+        <div class="navigation__tarif-info">
+          <p class="navigation__text">Тариф</p>
+          <p class="navigation__text navigation__text_spanned">Демо</p>
+        </div>
+      </div>
       <nav class="menu">
         <div class="menu__container">
           <ul class="menu__items">
@@ -260,45 +295,21 @@
         </div>
       </nav>
       <main class="main">
-        <div class="navigation">
-          <div class="navigation__menu"></div>
-          <div class="navigation__user-section">
-            <div class="template-icon template-icon_pos-rel">
-              <!-- <p class="template-icon__count">2</p> -->
-              <img
-                class="template-icon__ding"
-                src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
-                alt=""
-              />
-            </div>
-            <img
-              class="template-icon"
-              src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
-              alt="помощь"
-            />
-            <div class="navigation__user-info">
-              <img
-                alt="Аватар"
-                class="navigation__user-avatar"
-                src="<%=require('../../images/avatar/circle.png')%>"
-              />
-              <p class="navigation__text">User Name</p>
-              <img
-                alt="Стрелка вниз"
-                class="navigation__arrow-down"
-                src="<%=require('../../images/template-icon/20x20/down.svg')%>"
-              />
-            </div>
+        <section class="mailing-start">
+          <div class="mailing-title">
+            <h2>Рассылки</h2>
+            <button class="common-button common-button_color_green">
+              Создать рассылку
+            </button>
           </div>
-          <div class="navigation__tarif-info">
-            <p class="navigation__text">Тариф</p>
-            <p class="navigation__text navigation__text_spanned">Демо</p>
-          </div>
-        </div>
-
-        <!-- style из тегов удалить, они для наглядности -->
-        <section class="mailing" style="height: 35vw">
-          <h2>Section Рассылки</h2>
+          <button class="mailing-window">
+            <h3 class="mailing-label-title">
+              Давайте скорее запустим вашу первую рассылку!
+            </h3>
+            <h3 class="mailing-label-subtitle">
+              Нажмите на кнопку “создать рассылку”
+            </h3>
+          </button>
         </section>
       </main>
       <footer class="footer">
