@@ -11,72 +11,12 @@
     />
     <title>Dashboard</title>
   </head>
+
   <body class="body">
     <div class="page">
-      <div class="ui-kit-navigation">
-        <button type="button" class="ui-kit-navigation__menu-btn">
-          <img
-            src="<%=require('../../images/template-icon/24x24/add_block/menu_grey.svg')%>"
-            alt="menu"
-            width="24"
-            height="24"
-          />
-        </button>
-        <div class="ui-kit-navigation__right-container">
-          <div class="ui-kit-navigation__user-section">
-            <button type="button" class="ui-kit-navigation__notification-icon">
-              <div class="template-icon template-icon_pos-rel">
-                <p class="template-icon__count">2</p>
-                <img
-                  class="template-icon__ding"
-                  src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
-                  alt="колокольчик"
-                  height="40"
-                  width="40"
-                />
-              </div>
-            </button>
-            <button type="button" class="ui-kit-navigation__help-icon">
-              <img
-                class="template-icon"
-                src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
-                alt="помощь"
-                height="24"
-                width="24"
-              />
-            </button>
-            <div class="ui-kit-navigation__user-info">
-              <img
-                alt="аватар"
-                class="ui-kit-navigation__user-avatar"
-                src="<%=require('../../images/avatar/circle.png')%>"
-                height="40"
-                width="40"
-              />
-              <p class="ui-kit-navigation__text">User Name</p>
-              <button
-                type="button"
-                class="ui-kit-navigation__arrow-toggle-icon"
-              >
-                <img
-                  alt="Стрелка вниз"
-                  class="ui-kit-navigation__arrow-down"
-                  src="<%=require('../../images/template-icon/20x20/down.svg')%>"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="ui-kit-navigation__tarif-info">
-            <p class="ui-kit-navigation__text">Тариф</p>
-            <p class="ui-kit-navigation__text ui-kit-navigation__text_spanned">
-              Демо
-            </p>
-          </div>
-        </div>
-      </div>
-
       <nav class="menu">
         <div class="menu__container">
+          тзь
           <ul class="menu__items">
             <li class="menu__item menu__item_first">
               <div class="menu__logo">
@@ -84,7 +24,7 @@
               </div>
             </li>
             <li class="menu__item menu__item_second">
-              <button class="button button_theme_blue">
+              <buton class="button button_theme_blue">
                 <svg
                   class="button__image"
                   width="24"
@@ -100,8 +40,8 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <p class="button__text">ДОБАВИТЬ БОТА</p>
-              </button>
+                <p class="buton__text">ДОБАВИТЬ БОТА</p>
+              </buton>
             </li>
             <li class="menu__item">
               <button class="button button_theme_gray" onclick="">
@@ -322,22 +262,445 @@
         </div>
       </nav>
       <main class="main">
+        <div class="navigation">
+          <div class="navigation__menu"></div>
+          <div class="navigation__user-section">
+            <div class="template-icon template-icon_pos-rel">
+              <p class="template-icon__count">2</p>
+              <img
+                class="template-icon__ding"
+                src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
+                alt=""
+              />
+            </div>
+            <div class="template-icon">
+              <img
+                src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
+                alt="помощь"
+              />
+            </div>
+            <div class="navigation__user-info">
+              <img
+                alt="Аватар"
+                class="navigation__user-avatar"
+                src="<%=require('../../images/avatar/circle.png')%>"
+              />
+              <p class="navigation__text">User Name</p>
+              <img
+                alt="Стрелка вниз"
+                class="navigation__arrow-down"
+                src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+              />
+            </div>
+          </div>
+          <div class="navigation__tarif-info">
+            <p class="navigation__text">Тариф</p>
+            <p class="navigation__text navigation__text_spanned">Демо</p>
+          </div>
+        </div>
         <!-- style из тегов удалить, они для наглядности -->
-        <section class="templates" style="height: 200px">
-          <h2>Section Шаблоны</h2>
+        <section class="templates">
+          <div class="templates__container">
+            <h2 class="section-header section-header_margin-40">Шаблоны</h2>
+            <menu class="templates__menu">
+              <p class="templates__paragraph">Все шаблоны</p>
+              <button>
+                <img
+                  class=""
+                  src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+                  alt="Все шаблоны"
+                />
+              </button>
+            </menu>
+          </div>
+
+          <ul class="content-list test">
+            <li class="answering-machine" style="list-style: none">
+              <button
+                class="answering-machine__button"
+                type="button"
+                aria-label="добавить бота-автоответчика"
+              >
+                <span class="answering-machine__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p class="answering-machine__caption">Бот автоответчик</p>
+            </li>
+            <li class="answering-machine" style="list-style: none">
+              <button
+                class="answering-machine__button answering-machine__button_food"
+                type="button"
+                aria-label="добавить бота-доставка еды"
+              >
+                <span class="answering-machine__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p class="answering-machine__caption">Доставка еды</p>
+            </li>
+            <li class="answering-machine" style="list-style: none">
+              <button
+                class="answering-machine__button answering-machine__button_demo-bot"
+                type="button"
+                aria-label="попробовать, демо бот"
+              >
+                <span class="answering-machine__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p class="answering-machine__caption">Демо бот</p>
+            </li>
+            <li class="answering-machine" style="list-style: none">
+              <button
+                class="answering-machine__button answering-machine__button_poll"
+                type="button"
+                aria-label="добавить бота-опросы"
+              >
+                <span class="answering-machine__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p class="answering-machine__caption">Опрос</p>
+            </li>
+            <li class="answering-machine" style="list-style: none">
+              <button
+                class="answering-machine__button answering-machine__button_lead"
+                type="button"
+                aria-label="добавить бота-лидогенерация"
+              >
+                <span class="answering-machine__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p class="answering-machine__caption">Лидогенерация...</p>
+            </li>
+            <li class="answering-machine" style="list-style: none">
+              <button
+                class="answering-machine__button answering-machine__button_learning"
+                type="button"
+                aria-label="добавить бота-оналин школа"
+              >
+                <span class="answering-machine__button-plus">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#CCD4E0"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p class="answering-machine__caption">Онлайн школа...</p>
+            </li>
+          </ul>
         </section>
         <!-- style из тегов удалить, они для наглядности -->
-        <section class="my-bots" style="height: 200px">
-          <h2>Section Мои Боты</h2>
+        <section class="my-bots">
+          <h2 class="section-header section-header_margin-60">Мои Боты</h2>
+          <ul class="content-list">
+            <li class="card">
+              <div class="card__icons">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/social-icons/telegram.svg')%>"
+                  alt=""
+                />
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/more.svg')%>"
+                  alt=""
+                />
+              </div>
+              <div class="card__name">Салон красоты</div>
+            </li>
+            <li class="card">
+              <div class="card__icons">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/social-icons/telegram.svg')%>"
+                  alt=""
+                />
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/more.svg')%>"
+                  alt=""
+                />
+              </div>
+              <div class="card__name">Запись клиентов для консультации</div>
+            </li>
+            <li class="card">
+              <div class="card__icons">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/social-icons/telegram.svg')%>"
+                  alt=""
+                />
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/more.svg')%>"
+                  alt=""
+                />
+              </div>
+              <div class="card__name">
+                Опрос клиентов для проведения встречи
+              </div>
+            </li>
+            <li class="card card__padding-0">
+              <button class="panel-add-bot" type="button">
+                <span class="panel-add-bot__circle">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5V19"
+                      stroke="#A6B3C9"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 12H19"
+                      stroke="#A6B3C9"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <p class="panel-add-bot__text">Добавить бота</p>
+              </button>
+            </li>
+          </ul>
         </section>
         <!-- style из тегов удалить, они для наглядности -->
-        <section class="faq" style="height: 200px">
-          <h2>Section F.A.Q</h2>
+        <section class="faq" aria-label="Section F.A.Q">
+          <div class="faq-cont">
+            <div class="faq-cont__left-panel">
+              <h2 class="faq-cont__header">С чего начать?</h2>
+              <ul class="video-list" type="none">
+                <li class="video-list__container">
+                  <button class="button-video">
+                    <div
+                      class="button-video__bg button-video__bg_poster-one"
+                    ></div>
+                    <div class="icon-container">
+                      <img
+                        class="icon-container__icon"
+                        src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+                        alt="проигрывать видео"
+                      />
+                    </div>
+                  </button>
+                  <h3 class="video-heading">
+                    Подключение и основные параметры
+                  </h3>
+                </li>
+                <li class="video-list__container">
+                  <button class="button-video">
+                    <div
+                      class="button-video__bg button-video__bg_poster-two"
+                    ></div>
+                    <div class="icon-container">
+                      <img
+                        class="icon-container__icon"
+                        src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+                        alt="проигрывать видео"
+                      />
+                    </div>
+                  </button>
+                  <h3 class="video-heading">Настраиваем простую рассылку</h3>
+                </li>
+                <li class="video-list__container">
+                  <button class="button-video">
+                    <div
+                      class="button-video__bg button-video__bg_poster-three"
+                    ></div>
+                    <div class="icon-container">
+                      <img
+                        class="icon-container__icon"
+                        src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+                        alt="проигрывать видео"
+                      />
+                    </div>
+                  </button>
+                  <h3 class="video-heading">
+                    Начало работы с блок&#8209;схемами
+                  </h3>
+                </li>
+              </ul>
+            </div>
+            <div class="faq-cont__right-panel">
+              <h2 class="faq-cont__header">База знаний</h2>
+              <h3 class="faq-cont__description">
+                Узнай, как создать чат бота. Примеры и описание опций сервиса!
+              </h3>
+              <button class="button-container">
+                <img
+                  class="button-container__chevron-big button-container__chevron-big_rotation"
+                  src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+                  alt="спрятать панель"
+                />
+              </button>
+              <ul class="list-container" type="none">
+                <li>
+                  <span class="list-container__span">></span>
+                  <p class="list-container__paragraph">
+                    Начало работы в сервисе
+                  </p>
+                </li>
+                <li>
+                  <span class="list-container__span">></span>
+                  <p class="list-container__paragraph">Конфигурации</p>
+                </li>
+                <li>
+                  <span class="list-container__span">></span>
+                  <p class="list-container__paragraph">Блок схемы</p>
+                </li>
+                <li>
+                  <span class="list-container__span">></span>
+                  <p class="list-container__paragraph">Статистика</p>
+                </li>
+                <li>
+                  <span class="list-container__span">></span>
+                  <p class="list-container__paragraph">Рассылка</p>
+                </li>
+                <li>
+                  <span class="list-container__span">></span>
+                  <p class="list-container__paragraph">Диалоги</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </main>
-      <footer class="ui-kit-footer">
-        <p class="ui-kit-footer__text">&#169; 2021 BotKits</p>
-      </footer>
     </div>
+    <footer class="footer">
+      <p class="footer__text">&#169; 2021 BotKits</p>
+    </footer>
   </body>
 </html>
