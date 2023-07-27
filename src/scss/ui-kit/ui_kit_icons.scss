@@ -2,79 +2,117 @@
 @use "../common";
 @use "utils";
 
+.ui-kit-body {
+  margin: auto;
+  width: 700px;
+}
 .component {
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+
+  // &:last-child {
+  //   margin-top: 40px;
+  // }
+
+  &_flex-space {
+    justify-content: space-between;
+
+    &:last-child {
+      margin-top: 30px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
 }
 
-/* component тут для стилизации страницы. Не обращаем внимание */
+.header {
+  font-family: variables.$ff-primary;
+  color: variables.$clr-xiketic-press;
+}
 
-.template-icon {
+.section__header {
+  margin: 20px 0 20px;
+  color: variables.$clr-gray-3;
+  font-weight: variables.$fw-400;
+  border-bottom: solid 2px rgb(185, 185, 185);
+  justify-content: space-between;
+}
+
+.icon {
   margin: 0;
   padding: 0;
   width: 24px;
   height: 24px;
   object-fit: none;
-  display: inline-block;
+
+  &_30x24 {
+    width: 24px;
+    height: 30px;
+  }
+
+  &_36x36 {
+    width: 36px;
+    height: 36px;
+  }
+
+  &_40x40 {
+    width: 40px;
+    height: 40px;
+  }
+
+  &_pos-rel {
+    position: relative;
+  }
+
+  &_pos-abs {
+    position: absolute;
+  }
+
+  /*если нужно сменить цвет логотипа на белый*/
+  &_invert {
+    filter: invert(100%) grayscale(100%) brightness(3);
+  }
+
+  /*колокольчик. Если оповещении нет - удаляем этот класс*/
+  &__count {
+    margin: 0;
+    padding: 0;
+    width: 14px;
+    background-color: variables.$clr-validation-error;
+    border-radius: 50%;
+
+    color: #fff;
+    text-align: center;
+    line-height: 135%;
+    font-size: 10px;
+    font-family: variables.$ff-primary;
+    font-weight: variables.$fw-400;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &_add-bot {
+    width: 65px;
+    height: 46px;
+  }
+
+  &_avatar {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
 }
 
-.template-icon_36x36 {
-  width: 36px;
-  height: 36px;
-}
-
-.template-icon_40x40 {
-  width: 40px;
-  height: 40px;
-}
-
-.template-icon_pos-rel {
-  position: relative;
-}
-
-.template-icon_pos-abs {
-  position: absolute;
-}
-
-/*если нужно сменить цвет логотипа на белый*/
-.template-icon_invert {
-  filter: invert(100%) grayscale(100%) brightness(3);
-}
-
-/*колокольчик. Если оповещении нет - удаляем этот класс*/
-.template-icon__count {
-  margin: 0;
-  padding: 0;
-  width: 60%;
-  height: 60%;
-  background-color: variables.$clr-validation-error;
-  border-radius: 50%;
-
-  color: #fff;
-  text-align: center;
-  line-height: 135%;
-  font-size: 10px;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  /*шрифт нужно сменить*/
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.template-icon_add-bot {
-  width: 65px;
-  height: 46px;
-}
-
-.template-icon_avatar {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-}
-
-.button-avatar {
+.avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -84,20 +122,20 @@
   align-items: center;
   position: relative;
   cursor: pointer;
-}
 
-.button-avatar__bg {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  &__bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 
-  background-color: variables.$clr-secondary-gray;
-}
+    background-color: variables.$clr-secondary-gray;
+  }
 
-.button-avatar__bg_img {
-  background-position: center;
-  background-size: contain;
-  background-image: url("../../images/avatar/circle.png");
+  &__bg_img {
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../images/avatar/circle.png");
+  }
 }
 
 .button-elem {
@@ -109,70 +147,66 @@
   border-radius: 50%;
 
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
+
+  &_32x32 {
+    width: 32px;
+    height: 32px;
+  }
+  &__img-bg {
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    position: absolute;
+  }
+  &__img-bg_opacity {
+    opacity: 50%;
+  }
+
+  /* если нужно развернуть иконку / кнопку*/
+  &_rotate90 {
+    rotate: -90deg;
+  }
+
+  /* меняем цвет фона через модификаторы*/
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  &__bg-opacity {
+    opacity: 50%;
+  }
+
+  &__bg-blue {
+    background-color: variables.$clr-primary-medium;
+  }
+
+  &__bg-grey {
+    background-color: variables.$clr-secondary-gray;
+  }
+
+  &__bg-disable {
+    background-color: variables.$clr-primary-gray;
+  }
+
+  &__bg-green {
+    background-color: variables.$clr-accent;
+  }
+
+  &_disable {
+    background-color: variables.$clr-secondary-gray;
+  }
 }
 
-.button-elem_32x32 {
-  width: 32px;
-  height: 32px;
-}
-
-.button-elem__img-bg {
-  margin: 0;
-  padding: 0;
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  position: absolute;
-}
-
-.button-elem__img-bg_opacity {
-  opacity: 50%;
-}
-
-/* если нужно развернуть иконку / кнопку*/
-.button-elem_rotate90 {
-  rotate: -90deg;
-}
-
-/* меняем цвет фона через модификаторы*/
-.button-elem__bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.button-elem__bg-opacity {
-  opacity: 50%;
-}
-
-.button-elem__bg-blue {
-  background-color: variables.$clr-primary-medium;
-}
-
-.button-elem__bg-grey {
-  background-color: variables.$clr-secondary-gray;
-}
-
-.button-elem__bg-disable {
-  background-color: variables.$clr-primary-gray;
-}
-
-.button-elem__bg-green {
-  background-color: variables.$clr-accent;
-}
-
-.button-elem_disable {
-  background-color: variables.$clr-secondary-gray;
-}
-
-.social-media {
+.social-icon {
   margin: 0;
   padding: 0;
   width: 40px;
@@ -182,22 +216,110 @@
   background-size: contain;
   cursor: pointer;
   position: relative;
-}
 
-.social-media__img {
-  outline-color: none;
-  outline-style: none;
-  background-repeat: no-repeat;
-  background-size: contain;
+  &__img {
+    outline-color: none;
+    outline-style: none;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-  border-radius: 50%;
-  position: relative;
-  top: 0;
-  right: 0;
-}
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 
-.social-media__img_google {
-  filter: grayscale(100%) brightness(4);
+  &__img_google {
+    filter: grayscale(100%) brightness(4);
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: variables.$clr-primary-medium;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &_inactive {
+      background-color: variables.$clr-primary-gray;
+    }
+  }
+
+  .transition {
+    transition: 0.1s ease-in;
+  }
+
+  &:hover .social-icon__bg_facebook {
+    @extend .transition;
+    background-color: #2d88ff;
+  }
+  &:hover .social-icon__bg_telegram {
+    @extend .transition;
+    background-color: #2aabee;
+  }
+  &:hover .social-icon__bg_youtube {
+    @extend .transition;
+    background-color: #ff0000;
+  }
+  &:hover .social-icon__bg_vk {
+    @extend .transition;
+    background-color: #2787f5;
+  }
+  &:hover .social-icon__bg_insta {
+    @extend .transition;
+    background: radial-gradient(
+      100.29% 100.29% at 32.5% 97.5%,
+      #ffdc80 0%,
+      #fcaf45 18.39%,
+      #f06856 38.02%,
+      #e1306c 51.04%,
+      #833ab4 83.85%,
+      #405de6 99.99%
+    );
+  }
+  &:hover .social-icon__bg_twitter {
+    @extend .transition;
+    background-color: #1da1f2;
+  }
+  &:hover .social-icon__bg_web {
+    @extend .transition;
+    background-color: #435cdb;
+  }
+  &:hover .social-icon__bg_odnoklassniki {
+    @extend .transition;
+    background-color: #ee8208;
+  }
+  &:hover .social-icon__bg_mailru {
+    @extend .transition;
+    background-color: #005ff9;
+  }
+  &:hover .social-icon__bg_yandex {
+    @extend .transition;
+    background-color: #fc3f1d;
+  }
+  &:hover .social-icon__bg_google {
+    @extend .transition;
+    background-color: rgba(248, 249, 251, 1);
+  }
+  &:hover .social-icon__img_google {
+    @extend .transition;
+    filter: grayscale(0) brightness(1);
+  }
+  &:hover .social-icon__bg_viber {
+    @extend .transition;
+    background-color: #7360f2;
+  }
+  &:hover .social-icon__bg_alisa {
+    @extend .transition;
+    background: linear-gradient(180deg, #6326ff 0%, #b326ff 100%);
+  }
+  &:hover .social-icon__bg_whatsapp {
+    @extend .transition;
+    background-color: #3cbb28;
+  }
 }
 
 .bot-icon {
@@ -215,101 +337,10 @@
   display: inline-block;
 }
 
-.social-media__bg {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: variables.$clr-primary-medium;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.social-media__bg_inactive {
-  background-color: variables.$clr-primary-gray;
-}
-
-/*FACEBOOK---------------------------------------------------------------*/
-
-.social-media:hover .social-media__bg_facebook {
-  background-color: #2d88ff;
-}
-
-/*TELEGRAM---------------------------------------------------------------*/
-.social-media:hover .social-media__bg_telegram {
-  background-color: #2aabee;
-}
-
-/*YOUTUBE----------------------------------------------------------------*/
-.social-media:hover .social-media__bg_youtube {
-  background-color: #ff0000;
-}
-
-/*VK---------------------------------------------------------------------*/
-.social-media:hover .social-media__bg_vk {
-  cursor: pointer;
-  background-color: #2787f5;
-}
-
-/*INSTA------------------------------------------------------------------*/
-.social-media:hover .social-media__bg_insta {
-  background: radial-gradient(
-    100.29% 100.29% at 32.5% 97.5%,
-    #ffdc80 0%,
-    #fcaf45 18.39%,
-    #f06856 38.02%,
-    #e1306c 51.04%,
-    #833ab4 83.85%,
-    #405de6 99.99%
-  );
-}
-
-/*TWITTER----------------------------------------------------------------*/
-.social-media:hover .social-media__bg_twitter {
-  background-color: #1da1f2;
-}
-
-/*WEB--------------------------------------------------------------------*/
-.social-media:hover .social-media__bg_web {
-  background-color: #435cdb;
-}
-
-/*OK---------------------------------------------------------------------*/
-.social-media:hover .social-media__bg_odnoklassniki {
-  background-color: #ee8208;
-}
-
-/*MAILRU-----------------------------------------------------------------*/
-.social-media:hover .social-media__bg_mailru {
-  background-color: #005ff9;
-}
-
-/*YANDEX-----------------------------------------------------------------*/
-.social-media:hover .social-media__bg_yandex {
-  background-color: #fc3f1d;
-}
-
-/*GOOGLE-----------------------------------------------------------------*/
-.social-media:hover .social-media__bg_google {
-  background-color: rgba(248, 249, 251, 1);
-}
-
-.social-media:hover .social-media__img_google {
-  filter: grayscale(0) brightness(1);
-}
-
-/*VIBER------------------------------------------------------------------*/
-.social-media:hover .social-media__bg_viber {
-  background-color: #7360f2;
-}
-
-/*ALISA------------------------------------------------------------------*/
-.social-media:hover .social-media__bg_alisa {
-  background: linear-gradient(180deg, #6326ff 0%, #b326ff 100%);
-}
-
-/*WHATSAPP---------------------------------------------------------------*/
-.social-media:hover .social-media__bg_whatsapp {
-  background-color: #3cbb28;
+.frame-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
 }
