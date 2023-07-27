@@ -1,4 +1,6 @@
 import "../../scss/ui-kit/ui_kit_components.scss";
+import AirDatepicker from "air-datepicker";
+import "air-datepicker/air-datepicker.css";
 
 // Multiple Choice List
 
@@ -64,3 +66,7 @@ weekdays.forEach((weekday) => {
     weekday.classList.toggle("weekdays__weekday_chosen");
   });
 });
+
+// Calendar
+
+new AirDatepicker(".calendar", { inline: true });

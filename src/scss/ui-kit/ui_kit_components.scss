@@ -265,6 +265,7 @@
     @extend .card__action;
     padding: 7px 16px;
     justify-content: space-between;
+    gap: 30px;
 
     &:first-child,
     &:nth-last-child(2) {
@@ -382,4 +383,34 @@
     letter-spacing: 0.3px;
     color: variables.$clr-gray-3;
   }
+}
+
+.calendar {
+  &__chosen-date {
+    display: block;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 40px;
+
+    margin: 20px 16px 20px 16px;
+    padding-left: 8px;
+
+    background-color: variables.$clr-gray;
+    color: variables.$clr-primary-dark;
+
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-style: normal;
+    font-weight: variables.$fw-400;
+    line-height: 150%; /* 19.5px */
+    letter-spacing: 0.3px;
+  }
+}
+
+.air-datepicker {
+  border: none;
+}
+
+.air-datepicker-body--day-name {
+  color: variables.$clr-primary-dark;
 }
