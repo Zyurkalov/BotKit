@@ -1,30 +1,27 @@
 @use "../variables";
 @use "../common";
+@use "utils";
+@use "ui_kit_fields";
 
-body {
-  margin: 100px;
-}
-
-section {
+.ui-kit-section {
   display: grid;
-  grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
   align-items: center;
-  margin-bottom: 20px;
+  grid-template-columns: 150px 1fr;
+  row-gap: 30px;
 }
 
-h3 {
-  font-size: 12px;
-  color: #060c23;
-  font-family: variables.$ff-primary;
-  line-height: 15.6px;
-  opacity: 0.5;
+.ui-kit-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
 }
 
 /* Кнопка добавить бота синяя */
 .common-button {
   display: block;
-  width: 180px;
+  width: 100%;
+  max-width: 180px;
   height: 46px;
   border-radius: 10px;
   border: none;
@@ -93,7 +90,8 @@ h3 {
 /* Кнопка добавить бота зеленая */
 .common-button_color_green {
   display: block;
-  width: 180px;
+  width: 100%;
+  max-width: 180px;
   height: 46px;
   border-radius: 10px;
   border: none;
@@ -119,7 +117,8 @@ h3 {
 /* Кнопка с инструкциями остановить/возобновить */
 .button-elem-instruction {
   display: block;
-  width: 151px;
+  width: 100%;
+  max-width: 151px;
   height: 46px;
   border-radius: 10px;
   border: none;
@@ -198,10 +197,16 @@ h3 {
 
 /* Кнопка бот автоответчик */
 .answering-machine {
+  width: 100%;
+  max-width: 188px;
+  height: 125px;
   &__button {
-    width: 188px;
+    width: 100%;
+    max-width: 188px;
     height: 88px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     border-radius: 185px;
     background-color: variables.$clr-secondary-gray;
     border: none;
@@ -209,13 +214,14 @@ h3 {
     background-image: url("../../images/bot-icon/answering-machine.svg");
     background-repeat: no-repeat;
     background-size: 88px 88px;
+    position: relative;
 
     &-plus {
       height: 24px;
       width: 24px;
       position: absolute;
       top: 32px;
-      left: 132px;
+      right: 22%;
     }
   }
 
@@ -274,13 +280,17 @@ h3 {
 }
 
 /* Кнопка бот Facebook */
-.button-fb {
+.button-social {
   height: 124px;
   width: 124px;
   border: none;
   border-radius: 30px;
   background-color: variables.$clr-gray;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__caption {
     margin: 13px 0 0 0;
@@ -297,7 +307,7 @@ h3 {
     cursor: pointer;
   }
 
-  .button-fb:hover svg rect {
+  &:hover svg rect {
     fill: variables.$clr-blue;
   }
 
@@ -305,14 +315,14 @@ h3 {
     fill: variables.$clr-blue;
   }
 
-  .button-fb:active {
+  &:active {
     box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
   }
 
   &:disabled {
     pointer-events: none;
 
-    & .button-fb__caption {
+    & .button-social__caption {
       color: variables.$clr-gray-3;
     }
   }
@@ -322,35 +332,10 @@ h3 {
   }
 }
 
-/* Кнопка бот Фото */
-.button-photo {
-  height: 124px;
-  width: 124px;
-  border: none;
-  border-radius: 30px;
-  background-color: variables.$clr-gray;
-  padding: 0;
-
-  &__caption {
-    margin: 13px 0 0 0;
-    padding: 0;
-    font-family: variables.$ff-primary;
-    font-size: variables.$fs-small;
-    font-weight: variables.$fw-600;
-    line-height: 21px;
-    letter-spacing: 0.3px;
-    color: variables.$clr-primary-dark;
-  }
-
-  &_active {
-    box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
-    cursor: pointer;
-  }
-}
-
 /* Кнопка-панель добавить бота */
 .panel-add-bot {
-  width: 296px;
+  width: 100%;
+  max-width: 296px;
   height: 172px;
   padding: 0;
   display: flex;
@@ -424,12 +409,12 @@ h3 {
 .button-tutorial {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
-  width: 579px;
+  width: 100%;
+  max-width: 579px;
   height: 76px;
-  padding: 0;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-color: variables.$clr-white;
@@ -443,15 +428,12 @@ h3 {
     top: 17px;
     left: 32px;
   }
-
-  &__text {
-    font-family: variables.$ff-primary;
-    color: variables.$clr-primary-dark;
-    font-size: variables.$fs-small;
-    font-weight: variables.$fw-600;
-    line-height: 21px;
-    letter-spacing: 0.3px;
-  }
+  font-family: variables.$ff-primary;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  line-height: 21px;
+  letter-spacing: 0.3px;
 
   &:hover {
     border: none;
@@ -465,9 +447,7 @@ h3 {
   }
 
   &:active {
-    & .button-tutorial__text {
-      color: variables.$clr-xiketic-press;
-    }
+    color: variables.$clr-xiketic-press;
   }
 
   &:disabled {
@@ -486,7 +466,8 @@ h3 {
 
 /* Кнопка блок сообщений */
 .button-block-message {
-  width: 196px;
+  width: 100%;
+  max-width: 196px;
   height: 64px;
   display: flex;
   align-items: center;
@@ -497,14 +478,11 @@ h3 {
   border-radius: 10px;
   color: variables.$clr-primary-dark;
   background-color: transparent;
-
-  &__text {
-    font-size: variables.$fs-small;
-    font-weight: variables.$fw-600;
-    font-family: variables.$ff-primary;
-    line-height: 21px;
-    letter-spacing: 0.3px;
-  }
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  font-family: variables.$ff-primary;
+  line-height: 21px;
+  letter-spacing: 0.3px;
 
   &:hover {
     background-color: variables.$clr-secondary-gray;
@@ -553,5 +531,112 @@ h3 {
     & svg g {
       opacity: 0.5;
     }
+  }
+}
+
+.constructor__button_clr_default {
+  background-color: variables.$clr-secondary-focus;
+}
+
+.constructor__button {
+  font-family: variables.$ff-primary;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.constructor__default-button {
+  width: 95px;
+  height: 35px;
+  color: variables.$clr-xiketic-default;
+  font-weight: variables.$fw-600;
+}
+
+.constructor__default-button:hover {
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__default-button_pressed {
+  color: variables.$clr-primary-medium;
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__default-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-primary-gray;
+  cursor: default;
+
+  &:hover {
+    color: variables.$clr-primary-gray;
+  }
+}
+
+.constructor__video-button {
+  background-image: url("../../images/videoDefault.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+
+.constructor__video-button:hover {
+  background-image: url("../../images/videoHover.svg");
+}
+
+.constructor__video-button_pressed {
+  background-image: url("../../images/videoHover.svg");
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__video-button_disabled {
+  background-image: url("../../images/videoDisabled.svg");
+  background-color: variables.$clr-secondary-gray;
+  cursor: default;
+
+  &:hover {
+    background-image: url("../../images/videoDisabled.svg");
+    background-color: variables.$clr-secondary-gray;
+  }
+}
+
+.constructor__add-button {
+  background-image: url("../../images/defaultPlus.svg");
+  background-repeat: no-repeat;
+  background-position: 15%;
+  width: 264px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-gray-4;
+}
+
+.constructor__add-button:hover {
+  background-image: url("../../images/plusHover.svg");
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__add-button_pressed {
+  background-image: url("../../images/plusHover.svg");
+  background-color: variables.$clr-blue-disabled;
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__add-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-secondary-cultured;
+  cursor: default;
+  &:hover {
+    background-image: url("../../images/defaultPlus.svg");
+    background-color: variables.$clr-secondary-gray;
+    color: variables.$clr-secondary-cultured;
   }
 }
