@@ -51,6 +51,7 @@
   &_30x24 {
     width: 24px;
     height: 30px;
+    box-sizing: content-box;
   }
 
   &_36x36 {
@@ -65,6 +66,7 @@
 
   &_pos-rel {
     position: relative;
+    height: 30px;
   }
 
   &_pos-abs {
