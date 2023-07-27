@@ -339,30 +339,157 @@
         <li>
           <section class="section">
             <h2 class="section__title">Weekdays Choice Options List</h2>
-            <div class="popup">
-              <ul class="ui-kit-list selector__items">
-                <li class="selector__item">Пн</li>
-                <li class="selector__item">Вт</li>
-                <li class="selector__item">Ср</li>
-                <li class="selector__item">Чт</li>
-                <li class="selector__item">Пт</li>
-                <li class="selector__item">Сб</li>
-                <li class="selector__item">Вс</li>
-              </ul>
-            </div>
+            <ul class="ui-kit-list weekdays">
+              <button class="weekdays__weekday" type="button">Пн</button>
+              <button class="weekdays__weekday" type="button">Вт</button>
+              <button class="weekdays__weekday" type="button">Ср</button>
+              <button class="weekdays__weekday" type="button">Чт</button>
+              <button class="weekdays__weekday" type="button">Пт</button>
+              <button class="weekdays__weekday" type="button">Сб</button>
+              <button class="weekdays__weekday" type="button">Вс</button>
+            </ul>
           </section>
         </li>
 
         <li>
           <section class="section">
-            <h2 class="section__title">File Upload Button</h2>
-            <div class="popup">
-              <ul class="ui-kit-list selector__items">
-                <li class="selector__item">Size L</li>
-                <li class="selector__item">Size M</li>
-                <li class="selector__item">Size S</li>
-              </ul>
-            </div>
+            <h2 class="section__title">File Upload Buttons</h2>
+            <ul class="ui-kit-list upload-buttons">
+              <div class="file-upload file-upload_size_large">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div class="file-upload file-upload_size_medium">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div class="file-upload file-upload_size_small">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div
+                class="file-upload file-upload_size_large file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+
+              <div
+                class="file-upload file-upload_size_medium file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+
+              <div
+                class="file-upload file-upload_size_small file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+            </ul>
           </section>
         </li>
       </ul>

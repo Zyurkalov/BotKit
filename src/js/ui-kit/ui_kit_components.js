@@ -1,5 +1,7 @@
 import "../../scss/ui-kit/ui_kit_components.scss";
 
+// Multiple Choice List
+
 // все галочки обычных опций
 const checkmarks = Array.from(
   document.querySelectorAll(".selector__checkmark"),
@@ -51,4 +53,14 @@ allItemsOption.addEventListener("click", () => {
     // и опции "выбрать всё" тоже
     allItemsCheckmark.classList.add("selector__checkmark-for-all_checked");
   }
+});
+
+// Weekdays Choice
+
+const weekdays = Array.from(document.querySelectorAll(".weekdays__weekday"));
+
+weekdays.forEach((weekday) => {
+  weekday.addEventListener("click", () => {
+    weekday.classList.toggle("weekdays__weekday_chosen");
+  });
 });

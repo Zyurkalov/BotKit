@@ -289,3 +289,97 @@
     }
   }
 }
+
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: variables.$ff-primary;
+  font-size: variables.$fs-small;
+  font-style: normal;
+  font-weight: variables.$fw-400;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: 0.3px;
+
+  &__weekday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    height: 32px;
+    width: 65px;
+
+    background-color: variables.$clr-gray;
+    color: variables.$clr-gray-3;
+
+    &_chosen {
+      background-color: variables.$clr-primary-medium;
+      color: variables.$clr-white;
+    }
+  }
+}
+
+.upload-buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 40px;
+}
+
+.file-upload {
+  box-sizing: border-box;
+  height: 65px;
+  border: 2px dashed variables.$clr-gray-3;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &_invalid {
+    border: 1px solid variables.$clr-error-default;
+  }
+
+  &_size {
+    &_large {
+      width: 556px;
+    }
+    &_medium {
+      width: 410px;
+    }
+    &_small {
+      width: 272px;
+    }
+  }
+
+  &__input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__input-error {
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-tiny;
+    font-style: normal;
+    font-weight: variables.$fw-400;
+    line-height: 150%; /* 15px */
+    letter-spacing: 0.3px;
+    color: variables.$clr-error-default;
+  }
+
+  &__button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &__text {
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-style: normal;
+    font-weight: variables.$fw-600;
+    line-height: 150%; /* 21px */
+    letter-spacing: 0.3px;
+    color: variables.$clr-gray-3;
+  }
+}
