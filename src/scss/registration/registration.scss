@@ -102,6 +102,10 @@ svg {
   letter-spacing: 0.3px;
   text-decoration-line: underline;
 }
+.passw-recovery__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
 
 .form__submit_size_m {
   width: 260px;

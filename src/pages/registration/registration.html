@@ -21,12 +21,12 @@
           width="149"
           height="35"
         />
-        <h2 class="header__h2 hidden">Регистрация</h2>
-        <h2 class="header__h2 header__h2_type_login">Вход</h2>
+        <h2 class="header__h2 header__h2_type_reg">Регистрация</h2>
+        <h2 class="header__h2 header__h2_type_login hidden">Вход</h2>
       </header>
       <main class="main">
         <div class="window">
-          <section class="outer-wrapper hidden">
+          <section class="outer-wrapper outer-wrapper_type_reg">
             <h3 class="outer-wrapper__h3">Создай аккаунт с помощью</h3>
             <div class="icons-container">
               <div class="icons-container__icons">
@@ -163,7 +163,7 @@
               />
             </div>
           </section>
-          <section class="outer-wrapper outer-wrapper_type_login">
+          <section class="outer-wrapper outer-wrapper_type_login hidden">
             <div class="inner-wrapper inner-wrapper_type_login">
               <form
                 action="/"
@@ -197,10 +197,16 @@
                 </fieldset>
                 <ul class="passw-recovery">
                   <li class="passw-recovery__item">
-                    <a class="passw-recovery__link" href="#">Забыли пароль?</a>
+                    <a
+                      class="passw-recovery__link passw-recovery__link_type_recover"
+                      >Забыли пароль?</a
+                    >
                   </li>
                   <li class="passw-recovery__item">
-                    <a class="passw-recovery__link" href="#">Регистрация</a>
+                    <a
+                      class="passw-recovery__link passw-recovery__link_type_register"
+                      >Регистрация</a
+                    >
                   </li>
                 </ul>
                 <button type="submit" class="form__submit form__submit_size_m">
