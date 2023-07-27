@@ -52,11 +52,11 @@ svg {
 .page {
   // position: relative;
 
-  width: 1440px;
+  min-width: 1440px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // min-height: 100vh;
+  min-height: 1194px;
   // width: 100vw;
 }
 
@@ -355,6 +355,8 @@ svg {
 ///////////////////////////////////////////
 .navigation {
   margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .menu {
