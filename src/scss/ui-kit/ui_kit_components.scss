@@ -19,6 +19,17 @@
   width: 30%;
 }
 
+.popup {
+  box-shadow: 0px 12px 24px 0px variables.$clr-gray-shadow;
+  border-radius: 10px;
+  background: variables.$clr-white;
+}
+
+.popup_scrollable {
+  max-height: 135px;
+  overflow: scroll;
+}
+
 .steps {
   margin: 0;
   font-family: variables.$ff-secondary;
@@ -45,7 +56,6 @@
   padding: 24px 16px 16px 32px;
   border-radius: 30px;
   background: variables.$clr-white;
-  box-shadow: 0px 12px 24px 0px variables.$clr-gray-shadow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,9 +136,6 @@
 }
 
 .card__actions {
-  border-radius: 10px;
-  background: variables.$clr-white;
-  box-shadow: 0px 12px 24px 0px variables.$clr-gray-shadow;
   display: flex;
   flex-direction: column;
   row-gap: 4px;
@@ -257,11 +264,28 @@
   .selector__item {
     @extend .card__action;
     padding: 7px 16px;
+    justify-content: space-between;
 
     &:first-child,
     &:nth-last-child(2) {
       border-bottom: none;
       padding-bottom: 7px;
+    }
+  }
+
+  .selector__checkmark {
+    opacity: 0;
+
+    &_checked {
+      opacity: 1;
+    }
+  }
+
+  .selector__checkmark-for-all {
+    opacity: 0;
+
+    &_checked {
+      opacity: 1;
     }
   }
 }
