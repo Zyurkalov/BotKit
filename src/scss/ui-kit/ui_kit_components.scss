@@ -213,6 +213,7 @@
     &:first-child,
     &:nth-last-child(2) {
       border-bottom: none;
+      padding-bottom: 9px;
     }
   }
 }
@@ -260,6 +261,7 @@
     &:first-child,
     &:nth-last-child(2) {
       border-bottom: none;
+      padding-bottom: 7px;
     }
   }
 }
