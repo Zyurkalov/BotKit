@@ -13,13 +13,14 @@
   </head>
 
   <body class="ui-kit-body">
-    <h2 class="ui-kit__h2">Common</h2>
-    <main class="ui-kit-main">
-      <div>
-        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-1 ui-kit-buttons">
+    <main>
+      <h2 class="ui-kit__h2">Common</h2>
+      <section class="ui-kit-section">
+        <div>
+          <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка добавить бота синяя -->
           <button class="common-button common-button_color_blue" type="submit">
             добавить бота
@@ -91,12 +92,12 @@
             </svg>
           </button>
         </section>
-      </div>
-      <div>
-        <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-1 ui-kit-buttons">
+
+        <div>
+          <h3 class="ui-kit__h3">Disabled</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка добавить бота синяя Disabled -->
           <button
             class="common-button common-button_color_blue"
@@ -177,13 +178,13 @@
             </svg>
           </button>
         </section>
-      </div>
-      <!-- Component 2 -->
-      <div>
-        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-2 ui-kit-buttons">
+
+        <!-- Component 2 -->
+        <div>
+          <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка пошаговая инструкция -->
           <button class="button-tutorial" type="button">
             <img
@@ -194,29 +195,28 @@
             Пошаговая инструкция
           </button>
         </section>
-      </div>
-      <div>
-        <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-2 ui-kit-buttons">
-          <!-- Кнопка пошаговая инструкция Disabled -->
-          <button class="button-tutorial" type="button" disabled>
-            <img
-              class="button-tutorial__icon"
-              src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
-              alt="иконка кнопки"
-            />
-            <p class="button-tutorial__text">Пошаговая инструкция</p>
-          </button>
-        </section>
-      </div>
-      <!-- Component 3 -->
-      <div>
-        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-3 ui-kit-buttons">
+        <div>
+          <h3 class="ui-kit__h3">Disabled</h3>
+        </div>
+        <div>
+          <section class="ui-kit-buttons">
+            <!-- Кнопка пошаговая инструкция Disabled -->
+            <button class="button-tutorial" type="button" disabled>
+              <img
+                class="button-tutorial__icon"
+                src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
+                alt="иконка кнопки"
+              />
+              <p class="button-tutorial__text">Пошаговая инструкция</p>
+            </button>
+          </section>
+        </div>
+        <!-- Component 3 -->
+        <div>
+          <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка блок сообщений -->
           <button class="button-block-message" type="button">
             <svg
@@ -291,12 +291,12 @@
             </svg>
           </button>
         </section>
-      </div>
-      <div>
-        <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-3 ui-kit-buttons">
+
+        <div>
+          <h3 class="ui-kit__h3">Disabled</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка блок сообщений Disabled -->
           <button class="button-block-message" type="button" disabled>
             <svg
@@ -372,13 +372,13 @@
             </svg>
           </button>
         </section>
-      </div>
-      <!-- Component 4 -->
-      <div>
-        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-4 ui-kit-buttons">
+
+        <!-- Component 4 -->
+        <div>
+          <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка бот автоответчик  -->
           <div class="answering-machine">
             <button class="answering-machine__button" type="button">
@@ -488,12 +488,12 @@
             <p class="panel-add-bot__text">Добавить бота</p>
           </button>
         </section>
-      </div>
-      <div>
-        <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-4 ui-kit-buttons">
+
+        <div>
+          <h3 class="ui-kit__h3">Disabled</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
           <!-- Кнопка бот автоответчик  Disabled -->
           <div class="answering-machine answering-machine_type_disabled">
             <button class="answering-machine__button" type="button" disabled>
@@ -571,151 +571,118 @@
             <p class="panel-add-bot__text">Добавить бота</p>
           </button>
         </section>
-      </div>
-      <!-- Constructor -->
-      <section class="constructor">
-        <h2>Constructor</h2>
-        <div class="container">
-          <ul>
-            <li class="container__linear container__linear-text-condition">
-              Default
-              <button
-                class="constructor__button constructor__button-default-grey constructor-button-tab"
-              >
-                <h3 class="constructor__text constructor__text-tab">Текстом</h3>
-              </button>
-              <button
-                class="constructor__button constructor__button-video-default-grey constructor__button-content"
-              ></button>
-              <button
-                class="constructor__button constructor__button-condition-default-grey constructor-button-addCondition"
-              >
-                <img src="<%=require('../../images/defaultPlus.svg')%>" />
-                <h3 class="constructor__text constructor__text-condition">
-                  Добавить условие
-                </h3>
-              </button>
-            </li>
-            <li class="container__linear container__linear-text-condition">
-              Hover
-              <button
-                class="constructor__button constructor__button-default-grey constructor-button-tab tab-hover"
-              >
-                <h3 class="constructor__text constructor__text-tab tab-hover">
-                  Текстом
-                </h3>
-              </button>
-              <button
-                class="constructor__button constructor__button-video-default-grey constructor__button-content content-hover"
-              ></button>
-              <button
-                class="constructor__button constructor__button-condition-default-grey constructor-button-addCondition"
-              >
-                <img src="<%=require('../../images/plusHover.svg')%>" />
-                <h3
-                  class="constructor__text constructor__text-condition condition-hover"
-                >
-                  Добавить условие
-                </h3>
-              </button>
-            </li>
-            <li class="container__linear container__linear-text-condition">
-              Pressed
-              <button
-                class="constructor__button constructor-button-tab btn-pressed"
-              >
-                <h3 class="constructor__text constructor__text-tab tab-hover">
-                  Текстом
-                </h3>
-              </button>
-              <button
-                class="constructor__button constructor__button-content content-hover btn-pressed"
-              ></button>
-              <button
-                class="constructor__button constructor-button-addCondition btn-pressed"
-              >
-                <img src="<%=require('../../images/plusHover.svg')%>" />
-                <h3
-                  class="constructor__text constructor__text-condition condition-hover"
-                >
-                  Добавить условие
-                </h3>
-              </button>
-            </li>
-            <li class="container__linear container__linear-text-condition">
-              Disabled
-              <button
-                class="constructor__button constructor__button-default-grey constructor-button-tab btn-disabled"
-              >
-                <h3 class="constructor__text constructor__text-tab">Текстом</h3>
-              </button>
-              <button
-                class="constructor__button constructor__button-video-default-grey constructor__button-content content-disabled"
-              ></button>
-              <button
-                class="constructor__button constructor__button-condition-default-grey constructor-button-addCondition"
-              >
-                <img src="<%=require('../../images/defaultPlus.svg')%>" />
-                <h3
-                  class="constructor__text constructor__text-condition btn-disabled"
-                >
-                  Добавить условие
-                </h3>
-              </button>
-            </li>
-          </ul>
-          <ul>
-            <li class="container__linear container__linear-phone-delete">
-              Default
-              <div class="container__linear-shadow">
-                <object
-                  type="image/svg+xml"
-                  data="<%=require('../../images/template-icon/24x24/constructor/ask-phone.svg')%>"
-                  width="24"
-                ></object>
-                <object
-                  type="image/svg+xml"
-                  data="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
-                  width="24"
-                ></object>
-              </div>
-            </li>
-            <li class="container__linear container__linear-phone-delete">
-              Hover
-              <div class="container__linear-shadow">
-                <object
-                  type="image/svg+xml"
-                  data="<%=require('../../images/ask-phone-pressed.svg')%>"
-                  width="24"
-                ></object>
-                <object
-                  type="image/svg+xml"
-                  data="<%=require('../../images/delete-pressed.svg')%>"
-                  width="24"
-                ></object>
-              </div>
-            </li>
-            <li class="container__linear container__linear-phone-delete">
-              Pressed
-              <div class="container__linear-shadow">
-                <object
-                  type="image/svg+xml"
-                  data="<%=require('../../images/template-icon/24x24/constructor/ask-phone.svg')%>"
-                  width="24"
-                ></object>
-                <object
-                  type="image/svg+xml"
-                  data="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
-                  width="24"
-                ></object>
-              </div>
-            </li>
-          </ul>
-        </div>
       </section>
 
-      <!-- And so on, up to component N... -->
+      <h2 class="ui-kit__h2">Constructor</h2>
+      <section class="ui-kit-section">
+        <div>
+          <h3 class="ui-kit__h3">Default / Hover</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__button_clr_default"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__button_clr_default"
+          >
+            Добавить условие
+          </button>
+        </section>
+        <div>
+          <h3 class="ui-kit__h3">Pressed</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__default-button_pressed"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__video-button_pressed"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__add-button_pressed"
+          >
+            Добавить условие
+          </button>
+        </section>
+        <div>
+          <h3 class="ui-kit__h3">Disabled</h3>
+        </div>
+
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__default-button_disabled"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__video-button_disabled"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__add-button_disabled"
+          >
+            Добавить условие
+          </button>
+        </section>
+      </section>
+
+      <!--      <ul>-->
+      <!--        <li class="container__linear container__linear-phone-delete">-->
+      <!--          Default-->
+      <!--          <div class="container__linear-shadow">-->
+      <!--            <object-->
+      <!--              type="image/svg+xml"-->
+      <!--              data="<%=require('../../images/template-icon/24x24/constructor/ask-phone.svg')%>"-->
+      <!--              width="24"-->
+      <!--            ></object>-->
+      <!--            <object-->
+      <!--              type="image/svg+xml"-->
+      <!--              data="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"-->
+      <!--              width="24"-->
+      <!--            ></object>-->
+      <!--          </div>-->
+      <!--        </li>-->
+      <!--        <li class="container__linear container__linear-phone-delete">-->
+      <!--          Hover-->
+      <!--          <div class="container__linear-shadow">-->
+      <!--            <object-->
+      <!--              type="image/svg+xml"-->
+      <!--              data="<%=require('../../images/ask-phone-pressed.svg')%>"-->
+      <!--              width="24"-->
+      <!--            ></object>-->
+      <!--            <object-->
+      <!--              type="image/svg+xml"-->
+      <!--              data="<%=require('../../images/delete-pressed.svg')%>"-->
+      <!--              width="24"-->
+      <!--            ></object>-->
+      <!--          </div>-->
+      <!--        </li>-->
+      <!--        <li class="container__linear container__linear-phone-delete">-->
+      <!--          Pressed-->
+      <!--          <div class="container__linear-shadow">-->
+      <!--            <object-->
+      <!--              type="image/svg+xml"-->
+      <!--              data="<%=require('../../images/template-icon/24x24/constructor/ask-phone.svg')%>"-->
+      <!--              width="24"-->
+      <!--            ></object>-->
+      <!--            <object-->
+      <!--              type="image/svg+xml"-->
+      <!--              data="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"-->
+      <!--              width="24"-->
+      <!--            ></object>-->
+      <!--          </div>-->
+      <!--        </li>-->
+      <!--      </ul>-->
+      <!--    </div>-->
+      <!--  </section>-->
     </main>
   </body>
 </html>
-`
