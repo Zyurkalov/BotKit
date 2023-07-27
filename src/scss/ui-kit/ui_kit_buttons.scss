@@ -1,15 +1,18 @@
 @use "../variables";
 @use "../common";
 @use "utils";
+@use "ui_kit_fields";
 
-.ui-kit-main {
+.ui-kit-section {
   display: grid;
+  align-items: center;
   grid-template-columns: 150px 1fr;
   row-gap: 30px;
 }
 
 .ui-kit-buttons {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   gap: 40px;
 }
@@ -528,5 +531,113 @@
     & svg g {
       opacity: 0.5;
     }
+  }
+}
+
+.constructor__button_clr_default {
+  background-color: variables.$clr-secondary-focus;
+}
+
+.constructor__button {
+  font-family: variables.$ff-primary;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.constructor__default-button {
+  width: 95px;
+  height: 35px;
+  color: variables.$clr-xiketic-default;
+  font-weight: variables.$fw-600;
+}
+
+.constructor__default-button:hover {
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__default-button_pressed {
+  color: variables.$clr-primary-medium;
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__default-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-primary-gray;
+  cursor: default;
+
+  &:hover {
+    color: variables.$clr-primary-gray;
+  }
+}
+
+.constructor__video-button {
+  background-image: url("../../images/videoDefault.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+
+.constructor__video-button:hover {
+  background-image: url("../../images/videoHover.svg");
+}
+
+.constructor__video-button_pressed {
+  background-image: url("../../images/videoHover.svg");
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__video-button_disabled {
+  background-image: url("../../images/videoDisabled.svg");
+  background-color: variables.$clr-secondary-gray;
+  cursor: default;
+
+  &:hover {
+    background-image: url("../../images/videoDisabled.svg");
+    background-color: variables.$clr-secondary-gray;
+  }
+}
+
+.constructor__add-button {
+  background-image: url("../../images/defaultPlus.svg");
+  background-repeat: no-repeat;
+  background-position: 15%;
+  width: 264px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-gray-4;
+}
+
+.constructor__add-button:hover {
+  background-image: url("../../images/plusHover.svg");
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__add-button_pressed {
+  background-image: url("../../images/plusHover.svg");
+  background-color: variables.$clr-blue-disabled;
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__add-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-secondary-cultured;
+  cursor: default;
+  &:hover {
+    background-image: url("../../images/defaultPlus.svg");
+    background-color: variables.$clr-secondary-gray;
+    color: variables.$clr-secondary-cultured;
   }
 }

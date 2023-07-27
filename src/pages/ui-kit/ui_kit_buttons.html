@@ -13,13 +13,11 @@
   </head>
 
   <body class="ui-kit-body">
-    <h2 class="ui-kit__h2">Common</h2>
-    <main class="ui-kit-main">
-      <div>
+    <main>
+      <h2 class="ui-kit__h2">Common</h2>
+      <section class="ui-kit-section">
         <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-1 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка добавить бота синяя -->
           <button class="common-button common-button_color_blue" type="submit">
             добавить бота
@@ -91,12 +89,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <div>
+
         <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-1 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка добавить бота синяя Disabled -->
           <button
             class="common-button common-button_color_blue"
@@ -177,13 +172,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <!-- Component 2 -->
-      <div>
+
         <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-2 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка пошаговая инструкция -->
           <button class="button-tutorial" type="button">
             <img
@@ -194,12 +185,9 @@
             Пошаговая инструкция
           </button>
         </section>
-      </div>
-      <div>
+
         <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-2 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка пошаговая инструкция Disabled -->
           <button class="button-tutorial" type="button" disabled>
             <img
@@ -210,13 +198,9 @@
             <p class="button-tutorial__text">Пошаговая инструкция</p>
           </button>
         </section>
-      </div>
-      <!-- Component 3 -->
-      <div>
+
         <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-3 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка блок сообщений -->
           <button class="button-block-message" type="button">
             <svg
@@ -291,12 +275,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <div>
+
         <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-3 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка блок сообщений Disabled -->
           <button class="button-block-message" type="button" disabled>
             <svg
@@ -372,13 +353,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <!-- Component 4 -->
-      <div>
+
         <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-4 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка бот автоответчик  -->
           <div class="answering-machine">
             <button class="answering-machine__button" type="button">
@@ -488,12 +465,9 @@
             <p class="panel-add-bot__text">Добавить бота</p>
           </button>
         </section>
-      </div>
-      <div>
+
         <h3 class="ui-kit__h3">Disabled</h3>
-      </div>
-      <div>
-        <section class="component-4 ui-kit-buttons">
+        <section class="ui-kit-buttons">
           <!-- Кнопка бот автоответчик  Disabled -->
           <div class="answering-machine answering-machine_type_disabled">
             <button class="answering-machine__button" type="button" disabled>
@@ -571,7 +545,93 @@
             <p class="panel-add-bot__text">Добавить бота</p>
           </button>
         </section>
-      </div>
+      </section>
+
+      <h2 class="ui-kit__h2">Constructor</h2>
+      <section class="ui-kit-section">
+        <h3 class="ui-kit__h3">Default / Hover</h3>
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__button_clr_default"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__button_clr_default"
+          >
+            Добавить условие
+          </button>
+        </section>
+
+        <h3 class="ui-kit__h3">Pressed</h3>
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__default-button_pressed"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__video-button_pressed"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__add-button_pressed"
+          >
+            Добавить условие
+          </button>
+        </section>
+
+        <h3 class="ui-kit__h3">Disabled</h3>
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__default-button_disabled"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__video-button_disabled"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__add-button_disabled"
+          >
+            Добавить условие
+          </button>
+        </section>
+
+        <h3 class="ui-kit__h3">Default / Hover</h3>
+        <section class="ui-kit-buttons">
+          <div class="add-phone__container">
+            <button
+              class="ui-kit__button_xs icon__phone-plus"
+              type="button"
+            ></button>
+            <div>
+              <button
+                class="ui-kit__button_xs icon__trash-bin"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </section>
+
+        <h3 class="ui-kit__h3">Pressed</h3>
+        <section class="ui-kit-buttons">
+          <div class="add-phone__container">
+            <button
+              class="ui-kit__button_xs icon__phone-plus icon__phone-plus_pressed"
+              type="button"
+            ></button>
+            <div>
+              <button
+                class="ui-kit__button_xs icon__trash-bin icon__phone-plus_pressed"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
   </body>
 </html>
