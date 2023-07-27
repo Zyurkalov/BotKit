@@ -1,6 +1,7 @@
 @use "../variables";
 @use "../common";
 @use "utils";
+@use "ui_kit_fields";
 
 .ui-kit-section {
   display: grid;
@@ -533,26 +534,6 @@
   }
 }
 
-.container__linear {
-  font-family: variables.$ff-secondary;
-  font-weight: variables.$fw-400;
-  color: variables.$clr-primary-dark;
-  font-size: 12px;
-  list-style-type: none;
-  margin: 44px 0 0 0;
-}
-.container__linear-text-condition {
-  display: grid;
-  grid-template-columns: repeat(4, 70px);
-  align-items: center;
-  gap: 70px;
-}
-.container__linear-phone-delete {
-  display: grid;
-  grid-template-columns: 144px 55px 0px;
-  align-items: center;
-}
-
 .constructor__button_clr_default {
   background-color: variables.$clr-secondary-focus;
 }
@@ -575,6 +556,25 @@
   font-weight: variables.$fw-600;
 }
 
+.constructor__default-button:hover {
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__default-button_pressed {
+  color: variables.$clr-primary-medium;
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__default-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-primary-gray;
+  cursor: default;
+
+  &:hover {
+    color: variables.$clr-primary-gray;
+  }
+}
+
 .constructor__video-button {
   background-image: url("../../images/videoDefault.svg");
   background-repeat: no-repeat;
@@ -589,31 +589,6 @@
   transition: 0.3s;
 }
 
-.constructor__add-button {
-  background-image: url("../../images/defaultPlus.svg");
-  background-repeat: no-repeat;
-  background-position: 15%;
-  width: 264px;
-  height: 44px;
-  border-radius: 10px;
-  font-weight: variables.$fw-400;
-  color: variables.$clr-gray-4;
-}
-
-.constructor__default-button:hover {
-  color: variables.$clr-primary-medium;
-}
-
-.constructor__default-button_pressed {
-  color: variables.$clr-primary-medium;
-  background-color: variables.$clr-blue-disabled;
-}
-
-.constructor__default-button_disabled {
-  background-color: variables.$clr-secondary-gray;
-  color: variables.$clr-primary-gray;
-}
-
 .constructor__video-button:hover {
   background-image: url("../../images/videoHover.svg");
 }
@@ -626,6 +601,23 @@
 .constructor__video-button_disabled {
   background-image: url("../../images/videoDisabled.svg");
   background-color: variables.$clr-secondary-gray;
+  cursor: default;
+
+  &:hover {
+    background-image: url("../../images/videoDisabled.svg");
+    background-color: variables.$clr-secondary-gray;
+  }
+}
+
+.constructor__add-button {
+  background-image: url("../../images/defaultPlus.svg");
+  background-repeat: no-repeat;
+  background-position: 15%;
+  width: 264px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-gray-4;
 }
 
 .constructor__add-button:hover {
@@ -642,33 +634,10 @@
 .constructor__add-button_disabled {
   background-color: variables.$clr-secondary-gray;
   color: variables.$clr-secondary-cultured;
-}
-
-.tab-hover {
-  color: variables.$clr-primary-medium;
-}
-.btn-pressed {
-  background-color: variables.$clr-blue-disabled;
-}
-
-.constructor__text-condition {
-  color: variables.$clr-gray-4;
-  font-family: variables.$ff-primary;
-  font-weight: variables.$fw-400;
-  font-size: 13px;
-}
-.condition-hover {
-  color: variables.$clr-primary-medium;
-}
-.btn-disabled {
-  color: variables.$clr-primary-gray;
-}
-
-.container__linear-shadow {
-  display: flex;
-  box-shadow: 0px 6px 16px 0px #15123314;
-  align-items: center;
-  width: 96px;
-  height: 40px;
-  justify-content: space-evenly;
+  cursor: default;
+  &:hover {
+    background-image: url("../../images/defaultPlus.svg");
+    background-color: variables.$clr-secondary-gray;
+    color: variables.$clr-secondary-cultured;
+  }
 }
