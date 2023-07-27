@@ -282,17 +282,17 @@ svg {
     opacity: 90%;
     border-radius: 10px;
 
-    // &_poster-one {
-    //   background-image: url(../../images/video-posters/video-poster_1.svg);
-    // }
+    &_poster-one {
+      background-image: url(../../images/video-posters/video-poster_1.svg);
+    }
 
-    // &_poster-two {
-    //   background-image: url(../../images/video-posters/video-poster_2.svg);
-    // }
+    &_poster-two {
+      background-image: url(../../images/video-posters/video-poster_2.svg);
+    }
 
-    // &_poster-three {
-    //   background-image: url(../../images/video-posters/video-poster_3.svg);
-    // }
+    &_poster-three {
+      background-image: url(../../images/video-posters/video-poster_3.svg);
+    }
   }
 }
 
