@@ -97,8 +97,6 @@ svg {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
   padding: 60px 40px;
   border-radius: 30px;
   box-shadow: 0 12px 24px 0 rgba(21, 18, 51, 0.13);
@@ -111,4 +109,35 @@ svg {
 }
 .popup__close-btn:hover {
   opacity: 0.6;
+}
+.popup__main-logo {
+  min-width: 0;
+  min-height: 0;
+  width: 88px;
+  height: 88px;
+}
+.popup__title {
+  color: variables.$clr-primary-dark;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: variables.$ff-secondary;
+  font-size: 32px;
+  font-weight: variables.$fw-600;
+  line-height: 130%; /* 41.6px */
+  letter-spacing: -0.2px;
+  margin: 0;
+  padding-top: 40px;
+}
+.ordered-list {
+  //list-style-image: url('../../images/template-icon/24x24/variables/more.svg');
+  counter-reset: custom-counter;
+  list-style: none;
+}
+.ordered-list__item {
+  counter-increment: custom-counter;
+}
+.ordered-list__item::before {
+  content: counter(custom-counter)
+    url("../../images/template-icon/24x24/variables/more.svg");
 }
