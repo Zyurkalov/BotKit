@@ -6,14 +6,13 @@
 .ui-kit-section {
   display: grid;
   align-items: center;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 170px 1fr;
   row-gap: 30px;
 }
 
 .ui-kit-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   gap: 40px;
 }
 
