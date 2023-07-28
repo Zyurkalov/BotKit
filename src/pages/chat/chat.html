@@ -13,8 +13,9 @@
   </head>
   <body class="body">
     <div class="page">
-      <div class="ui-kit-navigation">
-        <button type="button" class="ui-kit-navigation__menu-btn">
+      <!-- Top navigation -->
+      <nav class="nav-top">
+        <button type="button">
           <img
             src="<%=require('../../images/template-icon/24x24/add_block/menu_grey.svg')%>"
             alt="menu"
@@ -22,21 +23,9 @@
             height="24"
           />
         </button>
-        <div class="ui-kit-navigation__right-container">
-          <div class="ui-kit-navigation__user-section">
-            <button type="button" class="ui-kit-navigation__notification-icon">
-              <div class="template-icon template-icon_pos-rel">
-                <p class="template-icon__count">2</p>
-                <img
-                  class="template-icon__ding"
-                  src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
-                  alt="колокольчик"
-                  height="40"
-                  width="40"
-                />
-              </div>
-            </button>
-            <button type="button" class="ui-kit-navigation__help-icon">
+        <div class="nav-top__right-container">
+          <div class="nav-top__user-section">
+            <button type="button" class="nav-top__help-icon">
               <img
                 class="template-icon"
                 src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
@@ -45,35 +34,41 @@
                 width="24"
               />
             </button>
-            <div class="ui-kit-navigation__user-info">
+            <button type="button" class="nav-top__notification-icon">
+              <div class="icon icon_pos-rel">
+                <p class="icon__count">2</p>
+                <img
+                  class="icon icon_30x24"
+                  src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
+                  alt="уведомления"
+                />
+              </div>
+            </button>
+            <div class="nav-top__user-info">
               <img
                 alt="аватар"
-                class="ui-kit-navigation__user-avatar"
+                class="nav-top__user-avatar"
                 src="<%=require('../../images/avatar/circle.png')%>"
                 height="40"
                 width="40"
               />
-              <p class="ui-kit-navigation__text">User Name</p>
-              <button
-                type="button"
-                class="ui-kit-navigation__arrow-toggle-icon"
-              >
+              <p class="nav-top__text">User Name</p>
+              <button type="button" class="nav-top__arrow-toggle-icon">
                 <img
                   alt="Стрелка вниз"
-                  class="ui-kit-navigation__arrow-down"
+                  class="nav-top__arrow-down"
                   src="<%=require('../../images/template-icon/20x20/down.svg')%>"
                 />
               </button>
             </div>
           </div>
-          <div class="ui-kit-navigation__tarif-info">
-            <p class="ui-kit-navigation__text">Тариф</p>
-            <p class="ui-kit-navigation__text ui-kit-navigation__text_spanned">
-              Демо
-            </p>
+          <div class="nav-top__tarif-info">
+            <span class="nav-top__text">Тариф</span>
+            <span class="nav-top__text nav-top__text_spanned"> Демо </span>
           </div>
         </div>
-      </div>
+      </nav>
+
       <nav class="menu">
         <div class="menu__container">
           <ul class="menu__items">
@@ -333,8 +328,9 @@
         </section>
       </main>
 
-      <footer class="ui-kit-footer">
-        <p class="ui-kit-footer__text">&#169; 2021 BotKits</p>
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer__text">&#169; 2021 BotKits</p>
       </footer>
     </div>
   </body>
