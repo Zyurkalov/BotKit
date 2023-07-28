@@ -1,7 +1,6 @@
 @use "../variables";
 @use "../common";
 @use "utils";
-@use "ui_kit_icons.scss";
 
 @mixin animation() {
   transition: all 0.3s ease-in-out;

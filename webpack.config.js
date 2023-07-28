@@ -55,7 +55,7 @@ module.exports = {
             loader: "css-loader",
             options: { importLoaders: 2 },
           },
-          // "resolve-url-loader",
+          "resolve-url-loader",
           "postcss-loader",
           {
             loader: "sass-loader",
