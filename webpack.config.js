@@ -55,8 +55,14 @@ module.exports = {
             loader: "css-loader",
             options: { importLoaders: 2 },
           },
+          // "resolve-url-loader",
           "postcss-loader",
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
