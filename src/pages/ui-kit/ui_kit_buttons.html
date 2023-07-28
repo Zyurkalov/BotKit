@@ -12,18 +12,12 @@
     <title>Buttons</title>
   </head>
 
-  <header class="header">
-    <h1>Buttons UI Kit</h1>
-  </header>
-
-  <body class="body">
-    <main class="main">
-      <!-- Component 1 -->
-      <div>
-        <h3>Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-1">
+  <body class="ui-kit-body">
+    <main>
+      <h2 class="ui-kit__h2">Common</h2>
+      <section class="ui-kit-section">
+        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка добавить бота синяя -->
           <button class="common-button common-button_color_blue" type="submit">
             добавить бота
@@ -95,12 +89,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <div>
-        <h3>Disabled</h3>
-      </div>
-      <div>
-        <section class="component-1">
+
+        <h3 class="ui-kit__h3">Disabled</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка добавить бота синяя Disabled -->
           <button
             class="common-button common-button_color_blue"
@@ -181,46 +172,29 @@
             </svg>
           </button>
         </section>
-      </div>
-      <!-- Component 2 -->
-      <div>
-        <h3>Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-2">
+
+        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка пошаговая инструкция -->
           <button class="button-tutorial" type="button">
-            <img
-              class="button-tutorial__icon"
-              src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
-              alt="иконка кнопки"
-            />
             Пошаговая инструкция
           </button>
         </section>
-      </div>
-      <div>
-        <h3>Disabled</h3>
-      </div>
-      <div>
-        <section class="component-2">
+
+        <h3 class="ui-kit__h3">Disabled</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка пошаговая инструкция Disabled -->
-          <button class="button-tutorial" type="button" disabled>
-            <img
-              class="button-tutorial__icon"
-              src="<%=require('../../images/template-icon/add_bot/tutorial.svg')%>"
-              alt="иконка кнопки"
-            />
-            <p class="button-tutorial__text">Пошаговая инструкция</p>
+          <button
+            class="button-tutorial button-tutorial_disabled"
+            type="button"
+            disabled
+          >
+            Пошаговая инструкция
           </button>
         </section>
-      </div>
-      <!-- Component 3 -->
-      <div>
-        <h3>Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-3">
+
+        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка блок сообщений -->
           <button class="button-block-message" type="button">
             <svg
@@ -295,12 +269,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <div>
-        <h3>Disabled</h3>
-      </div>
-      <div>
-        <section class="component-3">
+
+        <h3 class="ui-kit__h3">Disabled</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка блок сообщений Disabled -->
           <button class="button-block-message" type="button" disabled>
             <svg
@@ -376,13 +347,9 @@
             </svg>
           </button>
         </section>
-      </div>
-      <!-- Component 4 -->
-      <div>
-        <h3>Default / Hover / Pressed</h3>
-      </div>
-      <div>
-        <section class="component-4">
+
+        <h3 class="ui-kit__h3">Default / Hover / Pressed</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка бот автоответчик  -->
           <div class="answering-machine">
             <button class="answering-machine__button" type="button">
@@ -414,7 +381,7 @@
             <p class="answering-machine__caption">Бот автоответчик</p>
           </div>
           <!-- Кнопка Facebook -->
-          <button class="button-fb" type="button">
+          <button class="button-social" type="button">
             <svg
               width="52"
               height="52"
@@ -428,10 +395,10 @@
                 fill="white"
               />
             </svg>
-            <p class="button-fb__caption">Facebook</p>
+            <p class="button-social__caption">Facebook</p>
           </button>
           <!-- Кнопка Фото -->
-          <button class="button-photo button-photo_active" type="button">
+          <button class="button-social button-photo_active" type="button">
             <svg
               width="52"
               height="52"
@@ -462,7 +429,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <p class="button-photo__caption">Фото</p>
+            <p class="button-social__caption">Фото</p>
           </button>
           <!-- Кнопка-панель добавить бота  -->
           <button class="panel-add-bot" type="button">
@@ -492,12 +459,9 @@
             <p class="panel-add-bot__text">Добавить бота</p>
           </button>
         </section>
-      </div>
-      <div>
-        <h3>Disabled</h3>
-      </div>
-      <div>
-        <section class="component-4">
+
+        <h3 class="ui-kit__h3">Disabled</h3>
+        <section class="ui-kit-buttons">
           <!-- Кнопка бот автоответчик  Disabled -->
           <div class="answering-machine answering-machine_type_disabled">
             <button class="answering-machine__button" type="button" disabled>
@@ -529,7 +493,7 @@
             <p class="answering-machine__caption">Бот автоответчик</p>
           </div>
           <!-- Кнопка Facebook Disabled  -->
-          <button class="button-fb" type="button" disabled>
+          <button class="button-social" type="button" disabled>
             <svg
               width="52"
               height="52"
@@ -543,7 +507,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-fb__caption">Facebook</p>
+            <p class="button-social__caption">Facebook</p>
           </button>
           <!-- Пустота под кнопкой Фото -->
           <div></div>
@@ -575,7 +539,93 @@
             <p class="panel-add-bot__text">Добавить бота</p>
           </button>
         </section>
-      </div>
+      </section>
+
+      <h2 class="ui-kit__h2">Constructor</h2>
+      <section class="ui-kit-section">
+        <h3 class="ui-kit__h3">Default / Hover</h3>
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__button_clr_default"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__button_clr_default"
+          >
+            Добавить условие
+          </button>
+        </section>
+
+        <h3 class="ui-kit__h3">Pressed</h3>
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__default-button_pressed"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__video-button_pressed"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__add-button_pressed"
+          >
+            Добавить условие
+          </button>
+        </section>
+
+        <h3 class="ui-kit__h3">Disabled</h3>
+        <section class="ui-kit-buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__default-button_disabled"
+          >
+            Текстом
+          </button>
+          <button
+            class="constructor__button constructor__video-button constructor__video-button_disabled"
+          ></button>
+          <button
+            class="constructor__button constructor__add-button constructor__add-button_disabled"
+          >
+            Добавить условие
+          </button>
+        </section>
+
+        <h3 class="ui-kit__h3">Default / Hover</h3>
+        <section class="ui-kit-buttons">
+          <div class="add-stuff__container">
+            <button
+              class="ui-kit__button_xs icon__phone-plus"
+              type="button"
+            ></button>
+            <div>
+              <button
+                class="ui-kit__button_xs icon__trash-bin"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </section>
+
+        <h3 class="ui-kit__h3">Pressed</h3>
+        <section class="ui-kit-buttons">
+          <div class="add-stuff__container">
+            <button
+              class="ui-kit__button_xs icon__phone-plus icon__phone-plus_pressed"
+              type="button"
+            ></button>
+            <div>
+              <button
+                class="ui-kit__button_xs icon__trash-bin icon__phone-plus_pressed"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
   </body>
 </html>

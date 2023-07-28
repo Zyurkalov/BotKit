@@ -1,69 +1,14 @@
 @use "../variables";
 @use "../common";
-
-*,
-*::before,
-*::after {
-  font-family: inherit;
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
-input,
-button,
-fieldset,
-textarea {
-  font: inherit;
-  background-color: transparent;
-  border: 0;
-}
-
-img,
-svg {
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
-
-.list {
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-}
+@use "utils";
 
 .section {
-  outline: 1px 0px 1px 0px solid gray;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
 }
 
 .section__title {
   margin: 0;
-  font-family: variables.$ff-secondary;
-  font-size: variables.$fs-base;
-  font-style: normal;
-  font-weight: variables.$fw-400;
-  line-height: 130%;
   margin-right: 100px;
   width: 30%;
 }
@@ -98,15 +43,21 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
 
   &__icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-  &__icon:hover {
-    cursor: pointer;
+  &__icon {
+    &_52x52 {
+      width: 52px;
+      height: 52px;
+    }
+    &__icon:hover {
+      cursor: pointer;
+    }
   }
 
   &__name {

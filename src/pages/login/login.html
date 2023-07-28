@@ -21,12 +21,65 @@
           width="149"
           height="35"
         />
-        <h2 class="header__h2">Регистрация</h2>
+        <h2 class="header__h2 header__h2_type_login">Вход</h2>
       </header>
       <main class="main">
         <div class="window">
-          <section class="outer-wrapper">
-            <h3 class="outer-wrapper__h3">Создай аккаунт с помощью</h3>
+          <section class="outer-wrapper outer-wrapper_type_login">
+            <div class="inner-wrapper inner-wrapper_type_login">
+              <form
+                action="/"
+                class="form form_type_login"
+                name="login-form"
+                novalidate
+              >
+                <fieldset class="login-form__input-container">
+                  <label class="form__field form__field_size_l">
+                    <input
+                      type="email"
+                      class="form__input form__input_size_l"
+                      id="login-form-email"
+                      name="login-form-email"
+                      placeholder="E-mail"
+                      required
+                    />
+                    <span class="form__input-error url-input-error"></span>
+                  </label>
+                  <label class="form__field form__field_size_l">
+                    <input
+                      type="password"
+                      class="form__input form__input_size_l"
+                      id="login-form-password"
+                      name="login-form-password"
+                      placeholder="Пароль"
+                      autocomplete="current-password"
+                      required
+                    />
+                    <span class="form__input-error password-input-error"></span>
+                  </label>
+                </fieldset>
+                <ul class="passw-recovery">
+                  <li class="passw-recovery__item">
+                    <a
+                      class="passw-recovery__link passw-recovery__link_type_recover"
+                      >Забыли пароль?</a
+                    >
+                  </li>
+                  <li class="passw-recovery__item">
+                    <a
+                      class="passw-recovery__link passw-recovery__link_type_register"
+                      >Регистрация</a
+                    >
+                  </li>
+                </ul>
+                <button type="submit" class="form__submit form__submit_size_m">
+                  Войти
+                </button>
+              </form>
+              <div class="separator separator_type_login">
+                <span class="separator__text">или</span>
+              </div>
+            </div>
             <div class="icons-container">
               <div class="icons-container__icons">
                 <button class="icons-container__button" type="submit">
@@ -88,77 +141,6 @@
                   />
                 </button>
               </div>
-            </div>
-            <div class="separator">
-              <span class="separator__text">или</span>
-            </div>
-            <div class="inner-wrapper">
-              <form action="/" class="form" name="registration-form" novalidate>
-                <fieldset class="form__input-container">
-                  <label class="form__field">
-                    <input
-                      type="text"
-                      class="form__input"
-                      id="username"
-                      name="username"
-                      placeholder="Имя"
-                      required
-                    />
-                    <span class="form__input-error name-input-error"></span>
-                  </label>
-                  <label class="form__field">
-                    <input
-                      type="email"
-                      class="form__input"
-                      id="email"
-                      name="email"
-                      placeholder="E-mail"
-                      required
-                    />
-                    <span class="form__input-error url-input-error"></span>
-                  </label>
-                  <label class="form__field">
-                    <input
-                      type="password"
-                      class="form__input"
-                      id="password"
-                      name="password"
-                      placeholder="Пароль"
-                      autocomplete="current-password"
-                      required
-                    />
-                    <span class="form__input-error password-input-error"></span>
-                  </label>
-                  <label class="form__field">
-                    <input
-                      type="tel"
-                      class="form__input"
-                      id="phone"
-                      name="phone"
-                      placeholder="Телефон"
-                      required
-                    />
-                    <span class="form__input-error phone-input-error"></span>
-                  </label>
-                </fieldset>
-                <button type="submit" class="form__submit">
-                  Создать аккаунт
-                </button>
-              </form>
-
-              <div class="alternative-actions">
-                <p class="alternative-actions__text">Уже прошли регистрацию?</p>
-                <button type="submit" class="alternative-actions__button">
-                  Войти
-                </button>
-              </div>
-              <img
-                class="inner-wrapper__img"
-                src="<%=require('../../images/right-hand-bot.svg')%>"
-                alt="Чат бот, приветливо машущий рукой"
-                width="225"
-                height="187"
-              />
             </div>
           </section>
         </div>

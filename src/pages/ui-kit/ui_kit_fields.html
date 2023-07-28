@@ -12,12 +12,12 @@
     <title>Fields</title>
   </head>
 
-  <body class="body">
-    <main class="main">
+  <body class="ui-kit-body">
+    <main>
       <section class="fields-common">
-        <h2 class="fields-common__h2">Common</h2>
+        <h2 class="ui-kit__h2">Common</h2>
         <!-- Введите код доступа -->
-        <label class="label" for="access-key-default">
+        <label class="ui-kit__h3 ui-kit-label" for="access-key-default">
           Default / Hover / Filled
           <input
             class="access-key__input"
@@ -27,7 +27,7 @@
             placeholder="Введите ключ доступа"
           />
         </label>
-        <label class="label" for="access-key-incorrect">
+        <label class="ui-kit__h3 ui-kit-label" for="access-key-incorrect">
           Incorrect
           <input
             class="access-key__input access-key__input_incorrect"
@@ -38,10 +38,10 @@
           />
           <span class="access-key__text_incorrect"></span>
         </label>
-        <label class="label" for="access-key-disabled">
+        <label class="ui-kit__h3 ui-kit-label" for="access-key-disabled">
           Disabled
           <input
-            class="access-key__input access-key__input_disabled"
+            class="access-key__input"
             type="text"
             id="access-key-disabled"
             name="access-key-disabled"
@@ -52,67 +52,67 @@
 
         <div class="row">
           <span class="row__name">Default / Hover</span>
-          <div class="page">
-            <div class="page__container">
+          <div class="page-fields">
+            <div class="page-fields__container">
               <img
-                class="page__preview"
+                class="page-fields__preview"
                 src="<%=require('../../images/avatar/default.svg')%>"
                 alt="превью страницы"
                 width="32"
                 height="32"
               />
-              <div class="page__overlay">
-                <button type="button" class="page__checkmark"></button>
+              <div class="page-fields__overlay">
+                <button type="button" class="page-fields__checkmark"></button>
               </div>
             </div>
-            <span class="page__name">Страница 1</span>
+            <span class="page-fields__name">Страница 1</span>
           </div>
         </div>
 
         <div class="row">
           <span class="row__name">Active</span>
-          <div class="page page_active">
-            <div class="page__container">
+          <div class="page-fields page-fields_active">
+            <div class="page-fields__container">
               <img
-                class="page__preview"
+                class="page-fields__preview"
                 src="<%=require('../../images/avatar/default.svg')%>"
                 alt="превью страницы"
                 width="32"
                 height="32"
               />
-              <div class="page__overlay">
-                <button type="button" class="page__checkmark"></button>
+              <div class="page-fields__overlay">
+                <button type="button" class="page-fields__checkmark"></button>
               </div>
             </div>
-            <span class="page__name">Страница 1</span>
+            <span class="page-fields__name">Страница 1</span>
           </div>
         </div>
 
         <div class="row">
           <span class="row__name">Disabled</span>
 
-          <div class="page page_disabled">
-            <div class="page__container">
+          <div class="page-fields page-fields_disabled">
+            <div class="page-fields__container">
               <img
-                class="page__preview"
+                class="page-fields__preview"
                 src="<%=require('../../images/avatar/default.svg')%>"
                 alt="превью страницы"
                 width="32"
                 height="32"
               />
-              <div class="page__overlay">
-                <button type="button" class="page__checkmark"></button>
+              <div class="page-fields__overlay">
+                <button type="button" class="page-fields__checkmark"></button>
               </div>
             </div>
-            <span class="page__name">Страница 1</span>
+            <span class="page-fields__name">Страница 1</span>
           </div>
         </div>
       </section>
 
       <!-- Component 2 -->
       <section class="fields-constructor">
-        <h2 class="fields-constructor__h2">Constructor</h2>
-        <label class="label" for="field-default">
+        <h2 class="ui-kit__h2">Constructor</h2>
+        <label class="ui-kit__h3 ui-kit-label" for="field-default">
           Default / Active / Filled
           <input
             class="field__input"
@@ -122,7 +122,7 @@
             placeholder="Введите ответ"
           />
         </label>
-        <label class="label" for="field-incorrect">
+        <label class="ui-kit__h3 ui-kit-label" for="field-incorrect">
           Incorrect
           <input
             class="field__input field__input_incorrect"
@@ -133,10 +133,10 @@
           />
           <span class="field__text_incorrect"></span>
         </label>
-        <label class="label" for="field-disabled">
+        <label class="ui-kit__h3 ui-kit-label" for="field-disabled">
           Disabled
           <input
-            class="field__input field__input_disabled"
+            class="field__input"
             type="text"
             id="field-disabled"
             name="field-disabled"
@@ -145,58 +145,38 @@
           />
         </label>
 
-        <div class="grid">
-          <div class="add-phone">
-            <h3>Add Phone</h3>
-            <div class="add-phone__container">
-              <button class="button" type="button">
-                <img
-                  class="icon icon__phone-plus"
-                  src="<%=require('../../images/template-icon/24x24/constructor/ask-phone.svg')%>"
-                  alt="телефонная трубка"
-                  width="24"
-                  height="24"
-                />
-              </button>
+        <div class="ui-kit-grid">
+          <div class="add-stuff">
+            <h3 class="add-stuff__h3">Add Phone</h3>
+            <div class="add-stuff__container">
+              <button
+                class="ui-kit__button_xs icon__phone-plus"
+                type="button"
+              ></button>
               <div>
-                <button class="button" type="button">
-                  <img
-                    class="icon icon__trash-bin"
-                    src="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
-                    alt="мусорное ведро"
-                    width="24"
-                    height="24"
-                  />
-                </button>
+                <button
+                  class="ui-kit__button_xs icon__trash-bin"
+                  type="button"
+                ></button>
               </div>
             </div>
           </div>
-          <div class="add-link">
-            <h3>Add link</h3>
-            <div class="add-link__container">
-              <button class="button" type="button">
-                <img
-                  class="icon icon__url"
-                  src="<%=require('../../images/template-icon/24x24/constructor/url.svg')%>"
-                  alt="адрес веб страницы"
-                  width="24"
-                  height="24"
-                />
-              </button>
-              <button class="button" type="button">
-                <img
-                  class="icon icon__trash-bin"
-                  src="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
-                  alt="мусорное ведро"
-                  width="24"
-                  height="24"
-                />
-              </button>
+          <div class="add-stuff">
+            <h3 class="add-stuff__h3">Add link</h3>
+            <div class="add-stuff__container">
+              <button
+                class="ui-kit__button_xs icon__url"
+                type="button"
+              ></button>
+              <button
+                class="ui-kit__button_xs icon__trash-bin"
+                type="button"
+              ></button>
             </div>
           </div>
         </div>
 
-        <label class="label" for="field-green-border">
+        <label class="ui-kit__h3 ui-kit-label" for="field-green-border">
           Default
           <div class="field__wrapper">
             <input
@@ -206,6 +186,7 @@
               name="field-green-border"
               placeholder="Введите ответ"
             />
+            <div class="field__border-decoration"></div>
           </div>
         </label>
       </section>

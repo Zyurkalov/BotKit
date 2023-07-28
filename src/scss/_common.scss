@@ -1,2 +1,28 @@
 @use "../vendor/normalize";
-@use "../vendor/fonts";
+@use "../vendor/fonts/fonts.scss";
+@use "variables";
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+input,
+button,
+fieldset,
+textarea {
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+}

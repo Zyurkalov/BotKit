@@ -157,8 +157,12 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 
-img {
+img,
+svg {
   border-style: none;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 /* Forms
@@ -182,6 +186,13 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+button {
+  cursor: pointer;
 }
 
 /**

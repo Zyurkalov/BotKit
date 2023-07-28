@@ -7,6 +7,8 @@ const glob = require("glob");
 const entry = {
   main: "./src/index.js",
   registration: "./src/js/registration.js",
+  login: "./src/js/login.js",
+  reset_password: "./src/js/reset_password.js",
   add_bot: "./src/js/add_bot.js",
   chat: "./src/js/chat.js",
   dashboard: "./src/js/dashboard.js",
@@ -53,8 +55,14 @@ module.exports = {
             loader: "css-loader",
             options: { importLoaders: 2 },
           },
+          "resolve-url-loader",
           "postcss-loader",
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
