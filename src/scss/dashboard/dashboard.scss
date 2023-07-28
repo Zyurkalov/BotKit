@@ -3,21 +3,6 @@
 @use "../ui-kit/ui_kit_navigation.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
 
-*::before,
-*::after {
-  font-family: inherit;
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
 h1,
 h2,
 h3,
