@@ -47,6 +47,7 @@ h4 {
   @media screen and (max-width: 768px) {
     padding: 60px 34px 0 34px;
   }
+
   @media screen and (max-width: 480px) {
     padding: 20px 0 0 0;
   }
@@ -131,6 +132,7 @@ h4 {
   }
 
   @media screen and (max-width: 480px) {
+    font-family: variables.$ff-primary;
     font-weight: variables.$fw-700;
     font-size: 15px;
     line-height: 1.5;
