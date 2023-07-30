@@ -1,7 +1,7 @@
 @use "../variables";
 @use "../common";
 @use "utils";
-@use "ui_kit_icons.scss";
+@use "ui_kit_icons";
 
 @mixin animation() {
   transition: all 0.3s ease-in-out;
@@ -230,12 +230,7 @@
   @include animation();
 }
 
-body {
-  margin: 0;
-  font-family: variables.$ff-primary;
-}
-
-.ui-kit-navigation {
+.nav-top {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -244,49 +239,45 @@ body {
   border-bottom: 1px solid variables.$clr-secondary-focus;
 }
 
-.ui-kit-navigation__right-container {
+.nav-top__right-container {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.ui-kit-navigation__tarif-info {
+.nav-top__tarif-info {
   display: grid;
   grid-template-columns: min-content min-content;
   gap: 8px;
-  justify-content: space-between;
   padding-right: 16px;
-  height: 29px;
   align-self: center;
   border-right: 1px solid variables.$clr-secondary-focus;
 }
 
-.ui-kit-navigation__text {
+.nav-top__text {
   font-weight: variables.$fw-400;
   color: variables.$clr-primary-dark;
   font-size: variables.$fs-base;
-  line-height: 24px;
-  margin: 0;
-  align-self: center;
+  line-height: 1.5;
   font-family: variables.$ff-primary;
 }
 
-.ui-kit-navigation__text_spanned {
+.nav-top__text_spanned {
   font-weight: variables.$fw-500;
 }
 
-.ui-kit-navigation__user-section {
+.nav-top__user-section {
   align-items: center;
   display: flex;
   gap: 32px;
   margin-left: 16px;
 }
 
-.ui-kit-navigation__user-info {
+.nav-top__user-info {
   display: flex;
   align-items: center;
 }
 
-.ui-kit-navigation__user-avatar {
+.nav-top__user-avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -294,15 +285,14 @@ body {
   border: 2px solid variables.$clr-secondary-gray;
 }
 
-.ui-kit-navigation__arrow-down {
+.nav-top__arrow-down {
   margin-left: 12px;
   width: 24px;
   height: 24px;
 }
 
-.ui-kit-footer {
+.footer {
   height: 50px;
-  margin-top: 48px;
   width: 100%;
   max-width: 1308px;
   border-top: 1px solid variables.$clr-secondary-focus;
@@ -310,11 +300,12 @@ body {
   align-items: center;
 }
 
-.ui-kit-footer__text {
-  margin: 0;
-  margin-left: 40px;
+.footer__text {
+  margin: 0 0 0 40px;
   font-weight: variables.$fw-400;
   color: variables.$clr-primary-dark;
   font-size: variables.$fs-base;
-  line-height: 24px;
+  font-family: variables.$ff-primary;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
 }

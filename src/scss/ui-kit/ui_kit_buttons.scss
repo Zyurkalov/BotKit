@@ -1,16 +1,18 @@
 @use "../variables";
 @use "../common";
 @use "utils";
+@use "ui_kit_fields";
 
-.ui-kit-main {
+.ui-kit-section {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  align-items: center;
+  grid-template-columns: 170px 1fr;
   row-gap: 30px;
 }
 
 .ui-kit-buttons {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   gap: 40px;
 }
 
@@ -404,27 +406,16 @@
 
 /* Кнопка пошаговая инструкция */
 .button-tutorial {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   width: 100%;
   max-width: 579px;
   height: 76px;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
-  background-color: variables.$clr-white;
-  background-image: url("../../images/button-tutorial_ellipse_grey.svg");
+  background-image: url("../../images/template-icon/add_bot/book-frame_2.svg");
   background-repeat: no-repeat;
-
-  &__icon {
-    width: 65px;
-    height: 46px;
-    position: absolute;
-    top: 17px;
-    left: 32px;
-  }
   font-family: variables.$ff-primary;
   color: variables.$clr-primary-dark;
   font-size: variables.$fs-small;
@@ -434,13 +425,9 @@
 
   &:hover {
     border: none;
-    background-image: url("../../images/button-tutorial_ellipse_green.svg");
+    background-image: url("../../images/template-icon/add_bot/book-frame_1.svg");
     box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
     cursor: pointer;
-
-    & .button-tutorial__icon {
-      filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
-    }
   }
 
   &:active {
@@ -449,16 +436,12 @@
 
   &:disabled {
     pointer-events: none;
-
-    & .button-tutorial__icon {
-      opacity: 50%;
-      filter: grayscale(15%);
-    }
-
-    & .button-tutorial__text {
-      color: variables.$clr-primary-gray;
-    }
   }
+}
+
+.button-tutorial_disabled {
+  color: variables.$clr-primary-gray;
+  background-image: url("../../images/template-icon/add_bot/book-frame_3.svg");
 }
 
 /* Кнопка блок сообщений */
@@ -528,5 +511,112 @@
     & svg g {
       opacity: 0.5;
     }
+  }
+}
+
+.constructor__button_clr_default {
+  background-color: variables.$clr-secondary-focus;
+}
+
+.constructor__button {
+  font-family: variables.$ff-primary;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.constructor__default-button {
+  width: 95px;
+  height: 35px;
+  color: variables.$clr-xiketic-default;
+  font-weight: variables.$fw-600;
+}
+
+.constructor__default-button:hover {
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__default-button_pressed {
+  color: variables.$clr-primary-medium;
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__default-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-primary-gray;
+  cursor: default;
+
+  &:hover {
+    color: variables.$clr-primary-gray;
+  }
+}
+
+.constructor__video-button {
+  background-image: url("../../images/videoDefault.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+
+.constructor__video-button:hover {
+  background-image: url("../../images/videoHover.svg");
+}
+
+.constructor__video-button_pressed {
+  background-image: url("../../images/videoHover.svg");
+  background-color: variables.$clr-blue-disabled;
+}
+
+.constructor__video-button_disabled {
+  background-image: url("../../images/videoDisabled.svg");
+  background-color: variables.$clr-secondary-gray;
+  cursor: default;
+
+  &:hover {
+    background-image: url("../../images/videoDisabled.svg");
+    background-color: variables.$clr-secondary-gray;
+  }
+}
+
+.constructor__add-button {
+  background-image: url("../../images/defaultPlus.svg");
+  background-repeat: no-repeat;
+  background-position: 15%;
+  width: 264px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-gray-4;
+}
+
+.constructor__add-button:hover {
+  background-image: url("../../images/plusHover.svg");
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__add-button_pressed {
+  background-image: url("../../images/plusHover.svg");
+  background-color: variables.$clr-blue-disabled;
+  color: variables.$clr-primary-medium;
+}
+
+.constructor__add-button_disabled {
+  background-color: variables.$clr-secondary-gray;
+  color: variables.$clr-secondary-cultured;
+  cursor: default;
+  &:hover {
+    background-image: url("../../images/defaultPlus.svg");
+    background-color: variables.$clr-secondary-gray;
+    color: variables.$clr-secondary-cultured;
   }
 }
