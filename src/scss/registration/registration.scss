@@ -252,3 +252,90 @@ input[required] {
   letter-spacing: 0.3px;
   color: variables.$clr-white;
 }
+
+// -----------------------------------------------------------
+.outer-wrapper__h3 {
+  margin-bottom: 30px;
+}
+
+.inner-wrapper_resetPassword {
+  padding: 50px 100px 60px;
+}
+
+.outer-wrapper_resetPassword {
+  position: relative;
+  padding: 0;
+  height: 100%;
+}
+
+.window:first-of-type {
+  display: none;
+}
+
+.form__submit_resetPassword {
+  margin: 50px 0 0 0;
+}
+
+.form__input-container_resetPassword {
+  display: block;
+}
+
+.form__input_resetPassword {
+  max-width: 570px;
+  margin: auto;
+}
+
+.inner-wrapper__img_resetPassword {
+  left: 50%; /* Положение картинки по горизонтали, в середине контейнера */
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+}
+
+.window_resetPassword {
+  height: 590px;
+}
+
+@media screen and (max-width: 838px) {
+  .inner-wrapper_resetPassword {
+    padding-bottom: 140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner-wrapper_resetPassword {
+    padding-bottom: 140px;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .page {
+    padding: 0;
+  }
+
+  .outer-wrapper_resetPassword {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form__submit_resetPassword {
+    margin-top: 40px;
+  }
+
+  .window_resetPassword {
+    max-width: 360px;
+    height: 485px;
+  }
+
+  .outer-wrapper__h3 {
+    display: none;
+  }
+
+  .inner-wrapper__img_resetPassword {
+    width: 232px;
+    height: 193px;
+  }
+
+  .inner-wrapper_resetPassword {
+    padding: 40px 20px 135px;
+  }
+}
