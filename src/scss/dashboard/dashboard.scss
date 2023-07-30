@@ -5,18 +5,6 @@
 @use "../ui-kit/ui_kit_buttons.scss";
 @use "../ui-kit/ui_kit_icons.scss";
 
-// зафиксировал максимальную ширину грида, колока main, header, footer
-.main {
-  max-width: 1268px;
-}
-.header {
-  max-width: 1268px;
-}
-.footer {
-  max-width: 1268px;
-}
-///////////////////////////////////////////////////////////////////////
-
 .text {
   color: variables.$clr-primary-dark;
   font-family: variables.$ff-primary;
