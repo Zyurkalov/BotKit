@@ -1,15 +1,11 @@
 @use "../variables";
 @use "../common";
 @use "../registration/registration";
-
-.header__h2_type_login {
-  padding-left: 20px;
-  padding-top: 10px;
-}
+@use "../ui-kit/ui_kit_buttons.scss";
 
 .outer-wrapper_type_login {
   padding-top: 0;
-  padding-bottom: 60px;
+  //padding-bottom: 60px;
 }
 
 .separator_type_login {
