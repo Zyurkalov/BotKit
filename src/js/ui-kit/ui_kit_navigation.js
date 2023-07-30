@@ -1,4 +1,3 @@
-import { remove } from "immutable";
 import "../../scss/ui-kit/ui_kit_navigation.scss";
 
 // JS корявый нужно переделать!!!
