@@ -123,6 +123,14 @@
         margin: 11px;
       }
     }
+
+    &_up {
+      transform: scaleY(-1);
+
+      &-close {
+        transform: scaleY(1);
+      }
+    }
   }
 
   &__text {
@@ -243,7 +251,6 @@
 
 .page-container {
   min-height: 100vh;
-  // width: 100vw;
   box-sizing: border-box;
   display: grid;
   column-gap: 46px;

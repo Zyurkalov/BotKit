@@ -32,10 +32,14 @@ export function closeMenu(status) {
     statusMenu = false;
     secondMenu.removeEventListener("click", openSecondMenu);
     secondMenu.addEventListener("click", closeMenu);
+    secondMenu
+      .querySelector(".link__image_up")
+      .classList.remove("link__image_up-close");
   } else {
     statusMenu = true;
     secondMenu.removeEventListener("click", closeMenu);
     secondMenu.addEventListener("click", openSecondMenu);
+
     if (status) {
       openSecondMenu();
     }
@@ -43,6 +47,9 @@ export function closeMenu(status) {
 }
 
 function openSecondMenu() {
+  secondMenu
+    .querySelector(".link__image_up")
+    .classList.toggle("link__image_up-close");
   secondMenuItem.forEach((btn) => {
     btn.classList.toggle("menu__second_item-close");
   });
