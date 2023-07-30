@@ -1,6 +1,7 @@
 @use "../variables";
 @use "../common";
 @use "../registration/registration";
+@use "../ui-kit/ui_kit_buttons.scss";
 
 .header__h2_type_login {
   padding-left: 20px;
