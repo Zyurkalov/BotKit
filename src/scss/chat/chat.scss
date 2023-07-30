@@ -2,3 +2,134 @@
 @use "../common";
 @use "../ui-kit/ui_kit_navigation.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
+
+.dialogues {
+  width: 25.5%;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+.chat {
+  width: 51.5%;
+  box-sizing: border-box;
+  padding: 0 32px 0;
+  border-left: solid 1px variables.$clr-secondary-cultured;
+  border-right: solid 1px variables.$clr-secondary-cultured;
+}
+.user-info {
+  width: 23%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+.text {
+  margin: 0;
+  color: variables.$clr-primary-dark;
+  font-family: variables.$ff-primary;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+}
+
+.section-header {
+  margin-bottom: 24px;
+  @extend .text;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+  font-family: variables.$ff-secondary;
+}
+.dialogues__input {
+  height: 40px;
+  width: 100%;
+  outline-style: none;
+  background-color: variables.$clr-secondary-gray;
+}
+///////////// chat
+.chat-box {
+  height: 80px;
+  padding: 16px 0;
+  box-sizing: border-box;
+  border-bottom: solid 1px variables.$clr-secondary-cultured;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &:last-child {
+    border: 0px;
+  }
+  &__avatar {
+    height: 40px;
+    aspect-ratio: 1/1;
+    position: relative;
+  }
+  &__point {
+    height: 8px;
+    width: 8px;
+
+    background-color: variables.$clr-accent;
+    border: solid 2px variables.$clr-white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  &__container {
+    margin: 0 0 0 16px;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__user {
+    max-width: 110px;
+    @extend .text;
+    font-size: variables.$fs-base;
+    font-weight: variables.$fw-500;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  &__time {
+    @extend .text;
+    color: variables.$clr-gray-3;
+    font-size: variables.$fs-small;
+    font-family: variables.$ff-primary;
+    font-weight: variables.$fw-400;
+  }
+  &__text {
+    max-width: 140px;
+    @extend .chat-box__time;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  &__count-message {
+    @extend .text;
+
+    padding-top: 4px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: variables.$clr-primary-medium;
+
+    color: variables.$clr-white;
+    text-align: center;
+    font-size: variables.$fs-tiny;
+    font-family: variables.$ff-primary;
+  }
+}
+///////////// модификаторы на исходники компаненты
+.main {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: row;
+}
+.hidden {
+  display: none;
+}

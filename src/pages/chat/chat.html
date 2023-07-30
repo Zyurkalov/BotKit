@@ -278,15 +278,78 @@
     </nav>
     <!-- main -->
     <main class="main">
-      <!-- тело страницы -->
-
-      <a href="javascript:history.back()" style="text-decoration: none">
-        &#8617; Go Back
-      </a>
       <section class="dialogues">
-        <h2>Section Диалоги</h2>
+        <h2 class="section-header">Диалоги</h2>
+        <input class="dialogues__input" type="search" id="chat-search" />
+        <div class="chat-box">
+          <div class="chat-box__avatar">
+            <img
+              class="chat-box__avatar-img"
+              src="<%=require('../../images/avatar/avatar-mark.svg')%>"
+              alt="аватар пользователя"
+            />
+            <div class="chat-box__point"></div>
+          </div>
+          <div class="chat-box__container">
+            <t3 class="chat-box__user">Марк</t3>
+            <p class="chat-box__time">4 часа</p>
+            <p class="chat-box__text">Какой-то текст.</p>
+            <p class="chat-box__count-message">1</p>
+          </div>
+        </div>
+
+        <div class="chat-box">
+          <div class="chat-box__avatar">
+            <img
+              class="chat-box__avatar-img"
+              src="<%=require('../../images/avatar/avatar-operator.svg')%>"
+              alt="аватар пользователя"
+            />
+            <div class="chat-box__point hidden"></div>
+          </div>
+          <div class="chat-box__container">
+            <t3 class="chat-box__user">Оператор</t3>
+            <p class="chat-box__time">3 минуты</p>
+            <p class="chat-box__text">Какой-то текст.</p>
+            <p class="chat-box__count-message hidden"></p>
+          </div>
+        </div>
+
+        <div class="chat-box">
+          <div class="chat-box__avatar">
+            <img
+              class="chat-box__avatar-img"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="аватар пользователя"
+            />
+            <div class="chat-box__point hidden"></div>
+          </div>
+          <div class="chat-box__container">
+            <t3 class="chat-box__user">Сергей</t3>
+            <p class="chat-box__time">30 минут</p>
+            <p class="chat-box__text">Какой-то текст.</p>
+            <p class="chat-box__count-message hidden"></p>
+          </div>
+        </div>
+
+        <div class="chat-box">
+          <div class="chat-box__avatar">
+            <img
+              class="chat-box__avatar-img"
+              src="<%=require('../../images/avatar/avatar-dasha.svg')%>"
+              alt="аватар пользователя"
+            />
+            <div class="chat-box__point hidden"></div>
+          </div>
+          <div class="chat-box__container">
+            <t3 class="chat-box__user">Даша К.</t3>
+            <p class="chat-box__time">12.06.22</p>
+            <p class="chat-box__text">Какой-то текст.</p>
+            <p class="chat-box__count-message hidden"></p>
+          </div>
+        </div>
       </section>
-      <section class="Chat">
+      <section class="chat">
         <h2>Section Чат</h2>
       </section>
       <section class="user-info">
