@@ -60,7 +60,7 @@
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-
+  list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -130,7 +130,7 @@
 .list-container {
   margin: 0;
   padding: 0;
-
+  list-style: none;
   display: grid;
   column-count: auto;
   grid-template-columns: 216px 150px;
@@ -203,7 +203,7 @@
   }
 
   &__bg {
-    height: 100%;
+    height: 96px;
     width: 100%;
     transition: 0.3s ease-out;
     background-repeat: no-repeat;
