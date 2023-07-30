@@ -20,13 +20,6 @@
   box-shadow: 0 12px 24px 0 variables.$box-shadow;
 }
 
-.header_mod {
-  display: block;
-  position: absolute;
-  left: 300px;
-  top: 10px;
-}
-
 .menu {
   grid-area: nav;
   box-sizing: border-box;
@@ -39,6 +32,10 @@
 
   &-close {
     width: 86px;
+  }
+
+  &-open {
+    width: 240px;
   }
 
   // &:hover {
@@ -75,6 +72,7 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
+  // position: fixed;
 }
 
 .menu__item {
@@ -212,8 +210,9 @@
 // меню второго уровня раздела мини-лендинг. Пока есть вопросы по реализации.
 .menu__second {
   &_item {
-    // height: 0;
-    // margin: 0;
+    &-close {
+      display: none;
+    }
   }
   &_text {
     margin-left: 50px;
@@ -243,8 +242,8 @@
 }
 
 .page-container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  // width: 100vw;
   box-sizing: border-box;
   display: grid;
   column-gap: 46px;

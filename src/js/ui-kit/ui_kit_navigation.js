@@ -1,10 +1,58 @@
-import { remove } from "immutable";
 import "../../scss/ui-kit/ui_kit_navigation.scss";
 
 // JS корявый нужно переделать!!!
 
+// общие константы
 const page = document.querySelector(".page-container");
+const keyEscape = "Escape";
+
+// основное меню
 const mainMenu = page.querySelector(".menu");
+const secondMenu = mainMenu.querySelector(".menu__second");
+const secondMenuItem = mainMenu.querySelectorAll(".menu__second_item");
+let statusMenu = true;
+
+export function closeMenu(status) {
+  mainMenu.classList.toggle("menu-close");
+  mainMenu
+    .querySelector(".link_theme_blue")
+    .classList.toggle("link_theme_blue-close");
+  mainMenu
+    .querySelector(".link__image_reverse")
+    .classList.toggle("link__image_reverse-close");
+  mainMenu
+    .querySelector(".link__text_reverse")
+    .classList.toggle("link__text_reverse-close");
+
+  secondMenuItem.forEach((btn) => {
+    btn.classList.add("menu__second_item-close");
+  });
+
+  if (statusMenu) {
+    statusMenu = false;
+    secondMenu.removeEventListener("click", openSecondMenu);
+    secondMenu.addEventListener("click", closeMenu);
+  } else {
+    statusMenu = true;
+    secondMenu.removeEventListener("click", closeMenu);
+    secondMenu.addEventListener("click", openSecondMenu);
+    if (status) {
+      openSecondMenu();
+    }
+  }
+}
+
+function openSecondMenu() {
+  secondMenuItem.forEach((btn) => {
+    btn.classList.toggle("menu__second_item-close");
+  });
+}
+
+closeMenu(false);
+
+// header
+
+// ***********************************
 
 const header = page.querySelector(".header");
 const headerMenu = header.querySelector(".header__menu");
@@ -18,22 +66,8 @@ const notificationHeader = notification.querySelector(
 );
 const buttonCloseNotification =
   notificationHeader.querySelector(".popup__close");
-const keyEscape = "Escape";
 
 const accauntPopup = page.querySelector(".popup__accaunt");
-
-export function closeMenu() {
-  mainMenu.classList.toggle("menu-close");
-  mainMenu
-    .querySelector(".link_theme_blue")
-    .classList.toggle("link_theme_blue-close");
-  mainMenu
-    .querySelector(".link__image_reverse")
-    .classList.toggle("link__image_reverse-close");
-  mainMenu
-    .querySelector(".link__text_reverse")
-    .classList.toggle("link__text_reverse-close");
-}
 
 function openNotification() {
   notification.classList.remove("popup__notification-close");
@@ -65,7 +99,7 @@ const closePopupOnClickOverlay = (e) => {
   }
 };
 
-headerMenu.addEventListener("click", () => closeMenu());
+headerMenu.addEventListener("click", () => closeMenu(false));
 buttonOpenNotification.addEventListener("click", () => openNotification());
 
 // кнопка аккаунта
