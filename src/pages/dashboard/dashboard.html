@@ -11,7 +11,8 @@
     />
     <title>Dashboard</title>
   </head>
-  <body class="page">
+  <body class="page-container">
+    <!-- navi -->
     <nav class="menu">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
@@ -248,6 +249,7 @@
         </li>
       </ul>
     </nav>
+    <!-- header -->
     <header class="header">
       <button class="header__menu" type="button" aria-label="menu"></button>
       <p class="header__rate">Тариф</p>
@@ -257,11 +259,12 @@
         class="header__notification"
         type="button"
         aria-label="notification"
-      ></button>
+      >
+        <p class="header__notification-counter">2</p>
+      </button>
       <button class="header__profile">
         <img
           class="header__profile-avatar"
-          ;
           alt="Аватар"
           src="<%=require('../../images/avatar/circle.png')%>"
         />
@@ -273,7 +276,14 @@
         />
       </button>
     </header>
+    <!-- main -->
     <main class="main">
+      <!-- тело страницы -->
+
+      <a href="javascript:history.back()" style="text-decoration: none">
+        &#8617; Go Back
+      </a>
+
       <!-- style из тегов удалить, они для наглядности -->
       <section class="templates" style="height: 200px">
         <h2>Section Шаблоны</h2>
@@ -286,29 +296,86 @@
       <section class="faq" style="height: 200px">
         <h2>Section F.A.Q</h2>
       </section>
+      <!-- конец -->
     </main>
+    <!-- footer -->
     <footer class="footer">
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
-    <!-- <section class="popup popup__notification ">
+    <!-- popup -->
+    <section
+      class="popup__notification__overlay popup__notification__overlay-close"
+    ></section>
+    <section class="popup popup__notification popup__notification-close">
       <div class="popup__notification-header">
         <img
           alt="Стрелка вниз"
-          class="popup__header-notification"
-          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+          class="popup__header-ico"
+          src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
         />
-        <h2 class="popup__header-title">
-          Уведомления
-        </h2>
-        <button class="popup__close"></button>
+        <h3 class="popup__header-title">Уведомления</h3>
+        <button
+          class="popup__close"
+          type="button"
+          aria-label="close popup"
+        ></button>
       </div>
-      <div class="popup__notification-menu">
-        <button class="popup_notification-news">Новости сервиса</button>
-        <button class="popup_notification-logs">Лог событий</button>
-      </div>
+      <fieldset class="popup__notification-menu">
+        <input
+          class="popup__notification-menu-input"
+          type="radio"
+          name="notification"
+          value="news"
+          id="news"
+          checked
+        />
+        <label class="popup__notification-menu-label" for="news">
+          Новости сервиса
+        </label>
+        <input
+          class="popup__notification-menu-input"
+          type="radio"
+          name="notification"
+          value="logs"
+          id="logs"
+        />
+        <label class="popup__notification-menu-label" for="logs">
+          Лог событий
+        </label>
+      </fieldset>
       <div class="popup__notification-body">
-
+        <!-- место под новости и логи -->
+        <!-- конец -->
       </div>
-    </section> -->
+    </section>
+    <!-- корявый дизайн popup__accaunt. Разный размер иконок и отступов. Обводка? -->
+    <section class="popup popup__accaunt popup__accaunt-close">
+      <div class="popup__accaunt-container">
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image24"
+            alt="настройки"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings-gray.svg')%>"
+          />
+          <p class="popup__accaunt-button-text">Настройка аккаунта</p>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image16"
+            alt="Подписка и платежи"
+            src="<%=require('../../images/template-icon/16x16/payment-gray.svg')%>"
+          />
+          <p class="popup__accaunt-button-text">Подписка и платежи</p>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image16"
+            alt="выход"
+            src="<%=require('../../images/template-icon/16x16/log out-gray.svg')%>"
+          />
+          <p class="popup__accaunt-button-text">Выйти</p>
+        </button>
+      </div>
+    </section>
   </body>
 </html>
