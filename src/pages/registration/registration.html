@@ -21,12 +21,11 @@
           width="149"
           height="35"
         />
-        <h2 class="header__h2 header__h2_type_reg">Регистрация</h2>
-        <h2 class="header__h2 header__h2_type_login hidden">Вход</h2>
+        <h2 class="header__h2">Регистрация</h2>
       </header>
       <main class="main">
         <div class="window">
-          <section class="outer-wrapper outer-wrapper_type_reg">
+          <section class="outer-wrapper">
             <h3 class="outer-wrapper__h3">Создай аккаунт с помощью</h3>
             <div class="icons-container">
               <div class="icons-container__icons">
@@ -90,11 +89,9 @@
                 </button>
               </div>
             </div>
-
             <div class="separator">
               <span class="separator__text">или</span>
             </div>
-
             <div class="inner-wrapper">
               <form action="/" class="form" name="registration-form" novalidate>
                 <fieldset class="form__input-container">
@@ -127,6 +124,7 @@
                       id="password"
                       name="password"
                       placeholder="Пароль"
+                      autocomplete="current-password"
                       required
                     />
                     <span class="form__input-error password-input-error"></span>
@@ -143,7 +141,10 @@
                     <span class="form__input-error phone-input-error"></span>
                   </label>
                 </fieldset>
-                <button type="submit" class="form__submit">
+                <button
+                  type="submit"
+                  class="common-button common-button_color_green form__submit"
+                >
                   Создать аккаунт
                 </button>
               </form>
@@ -161,123 +162,6 @@
                 width="225"
                 height="187"
               />
-            </div>
-          </section>
-          <section class="outer-wrapper outer-wrapper_type_login hidden">
-            <div class="inner-wrapper inner-wrapper_type_login">
-              <form
-                action="/"
-                class="form form_type_login"
-                name="login-form"
-                novalidate
-              >
-                <fieldset class="login-form__input-container">
-                  <label class="form__field form__field_size_l">
-                    <input
-                      type="email"
-                      class="form__input form__input_size_l"
-                      id="login-form-email"
-                      name="login-form-email"
-                      placeholder="E-mail"
-                      required
-                    />
-                    <span class="form__input-error url-input-error"></span>
-                  </label>
-                  <label class="form__field form__field_size_l">
-                    <input
-                      type="password"
-                      class="form__input form__input_size_l"
-                      id="login-form-password"
-                      name="login-form-password"
-                      placeholder="Пароль"
-                      required
-                    />
-                    <span class="form__input-error password-input-error"></span>
-                  </label>
-                </fieldset>
-                <ul class="passw-recovery">
-                  <li class="passw-recovery__item">
-                    <a
-                      class="passw-recovery__link passw-recovery__link_type_recover"
-                      >Забыли пароль?</a
-                    >
-                  </li>
-                  <li class="passw-recovery__item">
-                    <a
-                      class="passw-recovery__link passw-recovery__link_type_register"
-                      >Регистрация</a
-                    >
-                  </li>
-                </ul>
-                <button type="submit" class="form__submit form__submit_size_m">
-                  Войти
-                </button>
-              </form>
-              <div class="separator separator_type_login">
-                <span class="separator__text">Быстрый вход</span>
-              </div>
-            </div>
-            <div class="icons-container">
-              <div class="icons-container__icons">
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/google.svg')%>"
-                    alt="gmail"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/yandex.svg')%>"
-                    alt="яндекс"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/mailru.svg')%>"
-                    alt="мэил ру"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-              </div>
-              <div class="icons-container__icons">
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/vk.svg')%>"
-                    alt="вконтакте"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/odnoklassniki.svg')%>"
-                    alt="одноклассники"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/facebook.svg')%>"
-                    alt="facebook"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/telegram.svg')%>"
-                    alt="телеграм"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-              </div>
             </div>
           </section>
         </div>

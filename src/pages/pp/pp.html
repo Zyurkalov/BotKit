@@ -11,332 +11,367 @@
     />
     <title>Affiliate Program</title>
   </head>
-  <body class="body">
-    <div class="page">
-      <div class="ui-kit-navigation">
-        <button type="button" class="ui-kit-navigation__menu-btn">
-          <img
-            src="<%=require('../../images/template-icon/24x24/add_block/menu_grey.svg')%>"
-            alt="menu"
-            width="24"
-            height="24"
-          />
-        </button>
-        <div class="ui-kit-navigation__right-container">
-          <div class="ui-kit-navigation__user-section">
-            <button type="button" class="ui-kit-navigation__notification-icon">
-              <div class="template-icon template-icon_pos-rel">
-                <p class="template-icon__count">2</p>
-                <img
-                  class="template-icon__ding"
-                  src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
-                  alt="колокольчик"
-                  height="40"
-                  width="40"
-                />
-              </div>
-            </button>
-            <button type="button" class="ui-kit-navigation__help-icon">
-              <img
-                class="template-icon"
-                src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
-                alt="помощь"
-                height="24"
-                width="24"
-              />
-            </button>
-            <div class="ui-kit-navigation__user-info">
-              <img
-                alt="аватар"
-                class="ui-kit-navigation__user-avatar"
-                src="<%=require('../../images/avatar/circle.png')%>"
-                height="40"
-                width="40"
-              />
-              <p class="ui-kit-navigation__text">User Name</p>
-              <button
-                type="button"
-                class="ui-kit-navigation__arrow-toggle-icon"
-              >
-                <img
-                  alt="Стрелка вниз"
-                  class="ui-kit-navigation__arrow-down"
-                  src="<%=require('../../images/template-icon/20x20/down.svg')%>"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="ui-kit-navigation__tarif-info">
-            <p class="ui-kit-navigation__text">Тариф</p>
-            <p class="ui-kit-navigation__text ui-kit-navigation__text_spanned">
-              Демо
-            </p>
-          </div>
-        </div>
-      </div>
-      <nav class="menu">
-        <div class="menu__container">
-          <ul class="menu__items">
-            <li class="menu__item menu__item_first">
-              <div class="menu__logo">
-                <!-- <img  src="<%=require('../../images/logo.svg')%>" alt="#"> -->
-              </div>
-            </li>
-            <li class="menu__item menu__item_second">
-              <button class="button button_theme_blue">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 6v12M6 12h12"
-                    stroke="#fff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">ДОБАВИТЬ БОТА</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 3H3v9h7V3ZM21 3h-7v5h7V3ZM21 12h-7v9h7v-9ZM10 16H3v5h7v-5Z"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Дашборд</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM13 6h3a2 2 0 0 1 2 2v7M6 9v12"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Воронки</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22 14.26V18c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h7.065M11.945 13.917 2.5 5"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    fill="#fff"
-                    d="M16 4h6v6M12 14 22 4"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Рассылки</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 14H3v7h7v-7ZM10 3H3v7h7V3ZM14 4h7M14 9h7M14 15h7M14 20h7"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Списки</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 16.73V8.369M12 16.73V3.352M2.736 20.649h18.528M6 16.73v-5.017"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Статистика</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 11.38a2 2 0 0 0 2 2h9l4 2.493V4.38a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v7Z"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.245 17.127a2 2 0 0 1-2 2H6.228l-4 2.493V11.127a2 2 0 0 1 2-2h1.629"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.747 8.127h5.506"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <p class="button__text">Диалоги</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Общий доступ</p>
-              </button>
-            </li>
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.894 3h7v7h-7zM2.894 14h7v7h-7zM13.894 14h7v7h-7zM17.394 2.749l3.785 2.75-1.446 4.45h-4.679l-1.446-4.45 3.786-2.75Z"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">Мини-лендинг</p>
-                <svg
-                  class="button__image_up"
-                  width="20"
-                  height="20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m15 12.5-5-5-5 5"
-                    stroke="#C3D1D8"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <ul class="menu__items menu__items_second">
-                <li class="menu__item">
-                  <button
-                    class="button button_theme_gray button_menu_second"
-                    onclick=""
-                  >
-                    <p class="button__text">Caйт + Vk</p>
-                  </button>
-                </li>
-              </ul>
-            </li>
 
-            <li class="menu__item">
-              <button class="button button_theme_gray" onclick="">
-                <svg
-                  class="button__image"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM3 9h18M3 15h18M9 9v12"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p class="button__text">CRM</p>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <main class="main">
-        <!-- style из тегов удалить, они для наглядности -->
-        <section class="affiliate-program" style="height: 200px">
-          <h2>Section Партнерская программа</h2>
-        </section>
-        <!-- style из тегов удалить, они для наглядности -->
-        <section class="stats-referal" style="height: 200px">
-          <h2>Section Статистика рефералов</h2>
-        </section>
-        <!-- style из тегов удалить, они для наглядности -->
-        <section class="cash" style="height: 200px">
-          <h2>Section Выплаты</h2>
-        </section>
-      </main>
-      <footer class="ui-kit-footer">
-        <p class="ui-kit-footer__text">&#169; 2021 BotKits</p>
-      </footer>
-    </div>
+  <body class="page-container">
+    <!-- navi -->
+    <nav class="menu">
+      <ul class="menu__items">
+        <li class="menu__item menu__item_logo"></li>
+        <li class="menu__item menu__item_bot">
+          <a class="link link_theme_blue" href="#">
+            <svg
+              class="link__image link__image_reverse"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 6v12M6 12h12"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text link__text_reverse">ДОБАВИТЬ БОТА</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 3H3v9h7V3ZM21 3h-7v5h7V3ZM21 12h-7v9h7v-9ZM10 16H3v5h7v-5Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Дашборд</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM13 6h3a2 2 0 0 1 2 2v7M6 9v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Воронки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 14.26V18c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h7.065M11.945 13.917 2.5 5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill="#fff"
+                d="M16 4h6v6M12 14 22 4"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Рассылки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 14H3v7h7v-7ZM10 3H3v7h7V3ZM14 4h7M14 9h7M14 15h7M14 20h7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Списки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 16.73V8.369M12 16.73V3.352M2.736 20.649h18.528M6 16.73v-5.017"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Статистика</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 11.38a2 2 0 0 0 2 2h9l4 2.493V4.38a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v7Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.245 17.127a2 2 0 0 1-2 2H6.228l-4 2.493V11.127a2 2 0 0 1 2-2h1.629"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.747 8.127h5.506"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <p class="link__text">Диалоги</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Общий доступ</p>
+          </a>
+        </li>
+        <li class="menu__item menu__second">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.894 3h7v7h-7zM2.894 14h7v7h-7zM13.894 14h7v7h-7zM17.394 2.749l3.785 2.75-1.446 4.45h-4.679l-1.446-4.45 3.786-2.75Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Мини-лендинг</p>
+            <svg
+              class="link__image_up"
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 12.5-5-5-5 5"
+                stroke="#C3D1D8"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </li>
+        <!-- меню второго уровня -->
+        <li class="menu__item menu__second_item">
+          <a class="link link_theme_gray menu__second_link" href="#">
+            <p class="link__text menu__second_text">Caйт + Vk</p>
+          </a>
+        </li>
+        <!-- end -->
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM3 9h18M3 15h18M9 9v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">CRM</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- header -->
+    <header class="header">
+      <button class="header__menu" type="button" aria-label="menu"></button>
+      <p class="header__rate">Тариф</p>
+      <p class="header__rate-name">Демо</p>
+      <button class="header__help" type="button" aria-label="help"></button>
+      <button
+        class="header__notification"
+        type="button"
+        aria-label="notification"
+      >
+        <p class="header__notification-counter">2</p>
+      </button>
+      <button class="header__profile">
+        <img
+          class="header__profile-avatar"
+          alt="Аватар"
+          src="<%=require('../../images/avatar/circle.png')%>"
+        />
+        <p class="header__profile-name">User Name</p>
+        <img
+          alt="Стрелка вниз"
+          class="header__profile-arrow"
+          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+        />
+      </button>
+    </header>
+    <!-- main -->
+    <main class="main">
+      <!-- тело страницы -->
+      <a href="javascript:history.back()" style="text-decoration: none">
+        &#8617; Go Back
+      </a>
+      <section class="affiliate-program">
+        <h2>Section Партнерская программа</h2>
+      </section>
+      <section class="stats-referal">
+        <h2>Section Статистика рефералов</h2>
+      </section>
+      <section class="cash">
+        <h2>Section Выплаты</h2>
+      </section>
+      <!-- конец -->
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <p class="footer__text">&#169; 2021 BotKits</p>
+    </footer>
+    <!-- popup -->
+    <section
+      class="popup__notification__overlay popup__notification__overlay-close"
+    ></section>
+    <section class="popup popup__notification popup__notification-close">
+      <div class="popup__notification-header">
+        <img
+          alt="Стрелка вниз"
+          class="popup__header-ico"
+          src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
+        />
+        <h3 class="popup__header-title">Уведомления</h3>
+        <button
+          class="popup__close"
+          type="button"
+          aria-label="close popup"
+        ></button>
+      </div>
+      <fieldset class="popup__notification-menu">
+        <input
+          class="popup__notification-menu-input"
+          type="radio"
+          name="notification"
+          value="news"
+          id="news"
+          checked
+        />
+        <label class="popup__notification-menu-label" for="news">
+          Новости сервиса
+        </label>
+        <input
+          class="popup__notification-menu-input"
+          type="radio"
+          name="notification"
+          value="logs"
+          id="logs"
+        />
+        <label class="popup__notification-menu-label" for="logs">
+          Лог событий
+        </label>
+      </fieldset>
+      <div class="popup__notification-body">
+        <!-- место под новости и логи -->
+        <!-- конец -->
+      </div>
+    </section>
+    <!-- корявый дизайн popup__accaunt. Разный размер иконок и отступов. Обводка? -->
+    <section class="popup popup__accaunt popup__accaunt-close">
+      <div class="popup__accaunt-container">
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image24"
+            alt="настройки"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings-gray.svg')%>"
+          />
+          <p class="popup__accaunt-button-text">Настройка аккаунта</p>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image16"
+            alt="Подписка и платежи"
+            src="<%=require('../../images/template-icon/16x16/payment-gray.svg')%>"
+          />
+          <p class="popup__accaunt-button-text">Подписка и платежи</p>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image16"
+            alt="выход"
+            src="<%=require('../../images/template-icon/16x16/log out-gray.svg')%>"
+          />
+          <p class="popup__accaunt-button-text">Выйти</p>
+        </button>
+      </div>
+    </section>
   </body>
 </html>
