@@ -263,7 +263,7 @@
 
 .video-heading {
   @extend .text;
-  font-size: 12px;
+  font-size: variables.$fs-small;
   line-height: 150%;
   letter-spacing: 0.3px;
   opacity: 1;
