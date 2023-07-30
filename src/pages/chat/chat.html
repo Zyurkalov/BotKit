@@ -11,6 +11,7 @@
     />
     <title>Chat</title>
   </head>
+
   <body class="page-container">
     <!-- side navigation -->
     <nav class="menu" aria-label="Side navigation">
@@ -278,7 +279,7 @@
     </nav>
     <!-- main -->
     <main class="main">
-      <section class="dialogues">
+      <section class="dialogues hidden">
         <h2 class="section-header">Диалоги</h2>
         <input class="dialogues__input" type="search" id="chat-search" />
         <div class="chat-box">
@@ -296,6 +297,7 @@
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message">1</p>
           </div>
+          <div class="chat-box__selector hidden"></div>
         </div>
 
         <div class="chat-box">
@@ -309,10 +311,11 @@
           </div>
           <div class="chat-box__container">
             <t3 class="chat-box__user">Оператор</t3>
-            <p class="chat-box__time">3 минуты</p>
+            <p class="chat-box__time">3 мин</p>
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message hidden"></p>
           </div>
+          <div class="chat-box__selector hidden"></div>
         </div>
 
         <div class="chat-box">
@@ -325,11 +328,12 @@
             <div class="chat-box__point hidden"></div>
           </div>
           <div class="chat-box__container">
-            <t3 class="chat-box__user">Сергей</t3>
-            <p class="chat-box__time">30 минут</p>
+            <t3 class="chat-box__user">Сергей Надеин</t3>
+            <p class="chat-box__time">30 мин</p>
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message hidden"></p>
           </div>
+          <div class="chat-box__selector"></div>
         </div>
 
         <div class="chat-box">
@@ -347,10 +351,61 @@
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message hidden"></p>
           </div>
+          <div class="chat-box__selector hidden"></div>
         </div>
       </section>
       <section class="chat">
-        <h2>Section Чат</h2>
+        <div class="chat__header-box">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="ваш аватар"
+            />
+            <div class="user-avatar__point">
+              <img
+                class="user-avatar__point-img"
+                src="<%=require('../../../favicon.ico')%>"
+                alt="значек бота"
+              />
+            </div>
+          </div>
+          <h2 class="user-name">Сергей Надеин</h2>
+          <div class="chat__icons-box">
+            <img
+              class="icon search"
+              src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
+              alt=""
+            />
+            <img
+              class="icon play"
+              src="<%=require('../../images/template-icon/24x24/common/play.svg')%>"
+              alt=""
+            />
+            <img
+              class="icon delete"
+              src="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="dialogue-cloud">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="ваш аватар"
+            />
+          </div>
+          <div class="cloud-box">
+            <div class="cloud-box__corner"></div>
+            <div class="cloud-box__cloud">
+              <h3 class="dialogue-cloud__header">Сергей Надеин</h3>
+              <p class="dialogue-cloud__text">Привет, как это сделать?</p>
+              <span class="dialogue-cloud__message-date"></span>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="user-info">
         <h2>Section Информация пользователя</h2>
