@@ -1,59 +1,304 @@
 @use "../variables";
 @use "../common";
 @use "../ui-kit/ui_kit_navigation.scss";
+@use "../ui-kit/ui_kit_components.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
+@use "../ui-kit/ui_kit_icons.scss";
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
-img,
-svg {
-  height: auto;
-  display: block;
-}
-
-.body {
-  margin: 0;
-  position: relative;
-  height: 100%;
-  font-family: variables.$ff-primary;
-  font-size: variables.$fs-base;
-  font-weight: variables.$fw-400;
-  line-height: 1.5;
-  font-style: normal;
+.text {
   color: variables.$clr-primary-dark;
+  font-family: variables.$ff-primary;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+}
+.templates {
+  &__container {
+    height: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    cursor: pointer;
+  }
+  &__paragraph {
+    @extend .text;
+    font-size: 16px;
+    color: variables.$clr-gray-3;
+  }
+}
+.section-header {
+  margin-bottom: 24px;
+  @extend .text;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+  font-family: variables.$ff-secondary;
+
+  &_margin-40 {
+    margin-top: 40px;
+  }
+  &_margin-60 {
+    margin-top: 60px;
+  }
 }
 
-.page {
-  position: relative;
+//////////////////////////
+
+.card {
+  width: 23%;
+}
+
+.content-list {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 28px;
+}
+.card:last-child {
+  padding: 0;
+}
+
+.tutorial-block {
+  align-items: center;
+}
+
+.faq-cont {
+  border-radius: 30px;
   width: 100%;
+  margin-top: 70px;
+
+  background-color: variables.$clr-secondary-gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__left-panel {
+    padding: 32px 30px 32px 32px;
+    width: 51%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right-panel {
+    box-sizing: border-box;
+    padding: 32px 14px 0 32px;
+    width: 49%;
+    height: 283px;
+    border-radius: 30px;
+
+    background-color: variables.$clr-secondary-focus;
+    position: relative;
+  }
+
+  &__header {
+    margin: 0;
+    padding-bottom: 24px;
+
+    @extend .text;
+    font-size: variables.$fs-button-text;
+    line-height: 130%;
+    font-family: variables.$ff-secondary;
+  }
+
+  &__description {
+    margin: 0;
+    padding-bottom: 28px;
+
+    @extend .text;
+    color: variables.$clr-primary-dark;
+    font-size: variables.$fs-small;
+    line-height: 150%;
+    letter-spacing: 0.3px;
+    opacity: 1;
+  }
 }
 
-.main {
-  max-width: 1308px;
-  padding: 32px 63px 0 132px;
-  flex: 1 1 auto;
+.list-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  column-count: auto;
+  grid-template-columns: 216px 150px;
+  column-gap: 70px;
+
+  &__paragraph {
+    margin: 0;
+    padding-bottom: 16px;
+    display: inline-block;
+
+    @extend .text;
+    font-size: variables.$fs-small;
+    font-weight: variables.$fw-400;
+    line-height: 150%;
+    letter-spacing: 0.3px;
+  }
+
+  &__span {
+    padding-right: 12px;
+
+    @extend .text;
+    color: variables.$clr-gray-3;
+    font-size: variables.$fs-base;
+    font-weight: variables.$fw-700;
+    line-height: 150%;
+    letter-spacing: 0.3px;
+  }
 }
 
-.menu {
+.video-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-between;
+  gap: 20px;
+
+  &__container {
+    width: 172px;
+    height: 151px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // &:last-child {
+    //   margin: 0;
+    // }
+  }
+}
+
+.button-video {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  height: 96px;
+  max-width: 172px;
+  min-width: 159px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  position: relative;
+  background-color: variables.$clr-primary-medium;
+
+  &:hover &__bg {
+    filter: brightness(80%);
+  }
+
+  &__bg {
+    height: 96px;
+    width: 100%;
+    transition: 0.3s ease-out;
+    background-repeat: no-repeat;
+    opacity: 90%;
+    border-radius: 10px;
+    display: block;
+
+    &_poster-one {
+      background-image: url(../../images/video-posters/video-poster_1.svg);
+    }
+
+    &_poster-two {
+      background-image: url(../../images/video-posters/video-poster_2.svg);
+    }
+
+    &_poster-three {
+      background-image: url(../../images/video-posters/video-poster_3.svg);
+    }
+  }
+}
+
+.icon-container {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
   position: absolute;
+  top: 30%;
+  left: 38%;
+  border: none;
+
+  border-radius: 50%;
+  box-shadow: 0 14px 56px 0 #1512331f;
+  background-color: variables.$clr-accent;
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+  }
 }
 
-.ui-kit-navigation {
-  margin-left: 132px;
+.button-container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  cursor: pointer;
+
+  &__chevron-big_rotation {
+    rotate: 180deg;
+  }
 }
 
-.ui-kit-footer {
-  margin-left: 132px;
+.video-heading {
+  @extend .text;
+  font-size: variables.$fs-small;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  opacity: 1;
 }
 
-.main {
-  padding-left: 132px;
+// Модификаторы импортируемых компонентов
+// .navigation {
+//   margin: 0;
+// }
+
+// .menu {
+//   &__container {
+//     height: 1005px;
+//   }
+// }
+
+.panel-add-bot {
+  max-width: 100%;
+}
+.answering-machine {
+  &__button {
+    &_food {
+      background-image: url(../../images/bot-icon/food-delivery.svg);
+    }
+    &_demo-bot {
+      background-image: url(../../images/bot-icon/demo-bot.svg);
+    }
+    &_poll {
+      background-image: url(../../images/bot-icon/poll.svg);
+    }
+    &_lead {
+      background-image: url(../../images/bot-icon/lead-generation.svg);
+    }
+    &_learning {
+      background-image: url(../../images/bot-icon/e-learning.svg);
+    }
+  }
 }

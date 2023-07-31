@@ -89,4 +89,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "./css/[name].css" }),
   ],
+  performance: {
+    hints: "warning",
+    maxEntrypointSize: 1000000,
+    maxAssetSize: 1000000,
+  },
 };
