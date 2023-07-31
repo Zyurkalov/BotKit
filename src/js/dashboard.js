@@ -11,6 +11,9 @@ const botPopupCloseBtn = botPopup.querySelector(
 const botPopupOpenBtn = document.querySelector(
   "." + selectors.dashboardPage.addBotOpenBtn,
 );
+const popupCancelBtn = document.querySelector(
+  "." + selectors.dashboardPage.popupCancelBtn,
+);
 //===========================functions===========================
 function openPopup() {
   botPopup.classList.remove(selectors.dashboardPage.hiddenPopupCls);
@@ -36,3 +39,4 @@ function closePopup() {
 botPopup.addEventListener("click", onOverlayClick);
 botPopupCloseBtn.addEventListener("click", closePopup);
 botPopupOpenBtn.addEventListener("click", openPopup);
+popupCancelBtn.addEventListener("click", closePopup);

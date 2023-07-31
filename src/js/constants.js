@@ -16,6 +16,7 @@ const selectors = {
     addBotOpenBtn: "panel-add-bot",
     addBotCloseBtn: "add-bot-popup__close-btn",
     hiddenPopupCls: "add-bot-popup_hidden",
+    popupCancelBtn: "add-bot-popup__cancel-btn",
   },
 };
 
