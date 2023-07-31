@@ -93,7 +93,7 @@ h4 {
   color: variables.$clr-white;
   overflow: hidden;
   border-radius: 30px;
-  box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+  box-shadow: 0 12px 24px 0 rgba(21, 18, 51, 0.13);
 
   @media screen and (max-width: 682px) {
     height: 100%;
@@ -419,7 +419,6 @@ input[required] {
   font-weight: variables.$fw-600;
   line-height: 41.6px;
   letter-spacing: -0.2px;
-
   display: inline-block;
   vertical-align: middle;
   margin: 0 10px 0 10px;
@@ -497,7 +496,7 @@ input[required] {
     font-size: 24px;
     line-height: 31.2px;
     padding: 6px 22px 10px 20px;
-    margin: 6 22px 10px 20px;
+    margin: 6px 22px 10px 20px;
   }
 }
 
@@ -546,8 +545,6 @@ input[required] {
     width: auto;
     font-size: 32px;
     line-height: 41.6px;
-    margin-right: 20px;
-    margin-bottom: 124px;
     margin: 74px 20px 124px 0;
     letter-spacing: -0.2px;
   }
