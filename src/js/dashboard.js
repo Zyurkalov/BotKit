@@ -16,7 +16,7 @@ const popupCancelBtn = document.querySelector(
 );
 //===========================functions===========================
 function openPopup() {
-  botPopup.classList.remove(selectors.dashboardPage.hiddenPopupCls);
+  botPopup.classList.add(selectors.dashboardPage.visiblePopupCls);
   document.addEventListener("keydown", onEscClose);
 }
 
@@ -32,7 +32,7 @@ function onEscClose(evt) {
   }
 }
 function closePopup() {
-  botPopup.classList.add(selectors.dashboardPage.hiddenPopupCls);
+  botPopup.classList.remove(selectors.dashboardPage.visiblePopupCls);
   document.removeEventListener("keydown", onEscClose);
 }
 //==============evtListeners===================================
