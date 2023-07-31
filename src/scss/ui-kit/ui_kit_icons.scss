@@ -341,3 +341,29 @@
   justify-content: space-around;
   gap: 10px;
 }
+
+.header {
+  &__notification {
+    background-image: url("../../images/template-icon/24x24/common/notifications.svg");
+    background-repeat: no-repeat;
+    position: relative;
+
+    &-counter {
+      height: 14px;
+      width: 14px;
+      background-color: variables.$clr-validation-error;
+      border-radius: 50%;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-600;
+      font-size: variables.$fs-tiny;
+      line-height: 15px;
+      color: variables.$clr-white;
+      position: absolute;
+      top: -15px;
+      right: -1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
