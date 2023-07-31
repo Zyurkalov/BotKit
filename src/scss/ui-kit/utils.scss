@@ -1,0 +1,32 @@
+@use "../variables";
+@use "../common";
+
+.ui-kit-body {
+  padding: 0 30px 30px 30px;
+}
+
+.ui-kit__h2 {
+  font-family: variables.$ff-secondary;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: variables.$fw-600;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: variables.$clr-black;
+  margin-bottom: 20px;
+}
+
+.ui-kit__h3 {
+  font-size: 12px;
+  font-weight: variables.$fw-400;
+  color: rgba(6, 12, 35, 0.5);
+  font-family: variables.$ff-primary;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+.ui-kit-list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
