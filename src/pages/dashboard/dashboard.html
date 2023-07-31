@@ -753,9 +753,9 @@
       </div>
     </section>
     <!--  Код попапа бота  -->
-    <div class="popup popup_add-bot">
-      <div class="popup__container">
-        <button type="button" class="popup__close-btn">
+    <div class="add-bot-popup">
+      <div class="add-bot-popup__container">
+        <button type="button" class="add-bot-popup__close-btn">
           <img
             class="icon close"
             src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
@@ -763,12 +763,12 @@
           />
         </button>
         <img
-          class="bot-icon machine popup__main-logo"
+          class="bot-icon machine add-bot-popup__main-logo"
           src="<%=require('../../images/bot-icon/answering-machine.svg')%>"
           alt="бот автоответчик"
         />
-        <h2 class="popup__title">Бот автоответчик</h2>
-        <p class="popup__content">
+        <h2 class="add-bot-popup__title">Бот автоответчик</h2>
+        <p class="add-bot-popup__content">
           Бот ответит стандартным сообщением на запрос от человека. Подходит для
           всех мессенджеров. Шаблон возможно изменить под ваши цели.
         </p>
@@ -778,10 +778,12 @@
           <li class="ordered-list__item">Что настроено в шаблоне</li>
           <li class="ordered-list__item">Что настроено в шаблоне</li>
         </ol>
-        <div class="popup__controls">
-          <button class="popup__cancel-btn" type="submit">отмена</button>
+        <div class="add-bot-popup__controls">
+          <button class="add-bot-popup__cancel-btn" type="submit">
+            отмена
+          </button>
           <button
-            class="common-button common-button_color_green popup__submit-btn"
+            class="common-button common-button_color_green add-bot-popup__submit-btn"
             type="submit"
           >
             добавить бота
