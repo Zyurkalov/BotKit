@@ -6,7 +6,10 @@ const selectors = {
     signUpBtn: ".passw-recovery__link_type_register",
   },
   resetPasswordPage: {
-    resetBtn: ".form__submit_resetPassword",
+    resetBtn: ".passw-recovery__link_type_recover",
+  },
+  confirmationPopupCloseBtn: {
+    closeBtn: ".confirmation__close-btn",
   },
   dashboardPage: {
     addBotPopup: "add-bot-popup",
@@ -19,7 +22,7 @@ const selectors = {
 const routes = {
   loginPage: "/pages/login/login.html",
   regPage: "/pages/registration/registration.html",
-  resetPasswordPage: "/pages/registration/registration.html",
+  resetPasswordPage: "/pages/reset-password/reset_password.html",
 };
 
 export { routes, selectors };
