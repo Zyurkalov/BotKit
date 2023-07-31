@@ -19,6 +19,7 @@
 
   &_flex-space {
     justify-content: space-between;
+    margin-bottom: 30px;
 
     &:last-child {
       margin-top: 30px;
@@ -108,7 +109,32 @@
     object-fit: contain;
   }
 }
+// header потому место иконки (колокольчик) в шапке
+.header {
+  &__notification {
+    background-image: url("../../images/template-icon/24x24/common/notifications.svg");
+    background-repeat: no-repeat;
+    position: relative;
 
+    &-counter {
+      height: 14px;
+      width: 14px;
+      background-color: variables.$clr-validation-error;
+      border-radius: 50%;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-600;
+      font-size: variables.$fs-tiny;
+      line-height: 15px;
+      color: variables.$clr-white;
+      position: absolute;
+      top: -15px;
+      right: -1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
 .avatar {
   width: 40px;
   height: 40px;
@@ -201,6 +227,66 @@
   &_disable {
     background-color: variables.$clr-secondary-gray;
   }
+}
+// общий стиль для всех кнопок
+.component_flex-space > button {
+  width: 104px;
+  height: 104px;
+}
+// модификаторы для background кнопок
+.machine-bot {
+  background-image: url("../../images/bot-icon/answering-machine.svg");
+}
+.deliverye-bot {
+  background-image: url("../../images/bot-icon/food-delivery.svg");
+}
+.demo-bot {
+  background-image: url("../../images/bot-icon/demo-bot.svg");
+}
+.poll-bot {
+  background-image: url("../../images/bot-icon/poll.svg");
+}
+.lead-bot {
+  background-image: url("../../images/bot-icon/lead-generation.svg");
+}
+.learning-bot {
+  background-image: url("../../images/bot-icon/e-learning.svg");
+}
+.medical-bot {
+  background-image: url("../../images/bot-icon/medical.svg");
+}
+.tikets-bot {
+  background-image: url("../../images/bot-icon/tikets.svg");
+}
+.shoping-bot {
+  background-image: url("../../images/bot-icon/internet-shoping.svg");
+}
+.commerce-bot {
+  background-image: url("../../images/bot-icon/e-commerce.svg");
+}
+.club-bot {
+  background-image: url("../../images/bot-icon/private-club.svg");
+}
+.estate-bot {
+  background-image: url("../../images/bot-icon/real-estate.svg");
+}
+.beauty-bot {
+  background-image: url("../../images/bot-icon/beauty.svg");
+}
+.question-bot {
+  background-image: url("../../images/bot-icon/question.svg");
+}
+.entertainment-bot {
+  background-image: url("../../images/bot-icon/entertainment.svg");
+}
+.banking-bot {
+  background-image: url("../../images/bot-icon/banking.svg");
+}
+.carsharing-bot {
+  background-image: url("../../images/bot-icon/carsharing.svg");
+}
+.chat-bot {
+  background-image: url("../../images/bot-icon/close-chatr.svg");
 }
 
 .social-icon {
@@ -319,51 +405,14 @@
   }
 }
 
-.bot-icon {
-  margin: 0;
-  padding: 0;
-  min-width: 104px;
-  min-height: 104px;
-  border-radius: 100%;
-
-  outline-color: none;
-  outline-style: none;
-  mask-repeat: round;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-}
-
 .frame-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  gap: 10px;
 }
-
-.header {
-  &__notification {
-    background-image: url("../../images/template-icon/24x24/common/notifications.svg");
-    background-repeat: no-repeat;
-    position: relative;
-
-    &-counter {
-      height: 14px;
-      width: 14px;
-      background-color: variables.$clr-validation-error;
-      border-radius: 50%;
-      font-family: variables.$ff-secondary;
-      font-weight: variables.$fw-600;
-      font-size: variables.$fs-tiny;
-      line-height: 15px;
-      color: variables.$clr-white;
-      position: absolute;
-      top: -15px;
-      right: -1px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
+// .bot-icon {
+//   margin: 0;
+//   padding: 0;
+//   width: 88px;
+//   height: 88px;
+// }
