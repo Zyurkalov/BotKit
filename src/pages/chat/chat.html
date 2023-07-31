@@ -279,9 +279,89 @@
     </nav>
     <!-- main -->
     <main class="main">
-      <section class="dialogues hidden">
+      <section class="dialogues">
         <h2 class="section-header">Диалоги</h2>
-        <input class="dialogues__input" type="search" id="chat-search" />
+        <div class="dialogues__input-box">
+          <svg
+            class="icon-color icon-color_size20x20"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+              stroke="#A6B3C9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20.9999 21L16.6499 16.65"
+              stroke="#A6B3C9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <input
+            class="field__input search-input"
+            type="text"
+            id="field-default"
+            name="field-default"
+            placeholder="Поиск..."
+          />
+          <svg
+            class="icon-color icon-color_size20x20"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="filter-svgrepo-com-2 1">
+              <path
+                id="Vector"
+                d="M8.83333 14.25H3"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_2"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.3334 14.2493C16.3334 15.3999 15.4007 16.3327 14.2501 16.3327C13.0995 16.3327 12.1667 15.3999 12.1667 14.2493C12.1667 13.0979 13.0995 12.166 14.2501 12.166C15.4007 12.166 16.3334 13.0979 16.3334 14.2493Z"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_3"
+                d="M10.8333 5.41602H16.6666"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_4"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 5.08333C3 6.23478 3.93273 7.16667 5.08333 7.16667C6.23393 7.16667 7.16667 6.23478 7.16667 5.08333C7.16667 3.93273 6.23393 3 5.08333 3C3.93273 3 3 3.93273 3 5.08333Z"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
+        <!-- <input class="dialogues__input" type="search" id="chat-search" /> -->
         <div class="chat-box">
           <div class="chat-box__avatar">
             <img
@@ -292,7 +372,7 @@
             <div class="chat-box__point"></div>
           </div>
           <div class="chat-box__container">
-            <t3 class="chat-box__user">Марк</t3>
+            <h3 class="chat-box__user">Марк</h3>
             <p class="chat-box__time">4 часа</p>
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message">1</p>
@@ -310,7 +390,7 @@
             <div class="chat-box__point hidden"></div>
           </div>
           <div class="chat-box__container">
-            <t3 class="chat-box__user">Оператор</t3>
+            <h3 class="chat-box__user">Оператор</h3>
             <p class="chat-box__time">3 мин</p>
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message hidden"></p>
@@ -328,7 +408,7 @@
             <div class="chat-box__point hidden"></div>
           </div>
           <div class="chat-box__container">
-            <t3 class="chat-box__user">Сергей Надеин</t3>
+            <h3 class="chat-box__user">Сергей Надеин</h3>
             <p class="chat-box__time">30 мин</p>
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message hidden"></p>
@@ -346,7 +426,7 @@
             <div class="chat-box__point hidden"></div>
           </div>
           <div class="chat-box__container">
-            <t3 class="chat-box__user">Даша К.</t3>
+            <h3 class="chat-box__user">Даша К.</h3>
             <p class="chat-box__time">12.06.22</p>
             <p class="chat-box__text">Какой-то текст.</p>
             <p class="chat-box__count-message hidden"></p>
@@ -354,6 +434,7 @@
           <div class="chat-box__selector hidden"></div>
         </div>
       </section>
+
       <section class="chat">
         <div class="chat__header-box">
           <div class="user-avatar">
@@ -372,41 +453,199 @@
           </div>
           <h2 class="user-name">Сергей Надеин</h2>
           <div class="chat__icons-box">
-            <img
-              class="icon search"
-              src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
-              alt=""
-            />
-            <img
-              class="icon play"
-              src="<%=require('../../images/template-icon/24x24/common/play.svg')%>"
-              alt=""
-            />
-            <img
-              class="icon delete"
-              src="<%=require('../../images/template-icon/24x24/constructor/delete.svg')%>"
-              alt=""
-            />
+            <svg
+              class="icon-color"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="поиск"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.9999 21L16.6499 16.65"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="icon-color"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="запуск"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 8L16 12L10 16V8Z"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              class="icon-color"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="удалить"
+            >
+              <path
+                d="M3.375 6H5.29167H20.625"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.1665 6V4C8.1665 3.46957 8.36844 2.96086 8.72788 2.58579C9.08733 2.21071 9.57484 2 10.0832 2H13.9165C14.4248 2 14.9123 2.21071 15.2718 2.58579C15.6312 2.96086 15.8332 3.46957 15.8332 4V6M18.7082 6V20C18.7082 20.5304 18.5062 21.0391 18.1468 21.4142C17.7873 21.7893 17.2998 22 16.7915 22H7.20817C6.69984 22 6.21233 21.7893 5.85288 21.4142C5.49344 21.0391 5.2915 20.5304 5.2915 20V6H18.7082Z"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.0835 11V17"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.9165 11V17"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
         </div>
-        <div class="dialogue-cloud">
+
+        <div class="time-border">
+          <div class="time-border__line"></div>
+          <h3 class="time-border__date">Сегодня</h3>
+          <div class="time-border__line"></div>
+        </div>
+
+        <div class="chat__dialogue-cloud">
           <div class="user-avatar">
             <img
               class="user-avatar__img"
               src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
-              alt="ваш аватар"
+              alt="аватар собеседника"
             />
           </div>
           <div class="cloud-box">
-            <div class="cloud-box__corner"></div>
-            <div class="cloud-box__cloud">
-              <h3 class="dialogue-cloud__header">Сергей Надеин</h3>
-              <p class="dialogue-cloud__text">Привет, как это сделать?</p>
-              <span class="dialogue-cloud__message-date"></span>
+            <h3 class="cloud-box__header">Сергей Надеин</h3>
+            <div class="cloud-box__message-cont">
+              <p class="cloud-box__text">Привет, как это сделать?</p>
+              <span class="cloud-box__message-date">16 мин назад</span>
             </div>
+            <span class="cloud-box__message-viewed">Просмотренно в 14:05</span>
           </div>
         </div>
+
+        <div class="chat__dialogue-cloud chat__dialogue-cloud_your">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img"
+              src="<%=require('../../images/avatar/avatar-operator.svg')%>"
+              alt="ваш аватар"
+            />
+          </div>
+          <div class="cloud-box cloud-box_your">
+            <h3 class="cloud-box__header">Вы</h3>
+            <div class="cloud-box__message-cont">
+              <p class="cloud-box__text">
+                Привет, {name}! Перейдите по ссылке
+                https://BOTkit/file/-node-id=3A332705
+              </p>
+              <span class="cloud-box__message-date cloud-box__message-date_your"
+                >10 мин назад</span
+              >
+            </div>
+            <span
+              class="cloud-box__message-viewed cloud-box__message-viewed_your"
+              >Просмотренно в 14:12</span
+            >
+          </div>
+        </div>
+
+        <div class="chat__dialogue-cloud">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="аватар собеседника"
+            />
+          </div>
+          <div class="cloud-box">
+            <h3 class="cloud-box__header">Сергей Надеин</h3>
+            <div class="cloud-box__message-cont">
+              <p class="cloud-box__text">Ок! Спасибо 😄</p>
+              <span class="cloud-box__message-date">16 мин назад</span>
+            </div>
+          </div>
+          <span class="cloud-box__message-viewed">Просмотренно в 14:05</span>
+        </div>
+
+        <div class="dialogues__input-box">
+          <input
+            class="field__input search-input"
+            type="text"
+            id="field-default"
+            name="field-default"
+            placeholder="Введите сообщение..."
+          />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.4398 11.05L12.2498 20.24C11.124 21.3658 9.59699 21.9983 8.0048 21.9983C6.41262 21.9983 4.88565 21.3658 3.7598 20.24C2.63396 19.1142 2.00146 17.5872 2.00146 15.995C2.00146 14.4028 2.63396 12.8758 3.7598 11.75L12.9498 2.56C13.7004 1.80944 14.7183 1.38778 15.7798 1.38778C16.8413 1.38778 17.8592 1.80944 18.6098 2.56C19.3604 3.31057 19.782 4.32855 19.782 5.39C19.782 6.45146 19.3604 7.46944 18.6098 8.22L9.4098 17.41C9.03452 17.7853 8.52553 17.9961 7.9948 17.9961C7.46407 17.9961 6.95508 17.7853 6.5798 17.41C6.20452 17.0347 5.99369 16.5257 5.99369 15.995C5.99369 15.4643 6.20452 14.9553 6.5798 14.58L15.0698 6.1"
+              stroke="#060C23"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <img
+            class="icon emoji icon_20x20"
+            src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
+            alt="выбрать смалик"
+          />
+          <img
+            class="icon x-circle icon_20x20"
+            src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
+            alt="отменить"
+          />
+        </div>
       </section>
+
       <section class="user-info">
         <h2>Section Информация пользователя</h2>
       </section>
