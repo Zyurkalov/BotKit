@@ -302,14 +302,11 @@
     }
   }
 }
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
 
 .add-bot-popup {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  max-height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -321,7 +318,12 @@
     visibility 0.3s,
     opacity 0.2s linear;
   z-index: 101;
+  &_hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
+
 .add-bot-popup__container {
   margin: auto;
   max-width: 620px;
