@@ -16,13 +16,6 @@
     background-color: variables.$clr-secondary-gray;
   }
 }
-.chat {
-  width: 51.5%;
-  box-sizing: border-box;
-  padding: 0 32px 0;
-  border-left: solid 1px variables.$clr-secondary-cultured;
-  border-right: solid 1px variables.$clr-secondary-cultured;
-}
 .user-info {
   width: 23%;
   box-sizing: border-box;
@@ -49,6 +42,16 @@
 }
 
 ///////////// chat
+.chat {
+  width: 51.5%;
+  box-sizing: border-box;
+  padding: 0 32px 0;
+
+  display: flex;
+  flex-direction: column;
+  border-left: solid 1px variables.$clr-secondary-cultured;
+  border-right: solid 1px variables.$clr-secondary-cultured;
+}
 .chat-box {
   height: 80px;
   padding: 16px 0;
@@ -157,8 +160,6 @@
     margin-top: 32px;
     display: flex;
     align-items: flex-end;
-
-    position: relative;
 
     &_your {
       flex-direction: row-reverse;
@@ -278,6 +279,32 @@
     }
   }
 }
+.dialogues__input-buttons {
+  min-width: 20px;
+  min-height: 20px;
+}
+.dialogues__input-box {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 8px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  background-color: variables.$clr-secondary-gray;
+  border-radius: 5px;
+
+  &_height-48 {
+    height: 48px;
+  }
+}
+.field__input {
+  position: relative;
+  height: 24px;
+  max-width: 100%;
+}
 
 ///////////// модификаторы на исходники компаненты
 .main {
@@ -297,24 +324,6 @@
   &_size20x20 {
     min-width: 20px;
   }
-}
-.dialogues__input-box {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 10px 8px;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-
-  background-color: variables.$clr-secondary-gray;
-  border-radius: 5px;
-}
-.field__input {
-  position: relative;
-  height: 24px;
-  max-width: 100%;
 }
 
 .hidden {

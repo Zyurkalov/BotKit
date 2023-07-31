@@ -79,6 +79,9 @@
   &_pos-abs {
     position: absolute;
   }
+  &_rotate-45 {
+    transform: rotate(45deg);
+  }
 
   /*если нужно сменить цвет логотипа на белый*/
   &_invert {
