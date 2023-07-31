@@ -1,10 +1,13 @@
 import "../../scss/ui-kit/ui_kit_navigation.scss";
 
-const pageNavigation = document.querySelector(".page__navigation");
-const pageContent = document.querySelector(".page__content");
+const page = document.querySelector(".page__container");
+const header = page.querySelector(".header");
+const footer = page.querySelector(".footer");
+const headerMenu = header.querySelector(".header__menu");
+
 const keyEscape = "Escape";
 
-const menu = pageNavigation.querySelector(".menu");
+const menu = page.querySelector(".menu");
 const menuItems = menu.querySelector(".menu__items");
 const linkThemeBlue = menu.querySelector(".link_theme_blue");
 const linkImageReverse = menu.querySelector(".link__image_reverse");
@@ -17,7 +20,9 @@ let menuStatus = false;
 export function openMenu() {
   menu.classList.toggle("menu-open");
   menuItems.classList.toggle("menu__items-open");
-  pageContent.classList.toggle("page__content-open");
+  page.classList.toggle("page__container-open");
+  header.classList.toggle("header-open");
+  footer.classList.toggle("footer-open");
   linkThemeBlue.classList.toggle("link_theme_blue-open");
   linkImageReverse.classList.toggle("link__image_reverse-open");
   menuSecond.removeEventListener("click", () => openMenu(true));
@@ -44,13 +49,12 @@ function toggleSecondMenu() {
 
 // header
 // бургер
-const header = pageNavigation.querySelector(".header");
-const headerMenu = header.querySelector(".header__menu");
+
 headerMenu.addEventListener("click", openMenu);
 
 // уведомления
 const buttonOpenNotification = header.querySelector(".header__notification");
-const popupNotification = document.querySelector(".popup__notification");
+const popupNotification = page.querySelector(".popup__notification");
 const buttonCloseNotification = popupNotification.querySelector(
   ".popup__button-close",
 );
@@ -77,7 +81,7 @@ buttonOpenNotification.addEventListener("click", openNotification);
 
 // Профиль пользователя
 const buttonOpenAccaunt = header.querySelector(".header__profile");
-const popupAccaunt = document.querySelector(".popup__accaunt");
+const popupAccaunt = page.querySelector(".popup__accaunt");
 
 function openAccauntSettings() {
   popupAccaunt.classList.toggle("popup__accaunt-close");
