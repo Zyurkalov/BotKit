@@ -21,18 +21,13 @@
           width="149"
           height="35"
         />
-        <h2 class="header__h2 header__h2_type_login">Вход</h2>
+        <h2 class="header__h2">Вход</h2>
       </header>
       <main class="main">
         <div class="window">
           <section class="outer-wrapper outer-wrapper_type_login">
             <div class="inner-wrapper inner-wrapper_type_login">
-              <form
-                action="/"
-                class="form form_type_login"
-                name="login-form"
-                novalidate
-              >
+              <form action="/" class="form" name="login-form" novalidate>
                 <fieldset class="login-form__input-container">
                   <label class="form__field form__field_size_l">
                     <input
@@ -52,6 +47,7 @@
                       id="login-form-password"
                       name="login-form-password"
                       placeholder="Пароль"
+                      autocomplete="current-password"
                       required
                     />
                     <span class="form__input-error password-input-error"></span>
@@ -71,7 +67,10 @@
                     >
                   </li>
                 </ul>
-                <button type="submit" class="form__submit form__submit_size_m">
+                <button
+                  type="submit"
+                  class="common-button common-button_color_green form__submit form__submit_type_login"
+                >
                   Войти
                 </button>
               </form>
@@ -79,7 +78,7 @@
                 <span class="separator__text">или</span>
               </div>
             </div>
-            <div class="icons-container">
+            <div class="icons-container icons-container_type_login">
               <div class="icons-container__icons">
                 <button class="icons-container__button" type="submit">
                   <img

@@ -66,14 +66,13 @@
 
       <section class="component">
         <!-- колокольчик-->
-        <div class="icon icon_pos-rel">
-          <p class="icon__count">2</p>
-          <img
-            class="icon ding icon_30x24"
-            src="<%=require('../../images/template-icon/24x24/common/notifications.svg')%>"
-            alt=""
-          />
-        </div>
+        <button
+          class="header__notification icon"
+          type="button"
+          aria-label="notification"
+        >
+          <p class="header__notification-counter">2</p>
+        </button>
         <img
           class="icon help"
           src="<%=require('../../images/template-icon/24x24/common/help.svg')%>"
