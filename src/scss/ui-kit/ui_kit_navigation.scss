@@ -3,6 +3,7 @@
 @use "utils";
 @use "ui_kit_icons";
 
+// mixin
 @mixin animation() {
   transition:
     width 0.3s ease-in-out,
@@ -20,82 +21,261 @@
   box-shadow: 0 12px 24px 0 variables.$box-shadow;
 }
 
-.header_mod {
-  display: block;
-  position: absolute;
-  left: 300px;
-  top: 10px;
+@mixin button-default() {
+  margin: 0;
+  padding: 0;
+  min-height: 24px;
+  min-width: 24px;
+  border: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@mixin text-default() {
+  font-family: variables.$ff-primary;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  font-size: variables.$fs-base;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+}
+
+@mixin test($color) {
+  border: 1px solid $color;
+  box-sizing: border-box;
+}
+// стили
+
+.page {
+  &__container {
+    padding: 0;
+    margin: 72px 40px 0 132px; //86+46
+    padding-bottom: 82px;
+    min-height: 800px;
+    @include animation();
+
+    &-open {
+      margin-left: 286px;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  z-index: 1;
+  width: calc(100% - 40px - 132px);
+  margin-left: 132px;
+  box-sizing: border-box;
+  border-bottom: 1px solid variables.$clr-secondary-focus;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: variables.$clr-white;
+  @include animation();
+
+  &-open {
+    margin-left: 286px;
+    width: calc(100% - 40px - 286px);
+  }
+
+  &__menu {
+    @include button-default();
+    margin-right: auto;
+    background-image: url("../../images/template-icon/24x24/add_block/menu_grey.svg");
+  }
+
+  &__rate {
+    @include text-default();
+    margin: 0 8px 0 0;
+    padding: 0;
+
+    &_name {
+      @include text-default();
+      margin: 0;
+      padding: 0;
+      font-weight: variables.$fw-600;
+    }
+  }
+
+  &__help {
+    @include button-default();
+    margin: 0 32px;
+    background-image: url("../../images/template-icon/24x24/common/help.svg");
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 29px;
+      width: 1px;
+      background-color: variables.$clr-secondary-focus;
+      position: absolute;
+      bottom: -2px;
+      left: -15px;
+    }
+  }
+
+  &__notification {
+    @include button-default();
+    margin-right: 32px;
+    background-image: url("../../images/template-icon/24x24/common/notifications.svg");
+    background-repeat: no-repeat;
+    position: relative;
+
+    &-counter {
+      height: 14px;
+      width: 14px;
+      background-color: variables.$clr-validation-error;
+      border-radius: 50%;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-600;
+      font-size: variables.$fs-tiny;
+      line-height: 15px;
+      color: variables.$clr-white;
+      position: absolute;
+      top: -15px;
+      right: -1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__profile {
+    margin: 0;
+    padding: 0;
+    height: 36px;
+    border: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &-avatar {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      border: 2px solid variables.$clr-secondary-gray;
+      box-sizing: border-box;
+    }
+    &-name {
+      margin: 0 10px 0 12px;
+      @include text-default();
+    }
+
+    &-arrow {
+      height: 20px;
+      width: 20px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// .main {
+// }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: calc(100% - 40px - 132px);
+  margin-left: 132px;
+  box-sizing: border-box;
+  background-color: variables.$clr-white;
+  border-top: 1px solid variables.$clr-secondary-cultured;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  @include text-default();
+  @include animation();
+
+  &-open {
+    margin-left: 286px;
+    width: calc(100% - 40px - 286px);
+  }
 }
 
 .menu {
-  grid-area: nav;
-  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
   min-width: 86px;
   max-width: 240px;
-  width: 86px; // удалить
-  width: 240px;
-
+  width: 86px;
   @include animation();
 
-  &-close {
-    width: 86px;
+  &-open {
+    width: 240px;
   }
 
-  // &:hover {
-  //   width: 86px;
+  &__items {
+    margin: 16px;
+    margin-right: 0;
+    padding: 20px 12px;
+    height: calc(100vh - 40px);
+    width: 70px;
+    max-height: 868px;
+    list-style-type: none;
+    background-color: variables.$clr-gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: fixed;
+    @include animation();
 
-  //   & .link_theme_blue {
-  //     padding: 0;
-  //     margin-left: 0;
-  //     border-radius: 50px;
-  //   }
-  //   & .link__image_reverse {
-  //     min-width: 24px;
-  //     margin: 11px;
-  //   }
-  //   & .link__text_reverse {
-  //     width: 0;
-  //   }
-  // }
-}
-
-.menu__items {
-  margin: 16px;
-  margin-right: 0;
-  padding: 20px 12px;
-  height: calc(100% - 40px);
-  max-height: 868px;
-  list-style-type: none;
-  background-color: variables.$clr-gray;
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
-.menu__item {
-  margin-bottom: 8px;
-  box-sizing: border-box;
-  height: 46px;
-  min-height: 46px;
-  min-width: 46px;
-
-  &_logo {
-    margin: 0 0 28px 4px;
-    min-height: 34px;
-    background-image: url(../../images/logo.svg);
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 145px 34px;
-    overflow: hidden;
+    &-open {
+      width: 224px;
+    }
   }
 
-  &_bot {
-    margin: 0 14px 48px 0;
+  &__item {
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    min-height: 46px;
+    min-width: 46px;
+
+    &_logo {
+      margin: 0 0 28px 4px;
+      min-height: 34px;
+      background-image: url(../../images/logo.svg);
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 145px 34px;
+      overflow: hidden;
+    }
+
+    &_bot {
+      margin: 0 14px 48px 0;
+    }
+  }
+
+  &__second {
+    &_items {
+      max-height: none;
+    }
+    &_item {
+      display: none;
+      &-open {
+        display: block;
+      }
+    }
   }
 }
 
@@ -116,13 +296,22 @@
 
     &_reverse {
       width: 0;
-      min-width: 0;
-      margin: 0;
+
+      min-width: 24px;
+      margin: 11px;
       @include animation();
 
-      &-close {
-        min-width: 24px;
-        margin: 11px;
+      &-open {
+        min-width: 0;
+        margin: 0;
+      }
+    }
+
+    &_up {
+      transform: scaleY(-1);
+
+      &-open {
+        transform: scaleY(1);
       }
     }
   }
@@ -136,19 +325,18 @@
 
     &_reverse {
       margin: 0;
-      @include animation();
+    }
 
-      &-close {
-        width: 0;
-      }
+    &_second {
+      margin-left: 50px;
     }
   }
 
   &_theme {
     &_blue {
-      padding: 0 30px;
-      margin-left: 4px;
-      border-radius: 10px;
+      padding: 0;
+      margin-left: 0;
+      border-radius: 50px;
       background-color: variables.$clr-primary-medium;
       color: variables.$clr-white;
       font-family: variables.$ff-secondary;
@@ -165,10 +353,10 @@
         background-color: variables.$clr-primary-light;
       }
 
-      &-close {
-        padding: 0;
-        margin-left: 0;
-        border-radius: 50px;
+      &-open {
+        padding: 0 30px;
+        margin-left: 4px;
+        border-radius: 10px;
       }
     }
 
@@ -209,148 +397,6 @@
   }
 }
 
-// меню второго уровня раздела мини-лендинг. Пока есть вопросы по реализации.
-.menu__second {
-  &_item {
-    // height: 0;
-    // margin: 0;
-  }
-  &_text {
-    margin-left: 50px;
-  }
-}
-
-@mixin button-default() {
-  margin: 0;
-  padding: 0;
-  min-height: 24px;
-  min-width: 24px;
-  margin-right: 32px;
-  border: 0;
-  background-color: transparent;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-@mixin text-default() {
-  font-family: variables.$ff-primary;
-  font-weight: variables.$fw-400;
-  color: variables.$clr-primary-dark;
-  font-size: variables.$fs-base;
-  line-height: 24px;
-  letter-spacing: -0.1px;
-  white-space: nowrap;
-}
-
-.page-container {
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-  display: grid;
-  column-gap: 43px;
-  grid-template-columns: auto 1fr 0;
-  grid-template-rows: 72px 1fr 50px;
-  grid-template-areas:
-    "nav header ."
-    "nav main ."
-    "nav footer .";
-  position: relative;
-}
-
-.main {
-  grid-area: main;
-  box-sizing: border-box;
-  margin-top: 0;
-  margin-bottom: 32px;
-}
-
-.header {
-  grid-area: header;
-  box-sizing: border-box;
-  border-bottom: 1px solid variables.$clr-secondary-focus;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  &__menu {
-    @include button-default();
-    background-image: url("../../images/template-icon/24x24/add_block/menu_grey.svg");
-  }
-
-  &__rate {
-    margin-left: auto;
-    margin-right: 8px;
-    @include text-default();
-
-    &-name {
-      @include text-default();
-      font-weight: variables.$fw-600;
-      margin-right: 32px;
-    }
-  }
-
-  &__help {
-    @include button-default();
-    background-image: url("../../images/template-icon/24x24/common/help.svg");
-    background-repeat: no-repeat;
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      height: 29px;
-      width: 1px;
-      background-color: variables.$clr-secondary-focus;
-      position: absolute;
-      bottom: -2px;
-      left: -15px;
-    }
-  }
-
-  &__notification {
-    @include button-default();
-  }
-
-  &__profile {
-    margin: 0;
-    padding: 0;
-    height: 36px;
-    border: 0;
-    background-color: transparent;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-
-    &-avatar {
-      height: 36px;
-      width: 36px;
-      border-radius: 50%;
-      border: 2px solid variables.$clr-secondary-gray;
-      box-sizing: border-box;
-    }
-    &-name {
-      margin-left: 10px;
-      margin-right: 12px;
-      @include text-default();
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.footer {
-  grid-area: footer;
-  box-sizing: border-box;
-  border-top: 1px solid variables.$clr-secondary-cultured;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  @include text-default();
-}
-
 .popup {
   display: block;
   position: fixed;
@@ -359,81 +405,32 @@
     height: 100vh;
     width: 364px;
     padding: 24px 40px 0 28px;
-
     top: 0;
     right: 0;
     background-color: variables.$clr-white;
     border-left: 1px solid variables.$clr-secondary-focus;
     @include boxShadow();
-    z-index: 100;
+    z-index: 150;
     transition: right 0.3s ease-in-out;
 
     &-close {
       right: -400px;
     }
-
-    &-header {
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    &__overlay {
-      width: 100%;
-      height: 100%;
-      display: block;
-      box-sizing: border-box;
-      position: fixed;
-      z-index: 99;
-
-      &-close {
-        display: none;
-      }
-    }
-
-    &-menu {
-      padding: 0;
-      margin: 0;
-      display: flex;
-
-      &-label {
-        height: 50px;
-        width: 100%;
-        border-bottom: 2px solid variables.$clr-secondary-cultured;
-        color: variables.$clr-secondary-cultured;
-        font-family: variables.$ff-secondary;
-        font-weight: variables.$fw-500;
-        font-size: variables.$fs-base;
-        line-height: 21px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        @include animation();
-      }
-
-      &-input {
-        display: none;
-
-        &:checked {
-          & + label {
-            color: variables.$clr-primary-medium;
-            border-bottom: 2px solid variables.$clr-primary-medium;
-          }
-        }
-      }
-    }
   }
 
   &__header {
-    &-ico {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &_ico {
       height: 24px;
       width: 24px;
       margin-right: 16px;
     }
 
-    &-title {
+    &_title {
       padding: 0;
       margin: 0;
       margin-right: auto;
@@ -444,12 +441,47 @@
     }
   }
 
-  &__close {
-    @include button-default();
+  &__menu {
+    padding: 0;
     margin: 0;
-    height: 24px;
-    width: 24px;
-    background-image: url("../../images/template-icon/24x24/common/close.svg");
+    display: flex;
+
+    &_label {
+      height: 50px;
+      width: 100%;
+      border-bottom: 2px solid variables.$clr-secondary-cultured;
+      color: variables.$clr-secondary-cultured;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-500;
+      font-size: variables.$fs-base;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include animation();
+    }
+
+    &_input {
+      display: none;
+
+      &:checked {
+        & + label {
+          color: variables.$clr-primary-medium;
+          border-bottom: 2px solid variables.$clr-primary-medium;
+        }
+      }
+    }
+  }
+
+  &__button {
+    &-close {
+      @include button-default();
+      margin: 0;
+      height: 24px;
+      width: 24px;
+      background-image: url("../../images/template-icon/24x24/common/close.svg");
+    }
   }
 
   &__accaunt {
@@ -460,6 +492,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     background-color: variables.$clr-white;
+    z-index: 101;
     @include boxShadow();
 
     &-container {
@@ -470,7 +503,6 @@
       flex-wrap: nowrap;
       align-content: stretch;
       justify-content: flex-start;
-
       position: relative;
 
       &::after {
@@ -492,6 +524,7 @@
       align-items: center;
       justify-content: flex-start;
       flex-direction: row;
+      cursor: pointer;
 
       &:hover {
         background-color: variables.$clr-secondary-gray;
