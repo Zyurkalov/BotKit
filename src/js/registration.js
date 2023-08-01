@@ -1,22 +1,20 @@
 import "../scss/registration/registration.scss";
-import { routes, selectors, openAndClosePage } from "./constants";
+import { authRoutes, selectors, toggleConfirmationPopup } from "./constants";
 
-// Переход на старницу логина
 const signInBtn = document.querySelector(selectors.regPage.signInBtn);
-
-// Переход на страницу логина
-signInBtn.addEventListener("click", () => {
-  window.location.href = window.location.origin + routes.loginPage;
-});
-
 const closeBtn = document.querySelector(
   selectors.confirmationPopupCloseBtn.closeBtn,
 );
+const signUpBtn = document.querySelector(selectors.regPage.signUpBtn);
 
-const signUpBtn = document.querySelector(".common-button");
+// Переход на страницу логина по клику на кнопку Войти
+signInBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  window.location.href = window.location.origin + authRoutes.loginPage;
+});
 
-// Создать аккаунт
-signUpBtn.addEventListener("click", openAndClosePage);
+// Регистрация аккаунта по клику на кнопку Создать аккаунт
+signUpBtn.addEventListener("click", toggleConfirmationPopup);
 
-// Закрыть попап подтверждения
-closeBtn.addEventListener("click", openAndClosePage);
+// Закрытие попапа подтверждения по клику на крестик
+closeBtn.addEventListener("click", toggleConfirmationPopup);
