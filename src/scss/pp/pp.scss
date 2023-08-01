@@ -2,3 +2,198 @@
 @use "../common";
 @use "../ui-kit/ui_kit_navigation.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
+
+.affiliate-program {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 32px 0;
+}
+
+.affiliate-program_container {
+  display: flex;
+  justify-content: space-between;
+  font-family: variables.$ff-secondary;
+  font-weight: variables.$fw-600;
+  line-height: 41.6px;
+  letter-spacing: -0.2px;
+  margin: 32px 0;
+  h2 {
+    margin: 0;
+    font-size: variables.$fs-h2-additionally;
+  }
+}
+
+.affiliate-program_container-copy {
+  display: flex;
+  margin: 22px 0 0 24px;
+  font-family: variables.$ff-primary;
+  font-weight: variables.$fw-600;
+}
+
+.ref-link {
+  margin: 0;
+  width: 399px;
+  font-size: variables.$fs-small;
+  color: variables.$clr-primary-medium;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+}
+
+.affiliate-program_payments-button {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-600;
+  line-height: 18.76px;
+  letter-spacing: 1px;
+  font-family: variables.$ff-secondary;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.payments-button_green {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  background-color: variables.$clr-accent;
+  color: variables.$clr-primary-dark;
+  padding: 0;
+
+  &:hover {
+    background-color: variables.$clr-accent-focus;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: variables.$clr-accent;
+  }
+
+  &:disabled {
+    background-color: variables.$clr-accent-press;
+    pointer-events: none;
+  }
+}
+
+.affiliate-program_copy-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover svg path {
+    stroke: variables.$clr-primary-medium;
+  }
+
+  &:active {
+    background-color: variables.$clr-blue-disabled;
+  }
+
+  &:active svg path {
+    stroke: variables.$clr-primary-medium;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:disabled svg path {
+    stroke: variables.$clr-secondary-cultured;
+  }
+}
+
+.pp-window__container {
+  background-color: variables.$clr-secondary-gray;
+  border-radius: 30px;
+  height: 625px;
+}
+
+.stats-referal {
+  background-color: variables.$clr-white;
+  border-radius: 30px;
+  box-shadow: 0px 6px 16px 0px #15123314;
+  height: 327px;
+}
+
+.stats-referal__container {
+  color: variables.$clr-primary-dark;
+  margin: 40px 0 0 40px;
+  h3 {
+    font-family: variables.$ff-secondary;
+    font-weight: variables.$fw-500;
+    font-size: variables.$fs-24;
+    line-height: 31.2px;
+    margin: 0;
+  }
+
+  &:last-child {
+    margin: 32px 40px 0 40px;
+  }
+}
+
+.stats-referal__container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table__con-first {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px;
+  grid-auto-columns: 5fr;
+  gap: 85px;
+  grid-auto-flow: row;
+  justify-items: end;
+  margin: 26px 0;
+  font-family: variables.$ff-secondary;
+  font-weight: variables.$fw-500;
+  font-size: variables.$fs-base;
+  line-height: 20.8px;
+  text-wrap: nowrap;
+}
+
+.tabble__text-info {
+  height: 48px;
+  margin: 16px 0 0;
+  align-content: center;
+  align-items: center;
+  font: caption;
+  font-family: variables.$ff-primary;
+  font-weight: variables.$fw-600;
+  font-size: variables.$fs-13;
+}
+
+.text-green {
+  color: variables.$clr-success;
+}
+
+.text-blue {
+  color: variables.$clr-primary-medium;
+}
+
+.table__con-second {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px;
+  grid-auto-columns: 5fr;
+  gap: 178px;
+  grid-auto-flow: row;
+  margin: 26px 0 16px 0;
+  font-family: variables.$ff-secondary;
+  font-weight: variables.$fw-500;
+  font-size: variables.$fs-base;
+  line-height: 20.8px;
+  text-wrap: nowrap;
+}
