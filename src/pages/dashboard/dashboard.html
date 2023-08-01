@@ -189,7 +189,7 @@
           </a>
         </li>
         <li class="menu__item menu__second">
-          <a class="link link_theme_gray" href="#">
+          <a class="link link_theme_gray" href="##">
             <svg
               class="link__image"
               width="24"
@@ -225,7 +225,7 @@
         <!-- меню второго уровня -->
         <li class="menu__item menu__second_item">
           <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text menu__second_text">Caйт + Vk</p>
+            <p class="link__text link__text_second">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -250,11 +250,10 @@
         </li>
       </ul>
     </nav>
-    <!-- top navigation -->
-    <nav class="header" aria-label="Top navigation">
+    <header class="header">
       <button class="header__menu" type="button" aria-label="menu"></button>
       <p class="header__rate">Тариф</p>
-      <p class="header__rate-name">Демо</p>
+      <p class="header__rate_name">Демо</p>
       <button class="header__help" type="button" aria-label="help"></button>
       <button
         class="header__notification"
@@ -276,8 +275,7 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </nav>
-    <!-- main -->
+    </header>
     <main class="main">
       <!-- тело страницы -->
       <section class="templates">
@@ -839,52 +837,44 @@
       </section>
       <!-- конец -->
     </main>
-    <!-- footer -->
     <footer class="footer">
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
     <!-- popup -->
-    <section
-      class="popup__notification__overlay popup__notification__overlay-close"
-    ></section>
     <section class="popup popup__notification popup__notification-close">
-      <div class="popup__notification-header">
+      <div class="popup__header">
         <img
           alt="Стрелка вниз"
-          class="popup__header-ico"
+          class="popup__header_ico"
           src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
         />
-        <h3 class="popup__header-title">Уведомления</h3>
+        <h3 class="popup__header_title">Уведомления</h3>
         <button
-          class="popup__close"
+          class="popup__button-close"
           type="button"
           aria-label="close popup"
         ></button>
       </div>
-      <fieldset class="popup__notification-menu">
+      <fieldset class="popup__menu">
         <input
-          class="popup__notification-menu-input"
+          class="popup__menu_input"
           type="radio"
           name="notification"
           value="news"
           id="news"
           checked
         />
-        <label class="popup__notification-menu-label" for="news">
-          Новости сервиса
-        </label>
+        <label class="popup__menu_label" for="news"> Новости сервиса </label>
         <input
-          class="popup__notification-menu-input"
+          class="popup__menu_input"
           type="radio"
           name="notification"
           value="logs"
           id="logs"
         />
-        <label class="popup__notification-menu-label" for="logs">
-          Лог событий
-        </label>
+        <label class="popup__menu_label" for="logs"> Лог событий </label>
       </fieldset>
-      <div class="popup__notification-body">
+      <div class="popup__main">
         <!-- место под новости и логи -->
         <!-- конец -->
       </div>
@@ -917,5 +907,44 @@
         </button>
       </div>
     </section>
+    <!--  Код попапа бота  -->
+    <div class="add-bot-popup">
+      <div class="add-bot-popup__container">
+        <button type="button" class="add-bot-popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <img
+          class="bot-icon machine add-bot-popup__main-logo"
+          src="<%=require('../../images/bot-icon/answering-machine.svg')%>"
+          alt="бот автоответчик"
+        />
+        <h2 class="add-bot-popup__title">Бот автоответчик</h2>
+        <p class="add-bot-popup__content">
+          Бот ответит стандартным сообщением на запрос от человека. Подходит для
+          всех мессенджеров. Шаблон возможно изменить под ваши цели.
+        </p>
+        <ol class="ordered-list">
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+        </ol>
+        <div class="add-bot-popup__controls">
+          <button class="add-bot-popup__cancel-btn" type="submit">
+            отмена
+          </button>
+          <button
+            class="common-button common-button_color_green add-bot-popup__submit-btn"
+            type="submit"
+          >
+            добавить бота
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
