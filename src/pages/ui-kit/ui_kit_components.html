@@ -14,13 +14,11 @@
 
   <body class="ui-kit-body">
     <h2 class="ui-kit__h2">Common</h2>
-    <main>
+    <main class="ui-kit-main">
       <ul class="ui-kit-list">
         <li>
           <section class="section">
-            <h2 class="section__title ui-kit__h3">
-              Добавление бота - название шагов
-            </h2>
+            <h2 class="section__title">Добавление бота - название шагов</h2>
             <div class="steps">
               <span class="step">1</span>
               <span class="step">Шаг</span>
@@ -31,19 +29,74 @@
         </li>
         <li>
           <section class="section">
-            <h2 class="section__title ui-kit__h3">Мои боты - карточка</h2>
+            <h2 class="section__title">Мои боты - карточка</h2>
             <div class="card">
               <div class="card__icons">
                 <img
-                  class="card__icon card__icon_52x52"
+                  class="card__icon"
                   src="<%=require('../../images/social-icons/telegram.svg')%>"
                   alt=""
                 />
-                <img
-                  class="card__icon"
-                  src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
-                  alt=""
-                />
+                <button class="card__more-button">
+                  <img
+                    class="card__icon"
+                    src="<%=require('../../images/more.svg')%>"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <div class="popup">
+                <ul class="ui-kit-list card__actions card__actions_open">
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/copy-bot.svg')%>"
+                      alt=""
+                    />Копировать бота
+                  </li>
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/share.svg')%>"
+                      alt=""
+                    />Общий доступ
+                  </li>
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/edit.svg')%>"
+                      alt=""
+                    />Редактировать
+                  </li>
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/link.svg')%>"
+                      alt=""
+                    />Получить ссылку
+                  </li>
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/info.svg')%>"
+                      alt=""
+                    />Информация
+                  </li>
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/notifications-setting.svg')%>"
+                      alt=""
+                    />Настройка уведомлений
+                  </li>
+                  <li class="card__action">
+                    <img
+                      class="card__actions-img"
+                      src="<%=require('../../images/trash.svg')%>"
+                      alt=""
+                    />Удалить
+                  </li>
+                </ul>
               </div>
               <div class="card__name">Салон красоты</div>
             </div>
@@ -51,7 +104,7 @@
         </li>
         <li>
           <section class="section">
-            <h2 class="section__title ui-kit__h3">
+            <h2 class="section__title">
               Информер / всплывающая подсказка - сверху
             </h2>
             <div class="helper">
@@ -62,7 +115,7 @@
         </li>
         <li>
           <section class="section">
-            <h2 class="section__title ui-kit__h3">
+            <h2 class="section__title">
               Информер / всплывающая подсказка - слева
             </h2>
             <div class="helper helper_aside">
@@ -73,7 +126,7 @@
         </li>
         <li>
           <section class="section">
-            <h2 class="section__title ui-kit__h3">Информер</h2>
+            <h2 class="section__title">Информер</h2>
             <div class="helper">
               <div class="helper__board helper__board_large">
                 Сcылка скопирована
@@ -87,7 +140,67 @@
               Список действий More - открывается из карточки Мои боты
             </h2>
             <div class="popup">
-              <ul class="ui-kit-list card__actions">
+              <ul class="ui-kit-list card__actions card__actions_open">
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/copy-bot.svg')%>"
+                    alt=""
+                  />Копировать бота
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/share.svg')%>"
+                    alt=""
+                  />Общий доступ
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/edit.svg')%>"
+                    alt=""
+                  />Редактировать
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/link.svg')%>"
+                    alt=""
+                  />Получить ссылку
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/info.svg')%>"
+                    alt=""
+                  />Информация
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/notifications-setting.svg')%>"
+                    alt=""
+                  />Настройка уведомлений
+                </li>
+                <li class="card__action">
+                  <img
+                    class="card__actions-img"
+                    src="<%=require('../../images/trash.svg')%>"
+                    alt=""
+                  />Удалить
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">
+              Список действий Настройки аккаунта
+            </h2>
+            <div class="popup">
+              <ul class="ui-kit-list card__actions card__actions_open">
                 <li class="card__action">
                   <img
                     class="card__actions-img"
@@ -142,12 +255,10 @@
           </section>
         </li>
         <li>
-          <section class="section">
-            <h2 class="section__title ui-kit__h3">
-              Список действий Настройки аккаунта
-            </h2>
+          <section class="section section-ui-kit-demonstration">
+            <h2 class="section__title">Список действий Настройки аккаунта</h2>
             <div class="popup">
-              <ul class="ui-kit-list account__actions">
+              <ul class="ui-kit-list account__actions account__actions_open">
                 <li class="account__action">
                   <img
                     class="account__actions-img"
@@ -174,10 +285,8 @@
           </section>
         </li>
         <li>
-          <section class="section">
-            <h2 class="section__title ui-kit__h3">
-              Рассылки - панель редактора текста
-            </h2>
+          <section class="section section-ui-kit-demonstration">
+            <h2 class="section__title">Рассылки - панель редактора текста</h2>
             <div class="popup">
               <ul class="ui-kit-list text__actions">
                 <li class="text__action">
@@ -213,12 +322,10 @@
           </section>
         </li>
         <li>
-          <section class="section">
-            <h2 class="section__title ui-kit__h3">
-              Список выбора простой текст
-            </h2>
+          <section class="section section-ui-kit-demonstration">
+            <h2 class="section__title">Список выбора простой текст</h2>
             <div class="popup">
-              <ul class="ui-kit-list calendar__actions">
+              <ul class="ui-kit-list calendar__actions calendar__actions_open">
                 <li class="calendar__action">Без повтора</li>
                 <li class="calendar__action">Каждый день</li>
                 <li class="calendar__action">Каждую неделю</li>
@@ -230,32 +337,37 @@
           </section>
         </li>
         <li>
-          <section class="section">
-            <h2 class="section__title ui-kit__h3">Поле с выпадающим списком</h2>
+          <section class="section section-ui-kit-demonstration">
+            <h2 class="section__title">Поле с выпадающим списком</h2>
             <div class="popup">
               <div class="selector">
                 Переменная
-                <div
-                  class="selector__button-arrow selector__button-arrow_up"
-                ></div>
+                <button
+                  type="button"
+                  class="ui-kit-navigation__arrow-toggle-icon"
+                >
+                  <div class="ui-kit-navigation__arrow"></div>
+                </button>
+                <ul class="ui-kit-list selector__items">
+                  <li class="selector__item">Переменная 1</li>
+                  <li class="selector__item">Переменная 2</li>
+                  <li class="selector__item">Переменная 3</li>
+                  <li class="selector__item">Переменная 4</li>
+                  <li class="selector__item">Переменная 5</li>
+                </ul>
               </div>
-              <ul class="ui-kit-list selector__items">
-                <li class="selector__item">Переменная 1</li>
-                <li class="selector__item">Переменная 2</li>
-                <li class="selector__item">Переменная 3</li>
-                <li class="selector__item">Переменная 4</li>
-                <li class="selector__item">Переменная 5</li>
-              </ul>
             </div>
           </section>
         </li>
       </ul>
 
       <!-- Component 2 -->
-      <section class="section">
-        <h2 class="ui-kit__h2">Constructor</h2>
+      <section class="component-2">
+        <h2>Component 2</h2>
         <!-- Include examples of component 2 -->
       </section>
+
+      <!-- And so on, up to component N... -->
     </main>
   </body>
 </html>
