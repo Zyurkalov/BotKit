@@ -1,3 +1,3 @@
 import "../scss/chat/chat.scss";
 
-import "./navigation";
+import "./ui-kit/ui_kit_navigation";

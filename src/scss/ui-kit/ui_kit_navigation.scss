@@ -194,11 +194,6 @@
   padding-left: 40px;
   @include text-default();
   @include animation();
-
-  &-open {
-    margin-left: 286px;
-    width: calc(100% - 40px - 286px);
-  }
 }
 
 .menu {

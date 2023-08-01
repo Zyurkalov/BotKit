@@ -1,3 +1,3 @@
 import "../scss/mailing-list/mailing_list.scss";
 
-import "./navigation";
+import "./ui-kit/ui_kit_navigation";
