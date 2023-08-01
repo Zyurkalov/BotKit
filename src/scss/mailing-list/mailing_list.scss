@@ -2,6 +2,7 @@
 @use "../common";
 @use "../ui-kit/ui_kit_navigation.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
+@use "../ui-kit/ui_kit_components.scss";
 
 h1,
 h2,
@@ -38,7 +39,6 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   min-height: 330px;
   border-radius: 30px;
@@ -62,4 +62,17 @@ h4 {
   font-weight: variables.$fw-600;
   line-height: 1.5;
   letter-spacing: 0.3px;
+}
+
+.mailing-list {
+  border-radius: 30px;
+  width: 100%;
+  height: calc(100% - 187px);
+  background-color: variables.$clr-white;
+  color: variables.$clr-primary-dark;
+}
+
+.mailing-tutorials {
+  width: 100%;
+  height: 187px;
 }

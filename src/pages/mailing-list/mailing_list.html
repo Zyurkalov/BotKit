@@ -283,6 +283,55 @@
           </button>
         </div>
         <div class="mailing-window">
+          <!-- Показывается в случае если у пользователя есть рассылки -->
+          <section class="card mailing-list">
+            <div class="mailing-list__header">
+              <h3 class="mailing-list__header-text">Мои Рассылки</h3>
+              <p class="mailing-list__filter">Все</p>
+              <img class="mailing-list__filter-icon" src="" alt="" />
+            </div>
+            <table class="mailing-list__table">
+              <thead class="mailing-list__columns">
+                <tr class="mailing-list__row">
+                  <th>ID</th>
+                  <th>Название</th>
+                  <th>Мессенджер</th>
+                  <th>Отправлено сообщений</th>
+                  <th>Конверсия</th>
+                  <th>Статус запуска</th>
+                </tr>
+              </thead>
+              <tbody class="mailing-list__body">
+                <template id="mailing-template">
+                  <tr class="mailing-list__row">
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_id"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_name"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_messenger"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_sent"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_conversion"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_status"
+                    ></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </section>
+          <section class="mailing-tutorials">
+            <h3 class="mailing-tutorials__header">Как это работает?</h3>
+            <div class="mailing-tutorials__list"></div>
+          </section>
+          <!-- Показывается в случае если у пользователя нет рассылок -->
           <h3 class="mailing-label-title">
             Давайте скорее запустим вашу первую рассылку!
           </h3>
