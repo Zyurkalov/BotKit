@@ -19,4 +19,19 @@ const routes = {
   resetPasswordPage: "/pages/reset-password/reset_password.html",
 };
 
+export function openAndClosePage(evt) {
+  evt.preventDefault();
+  const page = evt.target.closest(".page");
+  const header = page.querySelector(".header");
+  const popup = page.querySelector(".window");
+  const main = page.querySelector(".main");
+  const confirmationPage = page.querySelector(".confirmation");
+
+  page.classList.toggle("page_newMeasure");
+  header.classList.toggle("header_inActive");
+  popup.classList.toggle("window_inActive");
+  main.classList.toggle("main_newMeasure");
+  confirmationPage.classList.toggle("confirmation_active");
+}
+
 export { routes, selectors };

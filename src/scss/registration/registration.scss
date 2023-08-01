@@ -523,6 +523,13 @@ input[required] {
   }
 }
 
+@media screen and (max-width: 545px) {
+  .confirmation__heading_reg {
+    font-size: 32px;
+    line-height: 41.6px;
+    letter-spacing: -0.2px;
+  }
+}
 @media screen and (max-width: 461px) {
   .confirmation__close-btn {
     right: 20px;
@@ -549,6 +556,9 @@ input[required] {
     letter-spacing: -0.2px;
   }
 
+  .confirmation__heading_reg {
+    margin-bottom: 100px;
+  }
   .confirmation__span {
     font-size: 20px;
     line-height: 26px;
