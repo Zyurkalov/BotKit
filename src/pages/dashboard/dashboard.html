@@ -752,5 +752,44 @@
         </button>
       </div>
     </section>
+    <!--  Код попапа бота  -->
+    <div class="add-bot-popup add-bot-popup_hidden">
+      <div class="add-bot-popup__container">
+        <button type="button" class="add-bot-popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <img
+          class="bot-icon machine add-bot-popup__main-logo"
+          src="<%=require('../../images/bot-icon/answering-machine.svg')%>"
+          alt="бот автоответчик"
+        />
+        <h2 class="add-bot-popup__title">Бот автоответчик</h2>
+        <p class="add-bot-popup__content">
+          Бот ответит стандартным сообщением на запрос от человека. Подходит для
+          всех мессенджеров. Шаблон возможно изменить под ваши цели.
+        </p>
+        <ol class="ordered-list">
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+        </ol>
+        <div class="add-bot-popup__controls">
+          <button class="add-bot-popup__cancel-btn" type="submit">
+            отмена
+          </button>
+          <button
+            class="common-button common-button_color_green add-bot-popup__submit-btn"
+            type="submit"
+          >
+            добавить бота
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
