@@ -93,8 +93,7 @@
     white-space: nowrap;
     overflow: hidden;
   }
-  &__time {
-  }
+
   &__text {
     width: 80%;
     text-overflow: ellipsis;
@@ -260,10 +259,8 @@
   align-items: center;
   &__line {
     height: 1px;
-    width: 35%;
+    width: 38%;
     background-color: variables.$clr-secondary-cultured;
-  }
-  &__date {
   }
 }
 
@@ -296,6 +293,7 @@
     align-items: flex-end;
   }
   &__text {
+    max-width: 70%;
     margin: 0;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -500,17 +498,6 @@
   }
 }
 
-// &__selector {
-//   height: 100%;
-//   width: 4px;
-//   background-color: variables.$clr-primary-medium;
-//   border-radius: 2px 0 0 2px;
-
-//   position: absolute;
-//   top: 0;
-//   right: -20px;
-// }
-
 ///////////// модификаторы на исходники компаненты
 .main {
   padding-top: 32px;
@@ -536,6 +523,7 @@
   }
 }
 .icon {
+  cursor: pointer;
   &_rotate180 {
     rotate: 180deg;
   }
@@ -547,6 +535,4 @@
 
 .hidden {
   display: none;
-}
-.field__input {
 }
