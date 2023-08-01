@@ -1,15 +1,14 @@
 import "../scss/reset-password/reset_password.scss";
-import { selectors, openAndClosePage } from "./constants";
-//import {openAndClosePage} from "./registration";
+import { selectors, toggleConfirmationPopup } from "./constants";
 
 const closeResetBtn = document.querySelector(
   selectors.confirmationPopupCloseBtn.closeBtn,
 );
 
-const signBtn = document.querySelector(".common-button");
+const resetBtn = document.querySelector(selectors.resetPasswordPage.resetBtn);
 
-// Создать аккаунт
-signBtn.addEventListener("click", openAndClosePage);
+// Сброс пароля
+resetBtn.addEventListener("click", toggleConfirmationPopup);
 
 // Закрыть попап подтверждения
-closeResetBtn.addEventListener("click", openAndClosePage);
+closeResetBtn.addEventListener("click", toggleConfirmationPopup);

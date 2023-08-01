@@ -3,6 +3,12 @@
 @use "../registration/registration";
 @use "../ui-kit/ui_kit_buttons.scss";
 
+.page {
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
+}
+
 .outer-wrapper_type_login {
   padding-top: 0;
 }

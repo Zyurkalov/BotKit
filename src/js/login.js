@@ -1,17 +1,17 @@
 import "../scss/login/login.scss";
-import { routes, selectors } from "./constants";
+import { authRoutes, selectors } from "./constants";
 
 const signUpBtn = document.querySelector(selectors.loginPage.signUpBtn);
-const resetPassword = document.querySelector(
-  selectors.resetPasswordPage.resetBtn,
-);
+const resetPasswordBtn = document.querySelector(selectors.loginPage.resetBtn);
 
+// Переход на страницу регистрации по клику на кнопку Регистрация
 signUpBtn.addEventListener("click", (evt) => {
   evt.preventDefault();
-  window.location.href = window.location.origin + routes.regPage;
+  window.location.href = window.location.origin + authRoutes.regPage;
 });
 
-resetPassword.addEventListener("click", (evt) => {
+// Переход на страницу восстановления пароля по клику на кнопку Забыли пароль?
+resetPasswordBtn.addEventListener("click", (evt) => {
   evt.preventDefault();
-  window.location.href = window.location.origin + routes.resetPasswordPage;
+  window.location.href = window.location.origin + authRoutes.resetPasswordPage;
 });

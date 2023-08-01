@@ -1,6 +1,5 @@
 @use "../variables";
 @use "../common";
-// @use "../ui-kit/ui_kit_navigations.scss";
 @use "../ui-kit/ui_kit_components.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
 @use "../ui-kit/ui_kit_icons.scss";
@@ -49,22 +48,26 @@
     margin-top: 60px;
   }
 }
-
 //////////////////////////
-
-.card {
-  width: 23%;
+.page-container {
+  max-width: 100%;
 }
-
 .content-list {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 28px;
+  display: grid;
+  column-gap: 28px;
+  row-gap: 32px;
+
+  &_templates {
+    grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+  }
+
+  &_cards {
+    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  }
 }
 .card:last-child {
   padding: 0;
@@ -82,13 +85,12 @@
   background-color: variables.$clr-secondary-gray;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
   &__left-panel {
     padding: 32px 30px 32px 32px;
-    width: 51%;
     box-sizing: border-box;
-
+    width: 49%;
     display: flex;
     flex-direction: column;
   }
@@ -96,10 +98,9 @@
   &__right-panel {
     box-sizing: border-box;
     padding: 32px 14px 0 32px;
-    width: 49%;
-    height: 283px;
+    min-height: 283px;
     border-radius: 30px;
-
+    width: 51%;
     background-color: variables.$clr-secondary-focus;
     position: relative;
   }
@@ -130,11 +131,9 @@
 .list-container {
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: grid;
-  column-count: auto;
-  grid-template-columns: 216px 150px;
+  columns: 217px auto;
   column-gap: 70px;
+  list-style: none;
 
   &__paragraph {
     margin: 0;
@@ -164,9 +163,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  //justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
   gap: 20px;
 
   &__container {
@@ -284,6 +282,7 @@
   max-width: 100%;
 }
 .answering-machine {
+  min-width: 188px;
   &__button {
     &_food {
       background-image: url(../../images/bot-icon/food-delivery.svg);
@@ -301,6 +300,11 @@
       background-image: url(../../images/bot-icon/e-learning.svg);
     }
   }
+}
+
+.bot-popup {
+  position: relative;
+  z-index: 1;
 }
 
 .add-bot-popup {
@@ -435,4 +439,9 @@
 }
 .add-bot-popup__cancel-btn:hover {
   opacity: 0.6;
+}
+
+.add-bot-popup__main-logo {
+  max-width: 88px;
+  max-height: 88px;
 }
