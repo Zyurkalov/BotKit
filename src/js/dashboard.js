@@ -1,6 +1,6 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
-import { closeMenu } from "./ui-kit/ui_kit_navigation";
+import "./navigation";
 
 const botPopup = document.querySelector(
   "." + selectors.dashboardPage.addBotPopup,

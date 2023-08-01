@@ -184,17 +184,9 @@
   }
 }
 
-// .main {
-// }
-
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   height: 50px;
-  width: calc(100% - 40px - 132px);
-  margin-left: 132px;
-  box-sizing: border-box;
+  margin-top: 32.5px;
   background-color: variables.$clr-white;
   border-top: 1px solid variables.$clr-secondary-cultured;
   display: flex;
