@@ -67,6 +67,7 @@
   top: 0;
   left: 0;
   height: 72px;
+  z-index: 1;
   width: calc(100% - 40px - 132px);
   margin-left: 132px;
   box-sizing: border-box;
@@ -522,24 +523,21 @@
       flex-direction: row;
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:hover > .popup__accaunt-button-image {
         background-color: variables.$clr-secondary-gray;
+        opacity: 1;
       }
 
       &:last-of-type {
         margin: 11px 0 0;
       }
 
-      &-image16 {
-        height: 16px;
-        width: 16px;
-        margin: 0 12px 0 16px;
-      }
-
-      &-image24 {
+      &-image {
         height: 24px;
         width: 24px;
         margin: 0 8px 0 16px;
+        opacity: 0.4;
       }
 
       &-text {

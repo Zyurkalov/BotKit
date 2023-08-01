@@ -13,12 +13,9 @@
   flex-wrap: wrap;
   gap: 10px;
 
-  // &:last-child {
-  //   margin-top: 40px;
-  // }
-
   &_flex-space {
     justify-content: space-between;
+    margin-bottom: 30px;
 
     &:last-child {
       margin-top: 30px;
@@ -32,14 +29,6 @@
     gap: 5px;
   }
 }
-
-//.section__header {
-//  margin: 20px 0 20px;
-//  color: variables.$clr-gray-3;
-//  font-weight: variables.$fw-400;
-//  border-bottom: solid 2px rgb(185, 185, 185);
-//  justify-content: space-between;
-//}
 
 .icon {
   margin: 0;
@@ -108,7 +97,32 @@
     object-fit: contain;
   }
 }
+// header потому место иконки (колокольчик) в шапке
+.header {
+  &__notification {
+    background-image: url("../../images/template-icon/24x24/common/notifications.svg");
+    background-repeat: no-repeat;
+    position: relative;
 
+    &-counter {
+      height: 14px;
+      width: 14px;
+      background-color: variables.$clr-validation-error;
+      border-radius: 50%;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-600;
+      font-size: variables.$fs-tiny;
+      line-height: 15px;
+      color: variables.$clr-white;
+      position: absolute;
+      top: -15px;
+      right: -1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
 .avatar {
   width: 40px;
   height: 40px;
@@ -201,6 +215,13 @@
   &_disable {
     background-color: variables.$clr-secondary-gray;
   }
+}
+// общий стиль для всех кнопок
+.component_flex-space > img {
+  min-width: 104px;
+  min-height: 104px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .social-icon {
@@ -318,52 +339,8 @@
     background-color: #3cbb28;
   }
 }
-
-.bot-icon {
-  margin: 0;
-  padding: 0;
-  min-width: 104px;
-  min-height: 104px;
-  border-radius: 100%;
-
-  outline-color: none;
-  outline-style: none;
-  mask-repeat: round;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-}
-
 .frame-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-.header {
-  &__notification {
-    background-image: url("../../images/template-icon/24x24/common/notifications.svg");
-    background-repeat: no-repeat;
-    position: relative;
-
-    &-counter {
-      height: 14px;
-      width: 14px;
-      background-color: variables.$clr-validation-error;
-      border-radius: 50%;
-      font-family: variables.$ff-secondary;
-      font-weight: variables.$fw-600;
-      font-size: variables.$fs-tiny;
-      line-height: 15px;
-      color: variables.$clr-white;
-      position: absolute;
-      top: -15px;
-      right: -1px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
 }

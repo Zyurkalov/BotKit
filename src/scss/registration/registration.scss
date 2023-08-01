@@ -72,6 +72,7 @@ h4 {
   font-size: variables.$fs-h2;
   font-weight: variables.$fw-500;
   line-height: 1.1;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     font-size: 32px;
@@ -95,9 +96,11 @@ h4 {
   border-radius: 30px;
   box-shadow: 0 12px 24px 0 rgba(21, 18, 51, 0.13);
 
-  @media screen and (max-width: 682px) {
-    height: 100%;
-  }
+  //@media screen and (max-width: 682px) {
+  //  height: 100%;
+  //  border-bottom-left-radius: 0;
+  //  border-bottom-right-radius: 0;
+  //}
 }
 
 .outer-wrapper {
@@ -364,8 +367,6 @@ input[required] {
   color: variables.$clr-white;
 }
 
-//------------------------------------------------------
-
 .page_newMeasure {
   padding: 0;
   height: 100%;
@@ -523,6 +524,13 @@ input[required] {
   }
 }
 
+@media screen and (max-width: 545px) {
+  .confirmation__heading_reg {
+    font-size: 32px;
+    line-height: 41.6px;
+    letter-spacing: -0.2px;
+  }
+}
 @media screen and (max-width: 461px) {
   .confirmation__close-btn {
     right: 20px;
@@ -549,6 +557,9 @@ input[required] {
     letter-spacing: -0.2px;
   }
 
+  .confirmation__heading_reg {
+    margin-bottom: 100px;
+  }
   .confirmation__span {
     font-size: 20px;
     line-height: 26px;

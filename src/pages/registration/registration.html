@@ -102,6 +102,7 @@
                       id="username"
                       name="username"
                       placeholder="Имя"
+                      autocomplete="username"
                       required
                     />
                     <span class="form__input-error name-input-error"></span>
@@ -113,6 +114,7 @@
                       id="email"
                       name="email"
                       placeholder="E-mail"
+                      autocomplete="email"
                       required
                     />
                     <span class="form__input-error url-input-error"></span>
@@ -136,6 +138,7 @@
                       id="phone"
                       name="phone"
                       placeholder="Телефон"
+                      autocomplete="tel"
                       required
                     />
                     <span class="form__input-error phone-input-error"></span>
@@ -168,7 +171,7 @@
 
         <div class="confirmation">
           <div class="confirmation__container">
-            <h1 class="confirmation__heading">
+            <h1 class="confirmation__heading confirmation__heading_reg">
               Письмо с подтверждением отправлено тебе
               <span class="confirmation__nowrap"
                 >на<span class="confirmation__span">/e-mail</span>!</span
@@ -177,7 +180,7 @@
             <div class="confirmation__imgContainer">
               <img
                 class="confirmation__robot"
-                src="<%=require('../../images/funnyBot.svg')%>"
+                src="<%=require('../../images/funnyBot.png')%>"
                 alt="Улыбающийся чат бот"
               />
             </div>
