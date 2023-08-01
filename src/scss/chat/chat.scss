@@ -139,6 +139,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  position: relative;
   border-left: solid 1px variables.$clr-secondary-cultured;
   border-right: solid 1px variables.$clr-secondary-cultured;
 
@@ -191,9 +192,23 @@
     flex-grow: 1;
   }
   &__input-button {
-    // max-width: 20px;
-    // max-height: 20px;
+    min-width: 20px;
+    height: 20px;
+    object-fit: contain;
+    object-position: center;
+
     margin-left: 8px;
+  }
+  &__button-stretch {
+    width: 31px;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 20px 0 0 20px;
+    background-color: variables.$clr-primary-medium;
+
+    position: absolute;
+    right: 0;
+    top: 62%;
   }
 }
 .user-name {
@@ -465,6 +480,7 @@
     @extend .text;
     font-size: variables.$fs-small;
     color: variables.$clr-primary-medium;
+    text-align: end;
   }
 
   &__list {
@@ -479,6 +495,10 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
+  }
+  &__list_img {
+    display: flex;
+    gap: 8px;
   }
 }
 
