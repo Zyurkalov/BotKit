@@ -6,14 +6,13 @@
 .ui-kit-section {
   display: grid;
   align-items: center;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 170px 1fr;
   row-gap: 30px;
 }
 
 .ui-kit-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   gap: 40px;
 }
 
@@ -407,27 +406,16 @@
 
 /* Кнопка пошаговая инструкция */
 .button-tutorial {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   width: 100%;
   max-width: 579px;
   height: 76px;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
-  background-color: variables.$clr-white;
-  background-image: url("../../images/button-tutorial_ellipse_grey.svg");
+  background-image: url("../../images/template-icon/add_bot/book-frame_2.svg");
   background-repeat: no-repeat;
-
-  &__icon {
-    width: 65px;
-    height: 46px;
-    position: absolute;
-    top: 17px;
-    left: 32px;
-  }
   font-family: variables.$ff-primary;
   color: variables.$clr-primary-dark;
   font-size: variables.$fs-small;
@@ -437,13 +425,9 @@
 
   &:hover {
     border: none;
-    background-image: url("../../images/button-tutorial_ellipse_green.svg");
+    background-image: url("../../images/template-icon/add_bot/book-frame_1.svg");
     box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
     cursor: pointer;
-
-    & .button-tutorial__icon {
-      filter: grayscale(0) sepia(1) hue-rotate(100deg) saturate(3);
-    }
   }
 
   &:active {
@@ -452,16 +436,12 @@
 
   &:disabled {
     pointer-events: none;
-
-    & .button-tutorial__icon {
-      opacity: 50%;
-      filter: grayscale(15%);
-    }
-
-    & .button-tutorial__text {
-      color: variables.$clr-primary-gray;
-    }
   }
+}
+
+.button-tutorial_disabled {
+  color: variables.$clr-primary-gray;
+  background-image: url("../../images/template-icon/add_bot/book-frame_3.svg");
 }
 
 /* Кнопка блок сообщений */

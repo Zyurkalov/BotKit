@@ -23,7 +23,6 @@
         />
         <h2 class="header__h2">Регистрация</h2>
       </header>
-
       <main class="main">
         <div class="window">
           <section class="outer-wrapper">
@@ -90,11 +89,9 @@
                 </button>
               </div>
             </div>
-
             <div class="separator">
               <span class="separator__text">или</span>
             </div>
-
             <div class="inner-wrapper">
               <form action="/" class="form" name="registration-form" novalidate>
                 <fieldset class="form__input-container">
@@ -105,6 +102,7 @@
                       id="username"
                       name="username"
                       placeholder="Имя"
+                      autocomplete="username"
                       required
                     />
                     <span class="form__input-error name-input-error"></span>
@@ -116,6 +114,7 @@
                       id="email"
                       name="email"
                       placeholder="E-mail"
+                      autocomplete="email"
                       required
                     />
                     <span class="form__input-error url-input-error"></span>
@@ -127,6 +126,7 @@
                       id="password"
                       name="password"
                       placeholder="Пароль"
+                      autocomplete="current-password"
                       required
                     />
                     <span class="form__input-error password-input-error"></span>
@@ -138,12 +138,16 @@
                       id="phone"
                       name="phone"
                       placeholder="Телефон"
+                      autocomplete="tel"
                       required
                     />
                     <span class="form__input-error phone-input-error"></span>
                   </label>
                 </fieldset>
-                <button type="submit" class="form__submit">
+                <button
+                  type="submit"
+                  class="common-button common-button_color_green form__submit"
+                >
                   Создать аккаунт
                 </button>
               </form>
@@ -163,6 +167,25 @@
               />
             </div>
           </section>
+        </div>
+
+        <div class="confirmation">
+          <div class="confirmation__container">
+            <h1 class="confirmation__heading confirmation__heading_reg">
+              Письмо с подтверждением отправлено тебе
+              <span class="confirmation__nowrap"
+                >на<span class="confirmation__span">/e-mail</span>!</span
+              >
+            </h1>
+            <div class="confirmation__imgContainer">
+              <img
+                class="confirmation__robot"
+                src="<%=require('../../images/funnyBot.png')%>"
+                alt="Улыбающийся чат бот"
+              />
+            </div>
+          </div>
+          <button class="confirmation__close-btn"></button>
         </div>
       </main>
     </div>
