@@ -368,9 +368,27 @@
           color: variables.$clr-primary-medium;
           font-weight: variables.$fw-600;
         }
+
+        & .button__image {
+          stroke: variables.$clr-primary-medium;
+        }
+
+        & .button__text {
+          color: variables.$clr-primary-medium;
+          font-weight: variables.$fw-600;
+        }
       }
 
-      &:focus {
+      &_active {
+        & .link__image {
+          stroke: variables.$clr-primary-medium;
+        }
+
+        & .link__text {
+          color: variables.$clr-primary-medium;
+          font-weight: variables.$fw-600;
+        }
+
         & .button__image {
           stroke: variables.$clr-primary-medium;
         }
