@@ -22,13 +22,6 @@ export const selectors = {
   },
 };
 
-// Universal registration/login/reset password selectors
-const page = document.querySelector(".page");
-const header = page.querySelector(".header");
-const popup = page.querySelector(".window");
-const main = page.querySelector(".main");
-const confirmationPopup = page.querySelector(".confirmation");
-
 export const authRoutes = {
   loginPage: "/pages/login/login.html",
   regPage: "/pages/registration/registration.html",
@@ -37,6 +30,12 @@ export const authRoutes = {
 
 export function toggleConfirmationPopup(evt) {
   evt.preventDefault();
+  // Universal registration/login/reset password selectors
+  const page = document.querySelector(".page");
+  const header = page.querySelector(".header");
+  const popup = page.querySelector(".window");
+  const main = page.querySelector(".main");
+  const confirmationPopup = page.querySelector(".confirmation");
   page.classList.toggle("page_newMeasure");
   header.classList.toggle("header_inActive");
   popup.classList.toggle("window_inActive");
