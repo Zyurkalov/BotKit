@@ -13,10 +13,6 @@
   flex-wrap: wrap;
   gap: 10px;
 
-  // &:last-child {
-  //   margin-top: 40px;
-  // }
-
   &_flex-space {
     justify-content: space-between;
     margin-bottom: 30px;
@@ -33,14 +29,6 @@
     gap: 5px;
   }
 }
-
-//.section__header {
-//  margin: 20px 0 20px;
-//  color: variables.$clr-gray-3;
-//  font-weight: variables.$fw-400;
-//  border-bottom: solid 2px rgb(185, 185, 185);
-//  justify-content: space-between;
-//}
 
 .icon {
   margin: 0;
@@ -229,64 +217,11 @@
   }
 }
 // общий стиль для всех кнопок
-.component_flex-space > button {
-  width: 104px;
-  height: 104px;
-}
-// модификаторы для background кнопок
-.machine-bot {
-  background-image: url("../../images/bot-icon/answering-machine.svg");
-}
-.deliverye-bot {
-  background-image: url("../../images/bot-icon/food-delivery.svg");
-}
-.demo-bot {
-  background-image: url("../../images/bot-icon/demo-bot.svg");
-}
-.poll-bot {
-  background-image: url("../../images/bot-icon/poll.svg");
-}
-.lead-bot {
-  background-image: url("../../images/bot-icon/lead-generation.svg");
-}
-.learning-bot {
-  background-image: url("../../images/bot-icon/e-learning.svg");
-}
-.medical-bot {
-  background-image: url("../../images/bot-icon/medical.svg");
-}
-.tikets-bot {
-  background-image: url("../../images/bot-icon/tikets.svg");
-}
-.shoping-bot {
-  background-image: url("../../images/bot-icon/internet-shoping.svg");
-}
-.commerce-bot {
-  background-image: url("../../images/bot-icon/e-commerce.svg");
-}
-.club-bot {
-  background-image: url("../../images/bot-icon/private-club.svg");
-}
-.estate-bot {
-  background-image: url("../../images/bot-icon/real-estate.svg");
-}
-.beauty-bot {
-  background-image: url("../../images/bot-icon/beauty.svg");
-}
-.question-bot {
-  background-image: url("../../images/bot-icon/question.svg");
-}
-.entertainment-bot {
-  background-image: url("../../images/bot-icon/entertainment.svg");
-}
-.banking-bot {
-  background-image: url("../../images/bot-icon/banking.svg");
-}
-.carsharing-bot {
-  background-image: url("../../images/bot-icon/carsharing.svg");
-}
-.chat-bot {
-  background-image: url("../../images/bot-icon/close-chatr.svg");
+.component_flex-space > button > img {
+  min-width: 104px;
+  min-height: 104px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .social-icon {
@@ -410,9 +345,3 @@
   justify-content: space-between;
   align-items: center;
 }
-// .bot-icon {
-//   margin: 0;
-//   padding: 0;
-//   width: 88px;
-//   height: 88px;
-// }
