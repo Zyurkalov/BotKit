@@ -359,15 +359,260 @@
             </div>
           </section>
         </li>
+
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">Calendar</h2>
+            <div class="popup calendar">
+              <input
+                type="text"
+                class="calendar__chosen-date"
+                value="18.04.2011"
+              />
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">
+              Scrollable Single Choice Options List
+            </h2>
+            <div class="popup popup_scrollable">
+              <ul class="ui-kit-list selector__items">
+                <li class="selector__item">
+                  Afghanistan Afghanistan Afghanistan Afghanistan Afghanistan
+                </li>
+                <li class="selector__item">Albania</li>
+                <li class="selector__item">Algeria</li>
+                <li class="selector__item">Andorra</li>
+                <li class="selector__item">Angola</li>
+                <li class="selector__item">Antigua</li>
+                <li class="selector__item">Argentina</li>
+                <li class="selector__item">Armenia</li>
+                <li class="selector__item">Australia</li>
+                <li class="selector__item">Austria</li>
+                <li class="selector__item">Azerbaijan</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">
+              Static Multiple Choice Options List
+            </h2>
+            <div class="popup">
+              <ul class="ui-kit-list selector__items">
+                <li class="selector__item selector__item-all">
+                  Все пользователи
+                  <img
+                    class="selector__checkmark-for-all"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                  />
+                </li>
+                <li class="selector__item">
+                  Список 1
+                  <img
+                    class="selector__checkmark"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                  />
+                </li>
+                <li class="selector__item">
+                  Список 2
+                  <img
+                    class="selector__checkmark"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                  />
+                </li>
+                <li class="selector__item">
+                  Список 3
+                  <img
+                    class="selector__checkmark"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">Time Choice Options List</h2>
+            <div class="popup">
+              <ul class="ui-kit-list selector__items">
+                <li class="selector__item">56</li>
+                <li class="selector__item">57</li>
+                <li class="selector__item">58</li>
+                <li class="selector__item">59</li>
+                <li class="selector__item">Очистить</li>
+                <li class="selector__item">Сохранить</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">
+              Weekdays Choice Options List
+            </h2>
+            <ul class="ui-kit-list weekdays">
+              <button class="weekdays__weekday" type="button">Пн</button>
+              <button class="weekdays__weekday" type="button">Вт</button>
+              <button class="weekdays__weekday" type="button">Ср</button>
+              <button class="weekdays__weekday" type="button">Чт</button>
+              <button class="weekdays__weekday" type="button">Пт</button>
+              <button class="weekdays__weekday" type="button">Сб</button>
+              <button class="weekdays__weekday" type="button">Вс</button>
+            </ul>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="section__title ui-kit__h3">File Upload Buttons</h2>
+            <ul class="ui-kit-list upload-buttons">
+              <div class="file-upload file-upload_size_large">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div class="file-upload file-upload_size_medium">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div class="file-upload file-upload_size_small">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div
+                class="file-upload file-upload_size_large file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+
+              <div
+                class="file-upload file-upload_size_medium file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+
+              <div
+                class="file-upload file-upload_size_small file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="Выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+            </ul>
+          </section>
+        </li>
       </ul>
-
-      <!-- Component 2 -->
-      <section class="component-2">
-        <h2>Component 2</h2>
-        <!-- Include examples of component 2 -->
-      </section>
-
-      <!-- And so on, up to component N... -->
     </main>
   </body>
 </html>
