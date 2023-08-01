@@ -5,9 +5,6 @@
 @use "../ui-kit/ui_kit_fields.scss";
 
 .user-info {
-  max-width: 23%;
-  box-sizing: border-box;
-  padding-left: 20px;
 }
 .text {
   margin: 0;
@@ -49,8 +46,9 @@
   }
 }
 .dialogues-box {
-  height: 80px;
-  padding: 16px 0;
+  height: 79px;
+  width: 100%;
+  padding: 19px 0;
   box-sizing: border-box;
   border-bottom: solid 1px variables.$clr-secondary-cultured;
 
@@ -81,11 +79,12 @@
   }
   &__container {
     margin: 0 0 0 16px;
-
     width: 100%;
+    height: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    text-align: start;
   }
   &__user {
     width: 60%;
@@ -140,6 +139,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
   border-left: solid 1px variables.$clr-secondary-cultured;
   border-right: solid 1px variables.$clr-secondary-cultured;
 
@@ -160,7 +160,7 @@
     flex-grow: 1;
   }
   &__dialogue-cloud {
-    margin-top: 32px;
+    margin-top: 46px;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -168,6 +168,9 @@
     &_your {
       flex-direction: row-reverse;
     }
+  }
+  &__dialogue-window > div:first-child {
+    margin-top: 32px;
   }
   &__buttom-menu {
     display: flex;
@@ -205,6 +208,7 @@
 
   &_user-info {
     margin: 0;
+    padding-bottom: 4px;
   }
 }
 .user-avatar {
@@ -215,6 +219,7 @@
   &__img {
     &_user-info {
       margin-top: 40px;
+      margin-bottom: 16px;
 
       width: 60px;
       height: 60px;
@@ -285,6 +290,11 @@
 
     @extend .cloud-box__header;
     font-weight: variables.$fw-400;
+
+    &_span {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
   &__message-date {
     flex-grow: 0;
@@ -337,19 +347,152 @@
   }
 }
 .field__input {
-  position: relative;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+
   height: 24px;
   max-width: 100%;
+  position: relative;
+  background-color: variables.$clr-gray;
+
+  &_bg-grey {
+    background-color: variables.$clr-secondary-gray;
+  }
 }
 //////////////
 .user-info {
   width: 100%;
-  &__window {
+  max-width: 23%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-left: 40px;
+
+  &__column {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  // &__info-panel {
+  //   width: 100%;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+  &__buttons-box {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  &__button {
+    margin-top: 32px;
+    padding: 0;
+    width: 50%;
+    height: 35px;
+
+    @extend .general-grey-text;
+    font-weight: variables.$fw-600;
+    border-bottom: solid 1px variables.$clr-secondary-cultured;
+    color: variables.$clr-primary-gray;
+
+    &_select {
+      color: variables.$clr-primary-medium;
+    }
+  }
+  &__select {
+    height: 4px;
+    width: 50%;
+    background-color: variables.$clr-primary-medium;
+    border-radius: 2px 2px 0 0;
+
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+  }
 }
+.window-files-empty,
+.window-user-info,
+.window-files {
+  max-height: 69%;
+  min-width: 100%;
+  padding-top: 32px;
+}
+.window-files-empty {
+  text-align: center;
+}
+.window-user-info {
+  &__btn {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    min-width: 100%;
+    height: 40px;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: variables.$clr-gray;
+    @extend .general-grey-text;
+    color: variables.$clr-primary-dark;
+    font-size: variables.$fs-small;
+  }
+  &__list {
+    margin: 0;
+    padding: 16px 0 0;
+    list-style: none;
+
+    @extend .general-grey-text;
+    color: variables.$clr-primary-dark;
+    font-weight: variables.$fw-600;
+    font-size: variables.$fs-small;
+  }
+  &__list > li:last-child {
+    margin-top: 12px;
+  }
+}
+.window-files {
+  display: flex;
+  flex-wrap: wrap;
+  &__headers {
+    width: 80%;
+    padding: 0 0 20px;
+    @extend .text;
+    font-size: variables.$fs-small;
+  }
+  &__btn-all {
+    width: 20%;
+    padding: 0 0 20px;
+    @extend .text;
+    font-size: variables.$fs-small;
+    color: variables.$clr-primary-medium;
+  }
+
+  &__list {
+    padding: 0 0 32px;
+    width: 100%;
+    list-style: none;
+    @extend .text;
+    font-size: variables.$fs-small;
+  }
+  &__list > li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+}
+
+// &__selector {
+//   height: 100%;
+//   width: 4px;
+//   background-color: variables.$clr-primary-medium;
+//   border-radius: 2px 0 0 2px;
+
+//   position: absolute;
+//   top: 0;
+//   right: -20px;
+// }
 
 ///////////// модификаторы на исходники компаненты
 .main {
@@ -361,9 +504,6 @@
 }
 .button-elem {
   min-width: 40px;
-}
-.field__input {
-  background-color: variables.$clr-gray;
 }
 
 .icon-color {
@@ -378,12 +518,18 @@
     min-width: 20px;
   }
 }
+.icon {
+  &_rotate180 {
+    rotate: 180deg;
+  }
+  &__icon20x20 {
+    min-width: 20px;
+    max-height: 20px;
+  }
+}
 
 .hidden {
   display: none;
 }
 .field__input {
-  padding: 0;
-  outline: 0;
-  appearance: none;
 }
