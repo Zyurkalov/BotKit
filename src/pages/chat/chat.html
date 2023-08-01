@@ -641,6 +641,7 @@
         </div>
         <button class="chat__button-stretch" type="button">
           <svg
+            class="chat__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -672,10 +673,13 @@
         </div>
 
         <div class="user-info__buttons-box">
-          <button class="user-info__button" type="button">Информация</button>
+          <button class="user-info__button" type="button" id="user-info">
+            Информация
+          </button>
           <button
             class="user-info__button user-info__button_select"
             type="button"
+            id="user-files"
           >
             Файлы
           </button>
