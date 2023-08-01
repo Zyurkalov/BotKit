@@ -1,55 +1,74 @@
 import "../../scss/ui-kit/ui_kit_navigation.scss";
 
-// JS корявый нужно переделать!!!
-
-const page = document.querySelector(".page-container");
-const mainMenu = page.querySelector(".menu");
-
+const page = document.querySelector(".page__container");
 const header = page.querySelector(".header");
+const footer = page.querySelector(".footer");
 const headerMenu = header.querySelector(".header__menu");
-const buttonOpenNotification = header.querySelector(".header__notification");
-const buttonOpenAccaunt = header.querySelector(".header__profile");
 
-const notificationOverlay = page.querySelector(".popup__notification__overlay");
-const notification = page.querySelector(".popup__notification");
-const notificationHeader = notification.querySelector(
-  ".popup__notification-header",
-);
-const buttonCloseNotification =
-  notificationHeader.querySelector(".popup__close");
 const keyEscape = "Escape";
 
-const accauntPopup = page.querySelector(".popup__accaunt");
+const menu = page.querySelector(".menu");
+const menuItems = menu.querySelector(".menu__items");
+const linkThemeBlue = menu.querySelector(".link_theme_blue");
+const linkImageReverse = menu.querySelector(".link__image_reverse");
 
-export function closeMenu() {
-  mainMenu.classList.toggle("menu-close");
-  mainMenu
-    .querySelector(".link_theme_blue")
-    .classList.toggle("link_theme_blue-close");
-  mainMenu
-    .querySelector(".link__image_reverse")
-    .classList.toggle("link__image_reverse-close");
-  mainMenu
-    .querySelector(".link__text_reverse")
-    .classList.toggle("link__text_reverse-close");
+const menuSecond = menu.querySelector(".menu__second");
+const menuSecondArrow = menuSecond.querySelector(".link__image_up");
+const menuSecondItem = menu.querySelectorAll(".menu__second_item");
+let menuStatus = false;
+
+export function openMenu() {
+  menu.classList.toggle("menu-open");
+  menuItems.classList.toggle("menu__items-open");
+  page.classList.toggle("page__container-open");
+  header.classList.toggle("header-open");
+  footer.classList.toggle("footer-open");
+  linkThemeBlue.classList.toggle("link_theme_blue-open");
+  linkImageReverse.classList.toggle("link__image_reverse-open");
+  menuSecond.removeEventListener("click", () => openMenu(true));
+
+  if (menuStatus) {
+    menuStatus = false;
+    menuSecond.removeEventListener("click", toggleSecondMenu);
+    menuSecondItem.forEach((btn) => {
+      btn.classList.remove("menu__second_item-open");
+    });
+    menuSecondArrow.classList.remove("link__image_up-open");
+  } else {
+    menuStatus = true;
+    menuSecond.addEventListener("click", toggleSecondMenu);
+  }
 }
 
+function toggleSecondMenu() {
+  menuSecondItem.forEach((btn) => {
+    btn.classList.toggle("menu__second_item-open");
+  });
+  menuSecondArrow.classList.toggle("link__image_up-open");
+}
+
+// header
+// бургер
+
+headerMenu.addEventListener("click", openMenu);
+
+// уведомления
+const buttonOpenNotification = header.querySelector(".header__notification");
+const popupNotification = page.querySelector(".popup__notification");
+const buttonCloseNotification = popupNotification.querySelector(
+  ".popup__button-close",
+);
+
 function openNotification() {
-  notification.classList.remove("popup__notification-close");
+  popupNotification.classList.remove("popup__notification-close");
   document.addEventListener("keydown", closePopupOnPressKey);
-  notificationOverlay.classList.remove("popup__notification__overlay-close");
-  notificationOverlay.addEventListener("click", closePopupOnClickOverlay);
-  buttonCloseNotification.addEventListener("click", () => closeNotification());
+  buttonCloseNotification.addEventListener("click", closeNotification);
 }
 
 function closeNotification() {
-  notification.classList.add("popup__notification-close");
+  popupNotification.classList.add("popup__notification-close");
   document.removeEventListener("keydown", closePopupOnPressKey);
-  notificationOverlay.classList.add("popup__notification__overlay-close");
-  notificationOverlay.removeEventListener("click", closePopupOnClickOverlay);
-  buttonCloseNotification.removeEventListener("click", () =>
-    closeNotification(),
-  );
+  buttonCloseNotification.removeEventListener("click", closeNotification);
 }
 
 const closePopupOnPressKey = (e) => {
@@ -58,17 +77,13 @@ const closePopupOnPressKey = (e) => {
   }
 };
 
-const closePopupOnClickOverlay = (e) => {
-  if (e.target == notificationOverlay) {
-    closeNotification();
-  }
-};
+buttonOpenNotification.addEventListener("click", openNotification);
 
-headerMenu.addEventListener("click", () => closeMenu());
-buttonOpenNotification.addEventListener("click", () => openNotification());
+// Профиль пользователя
+const buttonOpenAccaunt = header.querySelector(".header__profile");
+const popupAccaunt = page.querySelector(".popup__accaunt");
 
-// кнопка аккаунта
 function openAccauntSettings() {
-  accauntPopup.classList.toggle("popup__accaunt-close");
+  popupAccaunt.classList.toggle("popup__accaunt-close");
 }
 buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());

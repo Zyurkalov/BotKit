@@ -1,33 +1,22 @@
 import "../scss/registration/registration.scss";
-import { routes, selectors } from "./constants";
+import { routes, selectors, openAndClosePage } from "./constants";
 
-//=========================
-
+// Переход на старницу логина
 const signInBtn = document.querySelector(selectors.regPage.signInBtn);
-//==================================
+
+// Переход на страницу логина
 signInBtn.addEventListener("click", () => {
   window.location.href = window.location.origin + routes.loginPage;
 });
 
-const page = document.querySelector(".page");
-const header = document.querySelector(".header");
-const popup = document.querySelector(".window");
-const main = document.querySelector(".main");
-const confirmationPage = document.querySelector(".confirmation");
+const closeBtn = document.querySelector(
+  selectors.confirmationPopupCloseBtn.closeBtn,
+);
 
-function openAndClosePage(evt) {
-  evt.preventDefault();
-  page.classList.toggle("page_newMeasure");
-  header.classList.toggle("header_inActive");
-  popup.classList.toggle("window_inActive");
-  main.classList.toggle("main_newMeasure");
-  confirmationPage.classList.toggle("confirmation_active");
-}
+const signUpBtn = document.querySelector(".common-button");
 
-// Закрытие
-const commonBtn = document.querySelector(".common-button");
+// Создать аккаунт
+signUpBtn.addEventListener("click", openAndClosePage);
 
-const closeBtn = document.querySelector(".confirmation__close-btn");
-
-commonBtn.addEventListener("click", openAndClosePage);
+// Закрыть попап подтверждения
 closeBtn.addEventListener("click", openAndClosePage);
