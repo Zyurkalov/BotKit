@@ -4,20 +4,8 @@
 @use "../ui-kit/ui_kit_buttons.scss";
 @use "../ui-kit/ui_kit_fields.scss";
 
-.dialogues {
-  width: 25.5%;
-  box-sizing: border-box;
-  padding-right: 20px;
-
-  &__input {
-    height: 40px;
-    width: 100%;
-    outline-style: none;
-    background-color: variables.$clr-secondary-gray;
-  }
-}
 .user-info {
-  width: 23%;
+  max-width: 23%;
   box-sizing: border-box;
   padding-left: 20px;
 }
@@ -31,6 +19,12 @@
   font-style: normal;
   font-weight: variables.$fw-600;
 }
+.general-grey-text {
+  @extend .text;
+  font-size: variables.$fs-small;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-gray-3;
+}
 
 .section-header {
   margin-bottom: 24px;
@@ -41,18 +35,20 @@
   font-family: variables.$ff-secondary;
 }
 
-///////////// chat
-.chat {
-  width: 51.5%;
+///////////// dialogues
+.dialogues {
+  width: 25.5%;
   box-sizing: border-box;
-  padding: 0 32px 0;
+  padding-right: 20px;
 
-  display: flex;
-  flex-direction: column;
-  border-left: solid 1px variables.$clr-secondary-cultured;
-  border-right: solid 1px variables.$clr-secondary-cultured;
+  &__input {
+    height: 40px;
+    width: 100%;
+    outline-style: none;
+    background-color: variables.$clr-secondary-gray;
+  }
 }
-.chat-box {
+.dialogues-box {
   height: 80px;
   padding: 16px 0;
   box-sizing: border-box;
@@ -102,15 +98,9 @@
     overflow: hidden;
   }
   &__time {
-    @extend .text;
-    color: variables.$clr-gray-3;
-    font-size: variables.$fs-small;
-    font-family: variables.$ff-primary;
-    font-weight: variables.$fw-400;
   }
   &__text {
     width: 80%;
-    @extend .chat-box__time;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -143,6 +133,16 @@
 
 ///////////////////////////////////////////// chat
 .chat {
+  width: 51.5%;
+  box-sizing: border-box;
+  padding: 0 32px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: solid 1px variables.$clr-secondary-cultured;
+  border-right: solid 1px variables.$clr-secondary-cultured;
+
   &__header-box {
     margin-bottom: 20px;
     height: 40px;
@@ -156,14 +156,42 @@
     flex-direction: row;
     gap: 12px;
   }
+  &__dialogue-window {
+    flex-grow: 1;
+  }
   &__dialogue-cloud {
     margin-top: 32px;
+    position: relative;
     display: flex;
     align-items: flex-end;
 
     &_your {
       flex-direction: row-reverse;
     }
+  }
+  &__buttom-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+  &__input-box {
+    display: inline-block;
+    padding: 14px 12px 14px 16px;
+    height: 48px;
+    background-color: variables.$clr-gray;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__input-button {
+    // max-width: 20px;
+    // max-height: 20px;
+    margin-left: 8px;
   }
 }
 .user-name {
@@ -174,6 +202,10 @@
   font-size: variables.$fs-base;
   font-weight: variables.$fw-500;
   font-family: variables.$ff-secondary;
+
+  &_user-info {
+    margin: 0;
+  }
 }
 .user-avatar {
   min-width: 40px;
@@ -181,6 +213,12 @@
   position: relative;
 
   &__img {
+    &_user-info {
+      margin-top: 40px;
+
+      width: 60px;
+      height: 60px;
+    }
   }
   &__point {
     width: 18px;
@@ -209,10 +247,6 @@
     background-color: variables.$clr-secondary-cultured;
   }
   &__date {
-    @extend .text;
-    font-size: variables.$fs-small;
-    font-weight: variables.$fw-400;
-    color: variables.$clr-gray-3;
   }
 }
 
@@ -279,9 +313,10 @@
     }
   }
 }
-.dialogues__input-buttons {
+.dialogues__input-button {
   min-width: 20px;
   min-height: 20px;
+  object-fit: contain;
 }
 .dialogues__input-box {
   box-sizing: border-box;
@@ -291,6 +326,7 @@
   height: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 8px;
 
   background-color: variables.$clr-secondary-gray;
@@ -305,12 +341,29 @@
   height: 24px;
   max-width: 100%;
 }
+//////////////
+.user-info {
+  width: 100%;
+  &__window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 ///////////// модификаторы на исходники компаненты
 .main {
   padding-top: 32px;
   display: flex;
   flex-direction: row;
+
+  min-height: 750px;
+}
+.button-elem {
+  min-width: 40px;
+}
+.field__input {
+  background-color: variables.$clr-gray;
 }
 
 .icon-color {

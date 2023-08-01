@@ -278,32 +278,13 @@
       <section class="dialogues">
         <h2 class="section-header">Диалоги</h2>
         <div class="dialogues__input-box">
-          <svg
-            class="icon-color icon-color_size20x20"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-              stroke="#A6B3C9"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M20.9999 21L16.6499 16.65"
-              stroke="#A6B3C9"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-
+          <img
+            class="icon icon_20x20"
+            src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
+            alt="Искать"
+          />
           <input
-            class="field__input search-input"
+            class="field__input general-grey-text"
             type="text"
             id="field-default"
             name="field-default"
@@ -358,76 +339,76 @@
           </svg>
         </div>
         <!-- <input class="dialogues__input" type="search" id="chat-search" /> -->
-        <div class="chat-box">
-          <div class="chat-box__avatar">
+        <div class="dialogues-box">
+          <div class="dialogues-box__avatar">
             <img
-              class="chat-box__avatar-img"
+              class="dialogues-box__avatar-img"
               src="<%=require('../../images/avatar/avatar-mark.svg')%>"
               alt="аватар пользователя"
             />
-            <div class="chat-box__point"></div>
+            <div class="dialogues-box__point"></div>
           </div>
-          <div class="chat-box__container">
-            <h3 class="chat-box__user">Марк</h3>
-            <p class="chat-box__time">4 часа</p>
-            <p class="chat-box__text">Какой-то текст.</p>
-            <p class="chat-box__count-message">1</p>
+          <div class="dialogues-box__container">
+            <h3 class="dialogues-box__user">Марк</h3>
+            <p class="dialogues-box__time general-grey-text">4 часа</p>
+            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
+            <p class="dialogues-box__count-message">1</p>
           </div>
-          <div class="chat-box__selector hidden"></div>
+          <div class="dialogues-box__selector hidden"></div>
         </div>
 
-        <div class="chat-box">
-          <div class="chat-box__avatar">
+        <div class="dialogues-box">
+          <div class="dialogues-box__avatar">
             <img
-              class="chat-box__avatar-img"
+              class="dialogues-box__avatar-img"
               src="<%=require('../../images/avatar/avatar-operator.svg')%>"
               alt="аватар пользователя"
             />
-            <div class="chat-box__point hidden"></div>
+            <div class="dialogues-box__point hidden"></div>
           </div>
-          <div class="chat-box__container">
-            <h3 class="chat-box__user">Оператор</h3>
-            <p class="chat-box__time">3 мин</p>
-            <p class="chat-box__text">Какой-то текст.</p>
-            <p class="chat-box__count-message hidden"></p>
+          <div class="dialogues-box__container">
+            <h3 class="dialogues-box__user">Оператор</h3>
+            <p class="dialogues-box__time general-grey-text">3 мин</p>
+            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
+            <p class="dialogues-box__count-message hidden"></p>
           </div>
-          <div class="chat-box__selector hidden"></div>
+          <div class="dialogues-box__selector hidden"></div>
         </div>
 
-        <div class="chat-box">
-          <div class="chat-box__avatar">
+        <div class="dialogues-box">
+          <div class="dialogues-box__avatar">
             <img
-              class="chat-box__avatar-img"
+              class="dialogues-box__avatar-img"
               src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
               alt="аватар пользователя"
             />
-            <div class="chat-box__point hidden"></div>
+            <div class="dialogues-box__point hidden"></div>
           </div>
-          <div class="chat-box__container">
-            <h3 class="chat-box__user">Сергей Надеин</h3>
-            <p class="chat-box__time">30 мин</p>
-            <p class="chat-box__text">Какой-то текст.</p>
-            <p class="chat-box__count-message hidden"></p>
+          <div class="dialogues-box__container">
+            <h3 class="dialogues-box__user">Сергей Надеин</h3>
+            <p class="dialogues-box__time general-grey-text">30 мин</p>
+            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
+            <p class="dialogues-box__count-message hidden"></p>
           </div>
-          <div class="chat-box__selector"></div>
+          <div class="dialogues-box__selector"></div>
         </div>
 
-        <div class="chat-box">
-          <div class="chat-box__avatar">
+        <div class="dialogues-box">
+          <div class="dialogues-box__avatar">
             <img
-              class="chat-box__avatar-img"
+              class="dialogues-box__avatar-img"
               src="<%=require('../../images/avatar/avatar-dasha.svg')%>"
               alt="аватар пользователя"
             />
-            <div class="chat-box__point hidden"></div>
+            <div class="dialogues-box__point hidden"></div>
           </div>
-          <div class="chat-box__container">
-            <h3 class="chat-box__user">Даша К.</h3>
-            <p class="chat-box__time">12.06.22</p>
-            <p class="chat-box__text">Какой-то текст.</p>
-            <p class="chat-box__count-message hidden"></p>
+          <div class="dialogues-box__container">
+            <h3 class="dialogues-box__user">Даша К.</h3>
+            <p class="dialogues-box__time general-grey-text">12.06.22</p>
+            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
+            <p class="dialogues-box__count-message hidden"></p>
           </div>
-          <div class="chat-box__selector hidden"></div>
+          <div class="dialogues-box__selector hidden"></div>
         </div>
       </section>
 
@@ -449,54 +430,16 @@
           </div>
           <h2 class="user-name">Сергей Надеин</h2>
           <div class="chat__icons-box">
-            <svg
-              class="icon-color"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-label="поиск"
-            >
-              <path
-                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                stroke="#A6B3C9"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M20.9999 21L16.6499 16.65"
-                stroke="#A6B3C9"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              class="icon-color"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-label="запуск"
-            >
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="#A6B3C9"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 8L16 12L10 16V8Z"
-                stroke="#A6B3C9"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <img
+              class="icon"
+              src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
+              alt="Искать"
+            />
+            <img
+              class="icon play"
+              src="<%=require('../../images/template-icon/24x24/common/play.svg')%>"
+              alt="запуск"
+            />
             <svg
               class="icon-color"
               width="24"
@@ -540,131 +483,173 @@
 
         <div class="time-border">
           <div class="time-border__line"></div>
-          <h3 class="time-border__date">Сегодня</h3>
+          <h3 class="general-grey-text">Сегодня</h3>
           <div class="time-border__line"></div>
         </div>
 
-        <div class="chat__dialogue-cloud">
-          <div class="user-avatar">
-            <img
-              class="user-avatar__img"
-              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
-              alt="аватар собеседника"
-            />
+        <div class="chat__dialogue-window">
+          <div class="chat__dialogue-cloud">
+            <div class="user-avatar">
+              <img
+                class="user-avatar__img"
+                src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+                alt="аватар собеседника"
+              />
+            </div>
+            <div class="cloud-box">
+              <h3 class="cloud-box__header">Сергей Надеин</h3>
+              <div class="cloud-box__message-cont">
+                <p class="cloud-box__text">Привет, как это сделать?</p>
+                <span class="cloud-box__message-date">16 мин назад</span>
+              </div>
+              <span class="cloud-box__message-viewed"
+                >Просмотренно в 14:05</span
+              >
+            </div>
           </div>
-          <div class="cloud-box">
-            <h3 class="cloud-box__header">Сергей Надеин</h3>
-            <div class="cloud-box__message-cont">
-              <p class="cloud-box__text">Привет, как это сделать?</p>
-              <span class="cloud-box__message-date">16 мин назад</span>
+
+          <div class="chat__dialogue-cloud chat__dialogue-cloud_your">
+            <div class="user-avatar">
+              <img
+                class="user-avatar__img"
+                src="<%=require('../../images/avatar/avatar-operator.svg')%>"
+                alt="ваш аватар"
+              />
+            </div>
+            <div class="cloud-box cloud-box_your">
+              <h3 class="cloud-box__header">Вы</h3>
+              <div class="cloud-box__message-cont">
+                <p class="cloud-box__text">
+                  Привет, {name}! Перейдите по ссылке
+                  https://BOTkit/file/-node-id=3A332705
+                </p>
+                <span
+                  class="cloud-box__message-date cloud-box__message-date_your"
+                  >10 мин назад</span
+                >
+              </div>
+              <span
+                class="cloud-box__message-viewed cloud-box__message-viewed_your"
+                >Просмотренно в 14:12</span
+              >
+            </div>
+          </div>
+
+          <div class="chat__dialogue-cloud">
+            <div class="user-avatar">
+              <img
+                class="user-avatar__img"
+                src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+                alt="аватар собеседника"
+              />
+            </div>
+            <div class="cloud-box">
+              <h3 class="cloud-box__header">Сергей Надеин</h3>
+              <div class="cloud-box__message-cont">
+                <p class="cloud-box__text">Ок! Спасибо 😄</p>
+                <span class="cloud-box__message-date">16 мин назад</span>
+              </div>
             </div>
             <span class="cloud-box__message-viewed">Просмотренно в 14:05</span>
           </div>
         </div>
-
-        <div class="chat__dialogue-cloud chat__dialogue-cloud_your">
-          <div class="user-avatar">
-            <img
-              class="user-avatar__img"
-              src="<%=require('../../images/avatar/avatar-operator.svg')%>"
-              alt="ваш аватар"
+        <div class="chat__buttom-menu">
+          <div class="chat__input-box">
+            <input
+              class="field__input search-input general-grey-text"
+              type="text"
+              id="field-default"
+              name="field-default"
+              placeholder="Введите сообщение..."
             />
-          </div>
-          <div class="cloud-box cloud-box_your">
-            <h3 class="cloud-box__header">Вы</h3>
-            <div class="cloud-box__message-cont">
-              <p class="cloud-box__text">
-                Привет, {name}! Перейдите по ссылке
-                https://BOTkit/file/-node-id=3A332705
-              </p>
-              <span class="cloud-box__message-date cloud-box__message-date_your"
-                >10 мин назад</span
+            <button class="chat__input-button">
+              <svg
+                class="icon-color"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-            </div>
-            <span
-              class="cloud-box__message-viewed cloud-box__message-viewed_your"
-              >Просмотренно в 14:12</span
-            >
+                <path
+                  d="M21.4398 11.05L12.2498 20.24C11.124 21.3658 9.59699 21.9983 8.0048 21.9983C6.41262 21.9983 4.88565 21.3658 3.7598 20.24C2.63396 19.1142 2.00146 17.5872 2.00146 15.995C2.00146 14.4028 2.63396 12.8758 3.7598 11.75L12.9498 2.56C13.7004 1.80944 14.7183 1.38778 15.7798 1.38778C16.8413 1.38778 17.8592 1.80944 18.6098 2.56C19.3604 3.31057 19.782 4.32855 19.782 5.39C19.782 6.45146 19.3604 7.46944 18.6098 8.22L9.4098 17.41C9.03452 17.7853 8.52553 17.9961 7.9948 17.9961C7.46407 17.9961 6.95508 17.7853 6.5798 17.41C6.20452 17.0347 5.99369 16.5257 5.99369 15.995C5.99369 15.4643 6.20452 14.9553 6.5798 14.58L15.0698 6.1"
+                  stroke="#060C23"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon__20x20"
+                src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
+                alt="выбрать смалик"
+              />
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon__20x20"
+                src="<%=require('../../images/template-icon/24x24/common/slash.svg')%>"
+                alt=""
+              />
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon__20x20"
+                src="<%=require('../../images/template-icon/24x24/common/zap.svg')%>"
+                alt=""
+              />
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon__20x20 icon_rotate-45"
+                src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
+                alt="добавить/убрать доп. инструменты"
+              />
+            </button>
           </div>
-        </div>
-
-        <div class="chat__dialogue-cloud">
-          <div class="user-avatar">
-            <img
-              class="user-avatar__img"
-              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
-              alt="аватар собеседника"
-            />
-          </div>
-          <div class="cloud-box">
-            <h3 class="cloud-box__header">Сергей Надеин</h3>
-            <div class="cloud-box__message-cont">
-              <p class="cloud-box__text">Ок! Спасибо 😄</p>
-              <span class="cloud-box__message-date">16 мин назад</span>
-            </div>
-          </div>
-          <span class="cloud-box__message-viewed">Просмотренно в 14:05</span>
-        </div>
-
-        <div class="chat__input-box chat__input-box_height-48">
-          <input
-            class="field__input search-input"
-            type="text"
-            id="field-default"
-            name="field-default"
-            placeholder="Введите сообщение..."
-          />
-          <button class="chat__input-buttons">
+          <button class="button-elem">
+            <div class="button-elem__bg button-elem__bg-blue"></div>
             <svg
-              class="icon-color"
+              class="icon_pos-abs"
+              xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M21.4398 11.05L12.2498 20.24C11.124 21.3658 9.59699 21.9983 8.0048 21.9983C6.41262 21.9983 4.88565 21.3658 3.7598 20.24C2.63396 19.1142 2.00146 17.5872 2.00146 15.995C2.00146 14.4028 2.63396 12.8758 3.7598 11.75L12.9498 2.56C13.7004 1.80944 14.7183 1.38778 15.7798 1.38778C16.8413 1.38778 17.8592 1.80944 18.6098 2.56C19.3604 3.31057 19.782 4.32855 19.782 5.39C19.782 6.45146 19.3604 7.46944 18.6098 8.22L9.4098 17.41C9.03452 17.7853 8.52553 17.9961 7.9948 17.9961C7.46407 17.9961 6.95508 17.7853 6.5798 17.41C6.20452 17.0347 5.99369 16.5257 5.99369 15.995C5.99369 15.4643 6.20452 14.9553 6.5798 14.58L15.0698 6.1"
-                stroke="#060C23"
+                d="M12 19V5"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 12L12 5L19 12"
+                stroke="white"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
           </button>
-          <button class="chat__input-buttons">
-            <img
-              class="icon emoji icon_20x20"
-              src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
-              alt="выбрать смалик"
-            />
-          </button>
-          <button class="chat__input-buttons">
-            <img
-              class="icon slash icon_20x20"
-              src="<%=require('../../images/template-icon/24x24/common/slash.svg')%>"
-              alt=""
-            />
-          </button>
-          <button class="chat__input-buttons">
-            <img
-              class="icon zap icon_20x20"
-              src="<%=require('../../images/template-icon/24x24/common/zap.svg')%>"
-              alt=""
-            />
-          </button>
-          <button class="chat__input-buttons">
-            <img
-              class="icon x-circle icon_20x20 icon_rotate-45"
-              src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
-              alt="добавить/убрать доп. инструменты"
-            />
-          </button>
         </div>
       </section>
 
       <section class="user-info">
-        <h2>Section Информация пользователя</h2>
+        <div class="user-info__window">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img_user-info"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="ваш аватар"
+            />
+          </div>
+          <h2 class="user-name user-name_user-info">Сергей Надеин</h2>
+          <p class="general-grey-text">Привет, как это сделать?</p>
+        </div>
       </section>
 
       <!-- конец -->
