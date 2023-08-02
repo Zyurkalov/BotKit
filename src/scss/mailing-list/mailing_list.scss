@@ -68,6 +68,7 @@ h4 {
     height: 60px;
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   &__header-text {
@@ -98,6 +99,21 @@ h4 {
   &__filter-icon {
     height: 24px;
     width: 24px;
+
+    &_upside-down {
+      transform: rotate(0.5turn);
+    }
+  }
+
+  &__filter-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &_visible {
+      display: block;
+    }
   }
 
   &__table {
