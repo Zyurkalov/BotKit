@@ -89,4 +89,4 @@ export function openAccauntSettings() {
 }
 buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
 
-export { popupAccaunt, buttonOpenAccaunt };
+// export { popupAccaunt, buttonOpenAccaunt };

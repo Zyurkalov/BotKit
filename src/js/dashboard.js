@@ -1,7 +1,6 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
 import { popupAccaunt, buttonOpenAccaunt } from "./ui-kit/ui_kit_navigation";
-import "./ui-kit/ui_kit_navigation";
 
 const botPopup = document.querySelector(
   "." + selectors.dashboardPage.addBotPopup,
