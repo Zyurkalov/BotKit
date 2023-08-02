@@ -1,5 +1,4 @@
 import "../../scss/ui-kit/ui_kit_navigation.scss";
-
 const page = document.querySelector(".page__container");
 const header = page.querySelector(".header");
 const footer = page.querySelector(".footer");
@@ -17,6 +16,7 @@ const menuSecondArrow = menuSecond.querySelector(".link__image_up");
 const menuSecondItem = menu.querySelectorAll(".menu__second_item");
 let menuStatus = false;
 
+// Открытие боковой навигации
 export function openMenu() {
   menu.classList.toggle("menu-open");
   menuItems.classList.toggle("menu__items-open");
@@ -40,6 +40,10 @@ export function openMenu() {
   }
 }
 
+// Открытие боковой навигации по клику на бургер
+headerMenu.addEventListener("click", openMenu);
+
+// Открытие выпадающего списка внутри боковой навигации
 function toggleSecondMenu() {
   menuSecondItem.forEach((btn) => {
     btn.classList.toggle("menu__second_item-open");
@@ -47,43 +51,40 @@ function toggleSecondMenu() {
   menuSecondArrow.classList.toggle("link__image_up-open");
 }
 
-// header
-// бургер
-
-headerMenu.addEventListener("click", openMenu);
-
-// уведомления
+// Уведомления
 const buttonOpenNotification = header.querySelector(".header__notification");
 const popupNotification = page.querySelector(".popup__notification");
 const buttonCloseNotification = popupNotification.querySelector(
   ".popup__button-close",
 );
 
-function openNotification() {
+// Открытие попапа с нотификакациями
+export function openNotification() {
   popupNotification.classList.remove("popup__notification-close");
   document.addEventListener("keydown", closePopupOnPressKey);
   buttonCloseNotification.addEventListener("click", closeNotification);
 }
+buttonOpenNotification.addEventListener("click", openNotification);
 
-function closeNotification() {
+// Закрытие попапа с нотификакациями
+export function closeNotification() {
   popupNotification.classList.add("popup__notification-close");
   document.removeEventListener("keydown", closePopupOnPressKey);
   buttonCloseNotification.removeEventListener("click", closeNotification);
 }
 
-const closePopupOnPressKey = (e) => {
+export const closePopupOnPressKey = (e) => {
   if (e.key === keyEscape) {
     closeNotification();
   }
 };
 
-buttonOpenNotification.addEventListener("click", openNotification);
-
 // Профиль пользователя
-const buttonOpenAccaunt = header.querySelector(".header__profile");
-const popupAccaunt = page.querySelector(".popup__accaunt");
+export const buttonOpenAccaunt = header.querySelector(".header__profile");
+export const popupAccaunt = page.querySelector(".popup__accaunt");
 
-function openAccauntSettings() {
+// Открытия меню в профиле
+export function openAccauntSettings() {
   popupAccaunt.classList.toggle("popup__accaunt-close");
 }
 buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
