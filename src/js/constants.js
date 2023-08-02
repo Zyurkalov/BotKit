@@ -17,8 +17,30 @@ export const selectors = {
     addBotPopup: "add-bot-popup",
     addBotOpenBtn: "panel-add-bot",
     addBotCloseBtn: "add-bot-popup__close-btn",
-    visiblePopupCls: "add-bot-popup_visible",
+    visiblePopupCls: "visible",
     popupCancelBtn: "add-bot-popup__cancel-btn",
+    templates: "templates",
+    templatesMenu: "templates__menu",
+    contentList: "content-list",
+    contentListClose: "content-list-close",
+    connInfoPopup: "more-actions-popup_type_connection",
+    connInfoOpenBtn: "card__action_info",
+    connInfoCloseBtn: "more-actions-popup__close-btn",
+    notificationPopup: "more-actions-popup_type_notifications",
+    notificationPopupClose: "more-actions-popup__close-btn",
+    notificationPopupOpen: "card__action_notifications",
+    notificationWrapper: "more-actions-popup__notification-wrapper",
+    //не имеет отношения к конкретному попапу это общий для всех попапов с копированием селектор
+    notificationText: "more-actions-popup__notification-text",
+    copyBtnCls: "more-actions-popup__copy",
+    copyBtnClsPressed: "more-actions-popup__copy_pressed",
+  },
+  allPage: {
+    pageContainer: "page__container",
+    main: "main",
+  },
+  addBotPage: {
+    buttonSocial: "button-social",
   },
 };
 

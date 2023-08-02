@@ -1,5 +1,4 @@
 import "../../scss/navigation.scss";
-
 document.addEventListener("DOMContentLoaded", function () {
   const goBackLink = document.getElementById("go-back-link");
 
