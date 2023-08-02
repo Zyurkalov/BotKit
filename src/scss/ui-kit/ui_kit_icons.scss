@@ -37,6 +37,13 @@
   height: 24px;
   object-fit: none;
 
+  &_20x20 {
+    width: 20px;
+    height: 20px;
+    box-sizing: content-box;
+    object-fit: cover;
+  }
+
   &_30x24 {
     width: 24px;
     height: 30px;
@@ -60,6 +67,9 @@
 
   &_pos-abs {
     position: absolute;
+  }
+  &_rotate-45 {
+    transform: rotate(45deg);
   }
 
   /*если нужно сменить цвет логотипа на белый*/

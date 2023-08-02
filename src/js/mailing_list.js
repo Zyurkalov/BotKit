@@ -1,4 +1,5 @@
 import "../scss/mailing-list/mailing_list.scss";
+import "./ui-kit/ui_kit_navigation";
 
 import { closeMenu } from "./ui-kit/ui_kit_navigation.js";
 
@@ -153,3 +154,4 @@ mailingsList.forEach((mailingObject) => {
   mailing.generate(".mailing-list__row");
   mailing.insert();
 });
+
