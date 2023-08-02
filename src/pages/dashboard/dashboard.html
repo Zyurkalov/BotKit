@@ -547,14 +547,14 @@
                     alt=""
                   />Получить ссылку
                 </li>
-                <li class="card__action">
+                <li class="card__action card__action_info">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/info.svg')%>"
                     alt=""
                   />Информация
                 </li>
-                <li class="card__action">
+                <li class="card__action card__action_notifications">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/notifications-setting.svg')%>"
@@ -913,7 +913,7 @@
       </div>
     </section>
     <!--  Код попапа бота  -->
-    <div class="add-bot-popup">
+    <div class="popup-overlay add-bot-popup">
       <div class="add-bot-popup__container">
         <button type="button" class="add-bot-popup__close-btn">
           <img
@@ -951,6 +951,85 @@
             добавить бота
           </button>
         </div>
+      </div>
+    </div>
+    <!-- попап информация о подключении   -->
+    <div
+      class="popup-overlay more-actions-popup more-actions-popup_type_connection"
+    >
+      <div class="more-actions-popup__container">
+        <div class="more-actions-popup__notification-wrapper">
+          <p class="more-actions-popup__notification-text">
+            Ключ доступа скопирован
+          </p>
+        </div>
+        <button type="button" class="more-actions-popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="more-actions-popup__title">Информация о подключении</h2>
+        <ul class="more-actions-popup__content">
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">Название канала</h3>
+            <p class="more-actions-popup__item-text">ChanelName</p>
+          </li>
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">Ключ доступа</h3>
+            <div class="more-actions-popup__item-wrapper">
+              <p class="more-actions-popup__item-text">
+                1842016250:AAF8uWUV1wE9B8XxZvfbmRiZkmh1tWXu-Ns
+              </p>
+              <button type="button" class="more-actions-popup__copy"></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- попап Настройка уведомлений   -->
+    <div
+      class="popup-overlay more-actions-popup more-actions-popup_type_notifications"
+    >
+      <div class="more-actions-popup__container">
+        <div class="more-actions-popup__notification-wrapper">
+          <p class="more-actions-popup__notification-text">
+            Ключ доступа скопирован
+          </p>
+        </div>
+        <button type="button" class="more-actions-popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="more-actions-popup__title">Настройка уведомлений</h2>
+        <ul class="more-actions-popup__content">
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">
+              Подписаться на уведомления
+            </h3>
+            <div class="more-actions-popup__item-wrapper">
+              <p class="more-actions-popup__item-text">
+                /notify 60a280e3f7b15d37975ccb69
+              </p>
+              <button type="button" class="more-actions-popup__copy"></button>
+            </div>
+          </li>
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">
+              Отписаться от уведомлений
+            </h3>
+            <div class="more-actions-popup__item-wrapper">
+              <p class="more-actions-popup__item-text">
+                /disable_notify 60a280e3f7b15d37975ccb69
+              </p>
+              <button type="button" class="more-actions-popup__copy"></button>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 

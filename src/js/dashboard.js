@@ -11,48 +11,123 @@ const templatesMenu = templates.querySelector(
 const contentList = templates.querySelector(
   "." + selectors.dashboardPage.contentList,
 );
-const botPopup = document.querySelector(
-  "." + selectors.dashboardPage.addBotPopup,
-);
-const botPopupCloseBtn = botPopup.querySelector(
-  "." + selectors.dashboardPage.addBotCloseBtn,
-);
-const botPopupOpenBtn = document.querySelector(
-  "." + selectors.dashboardPage.addBotOpenBtn,
-);
-const popupCancelBtn = document.querySelector(
-  "." + selectors.dashboardPage.popupCancelBtn,
-);
+
 //===========================functions===========================
-function openPopup() {
-  botPopup.classList.add(selectors.dashboardPage.visiblePopupCls);
-  document.addEventListener("keydown", onEscClose);
-}
-
-function onOverlayClick(evt) {
-  if (evt.target.classList.contains(selectors.dashboardPage.addBotPopup)) {
-    closePopup();
-  }
-}
-
-function onEscClose(evt) {
-  if (evt.key === "Escape") {
-    closePopup();
-  }
-}
-function closePopup() {
-  botPopup.classList.remove(selectors.dashboardPage.visiblePopupCls);
-  document.removeEventListener("keydown", onEscClose);
-}
 
 function openTemplatesItems() {
   contentList.classList.toggle(selectors.dashboardPage.contentListClose);
 }
-//==============evtListeners===================================
-botPopup.addEventListener("click", onOverlayClick);
-botPopupCloseBtn.addEventListener("click", closePopup);
-botPopupOpenBtn.addEventListener("click", openPopup);
-popupCancelBtn.addEventListener("click", closePopup);
+class Popup {
+  constructor(popupCssNames) {
+    this.popup = document.querySelector("." + popupCssNames.popup);
+    this.popupClassName = popupCssNames.popup;
+    this.closeBtn = this.popup.querySelector("." + popupCssNames.closeBtn);
+    this.openBtn = document.querySelector("." + popupCssNames.openBtn);
+    this.visibleClass = popupCssNames.visiblePopupCls;
+    this.connectListeners();
+  }
+  open = () => {
+    this.popup.classList.add(this.visibleClass);
+    document.addEventListener("keydown", this.onEscClose);
+  };
+  onEscClose = (evt) => {
+    if (evt.key === "Escape") {
+      this.close();
+    }
+  };
+  onOverlayClick = (evt) => {
+    if (evt.target.classList.contains(this.popupClassName)) {
+      this.close();
+    }
+  };
+  close = () => {
+    this.popup.classList.remove(this.visibleClass);
+    document.removeEventListener("keydown", this.onEscClose);
+  };
+  connectListeners = () => {
+    this.popup.addEventListener("click", this.onOverlayClick);
+    this.closeBtn.addEventListener("click", this.close);
+    this.openBtn.addEventListener("click", this.open);
+  };
+}
+
+class PopupWithCancel extends Popup {
+  constructor(popupCssNames) {
+    super(popupCssNames);
+    this.cancelBtn = this.popup.querySelector("." + popupCssNames.cancelBtn);
+    this.cancelBtn.addEventListener("click", this.close);
+  }
+}
+class PopupWithNotification extends Popup {
+  constructor(popupCssNames, copyBtnCls, copyBtnClsPressed, notificationMsg) {
+    super(popupCssNames);
+    this.notification = this.popup.querySelector(
+      "." + popupCssNames.notificationWrapper,
+    );
+    this.notificationText = this.popup.querySelector(
+      "." + popupCssNames.notificationText,
+    );
+    this.copyBtns = this.popup.querySelectorAll("." + copyBtnCls);
+    this.copyBtnCls = copyBtnCls;
+    this.copyBtnClsPressed = copyBtnClsPressed;
+    this.notificationMsg = notificationMsg;
+    this.connectButtons();
+  }
+  showNotification = (msg) => {
+    this.notification.classList.add(this.visibleClass);
+    this.notificationText.innerText = msg;
+  };
+  hideNotification = () => {
+    this.notification.classList.remove(this.visibleClass);
+  };
+
+  connectButtons = () => {
+    this.copyBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.classList.add(this.copyBtnClsPressed);
+        this.showNotification(this.notificationMsg);
+        setTimeout(() => {
+          this.hideNotification();
+          btn.classList.remove(this.copyBtnClsPressed);
+        }, 2000);
+      });
+    });
+  };
+}
+
+const addBotPopup = new PopupWithCancel({
+  popup: selectors.dashboardPage.addBotPopup,
+  closeBtn: selectors.dashboardPage.addBotCloseBtn,
+  openBtn: selectors.dashboardPage.addBotOpenBtn,
+  visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
+  cancelBtn: selectors.dashboardPage.popupCancelBtn,
+});
+const connectionPopup = new PopupWithNotification(
+  {
+    popup: selectors.dashboardPage.connInfoPopup,
+    closeBtn: selectors.dashboardPage.connInfoCloseBtn,
+    openBtn: selectors.dashboardPage.connInfoOpenBtn,
+    visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
+    notificationWrapper: selectors.dashboardPage.notificationWrapper,
+    notificationText: selectors.dashboardPage.notificationText,
+  },
+  selectors.dashboardPage.copyBtnCls,
+  selectors.dashboardPage.copyBtnClsPressed,
+  "Ключ доступа скопирован",
+);
+const notificationPopup = new PopupWithNotification(
+  {
+    popup: selectors.dashboardPage.notificationPopup,
+    closeBtn: selectors.dashboardPage.notificationPopupClose,
+    openBtn: selectors.dashboardPage.notificationPopupOpen,
+    visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
+    notificationWrapper: selectors.dashboardPage.notificationWrapper,
+    notificationText: selectors.dashboardPage.notificationText,
+  },
+  selectors.dashboardPage.copyBtnCls,
+  selectors.dashboardPage.copyBtnClsPressed,
+  "Ссылка скопирована",
+);
 
 const moreButtons = document.querySelectorAll(".card__more-button");
 const moreButtonsArray = Array.from(moreButtons);
