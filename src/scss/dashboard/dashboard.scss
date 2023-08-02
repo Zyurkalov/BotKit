@@ -311,7 +311,12 @@
   }
 }
 
-.add-bot-popup {
+.bot-popup {
+  position: relative;
+  z-index: 1;
+}
+
+.popup-overlay {
   position: fixed;
   inset: 0;
   background: rgb(0, 0, 0, 0.5);
