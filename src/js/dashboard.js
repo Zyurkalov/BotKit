@@ -1,6 +1,6 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
-import { popupAccaunt, buttonOpenAccaunt, openMenu } from "./ui-kit/ui_kit_navigation";
+import "./ui-kit/ui_kit_navigation";
 
 const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
@@ -68,7 +68,6 @@ moreButtons.forEach((moreButton) => {
   );
 });
 
-
 templatesMenu.addEventListener("click", openTemplatesItems);
 
 // function openBotActionsList() {
@@ -77,7 +76,6 @@ templatesMenu.addEventListener("click", openTemplatesItems);
 
 const accountElements = buttonOpenAccaunt.querySelectorAll("*");
 const accountElementsArray = Array.from(accountElements);
-
 
 document.addEventListener("click", (evt) => {
   if (

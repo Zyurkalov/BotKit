@@ -88,5 +88,3 @@ export function openAccauntSettings() {
   popupAccaunt.classList.toggle("popup__accaunt-close");
 }
 buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
-
-// export { popupAccaunt, buttonOpenAccaunt };
