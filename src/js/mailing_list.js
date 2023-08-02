@@ -155,3 +155,23 @@ mailingsList.forEach((mailingObject) => {
   mailing.insert();
 });
 
+// Фильтрация по статусу
+const statusFilter = mailingWindow.querySelector(".mailing-list__filter-icon");
+const statusList = mailingWindow.querySelector(".selector__items");
+
+function toggleFilter() {
+  statusFilter.classList.toggle("mailing-list__filter-icon_upside-down");
+  statusList.classList.toggle("selector__items_open");
+}
+
+statusFilter.addEventListener("click", toggleFilter);
+
+const currentStatus = mailingWindow.querySelector(".mailing-list__filter-text");
+const options = Array.from(statusList.querySelectorAll(".selector__item"));
+
+options.forEach((option) => {
+  option.addEventListener("click", () => {
+    currentStatus.textContent = option.textContent;
+    toggleFilter();
+  });
+});
