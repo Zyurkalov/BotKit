@@ -526,21 +526,21 @@
                     alt=""
                   />Копировать бота
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="share-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
                     alt=""
                   />Общий доступ
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="edit-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
                     alt=""
                   />Редактировать
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="link-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
@@ -596,21 +596,21 @@
                     alt=""
                   />Копировать бота
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="share-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
                     alt=""
                   />Общий доступ
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="edit-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
                     alt=""
                   />Редактировать
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="link-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
@@ -666,14 +666,14 @@
                     alt=""
                   />Копировать бота
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="share-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
                     alt=""
                   />Общий доступ
                 </li>
-                <li class="card__action">
+                <li class="card__action" id="edit-button-more">
                   <img
                     class="card__actions-img"
                     src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
@@ -949,6 +949,100 @@
             type="submit"
           >
             добавить бота
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--rename-popup-->
+    <div class="more-popup rename-popup">
+      <div class="rename-popup__container">
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h3 class="rename-popup__title">Переименуйте файл</h3>
+        <input
+          class="access-key__input"
+          type="text"
+          id="access-key-default"
+          name="access-key-default"
+          placeholder="Введите ключ доступа"
+        />
+        <div class="rename-popup__buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default"
+          >
+            ОТМЕНА
+          </button>
+          <button class="common-button common-button_color_blue" type="submit">
+            Переименовать
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- share-popup-->
+    <div class="more-popup share-popup">
+      <div class="rename-popup__container">
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h3 class="rename-popup__title">Поделитесь доступом к боту</h3>
+        <input
+          class="access-key__input"
+          type="text"
+          id="access-key-default"
+          name="access-key-default"
+          placeholder="Добавьте e-mail пользователя"
+        />
+        <div class="rename-popup__buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default"
+          >
+            ОТМЕНА
+          </button>
+          <button
+            class="common-button common-button_color_blue share-popup__share-button"
+            type="submit"
+          >
+            Поделиться
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- link-popup-->
+    <div class="more-popup link-popup">
+      <div class="rename-popup__container">
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h3 class="rename-popup__title">Скопируйте ссылку</h3>
+        <input
+          class="access-key__input"
+          type="text"
+          id="access-key-default"
+          name="access-key-default"
+          placeholder="Введите ключ доступа"
+        />
+        <div class="rename-popup__buttons">
+          <button
+            class="common-button common-button_color_blue link-popup__link-button"
+            type="submit"
+          >
+            Скопировать ссылку
           </button>
         </div>
       </div>
