@@ -77,7 +77,6 @@ h4 {
 
   &__filter {
     display: flex;
-    gap: 12px;
 
     font-family: variables.$ff-primary;
     font-size: variables.$fs-base;
@@ -95,20 +94,10 @@ h4 {
   &__filter-icon {
     height: 24px;
     width: 24px;
+    margin-left: 12px;
 
     &_upside-down {
       transform: rotate(0.5turn);
-    }
-  }
-
-  &__filter-popup {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    &_visible {
-      display: block;
     }
   }
 
