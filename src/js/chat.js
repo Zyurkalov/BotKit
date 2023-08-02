@@ -1,5 +1,4 @@
 import "../scss/chat/chat.scss";
-
 import "./ui-kit/ui_kit_navigation";
 
 const profileWindow = document.querySelector(".user-info");
@@ -53,3 +52,4 @@ function selectFiles() {
 buttonStretch.addEventListener("click", stretchChat);
 buttonInfo.addEventListener("click", selectInfo);
 buttonFiles.addEventListener("click", selectFiles);
+

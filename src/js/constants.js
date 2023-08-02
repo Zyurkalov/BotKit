@@ -19,6 +19,17 @@ export const selectors = {
     addBotCloseBtn: "add-bot-popup__close-btn",
     visiblePopupCls: "add-bot-popup_visible",
     popupCancelBtn: "add-bot-popup__cancel-btn",
+    templates: "templates",
+    templatesMenu: "templates__menu",
+    contentList: "content-list",
+    contentListClose: "content-list-close",
+  },
+  allPage: {
+    pageContainer: "page__container",
+    main: "main",
+  },
+  addBotPage: {
+    buttonSocial: "button-social",
   },
 };
 

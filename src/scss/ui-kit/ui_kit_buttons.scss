@@ -302,6 +302,10 @@
     color: variables.$clr-primary-dark;
   }
 
+  &-active {
+    fill: variables.$clr-blue;
+  }
+
   &:hover {
     cursor: pointer;
   }

@@ -1,3 +1,2 @@
 import "../scss/pp/pp.scss";
-
-import "./ui-kit/ui_kit_navigation";
+import { openMenu } from "./ui-kit/ui_kit_navigation";
