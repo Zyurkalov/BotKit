@@ -3,6 +3,9 @@
 @use "utils";
 @use "ui_kit_icons";
 
+.main-content {
+  height: 100vh;
+}
 // mixin
 @mixin animation() {
   transition:
