@@ -62,9 +62,9 @@ const botActionsAll = document.querySelectorAll(".card__actions");
 
 moreButtons.forEach((moreButton) => {
   const card = moreButton.closest(".card");
-  const botActions = card.querySelector(".card__actions");
+  const botActions = card.querySelector(".card__actions_dynamic");
   moreButton.addEventListener("click", () =>
-    botActions.classList.toggle("card__actions_open"),
+    botActions.classList.toggle("card__actions_dynamic_open"),
   );
 });
 
