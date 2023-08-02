@@ -83,10 +83,6 @@
     display: flex;
     align-items: center;
   }
-
-  &__more-button {
-    position: relative;
-  }
 }
 
 .helper {
@@ -160,9 +156,8 @@
 
   &_dynamic {
     position: absolute;
-    top: 0;
-    left: 20px;
     z-index: 1;
+
     &_open {
       display: block;
     }
