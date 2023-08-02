@@ -1,25 +1,33 @@
 import "../scss/add-bot/add_bot.scss";
+import { selectors } from "./constants";
+import { openMenu } from "./ui-kit/ui_kit_navigation";
 
-import { closeMenu } from "./ui-kit/ui_kit_navigation.js";
+const page = document.querySelector("." + selectors.allPage.pageContainer);
+const main = page.querySelector("." + selectors.allPage.main);
+const items = main.querySelectorAll("." + selectors.addBotPage.buttonSocial);
 
-const page = document.querySelector(".page__container");
-const content = page.querySelector(".main");
-const socials = content.querySelectorAll(".social__item");
-// const socials = content.querySelector(".social__item");
+items.forEach((item) => {
+  // const socialName = elem.querySelector(".button-social__caption").textContent;
+  addBot(item);
+});
 
-// socials.forEach(elem => {
-//   const socialName = elem.querySelector(".button-social__caption").textContent;
+function addBot(elem) {
+  elem.addEventListener("click", () => {
+    items.forEach((item) => {
+      if (elem.id != item.id) {
+        item.setAttribute("disabled", "");
+      } else {
+        // item.classList.add("button-social-active");
+        item
+          .querySelector(":hover svg rect")
+          .classList.add("button-social-active");
+        // const ttt = item.querySelector(":hover svg rect").setAttribute("fill", "#2d88ff");
+        // ttt.setAttribute("fill", "#2d88ff");
 
-//   elem.addEventListener("click", (socialName) => {
-//       const socialName = elem.querySelector(".button-social__caption").textContent;
-//       console.log(socialName);
-//       // addBot(socialName);
-//   })
-// });
-
-// function addBot(name) {
-//   // const socialName = social.querySelector(".button-social__caption").textContent;
-//   console.log(name);
-// };
-
-// console.log(socials);
+        // console.log(ttt);
+      }
+      // console.log(elem.id, item.id);
+    });
+  });
+  // console.log(elem);
+}
