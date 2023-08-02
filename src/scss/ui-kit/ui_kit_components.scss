@@ -9,7 +9,7 @@
 .section {
   padding: 50px 50px 50px 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .section__title {
@@ -83,6 +83,10 @@
     display: flex;
     align-items: center;
   }
+
+  &__more-button {
+    position: relative;
+  }
 }
 
 .helper {
@@ -150,8 +154,17 @@
     margin-right: 16px;
   }
 
-  &_open {
+  &_static {
     display: block;
+  }
+
+  &_dynamic {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    &_open {
+      display: block;
+    }
   }
 
   .card__action {

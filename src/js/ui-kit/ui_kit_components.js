@@ -1,9 +1,9 @@
 import "../../scss/ui-kit/ui_kit_components.scss";
 
+// Отмечаем выбранную опцию в списке с единственным выбором
 const calendarActions = Array.from(
   document.querySelectorAll(".calendar__action"),
 );
-
 calendarActions.forEach((calendarAction) => {
   calendarAction.addEventListener("click", () => {
     calendarActions.forEach((action) => {
@@ -13,6 +13,7 @@ calendarActions.forEach((calendarAction) => {
   });
 });
 
+// Пробрасываем выбранную опцию в превью в выпадающем списке
 const dropDownFieldsList = document.querySelector(".selector__items_dropdown");
 const currentValue = document.querySelector(".selector__current-value");
 
@@ -27,6 +28,7 @@ dropDownOptions.forEach((dropDownOption) => {
   });
 });
 
+// Меняем направление стрелочки в превью в выпадающем списке
 const arrowButton = document.querySelector(
   ".ui-kit-navigation__arrow-toggle-icon",
 );
@@ -39,17 +41,15 @@ export function openDropDownList() {
   arrowButtonImg.classList.toggle("ui-kit-navigation__arrow_up");
 }
 
+// Открываем всплывающее меню для совершения действий с ботом
 const moreButton = document.querySelector(".card__more-button");
-const botActions = document.querySelector(".card__actions");
+const botActions = document.querySelector(".card__actions_dynamic");
 
 moreButton.addEventListener("click", openBotActionsList);
 
 export function openBotActionsList() {
-  botActions.classList.toggle("card__actions_open");
+  botActions.classList.toggle("card__actions_dynamic_open");
 }
-
-import AirDatepicker from "air-datepicker";
-import "air-datepicker/air-datepicker.css";
 
 // Multiple Choice List
 
@@ -117,6 +117,9 @@ weekdays.forEach((weekday) => {
 });
 
 // Calendar
+
+import AirDatepicker from "air-datepicker";
+import "air-datepicker/air-datepicker.css";
 
 const currentDate = document.querySelector(".calendar__chosen-date");
 
