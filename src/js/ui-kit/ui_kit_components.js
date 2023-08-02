@@ -1,16 +1,41 @@
 import "../../scss/ui-kit/ui_kit_components.scss";
 
-const dropDownFieldsList = document.querySelector(".selector__items");
+const calendarActions = Array.from(
+  document.querySelectorAll(".calendar__action"),
+);
+
+calendarActions.forEach((calendarAction) => {
+  calendarAction.addEventListener("click", () => {
+    calendarActions.forEach((action) => {
+      action.classList.remove("calendar__action_chosen");
+    });
+    calendarAction.classList.add("calendar__action_chosen");
+  });
+});
+
+const dropDownFieldsList = document.querySelector(".selector__items_dropdown");
+const currentValue = document.querySelector(".selector__current-value");
+
+const dropDownOptions = Array.from(
+  dropDownFieldsList.querySelectorAll(".selector__item"),
+);
+
+dropDownOptions.forEach((dropDownOption) => {
+  dropDownOption.addEventListener("click", () => {
+    currentValue.textContent = dropDownOption.textContent;
+    openDropDownList();
+  });
+});
 
 const arrowButton = document.querySelector(
   ".ui-kit-navigation__arrow-toggle-icon",
 );
-const arrowButtonImg = document.querySelector(".ui-kit-navigation__arrow");
+const arrowButtonImg = arrowButton.querySelector(".ui-kit-navigation__arrow");
 
 arrowButton.addEventListener("click", openDropDownList);
 
 export function openDropDownList() {
-  dropDownFieldsList.classList.toggle("selector__items_open");
+  dropDownFieldsList.classList.toggle("selector__items_dropdown_open");
   arrowButtonImg.classList.toggle("ui-kit-navigation__arrow_up");
 }
 
@@ -22,6 +47,7 @@ moreButton.addEventListener("click", openBotActionsList);
 export function openBotActionsList() {
   botActions.classList.toggle("card__actions_open");
 }
+
 import AirDatepicker from "air-datepicker";
 import "air-datepicker/air-datepicker.css";
 

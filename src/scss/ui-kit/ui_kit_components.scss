@@ -12,10 +12,6 @@
   display: flex;
 }
 
-.popup {
-  position: relative;
-}
-
 .section__title {
   margin: 0;
   font-family: variables.$ff-secondary;
@@ -27,7 +23,7 @@
   width: 30%;
 }
 
-.popup-calendar {
+.popup {
   box-shadow: 0px 12px 24px 0px variables.$clr-gray-shadow;
   border-radius: 10px;
   background: variables.$clr-white;
@@ -144,7 +140,6 @@
 }
 
 .card__actions {
-  position: absolute;
   top: -32px;
   min-width: 244px;
   border-radius: 10px;
@@ -252,6 +247,10 @@
       border-bottom: none;
       padding-bottom: 9px;
     }
+
+    &_chosen {
+      background-color: variables.$clr-secondary-gray;
+    }
   }
 }
 
@@ -261,7 +260,7 @@
   background-color: variables.$clr-secondary-gray;
   color: variables.$clr-gray-2;
   border-radius: 5px;
-  padding: 10px 8px;
+  padding: 0;
   font-family: variables.$ff-primary;
   font-size: variables.$fs-small;
   font-style: normal;
@@ -269,8 +268,20 @@
   line-height: 150%; /* 19.5px */
   letter-spacing: 0.3px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  &__current-value-preview {
+    padding: 10px 8px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__current-value {
+    margin: 0;
+  }
 
   .ui-kit-navigation__arrow {
     display: inline-block;
@@ -291,12 +302,13 @@
 .selector__items {
   @extend .card__actions;
   min-width: 264px;
-  display: none;
+  display: block;
 
-  &_open {
-    display: block;
-    top: 39px;
-    right: 0;
+  &_dropdown {
+    display: none;
+    &_open {
+      display: block;
+    }
   }
 
   .selector__item {
@@ -370,7 +382,6 @@
   height: 65px;
   border: 2px dashed variables.$clr-gray-3;
   border-radius: 10px;
-  cursor: pointer;
 
   &_invalid {
     border: 1px solid variables.$clr-error-default;
@@ -411,6 +422,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    cursor: pointer;
   }
 
   &__text {
