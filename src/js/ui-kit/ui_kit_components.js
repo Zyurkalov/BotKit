@@ -118,4 +118,11 @@ weekdays.forEach((weekday) => {
 
 // Calendar
 
-new AirDatepicker(".calendar", { inline: true });
+const currentDate = document.querySelector(".calendar__chosen-date");
+
+new AirDatepicker(".calendar", {
+  inline: true,
+  onSelect({ date, formattedDate, datepicker }) {
+    currentDate.value = formattedDate;
+  },
+});
