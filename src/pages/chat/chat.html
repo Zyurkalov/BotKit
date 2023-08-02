@@ -345,77 +345,92 @@
             </g>
           </svg>
         </div>
-        <button class="dialogues-box" type="button">
-          <div class="dialogues-box__avatar">
-            <img
-              class="dialogues-box__avatar-img"
-              src="<%=require('../../images/avatar/avatar-mark.svg')%>"
-              alt="аватар пользователя"
-            />
-            <div class="dialogues-box__point"></div>
-          </div>
-          <div class="dialogues-box__container">
-            <h3 class="dialogues-box__user">Марк</h3>
-            <p class="dialogues-box__time general-grey-text">4 часа</p>
-            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
-            <p class="dialogues-box__count-message">1</p>
-          </div>
-          <div class="dialogues-box__selector hidden"></div>
-        </button>
-
-        <button class="dialogues-box" type="button">
-          <div class="dialogues-box__avatar">
-            <img
-              class="dialogues-box__avatar-img"
-              src="<%=require('../../images/avatar/avatar-operator.svg')%>"
-              alt="аватар пользователя"
-            />
-            <div class="dialogues-box__point hidden"></div>
-          </div>
-          <div class="dialogues-box__container">
-            <h3 class="dialogues-box__user">Оператор</h3>
-            <p class="dialogues-box__time general-grey-text">3 мин</p>
-            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
-            <p class="dialogues-box__count-message hidden"></p>
-          </div>
-          <div class="dialogues-box__selector hidden"></div>
-        </button>
-
-        <button class="dialogues-box" type="button">
-          <div class="dialogues-box__avatar">
-            <img
-              class="dialogues-box__avatar-img"
-              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
-              alt="аватар пользователя"
-            />
-            <div class="dialogues-box__point hidden"></div>
-          </div>
-          <div class="dialogues-box__container">
-            <h3 class="dialogues-box__user">Сергей Надеин</h3>
-            <p class="dialogues-box__time general-grey-text">30 мин</p>
-            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
-            <p class="dialogues-box__count-message hidden"></p>
-          </div>
-          <div class="dialogues-box__selector"></div>
-        </button>
-
-        <button class="dialogues-box" type="button">
-          <div class="dialogues-box__avatar">
-            <img
-              class="dialogues-box__avatar-img"
-              src="<%=require('../../images/avatar/avatar-dasha.svg')%>"
-              alt="аватар пользователя"
-            />
-            <div class="dialogues-box__point hidden"></div>
-          </div>
-          <div class="dialogues-box__container">
-            <h3 class="dialogues-box__user">Даша К.</h3>
-            <p class="dialogues-box__time general-grey-text">12.06.22</p>
-            <p class="dialogues-box__text general-grey-text">Какой-то текст.</p>
-            <p class="dialogues-box__count-message hidden"></p>
-          </div>
-          <div class="dialogues-box__selector hidden"></div>
-        </button>
+        <ul class="dialogues__ul">
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-mark.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Марк</h3>
+                <p class="dialogues-box__time general-grey-text">4 часа</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message">1</p>
+              </div>
+              <div class="dialogues-box__selector hidden"></div>
+            </button>
+          </li>
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-operator.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point hidden"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Оператор</h3>
+                <p class="dialogues-box__time general-grey-text">3 мин</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message hidden"></p>
+              </div>
+              <div class="dialogues-box__selector hidden"></div>
+            </button>
+          </li>
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point hidden"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Сергей Надеин</h3>
+                <p class="dialogues-box__time general-grey-text">30 мин</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message hidden"></p>
+              </div>
+              <div class="dialogues-box__selector"></div>
+            </button>
+          </li>
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-dasha.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point hidden"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Даша К.</h3>
+                <p class="dialogues-box__time general-grey-text">12.06.22</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message hidden"></p>
+              </div>
+              <div class="dialogues-box__selector hidden"></div>
+            </button>
+          </li>
+        </ul>
       </section>
 
       <section class="chat">
@@ -887,24 +902,25 @@
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image24"
+            class="popup__accaunt-button-image"
             alt="настройки"
-            src="<%=require('../../images/template-icon/24x24/drop_down/settings-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройка аккаунта</p>
+          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
         </button>
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image16"
+            class="popup__accaunt-button-image"
             alt="Подписка и платежи"
-            src="<%=require('../../images/template-icon/16x16/payment-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
           <p class="popup__accaunt-button-text">Подписка и платежи</p>
         </button>
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image16"
+            class="popup__accaunt-button-image"
             alt="выход"
+            src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
             src="<%=require('../../images/template-icon/16x16/logout-gray.svg')%>"
           />
           <p class="popup__accaunt-button-text">Выйти</p>

@@ -1,10 +1,6 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
-import {
-  popupAccaunt,
-  buttonOpenAccaunt,
-  openMenu,
-} from "./ui-kit/ui_kit_navigation";
+import { popupAccaunt, buttonOpenAccaunt } from "./ui-kit/ui_kit_navigation";
 
 const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
@@ -21,7 +17,6 @@ const contentList = templates.querySelector(
 function openTemplatesItems() {
   contentList.classList.toggle(selectors.dashboardPage.contentListClose);
 }
-
 class Popup {
   constructor(popupCssNames) {
     this.popup = document.querySelector("." + popupCssNames.popup);
@@ -176,4 +171,29 @@ document.addEventListener("click", (evt) => {
       list.classList.remove("card__actions_open");
     });
   }
+});
+
+const buttonsEditMoreMenu = document.querySelectorAll("#edit-button-more");
+const buttonsShareMoreMenu = document.querySelectorAll("#share-button-more");
+const buttonsLinkMoreMenu = document.querySelectorAll("#link-button-more");
+
+buttonsEditMoreMenu.forEach((buttonEditMoreMenu) => {
+  const renamePopup = document.querySelector(".rename-popup");
+  buttonEditMoreMenu.addEventListener("click", () => {
+    renamePopup.classList.add("rename-popup_visible");
+  });
+});
+
+buttonsShareMoreMenu.forEach((buttonShareMoreMenu) => {
+  const sharePopup = document.querySelector(".share-popup");
+  buttonShareMoreMenu.addEventListener("click", () => {
+    sharePopup.classList.add("share-popup_visible");
+  });
+});
+
+buttonsLinkMoreMenu.forEach((buttonLinkMoreMenu) => {
+  const linkPopup = document.querySelector(".link-popup");
+  buttonLinkMoreMenu.addEventListener("click", () => {
+    linkPopup.classList.add("link-popup_visible");
+  });
 });
