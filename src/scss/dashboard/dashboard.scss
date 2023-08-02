@@ -453,7 +453,6 @@
 .share-popup {
   position: fixed;
   inset: 0;
-  background: rgb(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
   display: flex;
@@ -487,12 +486,12 @@
     max-width: 360px;
   }
 }
-.rename-popup__close-btn {
+.popup__close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
 }
-.rename-popup__close-btn:hover {
+.popup__close-btn:hover {
   opacity: 0.6;
 }
 
@@ -538,4 +537,8 @@
   max-width: 384px;
   color: variables.$clr-primary-dark;
   background-color: variables.$clr-blue-disabled;
+  &:hover {
+    color: variables.$clr-primary-medium;
+    background-color: variables.$clr-blue-disabled;
+  }
 }

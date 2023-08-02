@@ -75,3 +75,28 @@ document.addEventListener("click", (evt) => {
     });
   }
 });
+
+const buttonsEditMoreMenu = document.querySelectorAll("#edit-button-more");
+const buttonsShareMoreMenu = document.querySelectorAll("#share-button-more");
+const buttonsLinkMoreMenu = document.querySelectorAll("#link-button-more");
+
+buttonsEditMoreMenu.forEach((buttonEditMoreMenu) => {
+  const renamePopup = document.querySelector(".rename-popup");
+  buttonEditMoreMenu.addEventListener("click", () => {
+    renamePopup.classList.add("rename-popup_visible");
+  });
+});
+
+buttonsShareMoreMenu.forEach((buttonShareMoreMenu) => {
+  const sharePopup = document.querySelector(".share-popup");
+  buttonShareMoreMenu.addEventListener("click", () => {
+    sharePopup.classList.add("share-popup_visible");
+  });
+});
+
+buttonsLinkMoreMenu.forEach((buttonLinkMoreMenu) => {
+  const linkPopup = document.querySelector(".link-popup");
+  buttonLinkMoreMenu.addEventListener("click", () => {
+    linkPopup.classList.add("link-popup_visible");
+  });
+});
