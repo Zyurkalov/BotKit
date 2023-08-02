@@ -80,9 +80,10 @@ class PopupWithNotification extends Popup {
   hideNotification = () => {
     this.notification.classList.remove(this.visibleClass);
   };
-  open = () => {
+
+  close = () => {
     this.hideNotification();
-    super.open();
+    super.close();
   };
   connectButtons = () => {
     this.copyBtns.forEach((btn) => {
