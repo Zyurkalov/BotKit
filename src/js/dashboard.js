@@ -1,7 +1,16 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
-import { popupAccaunt, buttonOpenAccaunt } from "./ui-kit/ui_kit_navigation";
+import { popupAccaunt, buttonOpenAccaunt, openMenu } from "./ui-kit/ui_kit_navigation";
 
+const page = document.querySelector("." + selectors.allPage.pageContainer);
+const main = page.querySelector("." + selectors.allPage.main);
+const templates = main.querySelector("." + selectors.dashboardPage.templates);
+const templatesMenu = templates.querySelector(
+  "." + selectors.dashboardPage.templatesMenu,
+);
+const contentList = templates.querySelector(
+  "." + selectors.dashboardPage.contentList,
+);
 const botPopup = document.querySelector(
   "." + selectors.dashboardPage.addBotPopup,
 );
@@ -35,6 +44,10 @@ function closePopup() {
   botPopup.classList.remove(selectors.dashboardPage.visiblePopupCls);
   document.removeEventListener("keydown", onEscClose);
 }
+
+function openTemplatesItems() {
+  contentList.classList.toggle(selectors.dashboardPage.contentListClose);
+}
 //==============evtListeners===================================
 botPopup.addEventListener("click", onOverlayClick);
 botPopupCloseBtn.addEventListener("click", closePopup);
@@ -55,8 +68,16 @@ moreButtons.forEach((moreButton) => {
   );
 });
 
+
+templatesMenu.addEventListener("click", openTemplatesItems);
+
+// function openBotActionsList() {
+//   botActions.classList.toggle('card__actions_open');
+// }
+
 const accountElements = buttonOpenAccaunt.querySelectorAll("*");
 const accountElementsArray = Array.from(accountElements);
+
 
 document.addEventListener("click", (evt) => {
   if (

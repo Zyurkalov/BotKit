@@ -1,5 +1,6 @@
 @use "../variables";
 @use "../common";
+@use "../ui-kit/ui_kit_navigation.scss";
 @use "../ui-kit/ui_kit_components.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
 @use "../ui-kit/ui_kit_icons.scss";
@@ -60,13 +61,22 @@
   display: grid;
   column-gap: 28px;
   row-gap: 32px;
+  height: auto;
 
   &_templates {
-    grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
   }
 
   &_cards {
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  }
+  &-close {
+    height: 125px;
+    overflow: hidden;
+  }
+
+  &-open {
+    height: auto;
   }
 }
 .card:last-child {
@@ -282,7 +292,7 @@
   max-width: 100%;
 }
 .answering-machine {
-  min-width: 188px;
+  min-width: 162px;
   &__button {
     &_food {
       background-image: url(../../images/bot-icon/food-delivery.svg);

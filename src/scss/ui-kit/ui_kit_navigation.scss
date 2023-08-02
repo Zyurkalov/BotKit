@@ -76,6 +76,7 @@
   flex-direction: row;
   align-items: center;
   background-color: variables.$clr-white;
+  z-index: 1;
   @include animation();
 
   &-open {
@@ -186,7 +187,7 @@
 
 .footer {
   height: 50px;
-  margin-top: 32.5px;
+  margin-top: 32px;
   background-color: variables.$clr-white;
   border-top: 1px solid variables.$clr-secondary-cultured;
   display: flex;
@@ -198,6 +199,7 @@
 
 .menu {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   min-width: 86px;
