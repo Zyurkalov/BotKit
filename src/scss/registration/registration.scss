@@ -96,11 +96,11 @@ h4 {
   border-radius: 30px;
   box-shadow: 0 12px 24px 0 rgba(21, 18, 51, 0.13);
 
-  //@media screen and (max-width: 682px) {
-  //  height: 100%;
-  //  border-bottom-left-radius: 0;
-  //  border-bottom-right-radius: 0;
-  //}
+  @media screen and (max-width: 360px) {
+    height: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .outer-wrapper {
@@ -109,10 +109,10 @@ h4 {
   border-radius: 30px;
   overflow: hidden;
 
-  //@media screen and (max-width: 682px) {
-  //  border-bottom-left-radius: 0;
-  //  border-bottom-right-radius: 0;
-  //}
+  @media screen and (max-width: 360px) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
   @media screen and (max-width: 480px) {
     padding-top: 25px;
@@ -215,10 +215,10 @@ h4 {
     padding: 60px 40px 43px;
   }
 
-  //@media screen and (max-width: 682px) {
-  //  border-bottom-left-radius: 0;
-  //  border-bottom-right-radius: 0;
-  //}
+  @media screen and (max-width: 360px) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
   @media screen and (max-width: 620px) {
     padding-bottom: 0;
