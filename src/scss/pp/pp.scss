@@ -24,13 +24,20 @@
 
 .affiliate-program_container-copy {
   display: flex;
-  margin: 22px 0 0 24px;
+  align-items: center;
   font-family: variables.$ff-primary;
   font-weight: variables.$fw-600;
 }
 
+.affiliate-program_copy-text {
+  max-width: 399px;
+  height: 65px;
+  background-color: variables.$clr-gray;
+  border-radius: 10px;
+}
+
 .ref-link {
-  margin: 0;
+  margin: 22px 0 0 24px;
   width: 399px;
   font-size: variables.$fs-small;
   color: variables.$clr-primary-medium;
@@ -83,10 +90,15 @@
 .affiliate-program_copy-button {
   width: 40px;
   height: 40px;
+  margin: 0 0 0 16px;
   border: none;
   border-radius: 10px;
   background-color: transparent;
   padding: 0;
+
+  svg {
+    margin: auto;
+  }
 
   &:hover {
     cursor: pointer;
@@ -152,7 +164,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 20px;
   grid-auto-columns: 5fr;
-  gap: 85px;
+  gap: auto;
   grid-auto-flow: row;
   justify-items: end;
   margin: 26px 0;
@@ -160,7 +172,7 @@
   font-weight: variables.$fw-500;
   font-size: variables.$fs-base;
   line-height: 20.8px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .tabble__text-info {
@@ -194,5 +206,5 @@
   font-weight: variables.$fw-500;
   font-size: variables.$fs-base;
   line-height: 20.8px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
