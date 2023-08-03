@@ -14,27 +14,48 @@ export const selectors = {
     closeBtn: ".confirmation__close-btn",
   },
   dashboardPage: {
-    addBotPopup: "add-bot-popup",
-    addBotOpenBtn: "panel-add-bot",
-    addBotCloseBtn: "add-bot-popup__close-btn",
+    addBot: {
+      popup: "add-bot-popup",
+      closeBtn: "add-bot-popup__close-btn",
+      cancelBtn: "add-bot-popup__cancel-btn",
+      openBtn: "panel-add-bot",
+    },
+    connectionInfo: {
+      popup: "more-actions-popup_type_connection",
+      openBtn: "card__action_info",
+    },
+    notifications: {
+      popup: "more-actions-popup_type_notifications",
+      openBtn: "card__action_notifications",
+    },
+    share: {
+      popup: "share-popup",
+      openBtn: "card__action_share",
+      cancelBtn: "cancel-btn",
+    },
+    copyLink: {
+      popup: "link-popup",
+      openBtn: "card__action_link",
+    },
+    rename: {
+      popup: "rename-popup",
+      openBtn: "card__action_rename",
+      cancelBtn: "cancel-btn",
+    },
     visiblePopupCls: "visible",
-    popupCancelBtn: "add-bot-popup__cancel-btn",
     templates: "templates",
     templatesMenu: "templates__menu",
     contentList: "content-list",
     contentListClose: "content-list-close",
-    connInfoPopup: "more-actions-popup_type_connection",
-    connInfoOpenBtn: "card__action_info",
-    connInfoCloseBtn: "more-actions-popup__close-btn",
-    notificationPopup: "more-actions-popup_type_notifications",
-    notificationPopupClose: "more-actions-popup__close-btn",
-    notificationPopupOpen: "card__action_notifications",
-    notificationWrapper: "more-actions-popup__notification-wrapper",
+
     //не имеет отношения к конкретному попапу это общий для всех попапов с копированием селектор
+    notificationWrapper: "more-actions-popup__notification-wrapper",
     notificationText: "more-actions-popup__notification-text",
-    copyBtnCls: "button-elem-copy",
+    copyBtnCls: "copy-btn",
     copyBtnClsPressed: "button-elem-copy_pressed",
+    smallPopupCloseBtn: "popup__close-btn",
   },
+
   allPage: {
     pageContainer: "page__container",
     main: "main",
