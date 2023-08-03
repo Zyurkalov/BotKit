@@ -1,8 +1,6 @@
 import "../scss/mailing-list/mailing_list.scss";
 import "./ui-kit/ui_kit_navigation";
 
-import { closeMenu } from "./ui-kit/ui_kit_navigation.js";
-
 const mailingIdSelector = ".mailing-list__cell_data_id";
 const mailingNameSelector = ".mailing-list__cell_data_name";
 const mailingMessengerSelector = ".mailing-list__cell_data_messenger";
