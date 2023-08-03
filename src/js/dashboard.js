@@ -133,21 +133,28 @@ const moreButtons = document.querySelectorAll(".card__more-button");
 const moreButtonsArray = Array.from(moreButtons);
 const moreButtonImgs = document.querySelectorAll(".card__icon");
 const moreButtonImgsArray = Array.from(moreButtonImgs);
-const botActionsAll = document.querySelectorAll(".card__actions");
+const botActions = document.querySelector(".card__actions_dynamic");
+
+function openBotActionsList(event) {
+  const viewportWidth = window.innerWidth;
+  const distanceToRightEdge = viewportWidth - event.pageX;
+
+  if (distanceToRightEdge < viewportWidth / 2) {
+    botActions.style.left = "auto";
+    botActions.style.right = distanceToRightEdge + "px";
+  } else {
+    botActions.style.left = event.pageX + "px";
+    botActions.style.right = "auto";
+  }
+  botActions.style.top = event.pageY + 20 + "px";
+  botActions.classList.toggle("card__actions_dynamic_open");
+}
 
 moreButtons.forEach((moreButton) => {
-  const card = moreButton.closest(".card");
-  const botActions = card.querySelector(".card__actions");
-  moreButton.addEventListener("click", () =>
-    botActions.classList.toggle("card__actions_open"),
-  );
+  moreButton.addEventListener("click", openBotActionsList);
 });
 
 templatesMenu.addEventListener("click", openTemplatesItems);
-
-// function openBotActionsList() {
-//   botActions.classList.toggle('card__actions_open');
-// }
 
 const accountElements = buttonOpenAccaunt.querySelectorAll("*");
 const accountElementsArray = Array.from(accountElements);
@@ -164,9 +171,7 @@ document.addEventListener("click", (evt) => {
     !moreButtonsArray.includes(evt.target) &
     !moreButtonImgsArray.includes(evt.target)
   ) {
-    botActionsAll.forEach((list) => {
-      list.classList.remove("card__actions_open");
-    });
+    botActions.classList.remove("card__actions_dynamic_open");
   }
 });
 
