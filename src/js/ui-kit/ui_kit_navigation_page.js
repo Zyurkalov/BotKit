@@ -1,11 +1,9 @@
 import "../../scss/navigation.scss";
-
 document.addEventListener("DOMContentLoaded", function () {
   const goBackLink = document.getElementById("go-back-link");
 
-  goBackLink.addEventListener("click", function (event) {
-    event.preventDefault();
-
+  goBackLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
     if (window.history.length > 1) {
       window.history.back();
     } else {

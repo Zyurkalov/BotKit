@@ -11,13 +11,12 @@
     />
     <title>Mailing List</title>
   </head>
-  <body class="page-container">
-    <!-- side navigation -->
+  <body class="page__container">
     <nav class="menu" aria-label="Side navigation">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
-          <a class="link link_theme_blue" href="#">
+          <a class="link link_theme_blue" href="../add-bot/add_bot.html">
             <svg
               class="link__image link__image_reverse"
               width="24"
@@ -37,7 +36,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a class="link link_theme_gray" href="../dashboard/dashboard.html">
             <svg
               class="link__image"
               width="24"
@@ -75,7 +74,10 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a
+            class="link link_theme_gray link_theme_gray_active"
+            href="../mailing-list/mailing_list.html"
+          >
             <svg
               class="link__image"
               width="24"
@@ -120,7 +122,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a class="link link_theme_gray" href="../pp/pp.html">
             <svg
               class="link__image"
               width="24"
@@ -139,7 +141,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a class="link link_theme_gray" href="../chat/chat.html">
             <svg
               class="link__image"
               width="24"
@@ -224,7 +226,7 @@
         <!-- меню второго уровня -->
         <li class="menu__item menu__second_item">
           <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text menu__second_text">Caйт + Vk</p>
+            <p class="link__text link__text_second">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -249,11 +251,10 @@
         </li>
       </ul>
     </nav>
-    <!-- top navigation -->
-    <nav class="header" aria-label="Top navigation">
+    <header class="header">
       <button class="header__menu" type="button" aria-label="menu"></button>
       <p class="header__rate">Тариф</p>
-      <p class="header__rate-name">Демо</p>
+      <p class="header__rate_name">Демо</p>
       <button class="header__help" type="button" aria-label="help"></button>
       <button
         class="header__notification"
@@ -275,105 +276,163 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </nav>
-    <!-- main -->
+    </header>
     <main class="main">
-      <!-- тело страницы -->
-      <a href="javascript:history.back()" style="text-decoration: none">
-        &#8617; Go Back
-      </a>
-      <section class="mailing-start">
-        <div class="mailing-title">
-          <h2>Рассылки</h2>
+      <section class="mailing">
+        <div class="mailing__header">
+          <h2 class="mailing__h2">Рассылки</h2>
           <button class="common-button common-button_color_green">
             Создать рассылку
           </button>
         </div>
-        <button class="mailing-window">
-          <h3 class="mailing-label-title">
-            Давайте скорее запустим вашу первую рассылку!
-          </h3>
-          <h3 class="mailing-label-subtitle">
-            Нажмите на кнопку “создать рассылку”
-          </h3>
-        </button>
+        <div class="mailing-window">
+          <!-- Показывается в случае если у пользователя есть рассылки -->
+          <section class="card mailing-list mailing-list_visible">
+            <div class="mailing-list__header">
+              <h3 class="mailing-list__header-text">Мои Рассылки</h3>
+              <div class="mailing-list__filter">
+                <p class="mailing-list__filter-text">Все</p>
+                <img
+                  class="mailing-list__filter-icon"
+                  src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+                  alt=""
+                />
+                <ul class="ui-kit-list selector__items">
+                  <li class="selector__item">Все</li>
+                  <li class="selector__item">Запущены</li>
+                  <li class="selector__item">Отклонены</li>
+                </ul>
+              </div>
+            </div>
+            <table class="mailing-list__table">
+              <thead class="mailing-list__columns">
+                <tr>
+                  <th>ID</th>
+                  <th>Название</th>
+                  <th>Мессенджер</th>
+                  <th>Отправлено сообщений</th>
+                  <th>Конверсия</th>
+                  <th>Статус запуска</th>
+                </tr>
+              </thead>
+              <tbody class="mailing-list__body">
+                <template id="mailing-template">
+                  <tr class="mailing-list__row">
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_id"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_name"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_messenger"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_sent-messages"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_conversion"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_launch-status"
+                    ></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </section>
+          <section class="mailing-tutorials mailing-tutorials_visible">
+            <h3 class="mailing-tutorials__header">Как это работает?</h3>
+            <ul class="mailing-tutorials__list">
+              <li class="mailing-tutorial">
+                <button class="button-tutorial" type="button">
+                  Пошаговая инструкция
+                </button>
+              </li>
+              <li class="mailing-tutorial">
+                <button class="button-tutorial" type="button">Видео</button>
+              </li>
+            </ul>
+          </section>
+          <!-- Показывается в случае если у пользователя нет рассылок -->
+          <section class="mailing-list-placeholder">
+            <h3 class="mailing-label-title">
+              Давайте скорее запустим вашу первую рассылку!
+            </h3>
+            <h3 class="mailing-label-subtitle">
+              Нажмите на кнопку “создать рассылку”
+            </h3>
+          </section>
+        </div>
       </section>
       <!-- конец -->
     </main>
-    <!-- footer -->
     <footer class="footer">
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
     <!-- popup -->
-    <section
-      class="popup__notification__overlay popup__notification__overlay-close"
-    ></section>
     <section class="popup popup__notification popup__notification-close">
-      <div class="popup__notification-header">
+      <div class="popup__header">
         <img
           alt="Стрелка вниз"
-          class="popup__header-ico"
+          class="popup__header_ico"
           src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
         />
-        <h3 class="popup__header-title">Уведомления</h3>
+        <h3 class="popup__header_title">Уведомления</h3>
         <button
-          class="popup__close"
+          class="popup__button-close"
           type="button"
           aria-label="close popup"
         ></button>
       </div>
-      <fieldset class="popup__notification-menu">
+      <fieldset class="popup__menu">
         <input
-          class="popup__notification-menu-input"
+          class="popup__menu_input"
           type="radio"
           name="notification"
           value="news"
           id="news"
           checked
         />
-        <label class="popup__notification-menu-label" for="news">
-          Новости сервиса
-        </label>
+        <label class="popup__menu_label" for="news"> Новости сервиса </label>
         <input
-          class="popup__notification-menu-input"
+          class="popup__menu_input"
           type="radio"
           name="notification"
           value="logs"
           id="logs"
         />
-        <label class="popup__notification-menu-label" for="logs">
-          Лог событий
-        </label>
+        <label class="popup__menu_label" for="logs"> Лог событий </label>
       </fieldset>
-      <div class="popup__notification-body">
+      <div class="popup__main">
         <!-- место под новости и логи -->
         <!-- конец -->
       </div>
     </section>
-    <!-- корявый дизайн popup__accaunt. Разный размер иконок и отступов. Обводка? -->
     <section class="popup popup__accaunt popup__accaunt-close">
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image24"
+            class="popup__accaunt-button-image"
             alt="настройки"
-            src="<%=require('../../images/template-icon/24x24/drop_down/settings-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройка аккаунта</p>
+          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
         </button>
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image16"
+            class="popup__accaunt-button-image"
             alt="Подписка и платежи"
-            src="<%=require('../../images/template-icon/16x16/payment-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
           <p class="popup__accaunt-button-text">Подписка и платежи</p>
         </button>
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image16"
+            class="popup__accaunt-button-image"
             alt="выход"
-            src="<%=require('../../images/template-icon/16x16/log out-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
+            src="<%=require('../../images/template-icon/16x16/logout-gray.svg')%>"
           />
           <p class="popup__accaunt-button-text">Выйти</p>
         </button>

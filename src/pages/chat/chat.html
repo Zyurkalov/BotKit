@@ -11,13 +11,12 @@
     />
     <title>Chat</title>
   </head>
-  <body class="page-container">
-    <!-- side navigation -->
+  <body class="page__container">
     <nav class="menu" aria-label="Side navigation">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
-          <a class="link link_theme_blue" href="#">
+          <a class="link link_theme_blue" href="../add-bot/add_bot.html">
             <svg
               class="link__image link__image_reverse"
               width="24"
@@ -37,7 +36,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a class="link link_theme_gray" href="../dashboard/dashboard.html">
             <svg
               class="link__image"
               width="24"
@@ -75,7 +74,10 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a
+            class="link link_theme_gray"
+            href="../mailing-list/mailing_list.html"
+          >
             <svg
               class="link__image"
               width="24"
@@ -120,7 +122,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a class="link link_theme_gray" href="../pp/pp.html">
             <svg
               class="link__image"
               width="24"
@@ -139,7 +141,10 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="link link_theme_gray" href="#">
+          <a
+            class="link link_theme_gray link_theme_gray_active"
+            href="../chat/chat.html"
+          >
             <svg
               class="link__image"
               width="24"
@@ -224,7 +229,7 @@
         <!-- меню второго уровня -->
         <li class="menu__item menu__second_item">
           <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text menu__second_text">Caйт + Vk</p>
+            <p class="link__text link__text_second">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -249,11 +254,10 @@
         </li>
       </ul>
     </nav>
-    <!-- top navigation -->
-    <nav class="header" aria-label="Top navigation">
+    <header class="header">
       <button class="header__menu" type="button" aria-label="menu"></button>
       <p class="header__rate">Тариф</p>
-      <p class="header__rate-name">Демо</p>
+      <p class="header__rate_name">Демо</p>
       <button class="header__help" type="button" aria-label="help"></button>
       <button
         class="header__notification"
@@ -275,100 +279,649 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </nav>
-    <!-- main -->
-    <main class="main">
-      <!-- тело страницы -->
+    </header>
 
-      <a href="javascript:history.back()" style="text-decoration: none">
-        &#8617; Go Back
-      </a>
+    <main class="main">
       <section class="dialogues">
-        <h2>Section Диалоги</h2>
+        <h2 class="section-header">Диалоги</h2>
+        <div class="dialogues__input-box">
+          <img
+            class="icon icon_20x20"
+            src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
+            alt="Искать"
+          />
+          <input
+            class="field__input field__input_bg-grey general-grey-text"
+            type="text"
+            id="field-default"
+            name="field-default"
+            placeholder="Поиск..."
+          />
+          <svg
+            class="icon-color icon-color_size20x20"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="filter-svgrepo-com-2 1">
+              <path
+                id="Vector"
+                d="M8.83333 14.25H3"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_2"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.3334 14.2493C16.3334 15.3999 15.4007 16.3327 14.2501 16.3327C13.0995 16.3327 12.1667 15.3999 12.1667 14.2493C12.1667 13.0979 13.0995 12.166 14.2501 12.166C15.4007 12.166 16.3334 13.0979 16.3334 14.2493Z"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_3"
+                d="M10.8333 5.41602H16.6666"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                id="Vector_4"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 5.08333C3 6.23478 3.93273 7.16667 5.08333 7.16667C6.23393 7.16667 7.16667 6.23478 7.16667 5.08333C7.16667 3.93273 6.23393 3 5.08333 3C3.93273 3 3 3.93273 3 5.08333Z"
+                stroke="#060C23"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
+        <ul class="dialogues__ul">
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-mark.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Марк</h3>
+                <p class="dialogues-box__time general-grey-text">4 часа</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message">1</p>
+              </div>
+              <div class="dialogues-box__selector hidden"></div>
+            </button>
+          </li>
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-operator.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point hidden"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Оператор</h3>
+                <p class="dialogues-box__time general-grey-text">3 мин</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message hidden"></p>
+              </div>
+              <div class="dialogues-box__selector hidden"></div>
+            </button>
+          </li>
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point hidden"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Сергей Надеин</h3>
+                <p class="dialogues-box__time general-grey-text">30 мин</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message hidden"></p>
+              </div>
+              <div class="dialogues-box__selector"></div>
+            </button>
+          </li>
+          <li class="dialogues__li">
+            <button class="dialogues-box" type="button">
+              <div class="dialogues-box__avatar">
+                <img
+                  class="dialogues-box__avatar-img"
+                  src="<%=require('../../images/avatar/avatar-dasha.svg')%>"
+                  alt="аватар пользователя"
+                />
+                <div class="dialogues-box__point hidden"></div>
+              </div>
+              <div class="dialogues-box__container">
+                <h3 class="dialogues-box__user">Даша К.</h3>
+                <p class="dialogues-box__time general-grey-text">12.06.22</p>
+                <p class="dialogues-box__text general-grey-text">
+                  Какой-то текст.
+                </p>
+                <p class="dialogues-box__count-message hidden"></p>
+              </div>
+              <div class="dialogues-box__selector hidden"></div>
+            </button>
+          </li>
+        </ul>
       </section>
-      <section class="Chat">
-        <h2>Section Чат</h2>
+
+      <section class="chat">
+        <div class="chat__header-box">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="ваш аватар"
+            />
+            <div class="user-avatar__point">
+              <img
+                class="user-avatar__point-img"
+                src="<%=require('../../../favicon.ico')%>"
+                alt="значек бота"
+              />
+            </div>
+          </div>
+          <h2 class="user-name">Сергей Надеин</h2>
+          <div class="chat__icons-box">
+            <img
+              class="icon"
+              src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
+              alt="Искать"
+            />
+            <img
+              class="icon play"
+              src="<%=require('../../images/template-icon/24x24/common/play.svg')%>"
+              alt="запуск"
+            />
+            <svg
+              class="icon-color"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="удалить"
+            >
+              <path
+                d="M3.375 6H5.29167H20.625"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.1665 6V4C8.1665 3.46957 8.36844 2.96086 8.72788 2.58579C9.08733 2.21071 9.57484 2 10.0832 2H13.9165C14.4248 2 14.9123 2.21071 15.2718 2.58579C15.6312 2.96086 15.8332 3.46957 15.8332 4V6M18.7082 6V20C18.7082 20.5304 18.5062 21.0391 18.1468 21.4142C17.7873 21.7893 17.2998 22 16.7915 22H7.20817C6.69984 22 6.21233 21.7893 5.85288 21.4142C5.49344 21.0391 5.2915 20.5304 5.2915 20V6H18.7082Z"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.0835 11V17"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M13.9165 11V17"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="time-border">
+          <div class="time-border__line"></div>
+          <h3 class="general-grey-text">Сегодня</h3>
+          <div class="time-border__line"></div>
+        </div>
+
+        <div class="chat__dialogue-window">
+          <div class="chat__dialogue-cloud">
+            <div class="user-avatar">
+              <img
+                class="user-avatar__img"
+                src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+                alt="аватар собеседника"
+              />
+            </div>
+            <div class="cloud-box">
+              <h3 class="cloud-box__header">Сергей Надеин</h3>
+              <div class="cloud-box__message-cont">
+                <p class="cloud-box__text">Привет, как это сделать?</p>
+                <span class="cloud-box__message-date">16 мин назад</span>
+              </div>
+              <span class="cloud-box__message-viewed"
+                >Просмотренно в 14:05</span
+              >
+            </div>
+          </div>
+
+          <div class="chat__dialogue-cloud chat__dialogue-cloud_your">
+            <div class="user-avatar">
+              <img
+                class="user-avatar__img"
+                src="<%=require('../../images/avatar/avatar-operator.svg')%>"
+                alt="ваш аватар"
+              />
+            </div>
+            <div class="cloud-box cloud-box_your">
+              <h3 class="cloud-box__header">Вы</h3>
+              <div class="cloud-box__message-cont">
+                <p class="cloud-box__text">
+                  Привет, {name}! Перейдите по ссылке
+                  <span class="cloud-box__text_span"
+                    >https://BOTkit/file/-node-id=3A332705</span
+                  >
+                </p>
+                <span
+                  class="cloud-box__message-date cloud-box__message-date_your"
+                  >10 мин назад</span
+                >
+              </div>
+              <span
+                class="cloud-box__message-viewed cloud-box__message-viewed_your"
+                >Просмотренно в 14:12</span
+              >
+            </div>
+          </div>
+
+          <div class="chat__dialogue-cloud">
+            <div class="user-avatar">
+              <img
+                class="user-avatar__img"
+                src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+                alt="аватар собеседника"
+              />
+            </div>
+            <div class="cloud-box">
+              <h3 class="cloud-box__header">Сергей Надеин</h3>
+              <div class="cloud-box__message-cont">
+                <p class="cloud-box__text">Ок! Спасибо 😄</p>
+                <span class="cloud-box__message-date">16 мин назад</span>
+              </div>
+            </div>
+            <span class="cloud-box__message-viewed">Просмотренно в 14:05</span>
+          </div>
+        </div>
+        <div class="chat__buttom-menu">
+          <div class="chat__input-box">
+            <input
+              class="field__input search-input general-grey-text"
+              type="text"
+              id="field-default"
+              name="field-default"
+              placeholder="Введите сообщение..."
+            />
+            <button class="chat__input-button">
+              <svg
+                class="icon-color"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.4398 11.05L12.2498 20.24C11.124 21.3658 9.59699 21.9983 8.0048 21.9983C6.41262 21.9983 4.88565 21.3658 3.7598 20.24C2.63396 19.1142 2.00146 17.5872 2.00146 15.995C2.00146 14.4028 2.63396 12.8758 3.7598 11.75L12.9498 2.56C13.7004 1.80944 14.7183 1.38778 15.7798 1.38778C16.8413 1.38778 17.8592 1.80944 18.6098 2.56C19.3604 3.31057 19.782 4.32855 19.782 5.39C19.782 6.45146 19.3604 7.46944 18.6098 8.22L9.4098 17.41C9.03452 17.7853 8.52553 17.9961 7.9948 17.9961C7.46407 17.9961 6.95508 17.7853 6.5798 17.41C6.20452 17.0347 5.99369 16.5257 5.99369 15.995C5.99369 15.4643 6.20452 14.9553 6.5798 14.58L15.0698 6.1"
+                  stroke="#060C23"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon_20x20"
+                src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
+                alt="выбрать смалик"
+              />
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon_20x20"
+                src="<%=require('../../images/template-icon/24x24/common/slash.svg')%>"
+                alt=""
+              />
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon_20x20"
+                src="<%=require('../../images/template-icon/24x24/common/zap.svg')%>"
+                alt=""
+              />
+            </button>
+            <button class="chat__input-button">
+              <img
+                class="icon icon_20x20 icon_rotate-45"
+                src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
+                alt="добавить/убрать доп. инструменты"
+              />
+            </button>
+          </div>
+          <button class="button-elem">
+            <div class="button-elem__bg button-elem__bg-blue"></div>
+            <svg
+              class="icon_pos-abs"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M12 19V5"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 12L12 5L19 12"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <button class="chat__button-stretch" type="button">
+          <svg
+            class="chat__button-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M9.42017 5L16.4202 12L9.42017 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </section>
+
       <section class="user-info">
-        <h2>Section Информация пользователя</h2>
+        <div class="user-info__column">
+          <div class="user-avatar">
+            <img
+              class="user-avatar__img_user-info"
+              src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
+              alt="ваш аватар"
+            />
+          </div>
+          <h2 class="user-name user-name_user-info">Сергей Надеин</h2>
+          <p class="general-grey-text">Пользователь</p>
+        </div>
+
+        <div class="user-info__buttons-box">
+          <button class="user-info__button" type="button" id="user-info">
+            Информация
+          </button>
+          <button
+            class="user-info__button user-info__button_select"
+            type="button"
+            id="user-files"
+          >
+            Файлы
+          </button>
+          <div class="user-info__select"></div>
+        </div>
+        <!-- первое окно -->
+        <div class="window-files-empty hidden">
+          <p class="general-grey-text">У вас пока нет загруженных файлов</p>
+        </div>
+        <!-- второе окно -->
+        <div class="window-user-info hidden">
+          <button class="window-user-info__btn" type="button">
+            Информация о пользователе
+            <svg
+              class=""
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M12.6667 6.28027L8.00001 10.9469L3.33334 6.28027"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="window-user-info__user-info hidden"></div>
+          <button class="window-user-info__btn" type="button">
+            История действий
+            <svg
+              class="icon_rotate180"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M12.6667 6.28027L8.00001 10.9469L3.33334 6.28027"
+                stroke="#060C23"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="window-user-info__history">
+            <ul class="window-user-info__list">
+              <li>
+                Последнее действие: &nbsp;
+                <span class="general-grey-text">3 мин назад</span>
+              </li>
+              <li>
+                Первое действие: &nbsp;
+                <span class="general-grey-text">12.02.2021</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- третье окно -->
+        <div class="window-files">
+          <h3 class="window-files__headers window-files__headers_padding">
+            Загруженные файлы
+          </h3>
+          <button
+            class="window-files__btn-all window-files__btn-all_padding"
+            type="button"
+          >
+            Все
+          </button>
+          <ul class="window-files__list">
+            <li>
+              <svg
+                width="47"
+                height="47"
+                viewBox="0 0 47 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.5001 43.0832C34.3157 43.0832 43.0834 34.3154 43.0834 23.4998C43.0834 12.6843 34.3157 3.9165 23.5001 3.9165C12.6845 3.9165 3.91675 12.6843 3.91675 23.4998C3.91675 34.3154 12.6845 43.0832 23.5001 43.0832Z"
+                  fill="#ECEFFF"
+                />
+                <path
+                  d="M26.0173 15.3628H17.458C16.9239 15.3628 16.4117 15.5683 16.034 15.934C15.6563 16.2998 15.4441 16.7959 15.4441 17.3131V29.687C15.4441 30.2043 15.6563 30.7004 16.034 31.0661C16.4117 31.4319 16.9239 31.6374 17.458 31.6374H29.5418C30.0759 31.6374 30.5882 31.4319 30.9658 31.0661C31.3435 30.7004 31.5557 30.2043 31.5557 29.687V20.7263L26.0173 15.3628Z"
+                  fill="#ECEFFF"
+                  stroke="#243CBB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.2354 15.3628V21.5767H31.5556"
+                  stroke="#243CBB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Инфо.pdf</span>
+            </li>
+            <li>
+              <svg
+                width="47"
+                height="47"
+                viewBox="0 0 47 47"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.5001 43.0832C34.3157 43.0832 43.0834 34.3154 43.0834 23.4998C43.0834 12.6843 34.3157 3.9165 23.5001 3.9165C12.6845 3.9165 3.91675 12.6843 3.91675 23.4998C3.91675 34.3154 12.6845 43.0832 23.5001 43.0832Z"
+                  fill="#ECEFFF"
+                />
+                <path
+                  d="M26.0173 15.3628H17.458C16.9239 15.3628 16.4117 15.5683 16.034 15.934C15.6563 16.2998 15.4441 16.7959 15.4441 17.3131V29.687C15.4441 30.2043 15.6563 30.7004 16.034 31.0661C16.4117 31.4319 16.9239 31.6374 17.458 31.6374H29.5418C30.0759 31.6374 30.5882 31.4319 30.9658 31.0661C31.3435 30.7004 31.5557 30.2043 31.5557 29.687V20.7263L26.0173 15.3628Z"
+                  fill="#ECEFFF"
+                  stroke="#243CBB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.2354 15.3628V21.5767H31.5556"
+                  stroke="#243CBB"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Список.docx</span>
+            </li>
+          </ul>
+
+          <h3 class="window-files__headers">Изображения</h3>
+          <button class="window-files__btn-all" type="button">Все</button>
+          <ul class="window-files__list window-files__list_img">
+            <li>
+              <img src="<%=require('../../images/chat/foto-766.png')%>" />
+            </li>
+            <li>
+              <img src="<%=require('../../images/chat/foto-767.png')%>" />
+            </li>
+            <li>
+              <img src="<%=require('../../images/chat/foto-768.png')%>" />
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
       </section>
 
       <!-- конец -->
     </main>
-    <!-- footer -->
     <footer class="footer">
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
     <!-- popup -->
-    <section
-      class="popup__notification__overlay popup__notification__overlay-close"
-    ></section>
     <section class="popup popup__notification popup__notification-close">
-      <div class="popup__notification-header">
+      <div class="popup__header">
         <img
           alt="Стрелка вниз"
-          class="popup__header-ico"
+          class="popup__header_ico"
           src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
         />
-        <h3 class="popup__header-title">Уведомления</h3>
+        <h3 class="popup__header_title">Уведомления</h3>
         <button
-          class="popup__close"
+          class="popup__button-close"
           type="button"
           aria-label="close popup"
         ></button>
       </div>
-      <fieldset class="popup__notification-menu">
+      <fieldset class="popup__menu">
         <input
-          class="popup__notification-menu-input"
+          class="popup__menu_input"
           type="radio"
           name="notification"
           value="news"
           id="news"
           checked
         />
-        <label class="popup__notification-menu-label" for="news">
-          Новости сервиса
-        </label>
+        <label class="popup__menu_label" for="news"> Новости сервиса </label>
         <input
-          class="popup__notification-menu-input"
+          class="popup__menu_input"
           type="radio"
           name="notification"
           value="logs"
           id="logs"
         />
-        <label class="popup__notification-menu-label" for="logs">
-          Лог событий
-        </label>
+        <label class="popup__menu_label" for="logs"> Лог событий </label>
       </fieldset>
-      <div class="popup__notification-body">
+      <div class="popup__main">
         <!-- место под новости и логи -->
         <!-- конец -->
       </div>
     </section>
-    <!-- корявый дизайн popup__accaunt. Разный размер иконок и отступов. Обводка? -->
     <section class="popup popup__accaunt popup__accaunt-close">
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image24"
+            class="popup__accaunt-button-image"
             alt="настройки"
-            src="<%=require('../../images/template-icon/24x24/drop_down/settings-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройка аккаунта</p>
+          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
         </button>
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image16"
+            class="popup__accaunt-button-image"
             alt="Подписка и платежи"
-            src="<%=require('../../images/template-icon/16x16/payment-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
           <p class="popup__accaunt-button-text">Подписка и платежи</p>
         </button>
         <button class="popup__accaunt-button">
           <img
-            class="popup__accaunt-button-image16"
+            class="popup__accaunt-button-image"
             alt="выход"
-            src="<%=require('../../images/template-icon/16x16/log out-gray.svg')%>"
+            src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
+            src="<%=require('../../images/template-icon/16x16/logout-gray.svg')%>"
           />
           <p class="popup__accaunt-button-text">Выйти</p>
         </button>

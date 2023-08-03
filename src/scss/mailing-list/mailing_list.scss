@@ -1,25 +1,193 @@
 @use "../variables";
 @use "../common";
-@use "../ui-kit/ui_kit_navigation.scss";
 @use "../ui-kit/ui_kit_buttons.scss";
+@use "../ui-kit/ui_kit_components.scss";
 
-.mailing-title {
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.mailing__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.mailing__h2 {
+  font-family: variables.$ff-secondary;
+  font-size: 32px;
+  font-weight: variables.$fw-600;
+  line-height: 1.3;
+  padding-top: 32px;
+  letter-spacing: -0.2px;
+  color: variables.$clr-primary-dark;
+}
+
+.common-button_color_green {
+  max-width: 188px;
 }
 
 .mailing-window {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   min-height: 330px;
-  border: none;
   border-radius: 30px;
-  cursor: pointer;
   background-color: variables.$clr-secondary-gray;
+  font-family: variables.$ff-secondary;
+
+  &_centered {
+    justify-content: center;
+  }
+}
+
+.mailing-list {
+  padding: 32px;
+  border-radius: 30px;
+  width: 100%;
+  min-height: calc(100% - 187px);
+  height: max-content;
+  background-color: variables.$clr-white;
+  color: variables.$clr-primary-dark;
+  display: none;
+
+  &_visible {
+    display: block;
+  }
+
+  &__header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__header-text {
+    font-family: variables.$ff-secondary;
+    font-size: variables.$fs-24;
+    font-style: normal;
+    font-weight: variables.$fw-600;
+    line-height: 130%; /* 31.2px */
+  }
+
+  &__filter {
+    display: flex;
+
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-base;
+    font-style: normal;
+    font-weight: variables.$fw-600;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.3px;
+    color: variables.$clr-gray-4;
+  }
+
+  &__filter-text {
+    margin: 0;
+  }
+
+  &__filter-icon {
+    height: 24px;
+    width: 24px;
+    margin-left: 12px;
+    cursor: pointer;
+
+    &_upside-down {
+      transform: rotate(0.5turn);
+    }
+  }
+
+  &__table {
+    text-align: left;
+    width: 100%;
+  }
+
+  &__columns {
+    height: 33px;
+
+    font-family: variables.$ff-secondary;
+    font-size: variables.$fs-base;
+    font-style: normal;
+    font-weight: variables.$fw-600;
+    line-height: 130%; /* 20.8px */
+    letter-spacing: 0.5px;
+  }
+
+  &__body {
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-style: normal;
+    font-weight: variables.$fw-400;
+    line-height: 150%; /* 19.5px */
+    letter-spacing: 0.3px;
+  }
+
+  &__row {
+    height: 48px;
+  }
+
+  &__cell_data_launch-status {
+    color: variables.$clr-success;
+    font-weight: variables.$fw-600;
+
+    &_rejected {
+      color: variables.$clr-validation-error;
+    }
+  }
+}
+
+.mailing-tutorials {
+  width: 100%;
+  height: 187px;
+  padding: 32px 40px 40px 40px;
+
+  display: none;
+
+  &_visible {
+    display: block;
+  }
+
+  &__header {
+    font-family: variables.$ff-secondary;
+    font-size: variables.$fs-button-text;
+    font-style: normal;
+    font-weight: variables.$fw-600;
+    line-height: 130%; /* 23.4px */
+  }
+
+  &__list {
+    margin: 16px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 29px;
+
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-small;
+    font-style: normal;
+    font-weight: variables.$fw-600;
+    line-height: 150%; /* 21px */
+    letter-spacing: 0.3px;
+  }
+}
+
+.mailing-tutorial {
+  width: 50%;
+}
+
+.mailing-list-placeholder {
+  text-align: center;
+  display: none;
+
+  &_visible {
+    display: block;
+  }
 }
 
 .mailing-label-title {
@@ -28,9 +196,7 @@
   color: variables.$clr-gray-3;
   font-size: 24px;
   font-weight: variables.$fw-600;
-  line-height: 31px;
-  letter-spacing: 0px;
-  text-align: left;
+  line-height: 1.3;
 }
 
 .mailing-label-subtitle {
@@ -39,7 +205,6 @@
   font-family: variables.$ff-primary;
   font-size: variables.$fs-base;
   font-weight: variables.$fw-600;
-  line-height: 24px;
-  letter-spacing: 0.30000001192092896px;
-  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
 }
