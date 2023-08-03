@@ -46,7 +46,10 @@ class Popup {
   };
   connectListeners = () => {
     this.popup.addEventListener("click", this.onOverlayClick);
-    this.closeBtn.addEventListener("click", this.close);
+    this.closeBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.close();
+    });
     this.openBtn.addEventListener("click", this.open);
   };
 }
@@ -55,7 +58,10 @@ class PopupWithCancel extends Popup {
   constructor(popupCssNames) {
     super(popupCssNames);
     this.cancelBtn = this.popup.querySelector("." + popupCssNames.cancelBtn);
-    this.cancelBtn.addEventListener("click", this.close);
+    this.cancelBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.close();
+    });
   }
 }
 class PopupWithNotification extends Popup {
@@ -86,12 +92,16 @@ class PopupWithNotification extends Popup {
       btn.addEventListener("click", () => {
         btn.classList.add(this.copyBtnClsPressed);
         this.showNotification(this.notificationMsg);
-        setTimeout(() => {
-          this.hideNotification();
-          btn.classList.remove(this.copyBtnClsPressed);
-        }, 2000);
       });
     });
+  };
+  close = () => {
+    this.popup.classList.remove(this.visibleClass);
+    document.removeEventListener("keydown", this.onEscClose);
+    this.hideNotification();
+    this.copyBtns.forEach((btn) =>
+      btn.classList.remove(this.copyBtnClsPressed),
+    );
   };
 }
 
