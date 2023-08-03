@@ -26,13 +26,9 @@ function openTemplatesItems() {
 class Popup {
   constructor(popupCssNames) {
     this.popupClassName = popupCssNames.popup;
-    console.log("1. " + this.popupClassName);
     this.popup = document.querySelector("." + this.popupClassName);
     this.closeBtn = this.popup.querySelector("." + popupCssNames.closeBtn);
-    console.log("2. ." + popupCssNames.closeBtn);
     this.openBtn = document.querySelector("." + popupCssNames.openBtn);
-    console.log("3. ." + popupCssNames.openBtn);
-    console.log(this.openBtn);
     this.visibleClass = popupCssNames.visiblePopupCls;
     this.connectListeners();
   }
