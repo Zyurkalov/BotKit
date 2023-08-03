@@ -112,15 +112,15 @@ const socialValue = {
 
 function createBotWindow(value) {
   const elementTemplate = document.querySelector(value.id).content;
-  const templateElement = elementTemplate
+  const panelElement = elementTemplate
     .querySelector(".bot-setting")
     .cloneNode(true);
-  const imgElement = templateElement.querySelector(".social-icon");
-  const headerElement = templateElement.querySelector(".bot-setting__header");
+  const imgElement = panelElement.querySelector(".social-icon");
+  const headerElement = panelElement.querySelector(".bot-setting__header");
 
   const container = document.querySelector(".infoblock");
   const faqPanel = container.querySelector(".faq-panel");
-  const submitBtn = templateElement.querySelector(".bot-setting__submit");
+  const submitBtn = panelElement.querySelector(".bot-setting__submit");
 
   imgElement.classList.add("social-icon_" + value.path);
   imgElement.src = value.icon;
@@ -129,16 +129,16 @@ function createBotWindow(value) {
 
   console.log(imgElement);
 
-  container.append(templateElement);
+  container.prepend(panelElement);
   faqPanel.classList.remove("hidden");
   container.style.height = "513px";
 
   submitBtn.addEventListener("click", () => {
-    templateElement.remove(container);
+    panelElement.remove(container);
     faqPanel.classList.add("hidden");
     container.style.height = "330px";
   });
-  console.log(templateElement);
+  console.log(panelElement);
 }
 const sociaIcons = document.querySelector(".social__items");
 
@@ -158,6 +158,6 @@ const websiteBtn = sociaIcons.querySelector("#website");
 // telegramBtn.addEventListener("click", createBotWindow(socialValue.telegram));
 // viberBtn.addEventListener("click", createBotWindow(socialValue.viber));
 // alisaBtn.addEventListener("click", createBotWindow(socialValue.alisa));
-//  whatsappBtn.addEventListener("click", createBotWindow(socialValue.whatsapp));
+// whatsappBtn.addEventListener("click", createBotWindow(socialValue.whatsapp));
 // instagramBtn.addEventListener("click", createBotWindow(socialValue.instagram));
 // websiteBtn.addEventListener("click", createBotWindow(socialValue.web),);
