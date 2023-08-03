@@ -19,14 +19,20 @@ function openTemplatesItems() {
 }
 class Popup {
   constructor(popupCssNames) {
-    this.popup = document.querySelector("." + popupCssNames.popup);
     this.popupClassName = popupCssNames.popup;
+    console.log("1. " + this.popupClassName);
+    this.popup = document.querySelector("." + this.popupClassName);
     this.closeBtn = this.popup.querySelector("." + popupCssNames.closeBtn);
+    console.log("2. ." + popupCssNames.closeBtn);
     this.openBtn = document.querySelector("." + popupCssNames.openBtn);
+    console.log("3. ." + popupCssNames.openBtn);
+    console.log(this.openBtn);
     this.visibleClass = popupCssNames.visiblePopupCls;
     this.connectListeners();
   }
   open = () => {
+    console.log("Open");
+    console.log(this.popup);
     this.popup.classList.add(this.visibleClass);
     document.addEventListener("keydown", this.onEscClose);
   };
@@ -40,18 +46,18 @@ class Popup {
       this.close();
     }
   };
-  close = () => {
+  close() {
     this.popup.classList.remove(this.visibleClass);
     document.removeEventListener("keydown", this.onEscClose);
-  };
-  connectListeners = () => {
+  }
+  connectListeners() {
     this.popup.addEventListener("click", this.onOverlayClick);
     this.closeBtn.addEventListener("click", (event) => {
       event.stopPropagation();
       this.close();
     });
     this.openBtn.addEventListener("click", this.open);
-  };
+  }
 }
 
 class PopupWithCancel extends Popup {
@@ -79,44 +85,44 @@ class PopupWithNotification extends Popup {
     this.notificationMsg = notificationMsg;
     this.connectButtons();
   }
-  showNotification = (msg) => {
+  showNotification(msg) {
     this.notification.classList.add(this.visibleClass);
     this.notificationText.innerText = msg;
-  };
-  hideNotification = () => {
+  }
+  hideNotification() {
     this.notification.classList.remove(this.visibleClass);
-  };
+  }
 
-  connectButtons = () => {
+  connectButtons() {
     this.copyBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         btn.classList.add(this.copyBtnClsPressed);
         this.showNotification(this.notificationMsg);
       });
     });
-  };
-  close = () => {
-    this.popup.classList.remove(this.visibleClass);
-    document.removeEventListener("keydown", this.onEscClose);
+  }
+  close() {
+    super.close();
     this.hideNotification();
     this.copyBtns.forEach((btn) =>
       btn.classList.remove(this.copyBtnClsPressed),
     );
-  };
+  }
 }
 
 const addBotPopup = new PopupWithCancel({
-  popup: selectors.dashboardPage.addBotPopup,
-  closeBtn: selectors.dashboardPage.addBotCloseBtn,
-  openBtn: selectors.dashboardPage.addBotOpenBtn,
+  popup: selectors.dashboardPage.addBot.popup,
+  closeBtn: selectors.dashboardPage.addBot.closeBtn,
+  openBtn: selectors.dashboardPage.addBot.openBtn,
   visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
-  cancelBtn: selectors.dashboardPage.popupCancelBtn,
+  cancelBtn: selectors.dashboardPage.addBot.cancelBtn,
 });
+
 const connectionPopup = new PopupWithNotification(
   {
-    popup: selectors.dashboardPage.connInfoPopup,
-    closeBtn: selectors.dashboardPage.connInfoCloseBtn,
-    openBtn: selectors.dashboardPage.connInfoOpenBtn,
+    popup: selectors.dashboardPage.connectionInfo.popup,
+    closeBtn: selectors.dashboardPage.smallPopupCloseBtn,
+    openBtn: selectors.dashboardPage.connectionInfo.openBtn,
     visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
     notificationWrapper: selectors.dashboardPage.notificationWrapper,
     notificationText: selectors.dashboardPage.notificationText,
@@ -125,11 +131,42 @@ const connectionPopup = new PopupWithNotification(
   selectors.dashboardPage.copyBtnClsPressed,
   "Ключ доступа скопирован",
 );
+
 const notificationPopup = new PopupWithNotification(
   {
-    popup: selectors.dashboardPage.notificationPopup,
-    closeBtn: selectors.dashboardPage.notificationPopupClose,
-    openBtn: selectors.dashboardPage.notificationPopupOpen,
+    popup: selectors.dashboardPage.notifications.popup,
+    closeBtn: selectors.dashboardPage.smallPopupCloseBtn,
+    openBtn: selectors.dashboardPage.notifications.openBtn,
+    visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
+    notificationWrapper: selectors.dashboardPage.notificationWrapper,
+    notificationText: selectors.dashboardPage.notificationText,
+  },
+  selectors.dashboardPage.copyBtnCls,
+  selectors.dashboardPage.copyBtnClsPressed,
+  "Ссылка скопирована",
+);
+
+const sharePopup = new PopupWithCancel({
+  popup: selectors.dashboardPage.share.popup,
+  closeBtn: selectors.dashboardPage.smallPopupCloseBtn,
+  openBtn: selectors.dashboardPage.share.openBtn,
+  visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
+  cancelBtn: selectors.dashboardPage.share.cancelBtn,
+});
+
+const renamePopup = new PopupWithCancel({
+  popup: selectors.dashboardPage.rename.popup,
+  closeBtn: selectors.dashboardPage.smallPopupCloseBtn,
+  openBtn: selectors.dashboardPage.rename.openBtn,
+  visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
+  cancelBtn: selectors.dashboardPage.rename.cancelBtn,
+});
+
+const copyLinkPopup = new PopupWithNotification(
+  {
+    popup: selectors.dashboardPage.copyLink.popup,
+    closeBtn: selectors.dashboardPage.smallPopupCloseBtn,
+    openBtn: selectors.dashboardPage.copyLink.openBtn,
     visiblePopupCls: selectors.dashboardPage.visiblePopupCls,
     notificationWrapper: selectors.dashboardPage.notificationWrapper,
     notificationText: selectors.dashboardPage.notificationText,
@@ -183,29 +220,4 @@ document.addEventListener("click", (evt) => {
   ) {
     botActions.classList.remove("card__actions_dynamic_open");
   }
-});
-
-const buttonsEditMoreMenu = document.querySelectorAll("#edit-button-more");
-const buttonsShareMoreMenu = document.querySelectorAll("#share-button-more");
-const buttonsLinkMoreMenu = document.querySelectorAll("#link-button-more");
-
-buttonsEditMoreMenu.forEach((buttonEditMoreMenu) => {
-  const renamePopup = document.querySelector(".rename-popup");
-  buttonEditMoreMenu.addEventListener("click", () => {
-    renamePopup.classList.add("rename-popup_visible");
-  });
-});
-
-buttonsShareMoreMenu.forEach((buttonShareMoreMenu) => {
-  const sharePopup = document.querySelector(".share-popup");
-  buttonShareMoreMenu.addEventListener("click", () => {
-    sharePopup.classList.add("share-popup_visible");
-  });
-});
-
-buttonsLinkMoreMenu.forEach((buttonLinkMoreMenu) => {
-  const linkPopup = document.querySelector(".link-popup");
-  buttonLinkMoreMenu.addEventListener("click", () => {
-    linkPopup.classList.add("link-popup_visible");
-  });
 });

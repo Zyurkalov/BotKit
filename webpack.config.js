@@ -28,6 +28,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
+  performance: {
+    hints: false,
+  },
   devtool: "eval-source-map",
   mode: "development",
   devServer: {
