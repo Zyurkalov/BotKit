@@ -21,6 +21,8 @@ export const selectors = {
     popupCancelBtn: "add-bot-popup__cancel-btn",
     templates: "templates",
     templatesMenu: "templates__menu",
+    templatesMenuArrow: "templates__menu-arrow",
+    templatesMenuArrowUp: "templates__menu-arrow_up",
     contentList: "content-list",
     contentListClose: "content-list-close",
     connInfoPopup: "more-actions-popup_type_connection",

@@ -11,6 +11,7 @@
     />
     <title>Dashboard</title>
   </head>
+
   <body class="page__container">
     <nav class="menu" aria-label="Side navigation">
       <ul class="menu__items">
@@ -285,16 +286,14 @@
       <section class="templates">
         <div class="templates__container">
           <h2 class="section-header section-header_margin-40">Шаблоны</h2>
-          <div class="templates__menu">
+          <button class="templates__menu">
             <p class="templates__paragraph">Все шаблоны</p>
-            <button>
-              <img
-                class=""
-                src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
-                alt="Все шаблоны"
-              />
-            </button>
-          </div>
+            <img
+              class="templates__menu-arrow"
+              src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+              alt="Все шаблоны"
+            />
+          </button>
         </div>
 
         <ul class="content-list content-list_templates content-list-close">
