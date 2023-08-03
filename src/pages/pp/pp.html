@@ -283,13 +283,145 @@
     <main class="main">
       <!-- тело страницы -->
       <section class="affiliate-program">
-        <h2>Section Партнерская программа</h2>
+        <div class="affiliate-program_container">
+          <h2 class="affiliate-program__h2">Партнерская программа</h2>
+          <button
+            class="affiliate-program_payments-button common-button_color_green common-button"
+          >
+            Запросить Выплату
+          </button>
+        </div>
+        <div class="affiliate-program_container-copy">
+          <div class="affiliate-program_copy-text">
+            <h3 class="ref-link">botkits.ru/?ref=12345</h3>
+          </div>
+          <button
+            class="button-elem-copy affiliate-program_copy-button"
+            type="button"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.5 2H8.6C8.2 2 7.8 2.2 7.5 2.5C7.2 2.8 7 3.2 7 3.6V16.4C7 16.8 7.2 17.2 7.5 17.5C7.8 17.8 8.2 18 8.6 18H18.4C18.8 18 19.2 17.8 19.5 17.5C19.8 17.2 20 16.8 20 16.4V6.5L15.5 2Z"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 7.60001V20.4C3 20.8 3.2 21.2 3.5 21.5C3.8 21.8 4.2 22 4.6 22H14.4"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 2V7H20"
+                stroke="#A6B3C9"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
       </section>
-      <section class="stats-referal">
-        <h2>Section Статистика рефералов</h2>
-      </section>
-      <section class="cash">
-        <h2>Section Выплаты</h2>
+      <section class="pp-window__container">
+        <section class="stats-referral">
+          <h3 class="stats-referral__h3">Статистика рефераллов</h3>
+          <div class="table-stats">
+            <div class="table-stats__header">Перешли по ссылке</div>
+            <div class="table-stats__header">Регистраций</div>
+            <div class="table-stats__header">Оплата</div>
+            <div class="table-stats__header">Сумма</div>
+            <div class="table-stats__header">Комиссия</div>
+            <div class="table-stats__header">Выплачено</div>
+            <div class="table-stats__header">Вывод</div>
+            <div class="table-stats__row">28 человек</div>
+            <div class="table-stats__row">15</div>
+            <div class="table-stats__row table-stats__row_clr_green">
+              Оплачено
+            </div>
+            <div class="table-stats__row">5 000 ₽</div>
+            <div class="table-stats__row">1 500 ₽</div>
+            <div class="table-stats__row">4 500 ₽</div>
+            <div class="table-stats__row">1 500 ₽</div>
+
+            <div class="table-stats__row">17 человек</div>
+            <div class="table-stats__row">8</div>
+            <div class="table-stats__row table-stats__row_clr_green">
+              Оплачено
+            </div>
+            <div class="table-stats__row">15 000 ₽</div>
+            <div class="table-stats__row">4 500 ₽</div>
+            <div class="table-stats__row">8 200 ₽</div>
+            <div class="table-stats__row">4 500 ₽</div>
+
+            <div class="table-stats__row">10 человек</div>
+            <div class="table-stats__row">10</div>
+            <div class="table-stats__row table-stats__row_clr_green">
+              Оплачено
+            </div>
+            <div class="table-stats__row">5 000 ₽</div>
+            <div class="table-stats__row">1 500 ₽</div>
+            <div class="table-stats__row">10 000 ₽</div>
+            <div class="table-stats__row">1 500 ₽</div>
+          </div>
+        </section>
+        <section class="cash">
+          <div class="cash__header">
+            <h3 class="cash__h3">Выплаты</h3>
+            <button class="stats-up-button" type="button">
+              <img
+                class="stats-up"
+                src="<%=require('../../images/up-black.svg')%>"
+                alt="Чёрная Стрелка"
+              />
+            </button>
+          </div>
+          <div class="table-payout">
+            <div class="table-payout__header">Дата запроса</div>
+            <div class="table-payout__header">Дата выплаты</div>
+            <div class="table-payout__header">Акт</div>
+            <div class="table-payout__header">Статус</div>
+            <div class="table-payout__header">Сумма выплаты</div>
+
+            <div class="table-payout__row">05.07.22</div>
+            <div class="table-payout__row">07.07.22</div>
+            <div class="table-payout__row table-payout__row_fw_bold">
+              Док.pdf
+            </div>
+            <div class="table-payout__row table-payout__row_clr_green">
+              Выплачено
+            </div>
+            <div class="table-payout__row">1 500 ₽</div>
+
+            <div class="table-payout__row">02.07.22</div>
+            <div class="table-payout__row">-</div>
+            <div class="table-payout__row table-payout__row_fw_bold">
+              Фото.png
+            </div>
+            <div class="table-payout__row table-payout__row_clr_blue">
+              В обработке
+            </div>
+            <div class="table-payout__row">4 500 ₽</div>
+
+            <div class="table-payout__row">27.06.22</div>
+            <div class="table-payout__row">28.06.22</div>
+            <div class="table-payout__row table-payout__row_fw_bold">
+              Data.pdf
+            </div>
+            <div class="table-payout__row table-payout__row_clr_green">
+              Выплачено
+            </div>
+            <div class="table-payout__row">1 000 ₽</div>
+          </div>
+        </section>
       </section>
       <!-- конец -->
     </main>
