@@ -164,10 +164,10 @@
 .button-elem-copy {
   width: 40px;
   height: 40px;
-  border: none;
   border-radius: 10px;
-  background-color: transparent;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     cursor: pointer;

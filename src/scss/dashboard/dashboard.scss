@@ -531,25 +531,16 @@
   letter-spacing: 0.3px;
   padding: 10px 0 18px;
 }
-.more-actions-popup__copy {
-  transform: translateY(7px);
-  cursor: pointer;
-  background-image: url("../../images/template-icon/24x24/common/copy.svg");
-  width: 24px;
-  height: 24px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  &_pressed {
-    background-image: url("../../images/template-icon/24x24/common/copy_pressed.svg");
-    transition:
-      opacity 0.6s,
-      visibility 0s;
-    width: 30px;
-    height: 30px;
-  }
+.button-elem-copy_pressed {
+  background-color: variables.$clr-blue-disabled;
+  stroke: variables.$clr-primary-medium;
 }
+
+.button-elem-copy_pressed svg path {
+  stroke: variables.$clr-primary-medium;
+}
+
 //этот класс должен быть в самом ниху иначе вес меняется и ничего не работает
 .visible {
   visibility: visible;

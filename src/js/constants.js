@@ -32,8 +32,8 @@ export const selectors = {
     notificationWrapper: "more-actions-popup__notification-wrapper",
     //не имеет отношения к конкретному попапу это общий для всех попапов с копированием селектор
     notificationText: "more-actions-popup__notification-text",
-    copyBtnCls: "more-actions-popup__copy",
-    copyBtnClsPressed: "more-actions-popup__copy_pressed",
+    copyBtnCls: "button-elem-copy",
+    copyBtnClsPressed: "button-elem-copy_pressed",
   },
   allPage: {
     pageContainer: "page__container",
