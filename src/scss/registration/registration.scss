@@ -1,6 +1,7 @@
 @use "../variables";
 @use "../common";
 @use "../ui-kit/ui_kit_buttons.scss";
+@import "intl-tel-input/build/css/intlTelInput.css";
 
 h1,
 h2,
@@ -345,6 +346,54 @@ input[required] {
   background-position:
     right center,
     right 20px center;
+}
+
+//код отвечающий за выпадающий список
+.iti input,
+.iti input[type="tel"] {
+  width: 325px;
+}
+
+.iti__country {
+  position: relative;
+}
+
+.iti__country-name {
+  margin-right: 35px;
+}
+
+.iti__country-list {
+  border-radius: 20px;
+  max-height: 225px;
+  max-width: 268px;
+  white-space: normal;
+}
+.iti__selected-flag {
+  border-radius: 10px;
+  background-color: variables.$clr-primary-medium;
+  // background-color: black;
+}
+
+.iti__dial-code {
+  color: variables.$clr-primary-medium;
+  padding-right: 2px;
+  position: absolute;
+  right: 5px;
+}
+
+//код отвечающий за скролл
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: variables.$clr-primary-medium;
+  border-radius: 10px;
 }
 
 /* Alternative actions*/

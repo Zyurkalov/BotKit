@@ -40,7 +40,8 @@
   },
   "dependencies": {
     "core-js": "3.31.1",
-    "glob": "^10.3.3"
+    "glob": "^10.3.3",
+    "intl-tel-input": "^18.1.8"
   },
   "husky": {
     "hooks": {
