@@ -1,29 +1,66 @@
 import "../../scss/ui-kit/ui_kit_components.scss";
 
-const dropDownFieldsList = document.querySelector(".selector__items");
+// Отмечаем выбранную опцию в списке с единственным выбором
+const calendarActions = Array.from(
+  document.querySelectorAll(".calendar__action"),
+);
+calendarActions.forEach((calendarAction) => {
+  calendarAction.addEventListener("click", () => {
+    calendarActions.forEach((action) => {
+      action.classList.remove("calendar__action_chosen");
+    });
+    calendarAction.classList.add("calendar__action_chosen");
+  });
+});
 
+// Пробрасываем выбранную опцию в превью в выпадающем списке
+const dropDownFieldsList = document.querySelector(".selector__items_dropdown");
+const currentValue = document.querySelector(".selector__current-value");
+
+const dropDownOptions = Array.from(
+  dropDownFieldsList.querySelectorAll(".selector__item"),
+);
+
+dropDownOptions.forEach((dropDownOption) => {
+  dropDownOption.addEventListener("click", () => {
+    currentValue.textContent = dropDownOption.textContent;
+    openDropDownList();
+  });
+});
+
+// Меняем направление стрелочки в превью в выпадающем списке
 const arrowButton = document.querySelector(
   ".ui-kit-navigation__arrow-toggle-icon",
 );
-const arrowButtonImg = document.querySelector(".ui-kit-navigation__arrow");
+const arrowButtonImg = arrowButton.querySelector(".ui-kit-navigation__arrow");
 
 arrowButton.addEventListener("click", openDropDownList);
 
 export function openDropDownList() {
-  dropDownFieldsList.classList.toggle("selector__items_open");
+  dropDownFieldsList.classList.toggle("selector__items_dropdown_open");
   arrowButtonImg.classList.toggle("ui-kit-navigation__arrow_up");
 }
 
+// Открываем всплывающее меню для совершения действий с ботом
 const moreButton = document.querySelector(".card__more-button");
-const botActions = document.querySelector(".card__actions");
+const botActions = document.querySelector(".card__actions_dynamic");
 
 moreButton.addEventListener("click", openBotActionsList);
 
-export function openBotActionsList() {
-  botActions.classList.toggle("card__actions_open");
+export function openBotActionsList(event) {
+  const viewportWidth = window.innerWidth;
+  const distanceToRightEdge = viewportWidth - event.pageX;
+
+  if (distanceToRightEdge < viewportWidth / 2) {
+    botActions.style.left = "auto";
+    botActions.style.right = distanceToRightEdge + "px";
+  } else {
+    botActions.style.left = event.pageX + "px";
+    botActions.style.right = "auto";
+  }
+  botActions.style.top = event.pageY + 20 + "px";
+  botActions.classList.toggle("card__actions_dynamic_open");
 }
-import AirDatepicker from "air-datepicker";
-import "air-datepicker/air-datepicker.css";
 
 // Multiple Choice List
 
@@ -92,4 +129,14 @@ weekdays.forEach((weekday) => {
 
 // Calendar
 
-new AirDatepicker(".calendar", { inline: true });
+import AirDatepicker from "air-datepicker";
+import "air-datepicker/air-datepicker.css";
+
+const currentDate = document.querySelector(".calendar__chosen-date");
+
+new AirDatepicker(".calendar", {
+  inline: true,
+  onSelect({ date, formattedDate, datepicker }) {
+    currentDate.value = formattedDate;
+  },
+});
