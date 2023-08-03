@@ -125,6 +125,10 @@
   height: 625px;
 }
 
+.pp-window__container-closed {
+  height: 419px;
+}
+
 .stats-referral {
   padding: 40px 44px 40px 40px;
   background-color: variables.$clr-white;
@@ -204,6 +208,10 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(10px, 1fr));
   gap: 25px 10%;
+}
+
+.table-payout-closed {
+  display: none;
 }
 
 .table-payout > .table-payout__row:nth-child(5n) {
