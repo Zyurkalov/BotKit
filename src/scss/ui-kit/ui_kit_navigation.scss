@@ -179,6 +179,10 @@
     &-arrow {
       height: 20px;
       width: 20px;
+
+      &_up {
+        transform: rotate(0.5turn);
+      }
     }
 
     &:focus {
