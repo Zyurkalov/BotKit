@@ -104,11 +104,11 @@ const socialValue = {
   },
 };
 
-function expandPanel(size) {
-  infoblock.style.minHeight = `${size}` + "px";
-  messegeTitle.textContent = "";
-  messegeText.textContent = "";
-}
+// function expandPanel(size) {
+//   infoblock.style.minHeight = `${size}` + "px";
+//   messegeTitle.textContent = "";
+//   messegeText.textContent = "";
+// }
 
 function createBotWindow(value) {
   const elementTemplate = document.querySelector(value.id).content;
@@ -127,17 +127,21 @@ function createBotWindow(value) {
   imgElement.alt = value.alt;
   headerElement.textContent = value.name;
 
+  console.log(imgElement);
+
   container.append(templateElement);
   faqPanel.classList.remove("hidden");
   container.style.height = "513px";
 
-  // submitBtn.addEventListener("click", () => {
-  //   container.remove(templateElement);
-  //   faqPanel.classList.add('hidden');
-  //   container.style.height = '330px'
-  // })
+  submitBtn.addEventListener("click", () => {
+    templateElement.remove(container);
+    faqPanel.classList.add("hidden");
+    container.style.height = "330px";
+  });
+  console.log(templateElement);
 }
 const sociaIcons = document.querySelector(".social__items");
+
 const facebookBtn = sociaIcons.querySelector("#facebook");
 const vkBtn = sociaIcons.querySelector("#vk");
 const odnoklassnikiBtn = sociaIcons.querySelector("#odnokassniki");
@@ -148,12 +152,12 @@ const whatsappBtn = sociaIcons.querySelector("#whaatsapp");
 const instagramBtn = sociaIcons.querySelector("#instagram");
 const websiteBtn = sociaIcons.querySelector("#website");
 
-// facebookBtn.addEventListener("click", createBotWindow(socialValue.facebook));
+// facebookBtn.addEventListener('click', createBotWindow(socialValue.facebook));
 // vkBtn.addEventListener("click", createBotWindow(socialValue.vk));
 // odnoklassnikiBtn.addEventListener("click", createBotWindow(socialValue.odnoklassniki))
 // telegramBtn.addEventListener("click", createBotWindow(socialValue.telegram));
 // viberBtn.addEventListener("click", createBotWindow(socialValue.viber));
 // alisaBtn.addEventListener("click", createBotWindow(socialValue.alisa));
-// whatsappBtn.addEventListener("click", createBotWindow(socialValue.whatsapp));
+//  whatsappBtn.addEventListener("click", createBotWindow(socialValue.whatsapp));
 // instagramBtn.addEventListener("click", createBotWindow(socialValue.instagram));
 // websiteBtn.addEventListener("click", createBotWindow(socialValue.web));
