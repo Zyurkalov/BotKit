@@ -3,22 +3,7 @@
 @use "utils";
 @use "ui_kit_icons";
 
-.main-content {
-  height: 100vh;
-}
 // mixin
-@mixin animation() {
-  transition:
-    width 0.3s ease-in-out,
-    min-width 0.3s ease-in-out,
-    margin 0.3s ease-in-out,
-    padding 0.3s ease-in-out,
-    margin-left 0.3s ease-in-out,
-    border-radius 0.3s ease-in-out,
-    right 0.3s ease-in-out,
-    color 0.3s ease-in-out,
-    border-bottom 0.3s ease-in-out;
-}
 
 @mixin boxShadow() {
   box-shadow: 0 12px 24px 0 variables.$box-shadow;
@@ -56,7 +41,6 @@
     margin: 72px 40px 0 132px; //86+46
     padding-bottom: 82px;
     min-height: 800px;
-    @include animation();
 
     &-open {
       margin-left: 286px;
@@ -79,7 +63,6 @@
   align-items: center;
   background-color: variables.$clr-white;
   z-index: 1;
-  @include animation();
 
   &-open {
     margin-left: 286px;
@@ -200,7 +183,6 @@
   align-items: center;
   padding-left: 40px;
   @include text-default();
-  @include animation();
 }
 
 .menu {
@@ -211,7 +193,6 @@
   min-width: 86px;
   max-width: 240px;
   width: 86px;
-  @include animation();
 
   &-open {
     width: 240px;
@@ -233,7 +214,6 @@
     justify-content: flex-start;
     align-items: stretch;
     position: fixed;
-    @include animation();
 
     &-open {
       width: 224px;
@@ -294,7 +274,6 @@
 
       min-width: 24px;
       margin: 11px;
-      @include animation();
 
       &-open {
         min-width: 0;
@@ -338,7 +317,10 @@
       font-weight: variables.$fw-600;
       font-size: variables.$fs-small;
       letter-spacing: 1px;
-      @include animation();
+      transition:
+        padding 0.3s ease-in-out,
+        margin-left 0.3s ease-in-out,
+        border-radius 0.3s ease-in-out;
 
       &:hover {
         background-color: variables.$clr-icon-hover;
@@ -472,7 +454,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      @include animation();
+      transition: color 0.3s ease-in-out;
     }
 
     &_input {
