@@ -40,10 +40,10 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "intl-tel-input": "^18.1.8"
     "air-datepicker": "^3.4.0",
     "core-js": "^3.32.0",
-    "glob": "^10.3.3"
+    "glob": "^10.3.3",
+    "intl-tel-input": "^18.2.1"
   },
   "husky": {
     "hooks": {
