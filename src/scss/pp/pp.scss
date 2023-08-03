@@ -160,3 +160,7 @@
 .table-payout > .table-payout__header:nth-child(5n) {
   margin-left: auto;
 }
+
+.stats-up_rotate {
+  transform: rotate(180deg);
+}

@@ -8,6 +8,7 @@ const statsPayout = document.querySelector(".table-payout");
 function toggleStatsClosedOpen() {
   ppWindowContainer.classList.toggle("pp-window__container-closed");
   statsPayout.classList.toggle("table-payout-closed");
+  statsButtonUp.classList.toggle("stats-up_rotate");
 }
 
 statsButtonUp.addEventListener("click", toggleStatsClosedOpen);
