@@ -161,7 +161,7 @@ const statusList = mailingWindow.querySelector(".selector__items");
 
 function toggleFilter() {
   statusFilter.classList.toggle("mailing-list__filter-icon_upside-down");
-  statusList.classList.toggle("selector__items_open");
+  statusList.classList.toggle("selector__items_dropdown_open");
 }
 
 statusFilter.addEventListener("click", toggleFilter);
