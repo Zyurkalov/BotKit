@@ -1,6 +1,6 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
-import { openMenu } from "./ui-kit/ui_kit_navigation";
+import "./ui-kit/ui_kit_navigation";
 
 const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
