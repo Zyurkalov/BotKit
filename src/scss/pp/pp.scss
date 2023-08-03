@@ -1,3 +1,167 @@
 @use "../variables";
 @use "../common";
 @use "../ui-kit/ui_kit_buttons.scss";
+
+.affiliate-program {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 32px 0;
+}
+
+.affiliate-program_container {
+  display: flex;
+  justify-content: space-between;
+  font-family: variables.$ff-secondary;
+  font-weight: variables.$fw-600;
+  line-height: 41.6px;
+  letter-spacing: -0.2px;
+  margin: 32px 0;
+}
+
+.affiliate-program__h2 {
+  margin: 0;
+  font-size: variables.$fs-h2-additionally;
+  font-weight: variables.$fw-600;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+
+.affiliate-program_container-copy {
+  display: flex;
+  align-items: center;
+  font-family: variables.$ff-primary;
+  font-weight: variables.$fw-600;
+}
+
+.affiliate-program_copy-text {
+  max-width: 399px;
+  height: 65px;
+  background-color: variables.$clr-gray;
+  border-radius: 10px;
+}
+
+.ref-link {
+  margin: 22px 0 0 24px;
+  width: 399px;
+  font-size: variables.$fs-small;
+  color: variables.$clr-primary-medium;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+  font-weight: variables.$fw-600;
+}
+
+.affiliate-program_payments-button {
+  max-width: 188px;
+}
+
+.affiliate-program_copy-button {
+  margin: 0 0 0 16px;
+}
+
+.pp-window__container {
+  background-color: variables.$clr-secondary-gray;
+  border-radius: 30px;
+  height: 625px;
+}
+
+.pp-window__container-closed {
+  height: 419px;
+}
+
+.stats-referral {
+  padding: 40px 44px 40px 40px;
+  background-color: variables.$clr-white;
+  border-radius: 30px;
+  box-shadow: 0px 6px 16px 0px #15123314;
+  height: 327px;
+}
+
+.stats-referral__h3,
+.cash__h3 {
+  font-family: variables.$ff-secondary;
+  font-size: variables.$fs-24;
+  font-weight: variables.$fw-500;
+  line-height: 1.3;
+  margin: 0 0 26px 0;
+}
+
+.table-stats {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(10px, 1fr));
+  gap: 25px 8%;
+}
+
+.table-stats > .table-stats__row:nth-child(7n) {
+  margin-left: auto;
+}
+
+.table-stats > .table-stats__header:nth-child(7n) {
+  margin-left: auto;
+}
+
+.table-stats__header,
+.table-payout__header {
+  font-family: variables.$ff-secondary;
+  font-size: variables.$fs-base;
+  font-weight: variables.$fw-500;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.table-stats__row,
+.table-payout__row {
+  font-family: variables.$ff-primary;
+  font-size: 13px;
+  font-weight: variables.$fw-400;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.table-stats__row_clr_green,
+.table-payout__row_clr_green {
+  font-weight: variables.$fw-600;
+  color: variables.$clr-success;
+}
+
+.table-payout__row_clr_blue {
+  font-weight: variables.$fw-600;
+  color: variables.$clr-primary-medium;
+}
+
+.table-payout__row_fw_bold {
+  color: variables.$clr-primary-dark;
+  font-weight: variables.$fw-600;
+}
+
+.cash {
+  padding: 32px 44px 40px 40px;
+}
+
+.cash__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.table-payout {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(10px, 1fr));
+  gap: 25px 10%;
+}
+
+.table-payout-closed {
+  display: none;
+}
+
+.table-payout > .table-payout__row:nth-child(5n) {
+  margin-left: auto;
+}
+
+.table-payout > .table-payout__header:nth-child(5n) {
+  margin-left: auto;
+}
+
+.stats-up_rotate {
+  transform: rotate(180deg);
+}
