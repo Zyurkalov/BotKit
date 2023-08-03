@@ -1,9 +1,7 @@
 import "../scss/registration/registration.scss";
 import intlTelInput from "intl-tel-input/build/js/intlTelInput";
-// import { routes, selectors } from "./constants";
 
 const input = document.querySelector("#phone");
-// const signInBtn = document.querySelector(selectors.regPage.signInBtn);
 
 intlTelInput(input, {
   // allowDropdown: false,
@@ -33,10 +31,22 @@ intlTelInput(input, {
   // "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
 });
 
-// select.addEventListener('click', ()=>{
-//   console.log(select.getAttribute("id"))
-// })
+import { authRoutes, selectors, toggleConfirmationPopup } from "./constants";
 
-// signInBtn.addEventListener("click", () => {
-//   window.location.href = window.location.origin + routes.loginPage;
-// });
+const signInBtn = document.querySelector(selectors.regPage.signInBtn);
+const closeBtn = document.querySelector(
+  selectors.confirmationPopupCloseBtn.closeBtn,
+);
+const signUpBtn = document.querySelector(selectors.regPage.signUpBtn);
+
+// Переход на страницу логина по клику на кнопку Войти
+signInBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  window.location.href = window.location.origin + authRoutes.loginPage;
+});
+
+// Регистрация аккаунта по клику на кнопку Создать аккаунт
+signUpBtn.addEventListener("click", toggleConfirmationPopup);
+
+// Закрытие попапа подтверждения по клику на крестик
+closeBtn.addEventListener("click", toggleConfirmationPopup);
