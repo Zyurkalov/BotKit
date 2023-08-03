@@ -334,7 +334,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Odnokassniki</p>
+            <p class="button-social__caption">Odnoklassniki</p>
           </button>
         </li>
         <li class="social__item">
@@ -477,7 +477,50 @@
           </button>
         </li>
       </ul>
+
       <section class="infoblock">
+        <!-- вставлять template элемент сюда -->
+
+        <div class="faq-panel hidden">
+          <h3 class="faq-panel__header">Как это работает?</h3>
+          <button class="faq-panel__btn-uncover" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              aria-label="открыть/закрыть панель"
+            >
+              <path
+                d="M5.41671 15.7948L13 8.21147L20.5834 15.7948"
+                stroke="#BFC9D9"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul class="faq-panel__faq">
+            <li class="faq-panel__list">
+              <button
+                class="faq-panel__button faq-panel__button_book"
+                type="button"
+              >
+                <p>Пошаговая инструкция</p>
+              </button>
+            </li>
+            <li class="faq-panel__list">
+              <button
+                class="faq-panel__button faq-panel__button_video"
+                type="button"
+              >
+                <p>Видео</p>
+              </button>
+            </li>
+          </ul>
+        </div>
+
         <div class="messege__block">
           <h3 class="messege__title messege__title_h3">
             К какому мессенджеру подключим бота?
@@ -558,5 +601,151 @@
         </button>
       </div>
     </section>
+
+    <!-- для лицокниги и ВК -->
+    <template id="facebook-templ">
+      <div class="bot-setting">
+        <div class="bot-setting__box-header">
+          <img class="social-icon" src="" alt="" />
+          <h2 class="bot-setting__header"></h2>
+          <p class="bot-setting__paragraph">
+            Бот будет создан на основе
+            <span class="bot-setting__span">BotName</span>
+          </p>
+        </div>
+
+        <ol class="bot-setting__ol">
+          <li class="bot-setting__list">
+            <p>1 Шаг ><span>Загрузить страницу</span></p>
+            <button class="bot-setting__button" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M12 5V19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 12H19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p>Загрузить страницу</p>
+            </button>
+          </li>
+          <li class="bot-setting__list">
+            <p>2 Шаг ><span>Название бота</span></p>
+            <div class="bot-setting__input-box">
+              <input
+                class="bot-setting__input"
+                type="text"
+                placeholder="Введите название"
+              />
+            </div>
+          </li>
+        </ol>
+        <div class="bot-setting__submit-box">
+          <button class="bot-setting__submit" type="submit">
+            СОЗДАТЬ БОТА
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <!-- для телеги -->
+    <template id="telegram-templ">
+      <div class="bot-setting">
+        <div class="bot-setting__box-header">
+          <img class="social-icon" src="" alt="" />
+          <h2 class="bot-setting__header"></h2>
+        </div>
+
+        <ol class="bot-setting__ol">
+          <li class="bot-setting__list">
+            <p>1 Шаг ><span>Ключ доступа </span></p>
+            <div class="bot-setting__input-box">
+              <input
+                class="bot-setting__input"
+                type="password"
+                placeholder="Введите ключ доступа"
+              />
+            </div>
+          </li>
+          <li class="bot-setting__list">
+            <p>2 Шаг ><span>Название бота</span></p>
+            <div class="bot-setting__input-box">
+              <input
+                class="bot-setting__input"
+                type="text"
+                placeholder="Введите название"
+              />
+            </div>
+          </li>
+        </ol>
+        <div class="bot-setting__submit-box">
+          <button class="bot-setting__submit" type="submit">
+            СОЗДАТЬ БОТА
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <!-- для вайбера -->
+    <template id="viber-templ">
+      <div class="bot-setting">
+        <div class="bot-setting__box-header">
+          <img class="social-icon" src="" alt="" />
+          <h2 class="bot-setting__header"></h2>
+        </div>
+
+        <ol class="bot-setting__ol">
+          <li class="bot-setting__list">
+            <p>1 Шаг ><span>Ключ доступа </span></p>
+            <div class="bot-setting__input-box">
+              <input
+                class="bot-setting__input"
+                type="password"
+                placeholder="Введите ключ доступа"
+              />
+            </div>
+          </li>
+          <li class="bot-setting__list">
+            <p>2 Шаг ><span>URI бота</span></p>
+            <div class="bot-setting__input-box">
+              <input
+                class="bot-setting__input"
+                type="text"
+                placeholder="Введите идентификатор"
+              />
+            </div>
+          </li>
+          <li class="bot-setting__list">
+            <p>3 Шаг ><span>Название бота</span></p>
+            <div class="bot-setting__input-box">
+              <input
+                class="bot-setting__input"
+                type="text"
+                placeholder="Введите название"
+              />
+            </div>
+          </li>
+        </ol>
+        <div class="bot-setting__submit-box">
+          <button class="bot-setting__submit" type="submit">
+            СОЗДАТЬ БОТА
+          </button>
+        </div>
+      </div>
+    </template>
   </body>
 </html>
