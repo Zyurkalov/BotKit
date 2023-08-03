@@ -45,6 +45,8 @@ export const selectors = {
     visiblePopupCls: "visible",
     templates: "templates",
     templatesMenu: "templates__menu",
+    templatesMenuArrow: "templates__menu-arrow",
+    templatesMenuArrowUp: "templates__menu-arrow_up",
     contentList: "content-list",
     contentListClose: "content-list-close",
 

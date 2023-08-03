@@ -1,6 +1,6 @@
 import "../scss/dashboard/dashboard.scss";
 import { selectors } from "./constants";
-import { popupAccaunt, buttonOpenAccaunt } from "./ui-kit/ui_kit_navigation";
+import { openMenu } from "./ui-kit/ui_kit_navigation";
 
 const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
@@ -11,11 +11,17 @@ const templatesMenu = templates.querySelector(
 const contentList = templates.querySelector(
   "." + selectors.dashboardPage.contentList,
 );
+const templatesMenuArrow = main.querySelector(
+  "." + selectors.dashboardPage.templatesMenuArrow,
+);
 
 //===========================functions===========================
 
 function openTemplatesItems() {
   contentList.classList.toggle(selectors.dashboardPage.contentListClose);
+  templatesMenuArrow.classList.toggle(
+    selectors.dashboardPage.templatesMenuArrowUp,
+  );
 }
 class Popup {
   constructor(popupCssNames) {
@@ -203,17 +209,7 @@ moreButtons.forEach((moreButton) => {
 
 templatesMenu.addEventListener("click", openTemplatesItems);
 
-const accountElements = buttonOpenAccaunt.querySelectorAll("*");
-const accountElementsArray = Array.from(accountElements);
-
 document.addEventListener("click", (evt) => {
-  if (
-    (evt.target !== buttonOpenAccaunt) &
-    !accountElementsArray.includes(evt.target) &
-    !popupAccaunt.classList.contains("popup__accaunt-close")
-  ) {
-    popupAccaunt.classList.add("popup__accaunt-close");
-  }
   if (
     !moreButtonsArray.includes(evt.target) &
     !moreButtonImgsArray.includes(evt.target)
