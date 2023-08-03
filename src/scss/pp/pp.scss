@@ -50,84 +50,12 @@
   font-weight: variables.$fw-600;
 }
 
-.common-button {
-  display: block;
-  width: 100%;
-  max-width: 180px;
-  height: 46px;
-  border-radius: 10px;
-  border: none;
-  font-size: variables.$fs-small;
-  font-weight: variables.$fw-600;
-  line-height: 18.76px;
-  letter-spacing: 1px;
-  font-family: variables.$ff-secondary;
-  text-transform: uppercase;
-  padding: 0;
-}
-
-.common-button_color_green {
-  display: block;
-  width: 100%;
-  max-width: 180px;
-  height: 46px;
-  border-radius: 10px;
-  border: none;
-  background-color: variables.$clr-accent;
-  color: variables.$clr-primary-dark;
-  padding: 0;
-
-  &:hover {
-    background-color: variables.$clr-accent-focus;
-    cursor: pointer;
-  }
-
-  &:active {
-    background-color: variables.$clr-accent;
-  }
-
-  &:disabled {
-    background-color: variables.$clr-accent-press;
-    pointer-events: none;
-  }
+.affiliate-program_payments-button {
+  max-width: 188px;
 }
 
 .affiliate-program_copy-button {
-  width: 40px;
-  height: 40px;
   margin: 0 0 0 16px;
-  border: none;
-  border-radius: 10px;
-  background-color: transparent;
-  padding: 0;
-
-  svg {
-    margin: auto;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:hover svg path {
-    stroke: variables.$clr-primary-medium;
-  }
-
-  &:active {
-    background-color: variables.$clr-blue-disabled;
-  }
-
-  &:active svg path {
-    stroke: variables.$clr-primary-medium;
-  }
-
-  &:disabled {
-    pointer-events: none;
-  }
-
-  &:disabled svg path {
-    stroke: variables.$clr-secondary-cultured;
-  }
 }
 
 .pp-window__container {
