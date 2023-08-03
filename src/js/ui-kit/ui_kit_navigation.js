@@ -82,26 +82,9 @@ export const closePopupOnPressKey = (e) => {
 // Профиль пользователя
 export const buttonOpenAccaunt = header.querySelector(".header__profile");
 export const popupAccaunt = page.querySelector(".popup__accaunt");
-const buttonOpenAccountArrow = buttonOpenAccaunt.querySelector(
-  ".header__profile-arrow",
-);
-const accountElements = buttonOpenAccaunt.querySelectorAll("*");
-const accountElementsArray = Array.from(accountElements);
 
 // Открытия меню в профиле
 export function openAccauntSettings() {
   popupAccaunt.classList.toggle("popup__accaunt-close");
-  buttonOpenAccountArrow.classList.toggle("header__profile-arrow_up");
 }
 buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
-
-document.addEventListener("click", (evt) => {
-  if (
-    (evt.target !== buttonOpenAccaunt) &
-    !accountElementsArray.includes(evt.target) &
-    !popupAccaunt.classList.contains("popup__accaunt-close")
-  ) {
-    popupAccaunt.classList.add("popup__accaunt-close");
-    buttonOpenAccountArrow.classList.remove("header__profile-arrow_up");
-  }
-});
