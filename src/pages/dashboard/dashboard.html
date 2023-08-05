@@ -13,7 +13,7 @@
   </head>
 
   <body class="page__container">
-    <nav class="menu" aria-label="Side navigation">
+    <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -255,15 +255,19 @@
         </li>
       </ul>
     </nav>
-    <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+    <nav class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Верхняя навигация"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <p class="header__notification-counter">2</p>
       </button>
@@ -280,7 +284,7 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </header>
+    </nav>
     <main class="main">
       <!-- тело страницы -->
       <section class="templates">
@@ -505,7 +509,7 @@
             <div class="card__icons">
               <img
                 class="card__icon card__icon_size_m"
-                src="<%=require('../../images/social-icons/telegram.svg')%>"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
                 alt="телеграмм"
               />
               <button class="card__more-button">
@@ -522,7 +526,7 @@
             <div class="card__icons">
               <img
                 class="card__icon card__icon_size_m"
-                src="<%=require('../../images/social-icons/telegram.svg')%>"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
                 alt="телеграм"
               />
               <button class="card__more-button">
@@ -539,7 +543,7 @@
             <div class="card__icons">
               <img
                 class="card__icon card__icon_size_m"
-                src="<%=require('../../images/social-icons/telegram.svg')%>"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
                 alt="телеграм"
               />
               <button class="card__more-button">
@@ -635,7 +639,7 @@
         </ul>
       </section>
 
-      <section class="faq" aria-label="Section FAQ">
+      <section class="faq" aria-label="Частные вопросы">
         <div class="faq-cont">
           <div class="faq-cont__left-panel">
             <h3 class="faq-cont__header">С чего начать?</h3>
@@ -745,7 +749,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">

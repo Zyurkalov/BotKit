@@ -72,22 +72,6 @@
   }
 }
 
-.passw-recovery__link {
-  color: variables.$clr-white;
-  text-align: right;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 21px */
-  letter-spacing: 0.3px;
-  text-decoration-line: underline;
-}
-
-.passw-recovery__link:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 .icons-container_type_login {
   margin-bottom: 60px;
 }
