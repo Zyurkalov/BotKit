@@ -1,4 +1,4 @@
-import "../scss/reset-password/reset_password.scss";
+import "../blocks/reset-password/reset_password.scss";
 import { selectors, toggleConfirmationPopup } from "./constants";
 
 const closeResetBtn = document.querySelector(

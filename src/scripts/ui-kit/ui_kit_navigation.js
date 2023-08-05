@@ -1,4 +1,4 @@
-import "../../scss/ui-kit/ui_kit_navigation.scss";
+import "../../blocks/ui-kit/ui_kit_navigation.scss";
 const page = document.querySelector(".page__container");
 const header = page.querySelector(".header");
 const footer = page.querySelector(".footer");
