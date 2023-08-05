@@ -269,7 +269,7 @@
         type="button"
         aria-label="Уведомления"
       >
-        <p class="header__notification-counter">2</p>
+        <span class="header__notification-counter">2</span>
       </button>
       <button class="header__profile">
         <img
@@ -277,7 +277,7 @@
           alt="Аватар"
           src="<%=require('../../images/avatar/circle.png')%>"
         />
-        <p class="header__profile-name">User Name</p>
+        <span class="header__profile-name">User Name</span>
         <img
           alt="Стрелка вниз"
           class="header__profile-arrow"
@@ -287,11 +287,11 @@
     </nav>
     <main class="main">
       <!-- тело страницы -->
-      <section class="templates">
+      <section class="templates" aria-label="Шаблоны">
         <div class="templates__container">
           <p class="section-header section-header_margin-s">Шаблоны</p>
           <button class="templates__menu">
-            <p class="templates__paragraph">Все шаблоны</p>
+            <span class="templates__paragraph">Все шаблоны</span>
             <img
               class="templates__menu-arrow"
               src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
@@ -582,7 +582,7 @@
                   />
                 </svg>
               </span>
-              <p class="panel-add-bot__text">Добавить бота</p>
+              <span class="panel-add-bot__text">Добавить бота</span>
             </button>
           </li>
         </ul>
@@ -657,7 +657,9 @@
                     />
                   </span>
                 </button>
-                <p class="video-heading">Подключение и основные параметры</p>
+                <span class="video-heading"
+                  >Подключение и основные параметры</span
+                >
               </li>
               <li class="video-list__container">
                 <button class="button-video">
@@ -776,7 +778,10 @@
         <!-- конец -->
       </div>
     </section>
-    <section class="popup popup__accaunt popup__accaunt-close">
+    <section
+      class="popup popup__accaunt popup__accaunt-close"
+      aria-label="Меню профиля"
+    >
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
@@ -784,7 +789,7 @@
             alt="настройки"
             src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
+          <span class="popup__accaunt-button-text">Настройки аккаунта</span>
         </button>
         <button class="popup__accaunt-button">
           <img
@@ -792,16 +797,15 @@
             alt="Подписка и платежи"
             src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Подписка и платежи</p>
+          <span class="popup__accaunt-button-text">Подписка и платежи</span>
         </button>
         <button class="popup__accaunt-button">
           <img
             class="popup__accaunt-button-image"
             alt="выход"
             src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
-            src="<%=require('../../images/template-icon/16x16/logout-gray.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Выйти</p>
+          <span class="popup__accaunt-button-text">Выйти</span>
         </button>
       </div>
     </section>
@@ -1027,10 +1031,17 @@
           />
         </button>
         <h2 class="rename-popup__title">Переименуйте файл</h2>
-        <input
+        <!-- Дублирование ID, оставил на всякий случай копию -->
+        <!-- <input
           class="access-key__input"
           type="text"
           id="access-key-default"
+          name="access-key-default"
+          placeholder="Введите ключ доступа"
+        /> -->
+        <input
+          class="access-key__input"
+          type="text"
           name="access-key-default"
           placeholder="Введите ключ доступа"
         />
@@ -1061,10 +1072,17 @@
         <input
           class="access-key__input"
           type="text"
-          id="access-key-default"
           name="access-key-default"
           placeholder="Добавьте e-mail пользователя"
         />
+        <!-- Дублирование ID, оставил на всякий случай копию -->
+        <!-- <input
+          class="access-key__input"
+          type="text"
+          id="access-key-default"
+          name="access-key-default"
+          placeholder="Добавьте e-mail пользователя"
+        /> -->
         <div class="rename-popup__buttons">
           <button
             class="constructor__button constructor__default-button constructor__button_clr_default cancel-btn"
