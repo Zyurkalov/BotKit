@@ -4,6 +4,7 @@
 
 1. [Overview](#overview)
    - [Figma](#figma)
+   - [Brief](#brief)
    - [Hosting](#hosting)
    - [Collaborators](#collaborators)
 2. [Technologies](#technologies)
@@ -18,6 +19,10 @@ BOTkit is a chat bot commercial project developed to streamline business communi
 ### Figma
 
 - [Prototypes](<https://www.figma.com/file/TmerP2HqAuh7zRWpDLW5hG/BOTkit-Admin-panel-(Copy)?type=design&node-id=1440-199297&mode=design&t=4MXAOeIOJPARa1Bs-0>)
+
+### Brief
+
+- [Brief](https://powerful-maxilla-a60.notion.site/BotKits-25-42dd34f0eb344980ae109cef06007807)
 
 ### Hosting
 
