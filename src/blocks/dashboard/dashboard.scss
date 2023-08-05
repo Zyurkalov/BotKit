@@ -31,11 +31,17 @@
     &-arrow_up {
       transform: rotate(0.5turn);
     }
+    @media screen and (max-width: 360px) {
+      display: none;
+    }
   }
   &__paragraph {
     @extend .text;
     font-size: 16px;
     color: variables.$clr-gray-3;
+  }
+  @media screen and (max-width: 360px) {
+    padding: 50px 20px 0 20px;
   }
 }
 .section-header {
@@ -51,6 +57,13 @@
   }
   &_margin-m {
     margin-top: 60px;
+
+    @media screen and (max-width: 360px) {
+      margin: 45px 0 0 19px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 24px;
   }
 }
 
@@ -82,6 +95,10 @@
   &-open {
     height: auto;
   }
+  @media screen and (max-width: 360px) {
+    display: flex;
+    overflow-x: scroll;
+  }
 }
 .card:last-child {
   padding: 0;
@@ -107,6 +124,10 @@
     width: 49%;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 360px) {
+      width: 100%;
+    }
   }
 
   &__right-panel {
@@ -117,6 +138,10 @@
     width: 51%;
     background-color: variables.$clr-secondary-focus;
     position: relative;
+
+    @media screen and (max-width: 360px) {
+      width: 100%;
+    }
   }
 
   &__header {
@@ -139,6 +164,9 @@
     line-height: 150%;
     letter-spacing: 0.3px;
     opacity: 1;
+  }
+  @media screen and (max-width: 360px) {
+    flex-direction: column;
   }
 }
 
@@ -188,6 +216,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 360px) {
+      flex-direction: row;
+    }
 
     // &:last-child {
     //   margin: 0;
