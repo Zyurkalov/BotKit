@@ -439,7 +439,7 @@ input[required] {
   cursor: pointer;
 }
 
-.confirmation__imgContainer {
+.confirmation__img-container {
   display: flex;
   flex-wrap: wrap;
   width: 570px;
@@ -480,7 +480,7 @@ input[required] {
     margin-top: 130px;
   }
 
-  .confirmation__imgContainer {
+  .confirmation__img-container {
     max-width: 388px;
     max-height: 367px;
   }
@@ -512,7 +512,7 @@ input[required] {
 }
 
 @media (max-height: 850px) and (max-width: 700px) {
-  .confirmation__imgContainer {
+  .confirmation__img-container {
     width: 306px;
     height: 290px;
   }
@@ -543,7 +543,7 @@ input[required] {
     justify-content: space-between;
   }
 
-  .confirmation__imgContainer {
+  .confirmation__img-container {
     width: 306px;
     height: 290px;
     margin-left: auto;

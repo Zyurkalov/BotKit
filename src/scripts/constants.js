@@ -8,7 +8,7 @@ export const selectors = {
     resetBtn: ".passw-recovery__link_type_recover",
   },
   resetPasswordPage: {
-    resetBtn: ".form__submit_resetPassword",
+    resetBtn: ".form__submit_reset-password",
   },
   confirmationPopupCloseBtn: {
     closeBtn: ".confirmation__close-btn",

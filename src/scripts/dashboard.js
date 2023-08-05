@@ -33,8 +33,6 @@ class Popup {
     this.connectListeners();
   }
   open = () => {
-    console.log("Open");
-    console.log(this.popup);
     this.popup.classList.add(this.visibleClass);
     document.addEventListener("keydown", this.onEscClose);
   };
