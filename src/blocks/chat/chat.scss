@@ -356,7 +356,7 @@
   background-color: variables.$clr-secondary-gray;
   border-radius: 5px;
 
-  &_height-48 {
+  &_height-s {
     height: 48px;
   }
 }
@@ -522,7 +522,7 @@
   line {
     stroke: variables.$clr-gray-3;
   }
-  &_size20x20 {
+  &_size_small {
     min-width: 20px;
   }
 }
@@ -531,7 +531,7 @@
   &_rotate180 {
     rotate: 180deg;
   }
-  &__icon20x20 {
+  &__icon_size_s {
     min-width: 20px;
     max-height: 20px;
   }

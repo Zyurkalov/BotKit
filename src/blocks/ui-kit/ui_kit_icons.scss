@@ -37,25 +37,25 @@
   height: 24px;
   object-fit: none;
 
-  &_20x20 {
+  &_size_xxs {
     width: 20px;
     height: 20px;
     box-sizing: content-box;
     object-fit: cover;
   }
 
-  &_30x24 {
+  &_size_xs {
     width: 24px;
     height: 30px;
     box-sizing: content-box;
   }
 
-  &_36x36 {
+  &_size_s {
     width: 36px;
     height: 36px;
   }
 
-  &_40x40 {
+  &_size_m {
     width: 40px;
     height: 40px;
   }
@@ -68,7 +68,7 @@
   &_pos-abs {
     position: absolute;
   }
-  &_rotate-45 {
+  &_rotate_one-eighth {
     transform: rotate(45deg);
   }
 
@@ -173,7 +173,7 @@
   align-items: center;
   position: relative;
 
-  &_32x32 {
+  &_size_m {
     width: 32px;
     height: 32px;
   }
@@ -190,7 +190,7 @@
   }
 
   /* если нужно развернуть иконку / кнопку*/
-  &_rotate90 {
+  &_rotate_one-fourth {
     rotate: -90deg;
   }
 
