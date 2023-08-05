@@ -22,8 +22,8 @@
   row-gap: 16px;
 }
 
-.fields-common__h2,
-.fields-constructor__h2 {
+.fields-common__title,
+.fields-constructor__title {
   font-family: variables.$ff-secondary;
   font-size: 32px;
   font-style: normal;
@@ -155,6 +155,8 @@
 .page-fields__overlay {
   position: absolute;
   border-radius: 50%;
+  right: 0;
+  bottom: 0;
   top: 0;
   left: 0;
   background-color: transparent;
@@ -255,7 +257,7 @@
   border-radius: 5px;
 }
 
-.add-stuff__h3 {
+.add-stuff__title {
   font-family: variables.$ff-secondary;
   font-size: variables.$fs-base;
   font-weight: variables.$fw-500;

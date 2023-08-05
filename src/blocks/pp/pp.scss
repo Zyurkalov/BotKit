@@ -18,7 +18,7 @@
   margin: 32px 0;
 }
 
-.affiliate-program__h2 {
+.affiliate-program__title {
   margin: 0;
   font-size: variables.$fs-h2-additionally;
   font-weight: variables.$fw-600;
@@ -76,8 +76,8 @@
   height: 327px;
 }
 
-.stats-referral__h3,
-.cash__h3 {
+.stats-referral__title,
+.cash__title {
   font-family: variables.$ff-secondary;
   font-size: variables.$fs-24;
   font-weight: variables.$fw-500;
