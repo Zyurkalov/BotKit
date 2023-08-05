@@ -57,13 +57,13 @@
                 <ul class="passw-recovery">
                   <li class="passw-recovery__item">
                     <a
-                      class="passw-recovery__link passw-recovery__link_type_recover"
+                      class="alternative-actions__button passw-recovery__link passw-recovery__link_type_recover"
                       >Забыли пароль?</a
                     >
                   </li>
                   <li class="passw-recovery__item">
                     <a
-                      class="passw-recovery__link passw-recovery__link_type_register"
+                      class="alternative-actions__button passw-recovery__link passw-recovery__link_type_register"
                       >Регистрация</a
                     >
                   </li>
@@ -81,64 +81,57 @@
             </div>
             <div class="icons-container icons-container_type_login">
               <div class="icons-container__icons">
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/google.svg')%>"
-                    alt="gmail"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/yandex.svg')%>"
-                    alt="яндекс"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/mailru.svg')%>"
-                    alt="мэил ру"
-                    width="40"
-                    height="40"
-                  />
-                </button>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_google"
+                    type="submit"
+                    aria-label="Войти через джимейл"
+                  ></button>
+                </a>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_yandex"
+                    type="submit"
+                    aria-label="Войти через Яндекс"
+                  ></button>
+                </a>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_mailru"
+                    type="submit"
+                    aria-label="Войти через мэил ру"
+                  ></button>
+                </a>
               </div>
               <div class="icons-container__icons">
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/vk.svg')%>"
-                    alt="вконтакте"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/odnoklassniki.svg')%>"
-                    alt="одноклассники"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/facebook.svg')%>"
-                    alt="facebook"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/telegram.svg')%>"
-                    alt="телеграм"
-                    width="40"
-                    height="40"
-                  />
-                </button>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_vk"
+                    type="submit"
+                    aria-label="Войти через Вконтакте"
+                  ></button>
+                </a>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_odnoklassniki"
+                    type="submit"
+                    aria-label="Войти через Одноклассники"
+                  ></button>
+                </a>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_fb"
+                    type="submit"
+                    aria-label="Войти через Фейсбук"
+                  ></button>
+                </a>
+                <a class="icons-container__social-link">
+                  <button
+                    class="icons-container__button icons-container__type_telegram"
+                    type="submit"
+                    aria-label="Войти через Телеграм"
+                  ></button>
+                </a>
               </div>
             </div>
           </section>

@@ -12,7 +12,7 @@
     <title>Chat</title>
   </head>
   <body class="page__container">
-    <nav class="menu" aria-label="Side navigation">
+    <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -254,15 +254,19 @@
         </li>
       </ul>
     </nav>
-    <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+    <nav class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Верхняя навигация"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <p class="header__notification-counter">2</p>
       </button>
@@ -279,7 +283,7 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </header>
+    </nav>
 
     <main class="main">
       <section class="dialogues">
@@ -870,7 +874,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">
