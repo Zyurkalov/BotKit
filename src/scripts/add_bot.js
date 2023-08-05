@@ -1,4 +1,4 @@
-import "../scss/add-bot/add_bot.scss";
+import "../blocks/add-bot/add_bot.scss";
 import { selectors } from "./constants";
 import "./ui-kit/ui_kit_navigation";
 

@@ -1,4 +1,4 @@
-import "../scss/mailing-list/mailing_list.scss";
+import "../blocks/mailing-list/mailing_list.scss";
 import "./ui-kit/ui_kit_navigation";
 
 const mailingIdSelector = ".mailing-list__cell_data_id";

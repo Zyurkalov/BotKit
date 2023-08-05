@@ -1,4 +1,4 @@
-import "../scss/registration/registration.scss";
+import "../blocks/registration/registration.scss";
 import { authRoutes, selectors, toggleConfirmationPopup } from "./constants";
 
 const signInBtn = document.querySelector(selectors.regPage.signInBtn);

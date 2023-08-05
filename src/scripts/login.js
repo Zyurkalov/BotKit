@@ -1,4 +1,4 @@
-import "../scss/login/login.scss";
+import "../blocks/login/login.scss";
 import { authRoutes, selectors } from "./constants";
 
 const signUpBtn = document.querySelector(selectors.loginPage.signUpBtn);

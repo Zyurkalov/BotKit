@@ -1,4 +1,4 @@
-import "../../scss/ui-kit/ui_kit_components.scss";
+import "../../blocks/ui-kit/ui_kit_components.scss";
 
 // Отмечаем выбранную опцию в списке с единственным выбором
 const calendarActions = Array.from(

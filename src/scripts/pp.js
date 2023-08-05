@@ -1,4 +1,4 @@
-import "../scss/pp/pp.scss";
+import "../blocks/pp/pp.scss";
 import "./ui-kit/ui_kit_navigation";
 
 const statsButtonUp = document.querySelector(".stats-up-button");

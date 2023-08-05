@@ -1,4 +1,4 @@
-import "../scss/dashboard/dashboard.scss";
+import "../blocks/dashboard/dashboard.scss";
 import { selectors } from "./constants";
 import "./ui-kit/ui_kit_navigation";
 
