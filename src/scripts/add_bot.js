@@ -6,7 +6,7 @@ const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
 const items = main.querySelectorAll("." + selectors.addBotPage.buttonSocial);
 
-const infoblock = main.querySelector(".infoblock");
+const infoblock = main.querySelector(".info-block");
 const messegeTitle = main.querySelector(".messege__title");
 const messegeText = main.querySelector(".messege__text");
 
@@ -28,13 +28,9 @@ function addBot(elem) {
 
         // const ttt = item.querySelector(":hover svg rect").setAttribute("fill", "#2d88ff");
         // ttt.setAttribute("fill", "#2d88ff");
-
-        // console.log(ttt);
       }
-      // console.log(elem.id, item.id);
     });
   });
-  // console.log(elem);
 }
 
 ////// новый код
@@ -118,7 +114,7 @@ function createBotWindow(value) {
   const imgElement = panelElement.querySelector(".social-icon");
   const headerElement = panelElement.querySelector(".bot-setting__header");
 
-  const container = document.querySelector(".infoblock");
+  const container = document.querySelector(".info-block");
   const faqPanel = container.querySelector(".faq-panel");
   const submitBtn = panelElement.querySelector(".bot-setting__submit");
 
@@ -126,8 +122,6 @@ function createBotWindow(value) {
   imgElement.src = value.icon;
   imgElement.alt = value.alt;
   headerElement.textContent = value.name;
-
-  console.log(imgElement);
 
   container.prepend(panelElement);
   faqPanel.classList.remove("hidden");
@@ -138,7 +132,6 @@ function createBotWindow(value) {
     faqPanel.classList.add("hidden");
     container.style.height = "330px";
   });
-  console.log(panelElement);
 }
 const sociaIcons = document.querySelector(".social__items");
 
