@@ -21,79 +21,58 @@
           width="149"
           height="35"
         />
-        <h2 class="header__h2">Регистрация</h2>
+        <h1 class="header__title">Регистрация</h1>
       </header>
       <main class="main">
         <div class="window">
           <section class="outer-wrapper">
-            <h3 class="outer-wrapper__h3">Создай аккаунт с помощью</h3>
+            <h2 class="outer-wrapper__title">Создай аккаунт с помощью</h2>
             <div class="icons-container">
               <div class="icons-container__icons">
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/google.svg')%>"
-                    alt="gmail"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/yandex.svg')%>"
-                    alt="яндекс"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/mailru.svg')%>"
-                    alt="мэил ру"
-                    width="40"
-                    height="40"
-                  />
-                </button>
+                <button
+                  class="icons-container__button icons-container__button_google"
+                  type="button"
+                  aria-label="Зарегистрироваться через джимейл"
+                ></button>
+                <button
+                  class="icons-container__button icons-container__button_yandex"
+                  type="button"
+                  aria-label="Зарегистрироваться через Яндекс"
+                ></button>
+                <button
+                  class="icons-container__button icons-container__button_mailru"
+                  type="button"
+                  aria-label="Зарегистрироваться через мэил ру"
+                ></button>
               </div>
               <div class="icons-container__icons">
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/vk.svg')%>"
-                    alt="вконтакте"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/odnoklassniki.svg')%>"
-                    alt="одноклассники"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/facebook.svg')%>"
-                    alt="facebook"
-                    width="40"
-                    height="40"
-                  />
-                </button>
-                <button class="icons-container__button" type="submit">
-                  <img
-                    src="<%=require('../../images/social-icons/telegram.svg')%>"
-                    alt="телеграм"
-                    width="40"
-                    height="40"
-                  />
-                </button>
+                <button
+                  class="icons-container__button icons-container__button_vk"
+                  type="button"
+                  aria-label="Зарегистрироваться через Вконтакте"
+                ></button>
+                <button
+                  class="icons-container__button icons-container__button_odnoklassniki"
+                  type="button"
+                  aria-label="Зарегистрироваться через Одноклассники"
+                ></button>
+                <button
+                  class="icons-container__button icons-container__button_fb"
+                  type="button"
+                  aria-label="Зарегистрироваться через Фейсбук"
+                ></button>
+                <button
+                  class="icons-container__button icons-container__button_telegram"
+                  type="button"
+                  aria-label="Зарегистрироваться через Телеграм"
+                ></button>
               </div>
             </div>
             <div class="separator">
               <span class="separator__text">или</span>
             </div>
             <div class="inner-wrapper">
-              <form action="/" class="form" name="registration-form" novalidate>
+              <form action="/" class="form" name="registration-form">
                 <fieldset class="form__input-container">
                   <label class="form__field">
                     <input
@@ -134,7 +113,7 @@
                   <label class="form__field">
                     <input
                       type="tel"
-                      class="form__input form__input_tel"
+                      class="form__input"
                       id="phone"
                       name="phone"
                       placeholder="Телефон"
@@ -154,9 +133,7 @@
 
               <div class="alternative-actions">
                 <p class="alternative-actions__text">Уже прошли регистрацию?</p>
-                <button type="submit" class="alternative-actions__button">
-                  Войти
-                </button>
+                <a class="alternative-actions__button"> Войти </a>
               </div>
               <img
                 class="inner-wrapper__img"
@@ -171,13 +148,13 @@
 
         <div class="confirmation">
           <div class="confirmation__container">
-            <h1 class="confirmation__heading confirmation__heading_reg">
+            <h2 class="confirmation__heading confirmation__heading_reg">
               Письмо с подтверждением отправлено тебе
               <span class="confirmation__nowrap"
                 >на<span class="confirmation__span">/e-mail</span>!</span
               >
-            </h1>
-            <div class="confirmation__imgContainer">
+            </h2>
+            <div class="confirmation__img-container">
               <img
                 class="confirmation__robot"
                 src="<%=require('../../images/funnyBot.png')%>"

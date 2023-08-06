@@ -12,7 +12,7 @@
     <title>Chat</title>
   </head>
   <body class="page__container">
-    <nav class="menu" aria-label="Side navigation">
+    <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -192,7 +192,7 @@
             <p class="link__text">Общий доступ</p>
           </a>
         </li>
-        <li class="menu__item menu__second">
+        <li class="menu__item menu__dropdown">
           <a class="link link_theme_gray" href="#">
             <svg
               class="link__image"
@@ -227,9 +227,9 @@
           </a>
         </li>
         <!-- меню второго уровня -->
-        <li class="menu__item menu__second_item">
-          <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text link__text_second">Caйт + Vk</p>
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -254,15 +254,19 @@
         </li>
       </ul>
     </nav>
-    <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+    <nav class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Верхняя навигация"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <p class="header__notification-counter">2</p>
       </button>
@@ -279,14 +283,14 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </header>
+    </nav>
 
     <main class="main">
       <section class="dialogues">
-        <h2 class="section-header">Диалоги</h2>
+        <h1 class="section-header">Диалоги</h1>
         <div class="dialogues__input-box">
           <img
-            class="icon icon_20x20"
+            class="icon icon_size_s"
             src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
             alt="Искать"
           />
@@ -298,7 +302,7 @@
             placeholder="Поиск..."
           />
           <svg
-            class="icon-color icon-color_size20x20"
+            class="icon-color icon-color_size_small"
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -357,7 +361,7 @@
                 <div class="dialogues-box__point"></div>
               </div>
               <div class="dialogues-box__container">
-                <h3 class="dialogues-box__user">Марк</h3>
+                <p class="dialogues-box__user">Марк</p>
                 <p class="dialogues-box__time general-grey-text">4 часа</p>
                 <p class="dialogues-box__text general-grey-text">
                   Какой-то текст.
@@ -378,7 +382,7 @@
                 <div class="dialogues-box__point hidden"></div>
               </div>
               <div class="dialogues-box__container">
-                <h3 class="dialogues-box__user">Оператор</h3>
+                <h2 class="dialogues-box__user">Оператор</h2>
                 <p class="dialogues-box__time general-grey-text">3 мин</p>
                 <p class="dialogues-box__text general-grey-text">
                   Какой-то текст.
@@ -399,7 +403,7 @@
                 <div class="dialogues-box__point hidden"></div>
               </div>
               <div class="dialogues-box__container">
-                <h3 class="dialogues-box__user">Сергей Надеин</h3>
+                <h2 class="dialogues-box__user">Сергей Надеин</h2>
                 <p class="dialogues-box__time general-grey-text">30 мин</p>
                 <p class="dialogues-box__text general-grey-text">
                   Какой-то текст.
@@ -420,7 +424,7 @@
                 <div class="dialogues-box__point hidden"></div>
               </div>
               <div class="dialogues-box__container">
-                <h3 class="dialogues-box__user">Даша К.</h3>
+                <h2 class="dialogues-box__user">Даша К.</h2>
                 <p class="dialogues-box__time general-grey-text">12.06.22</p>
                 <p class="dialogues-box__text general-grey-text">
                   Какой-то текст.
@@ -504,7 +508,7 @@
 
         <div class="time-border">
           <div class="time-border__line"></div>
-          <h3 class="general-grey-text">Сегодня</h3>
+          <p class="general-grey-text">Сегодня</p>
           <div class="time-border__line"></div>
         </div>
 
@@ -518,7 +522,7 @@
               />
             </div>
             <div class="cloud-box">
-              <h3 class="cloud-box__header">Сергей Надеин</h3>
+              <h2 class="cloud-box__header">Сергей Надеин</h2>
               <div class="cloud-box__message-cont">
                 <p class="cloud-box__text">Привет, как это сделать?</p>
                 <span class="cloud-box__message-date">16 мин назад</span>
@@ -538,7 +542,7 @@
               />
             </div>
             <div class="cloud-box cloud-box_your">
-              <h3 class="cloud-box__header">Вы</h3>
+              <h2 class="cloud-box__header">Вы</h2>
               <div class="cloud-box__message-cont">
                 <p class="cloud-box__text">
                   Привет, {name}! Перейдите по ссылке
@@ -567,7 +571,7 @@
               />
             </div>
             <div class="cloud-box">
-              <h3 class="cloud-box__header">Сергей Надеин</h3>
+              <h2 class="cloud-box__header">Сергей Надеин</h2>
               <div class="cloud-box__message-cont">
                 <p class="cloud-box__text">Ок! Спасибо 😄</p>
                 <span class="cloud-box__message-date">16 мин назад</span>
@@ -605,30 +609,30 @@
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_20x20"
+                class="icon icon_size_s"
                 src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
                 alt="выбрать смалик"
               />
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_20x20"
+                class="icon icon_size_s"
                 src="<%=require('../../images/template-icon/24x24/common/slash.svg')%>"
-                alt=""
+                alt="невидимое сообщение"
               />
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_20x20"
+                class="icon icon_size_s"
                 src="<%=require('../../images/template-icon/24x24/common/zap.svg')%>"
-                alt=""
+                alt="молния"
               />
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_20x20 icon_rotate-45"
+                class="icon icon_size_s icon_rotate_one-eight"
                 src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
-                alt="добавить/убрать доп. инструменты"
+                alt="добавить/убрать дополнительные инструменты"
               />
             </button>
           </div>
@@ -714,7 +718,6 @@
           <button class="window-user-info__btn" type="button">
             Информация о пользователе
             <svg
-              class=""
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -734,7 +737,7 @@
           <button class="window-user-info__btn" type="button">
             История действий
             <svg
-              class="icon_rotate180"
+              class="icon_rotate_half"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -841,13 +844,22 @@
           <button class="window-files__btn-all" type="button">Все</button>
           <ul class="window-files__list window-files__list_img">
             <li>
-              <img src="<%=require('../../images/chat/foto-766.png')%>" />
+              <img
+                src="<%=require('../../images/chat/foto-766.png')%>"
+                alt="фото"
+              />
             </li>
             <li>
-              <img src="<%=require('../../images/chat/foto-767.png')%>" />
+              <img
+                src="<%=require('../../images/chat/foto-767.png')%>"
+                alt="фото"
+              />
             </li>
             <li>
-              <img src="<%=require('../../images/chat/foto-768.png')%>" />
+              <img
+                src="<%=require('../../images/chat/foto-768.png')%>"
+                alt="фото"
+              />
             </li>
           </ul>
         </div>
@@ -871,7 +883,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">

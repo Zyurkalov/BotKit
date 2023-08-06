@@ -6,20 +6,20 @@ const glob = require("glob");
 
 const entry = {
   main: "./src/index.js",
-  registration: "./src/js/registration.js",
-  login: "./src/js/login.js",
-  reset_password: "./src/js/reset_password.js",
-  add_bot: "./src/js/add_bot.js",
-  chat: "./src/js/chat.js",
-  dashboard: "./src/js/dashboard.js",
-  mailing_list: "./src/js/mailing_list.js",
-  pp: "./src/js/pp.js",
-  ui_kit_buttons: "./src/js/ui-kit/ui_kit_buttons.js",
-  ui_kit_fields: "./src/js/ui-kit/ui_kit_fields.js",
-  ui_kit_components: "./src/js/ui-kit/ui_kit_components.js",
-  ui_kit_icons: "./src/js/ui-kit/ui_kit_icons.js",
-  ui_kit_navigation: "./src/js/ui-kit/ui_kit_navigation.js",
-  ui_kit_navigation_page: "./src/js/ui-kit/ui_kit_navigation_page.js",
+  registration: "./src/scripts/registration.js",
+  login: "./src/scripts/login.js",
+  reset_password: "./src/scripts/reset_password.js",
+  add_bot: "./src/scripts/add_bot.js",
+  chat: "./src/scripts/chat.js",
+  dashboard: "./src/scripts/dashboard.js",
+  mailing_list: "./src/scripts/mailing_list.js",
+  pp: "./src/scripts/pp.js",
+  ui_kit_buttons: "./src/scripts/ui-kit/ui_kit_buttons.js",
+  ui_kit_fields: "./src/scripts/ui-kit/ui_kit_fields.js",
+  ui_kit_components: "./src/scripts/ui-kit/ui_kit_components.js",
+  ui_kit_icons: "./src/scripts/ui-kit/ui_kit_icons.js",
+  ui_kit_navigation: "./src/scripts/ui-kit/ui_kit_navigation.js",
+  ui_kit_navigation_page: "./src/scripts/ui-kit/ui_kit_navigation_page.js",
 };
 
 module.exports = {
@@ -27,9 +27,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-  },
-  performance: {
-    hints: false,
   },
   devtool: "eval-source-map",
   mode: "development",

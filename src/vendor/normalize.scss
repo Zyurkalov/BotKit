@@ -1,4 +1,4 @@
-/*! normalize.scss v8.0.1 | MIT License | github.com/necolas/normalize.scss */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -157,12 +157,8 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 
-img,
-svg {
+img {
   border-style: none;
-  height: auto;
-  max-width: 100%;
-  display: block;
 }
 
 /* Forms
@@ -186,13 +182,6 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
-  border: 0;
-  padding: 0;
-  background: transparent;
-}
-
-button {
-  cursor: pointer;
 }
 
 /**

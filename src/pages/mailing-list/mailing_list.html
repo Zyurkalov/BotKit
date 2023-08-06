@@ -12,7 +12,7 @@
     <title>Mailing List</title>
   </head>
   <body class="page__container">
-    <nav class="menu" aria-label="Side navigation">
+    <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -189,7 +189,7 @@
             <p class="link__text">Общий доступ</p>
           </a>
         </li>
-        <li class="menu__item menu__second">
+        <li class="menu__item menu__dropdown">
           <a class="link link_theme_gray" href="#">
             <svg
               class="link__image"
@@ -224,9 +224,9 @@
           </a>
         </li>
         <!-- меню второго уровня -->
-        <li class="menu__item menu__second_item">
-          <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text link__text_second">Caйт + Vk</p>
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -251,15 +251,19 @@
         </li>
       </ul>
     </nav>
-    <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+    <nav class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Верхняя навигация"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <p class="header__notification-counter">2</p>
       </button>
@@ -276,11 +280,11 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </header>
+    </nav>
     <main class="main">
       <section class="mailing">
         <div class="mailing__header">
-          <h2 class="mailing__h2">Рассылки</h2>
+          <h1 class="mailing__title">Рассылки</h1>
           <button class="common-button common-button_color_green">
             Создать рассылку
           </button>
@@ -289,13 +293,13 @@
           <!-- Показывается в случае если у пользователя есть рассылки -->
           <section class="card mailing-list mailing-list_visible">
             <div class="mailing-list__header">
-              <h3 class="mailing-list__header-text">Мои Рассылки</h3>
+              <h2 class="mailing-list__header-text">Мои Рассылки</h2>
               <div class="mailing-list__filter">
                 <p class="mailing-list__filter-text">Все</p>
                 <img
                   class="mailing-list__filter-icon"
                   src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
-                  alt=""
+                  alt="развернуть/свернуть"
                 />
                 <ul
                   class="ui-kit-list selector__items selector__items_dropdown"
@@ -358,12 +362,12 @@
           </section>
           <!-- Показывается в случае если у пользователя нет рассылок -->
           <section class="mailing-list-placeholder">
-            <h3 class="mailing-label-title">
+            <h2 class="mailing-label-title">
               Давайте скорее запустим вашу первую рассылку!
-            </h3>
-            <h3 class="mailing-label-subtitle">
+            </h2>
+            <p class="mailing-label-subtitle">
               Нажмите на кнопку “создать рассылку”
-            </h3>
+            </p>
           </section>
         </div>
       </section>
@@ -384,7 +388,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">

@@ -12,7 +12,7 @@
     <title>Affiliate Program</title>
   </head>
   <body class="page__container">
-    <nav class="menu" aria-label="Side navigation">
+    <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -192,7 +192,7 @@
             <p class="link__text">Общий доступ</p>
           </a>
         </li>
-        <li class="menu__item menu__second">
+        <li class="menu__item menu__dropdown">
           <a class="link link_theme_gray" href="#">
             <svg
               class="link__image"
@@ -227,9 +227,9 @@
           </a>
         </li>
         <!-- меню второго уровня -->
-        <li class="menu__item menu__second_item">
-          <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text link__text_second">Caйт + Vk</p>
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -254,15 +254,19 @@
         </li>
       </ul>
     </nav>
-    <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+    <nav class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Верхняя навигация"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <p class="header__notification-counter">2</p>
       </button>
@@ -279,12 +283,12 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </header>
+    </nav>
     <main class="main">
       <!-- тело страницы -->
       <section class="affiliate-program">
         <div class="affiliate-program_container">
-          <h2 class="affiliate-program__h2">Партнерская программа</h2>
+          <h1 class="affiliate-program__title">Партнерская программа</h1>
           <button
             class="affiliate-program_payments-button common-button_color_green common-button"
           >
@@ -293,7 +297,7 @@
         </div>
         <div class="affiliate-program_container-copy">
           <div class="affiliate-program_copy-text">
-            <h3 class="ref-link">botkits.ru/?ref=12345</h3>
+            <p class="ref-link">botkits.ru/?ref=12345</p>
           </div>
           <button
             class="button-elem-copy affiliate-program_copy-button"
@@ -333,7 +337,7 @@
       </section>
       <section class="pp-window__container">
         <section class="stats-referral">
-          <h3 class="stats-referral__h3">Статистика рефераллов</h3>
+          <h2 class="stats-referral__title">Статистика рефераллов</h2>
           <div class="table-stats">
             <div class="table-stats__header">Перешли по ссылке</div>
             <div class="table-stats__header">Регистраций</div>
@@ -375,7 +379,7 @@
         </section>
         <section class="cash">
           <div class="cash__header">
-            <h3 class="cash__h3">Выплаты</h3>
+            <h2 class="cash__title">Выплаты</h2>
             <button class="stats-up-button" type="button">
               <img
                 class="stats-up"
@@ -440,7 +444,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">

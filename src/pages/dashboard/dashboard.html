@@ -13,7 +13,7 @@
   </head>
 
   <body class="page__container">
-    <nav class="menu" aria-label="Side navigation">
+    <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -193,7 +193,7 @@
             <p class="link__text">Общий доступ</p>
           </a>
         </li>
-        <li class="menu__item menu__second">
+        <li class="menu__item menu__dropdown">
           <a class="link link_theme_gray" href="#">
             <svg
               class="link__image"
@@ -228,9 +228,9 @@
           </a>
         </li>
         <!-- меню второго уровня -->
-        <li class="menu__item menu__second_item">
-          <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text link__text_second">Caйт + Vk</p>
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -255,15 +255,19 @@
         </li>
       </ul>
     </nav>
-    <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+    <nav class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Верхняя навигация"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <p class="header__notification-counter">2</p>
       </button>
@@ -280,12 +284,12 @@
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </header>
+    </nav>
     <main class="main">
       <!-- тело страницы -->
       <section class="templates">
         <div class="templates__container">
-          <h2 class="section-header section-header_margin-40">Шаблоны</h2>
+          <p class="section-header section-header_margin-s">Шаблоны</p>
           <button class="templates__menu">
             <p class="templates__paragraph">Все шаблоны</p>
             <img
@@ -499,58 +503,58 @@
       </section>
 
       <section class="my-bots">
-        <h2 class="section-header section-header_margin-60">Мои Боты</h2>
+        <h1 class="section-header section-header_margin-m">Мои Боты</h1>
         <ul class="content-list content-list_cards">
           <li class="card">
             <div class="card__icons">
               <img
-                class="card__icon card__icon_52x52"
-                src="<%=require('../../images/social-icons/telegram.svg')%>"
-                alt=""
+                class="card__icon card__icon_size_m"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                alt="телеграмм"
               />
               <button class="card__more-button">
                 <img
                   class="card__icon"
                   src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
-                  alt=""
+                  alt="добавить"
                 />
               </button>
             </div>
-            <div class="card__name">Салон красоты</div>
+            <h2 class="card__name">Салон красоты</h2>
           </li>
           <li class="card">
             <div class="card__icons">
               <img
-                class="card__icon card__icon_52x52"
-                src="<%=require('../../images/social-icons/telegram.svg')%>"
-                alt=""
+                class="card__icon card__icon_size_m"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                alt="телеграм"
               />
               <button class="card__more-button">
                 <img
                   class="card__icon"
                   src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
-                  alt=""
+                  alt="показать контекстное меню"
                 />
               </button>
             </div>
-            <div class="card__name">Запись клиентов для консультации</div>
+            <h2 class="card__name">Запись клиентов для консультации</h2>
           </li>
           <li class="card">
             <div class="card__icons">
               <img
-                class="card__icon card__icon_52x52"
-                src="<%=require('../../images/social-icons/telegram.svg')%>"
-                alt=""
+                class="card__icon card__icon_size_m"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                alt="телеграм"
               />
               <button class="card__more-button">
                 <img
                   class="card__icon"
                   src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
-                  alt=""
+                  alt="показать контекстное меню"
                 />
               </button>
             </div>
-            <div class="card__name">Опрос клиентов для проведения встречи</div>
+            <h2 class="card__name">Опрос клиентов для проведения встречи</h2>
           </li>
           <li class="card">
             <button class="panel-add-bot" type="button">
@@ -587,58 +591,58 @@
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/copy-bot.svg')%>"
-              alt=""
+              alt="копировать бота"
             />Копировать бота
           </li>
           <li class="card__action card__action_share" id="share-button-more">
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
-              alt=""
+              alt="поделиться ботом"
             />Общий доступ
           </li>
           <li class="card__action card__action_rename" id="edit-button-more">
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
-              alt=""
+              alt="редактировать"
             />Редактировать
           </li>
           <li class="card__action card__action_link" id="link-button-more">
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
-              alt=""
+              alt="получить ссылку"
             />Получить ссылку
           </li>
           <li class="card__action card__action_info">
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/info.svg')%>"
-              alt=""
+              alt="информация"
             />Информация
           </li>
           <li class="card__action card__action_notifications">
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/notifications-setting.svg')%>"
-              alt=""
+              alt="настройка уведомлений"
             />Настройка уведомлений
           </li>
           <li class="card__action">
             <img
               class="card__actions-img"
               src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
-              alt=""
+              alt="удалить"
             />Удалить
           </li>
         </ul>
       </section>
 
-      <section class="faq" aria-label="Section FAQ">
+      <section class="faq" aria-label="Частные вопросы">
         <div class="faq-cont">
-          <div class="faq-cont__left-panel">
-            <h2 class="faq-cont__header">С чего начать?</h2>
+          <div class="faq-cont__how-to-start">
+            <h3 class="faq-cont__header">С чего начать?</h3>
             <ul class="video-list">
               <li class="video-list__container">
                 <button class="button-video">
@@ -653,7 +657,7 @@
                     />
                   </span>
                 </button>
-                <h3 class="video-heading">Подключение и основные параметры</h3>
+                <p class="video-heading">Подключение и основные параметры</p>
               </li>
               <li class="video-list__container">
                 <button class="button-video">
@@ -668,7 +672,7 @@
                     />
                   </span>
                 </button>
-                <h3 class="video-heading">Настраиваем простую рассылку</h3>
+                <p class="video-heading">Настраиваем простую рассылку</p>
               </li>
               <li class="video-list__container">
                 <button class="button-video">
@@ -683,17 +687,15 @@
                     />
                   </span>
                 </button>
-                <h3 class="video-heading">
-                  Начало работы с блок&#8209;схемами
-                </h3>
+                <p class="video-heading">Начало работы с блок&#8209;схемами</p>
               </li>
             </ul>
           </div>
-          <div class="faq-cont__right-panel">
-            <h2 class="faq-cont__header">База знаний</h2>
-            <h3 class="faq-cont__description">
+          <div class="faq-cont__knowledge-base">
+            <h3 class="faq-cont__header">База знаний</h3>
+            <p class="faq-cont__description">
               Узнай, как создать чат бота. Примеры и описание опций сервиса!
-            </h3>
+            </p>
             <button class="button-container">
               <img
                 class="button-container__chevron-big button-container__chevron-big_rotation"
@@ -747,7 +749,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">
@@ -1024,7 +1026,7 @@
             alt="закрыть окно"
           />
         </button>
-        <h3 class="rename-popup__title">Переименуйте файл</h3>
+        <h2 class="rename-popup__title">Переименуйте файл</h2>
         <input
           class="access-key__input"
           type="text"
@@ -1055,7 +1057,7 @@
             alt="закрыть окно"
           />
         </button>
-        <h3 class="rename-popup__title">Поделитесь доступом к боту</h3>
+        <h2 class="rename-popup__title">Поделитесь доступом к боту</h2>
         <input
           class="access-key__input"
           type="text"
@@ -1094,7 +1096,7 @@
             alt="закрыть окно"
           />
         </button>
-        <h3 class="rename-popup__title">Скопируйте ссылку</h3>
+        <h2 class="rename-popup__title">Скопируйте ссылку</h2>
         <input
           class="access-key__input"
           type="text"
