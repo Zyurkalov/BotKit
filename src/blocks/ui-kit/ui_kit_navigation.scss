@@ -1,9 +1,7 @@
 @use "../variables";
-@use "../common";
+@use "../common-styles";
 @use "utils";
 @use "ui_kit_icons";
-
-// mixin
 
 @mixin boxShadow() {
   box-shadow: 0 12px 24px 0 variables.$box-shadow;
@@ -62,7 +60,6 @@
   flex-direction: row;
   align-items: center;
   background-color: variables.$clr-white;
-  z-index: 1;
 
   &-open {
     margin-left: 286px;
@@ -167,7 +164,6 @@
         transform: rotate(0.5turn);
       }
     }
-
     &:focus {
       outline: none;
     }

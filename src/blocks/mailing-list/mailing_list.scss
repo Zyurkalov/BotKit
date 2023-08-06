@@ -1,14 +1,7 @@
 @use "../variables";
-@use "../common";
+@use "../common-styles";
 @use "../ui-kit/ui_kit_buttons.scss";
 @use "../ui-kit/ui_kit_components.scss";
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
 
 .mailing__header {
   display: flex;
@@ -25,6 +18,7 @@ h4 {
   padding-top: 32px;
   letter-spacing: -0.2px;
   color: variables.$clr-primary-dark;
+  margin: 0;
 }
 
 .common-button_color_green {
@@ -68,6 +62,7 @@ h4 {
   }
 
   &__header-text {
+    margin: 0;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-24;
     font-style: normal;
@@ -154,6 +149,7 @@ h4 {
   }
 
   &__header {
+    margin: 0;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-button-text;
     font-style: normal;
@@ -192,6 +188,7 @@ h4 {
 }
 
 .mailing-label-title {
+  margin: 0;
   max-width: 648px;
   font-family: variables.$ff-secondary;
   color: variables.$clr-gray-3;
