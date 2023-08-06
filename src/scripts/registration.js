@@ -14,7 +14,16 @@ signInBtn.addEventListener("click", (evt) => {
 });
 
 // Регистрация аккаунта по клику на кнопку Создать аккаунт
-signUpBtn.addEventListener("click", toggleConfirmationPopup);
+signUpBtn.addEventListener("click", (evt) => {
+  const form = signUpBtn.closest("form");
+  if (form && !form.checkValidity()) {
+    // If the form is not valid, let the browser handle the validation feedback
+    return;
+  }
+  // If no form is found or if the form is valid, prevent the default action and toggle the popup
+  evt.preventDefault();
+  toggleConfirmationPopup(evt);
+});
 
 // Закрытие попапа подтверждения по клику на крестик
 closeBtn.addEventListener("click", toggleConfirmationPopup);
