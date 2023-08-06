@@ -11,9 +11,9 @@ const menuItems = menu.querySelector(".menu__items");
 const linkThemeBlue = menu.querySelector(".link_theme_blue");
 const linkImageReverse = menu.querySelector(".link__image_reverse");
 
-const menuSecond = menu.querySelector(".menu__second");
-const menuSecondArrow = menuSecond.querySelector(".link__image_up");
-const menuSecondItem = menu.querySelectorAll(".menu__second_item");
+const menuDropdown = menu.querySelector(".menu__dropdown");
+const menuDropdownArrow = menuDropdown.querySelector(".link__image_up");
+const menuDropdownItem = menu.querySelectorAll(".menu__dropdown_item");
 let menuStatus = false;
 
 // Открытие боковой навигации
@@ -25,18 +25,18 @@ export function openMenu() {
   footer.classList.toggle("footer-open");
   linkThemeBlue.classList.toggle("link_theme_blue-open");
   linkImageReverse.classList.toggle("link__image_reverse-open");
-  menuSecond.removeEventListener("click", () => openMenu(true));
+  menuDropdown.removeEventListener("click", () => openMenu(true));
 
   if (menuStatus) {
     menuStatus = false;
-    menuSecond.removeEventListener("click", toggleSecondMenu);
-    menuSecondItem.forEach((btn) => {
-      btn.classList.remove("menu__second_item-open");
+    menuDropdown.removeEventListener("click", toggleDropdownMenu);
+    menuDropdownItem.forEach((btn) => {
+      btn.classList.remove("menu__dropdown_item-open");
     });
-    menuSecondArrow.classList.remove("link__image_up-open");
+    menuDropdownArrow.classList.remove("link__image_up-open");
   } else {
     menuStatus = true;
-    menuSecond.addEventListener("click", toggleSecondMenu);
+    menuDropdown.addEventListener("click", toggleDropdownMenu);
   }
 }
 
@@ -44,11 +44,11 @@ export function openMenu() {
 headerMenu.addEventListener("click", openMenu);
 
 // Открытие выпадающего списка внутри боковой навигации
-function toggleSecondMenu() {
-  menuSecondItem.forEach((btn) => {
-    btn.classList.toggle("menu__second_item-open");
+function toggleDropdownMenu() {
+  menuDropdownItem.forEach((btn) => {
+    btn.classList.toggle("menu__dropdown_item-open");
   });
-  menuSecondArrow.classList.toggle("link__image_up-open");
+  menuDropdownArrow.classList.toggle("link__image_up-open");
 }
 
 // Уведомления
