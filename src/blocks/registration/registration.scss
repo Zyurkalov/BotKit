@@ -170,11 +170,6 @@ h4 {
   }
 }
 
-.icons-container__social-link {
-  width: 40px;
-  height: 40px;
-}
-
 .icons-container__button {
   padding: 0;
 
@@ -184,73 +179,73 @@ h4 {
   }
 }
 
-.icons-container__type_google {
+.icons-container__button_google {
   background-image: url("../../images/social-icons/auth/google.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_google:hover {
+.icons-container__button_google:hover {
   background-image: url("../../images/social-icons/auth/google-hovered.svg");
 }
 
-.icons-container__type_yandex {
+.icons-container__button_yandex {
   background-image: url("../../images/social-icons/auth/yandex.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_yandex:hover {
+.icons-container__button_yandex:hover {
   background-image: url("../../images/social-icons/auth/yandex-hovered.svg");
 }
 
-.icons-container__type_mailru {
+.icons-container__button_mailru {
   background-image: url("../../images/social-icons/auth/mailru.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_mailru:hover {
+.icons-container__button_mailru:hover {
   background-image: url("../../images/social-icons/auth/mailru-hovered.svg");
 }
 
-.icons-container__type_vk {
+.icons-container__button_vk {
   background-image: url("../../images/social-icons/auth/vk.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_vk:hover {
+.icons-container__button_vk:hover {
   background-image: url("../../images/social-icons/auth/vk-hovered.svg");
 }
 
-.icons-container__type_odnoklassniki {
+.icons-container__button_odnoklassniki {
   background-image: url("../../images/social-icons/auth/odnoklassniki.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_odnoklassniki:hover {
+.icons-container__button_odnoklassniki:hover {
   background-image: url("../../images/social-icons/auth/odnoklassniki-hovered.svg");
 }
 
-.icons-container__type_fb {
+.icons-container__button_fb {
   background-image: url("../../images/social-icons/auth/facebook.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_fb:hover {
+.icons-container__button_fb:hover {
   background-image: url("../../images/social-icons/auth/facebook-hovered.svg");
 }
 
-.icons-container__type_telegram {
+.icons-container__button_telegram {
   background-image: url("../../images/social-icons/auth/telegram.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_telegram:hover {
+.icons-container__button_telegram:hover {
   background-image: url("../../images/social-icons/auth/telegram-hovered.svg");
 }
 
