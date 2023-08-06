@@ -1,5 +1,5 @@
 @use "../variables";
-@use "../common";
+@use "../common-styles";
 @use "../ui-kit/ui_kit_buttons.scss";
 @use "../ui-kit/ui_kit_fields.scss";
 
@@ -55,9 +55,6 @@
   height: 79px;
   width: 100%;
   padding: 19px 0;
-  box-sizing: border-box;
-  cursor: pointer;
-  // border-bottom: solid 1px variables.$clr-secondary-cultured;
 
   display: flex;
   flex-direction: row;

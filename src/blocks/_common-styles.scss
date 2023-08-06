@@ -26,3 +26,24 @@ textarea {
   background-color: transparent;
   border: 0;
 }
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,13 +1,6 @@
 @use "../variables";
-@use "../common";
+@use "../common-styles";
 @use "../ui-kit/ui_kit_buttons.scss";
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
 
 .body {
   min-height: 100vh;
@@ -67,7 +60,7 @@ h4 {
 }
 
 .header__title {
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   font-family: variables.$ff-secondary;
   font-size: variables.$fs-h2;
   font-weight: variables.$fw-500;
@@ -121,7 +114,7 @@ h4 {
 
 .outer-wrapper__title {
   text-align: center;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
   font-family: variables.$ff-secondary;
   font-size: 20px;
   font-weight: variables.$fw-600;
@@ -170,11 +163,6 @@ h4 {
   }
 }
 
-.icons-container__social-link {
-  width: 40px;
-  height: 40px;
-}
-
 .icons-container__button {
   padding: 0;
 
@@ -184,73 +172,73 @@ h4 {
   }
 }
 
-.icons-container__type_google {
+.icons-container__button_google {
   background-image: url("../../images/social-icons/auth/google.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_google:hover {
+.icons-container__button_google:hover {
   background-image: url("../../images/social-icons/auth/google-hovered.svg");
 }
 
-.icons-container__type_yandex {
+.icons-container__button_yandex {
   background-image: url("../../images/social-icons/auth/yandex.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_yandex:hover {
+.icons-container__button_yandex:hover {
   background-image: url("../../images/social-icons/auth/yandex-hovered.svg");
 }
 
-.icons-container__type_mailru {
+.icons-container__button_mailru {
   background-image: url("../../images/social-icons/auth/mailru.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_mailru:hover {
+.icons-container__button_mailru:hover {
   background-image: url("../../images/social-icons/auth/mailru-hovered.svg");
 }
 
-.icons-container__type_vk {
+.icons-container__button_vk {
   background-image: url("../../images/social-icons/auth/vk.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_vk:hover {
+.icons-container__button_vk:hover {
   background-image: url("../../images/social-icons/auth/vk-hovered.svg");
 }
 
-.icons-container__type_odnoklassniki {
+.icons-container__button_odnoklassniki {
   background-image: url("../../images/social-icons/auth/odnoklassniki.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_odnoklassniki:hover {
+.icons-container__button_odnoklassniki:hover {
   background-image: url("../../images/social-icons/auth/odnoklassniki-hovered.svg");
 }
 
-.icons-container__type_fb {
+.icons-container__button_fb {
   background-image: url("../../images/social-icons/auth/facebook.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_fb:hover {
+.icons-container__button_fb:hover {
   background-image: url("../../images/social-icons/auth/facebook-hovered.svg");
 }
 
-.icons-container__type_telegram {
+.icons-container__button_telegram {
   background-image: url("../../images/social-icons/auth/telegram.svg");
   width: 40px;
   height: 40px;
 }
 
-.icons-container__type_telegram:hover {
+.icons-container__button_telegram:hover {
   background-image: url("../../images/social-icons/auth/telegram-hovered.svg");
 }
 
@@ -483,6 +471,7 @@ input[required] {
 }
 
 .confirmation__heading {
+  margin: 0;
   font-size: variables.$fs-h1;
   font-weight: variables.$fw-500;
   line-height: 70.4px;
@@ -607,6 +596,7 @@ input[required] {
 
 @media screen and (max-width: 545px) {
   .confirmation__heading_reg {
+    margin: 0;
     font-size: 32px;
     line-height: 41.6px;
     letter-spacing: -0.2px;
@@ -641,6 +631,7 @@ input[required] {
   .confirmation__heading_reg {
     margin-bottom: 100px;
   }
+
   .confirmation__span {
     font-size: 20px;
     line-height: 26px;

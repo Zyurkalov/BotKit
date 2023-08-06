@@ -192,7 +192,7 @@
             <p class="link__text">Общий доступ</p>
           </a>
         </li>
-        <li class="menu__item menu__second">
+        <li class="menu__item menu__dropdown">
           <a class="link link_theme_gray" href="#">
             <svg
               class="link__image"
@@ -227,9 +227,9 @@
           </a>
         </li>
         <!-- меню второго уровня -->
-        <li class="menu__item menu__second_item">
-          <a class="link link_theme_gray menu__second_link" href="#">
-            <p class="link__text link__text_second">Caйт + Vk</p>
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
           </a>
         </li>
         <!-- end -->
@@ -902,7 +902,10 @@
         <!-- конец -->
       </div>
     </section>
-    <section class="popup popup__accaunt popup__accaunt-close">
+    <section
+      class="popup popup__accaunt popup__accaunt-close"
+      aria-label="Скрытые элементы"
+    >
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
