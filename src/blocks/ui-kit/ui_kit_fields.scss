@@ -33,6 +33,10 @@
   color: variables.$clr-black;
   margin-bottom: 20px;
 }
+@mixin inputBorder() {
+  outline: 0;
+  outline-offset: 0;
+}
 
 // Common
 // Введите код доступа
@@ -52,6 +56,16 @@
   line-height: 1.5;
   letter-spacing: 0.3px;
   color: variables.$clr-primary-dark;
+
+  &:active {
+    @include inputBorder();
+  }
+  &:focus {
+    @include inputBorder();
+  }
+  &:hover {
+    @include inputBorder();
+  }
 }
 
 .access-key__input::placeholder {

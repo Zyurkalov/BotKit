@@ -333,6 +333,9 @@
   &:disabled svg rect {
     fill: variables.$clr-primary-gray;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 /* Кнопка-панель добавить бота */
@@ -411,11 +414,14 @@
 /* Кнопка пошаговая инструкция */
 .button-tutorial {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
+  min-width: 300px;
   max-width: 579px;
   height: 76px;
+  padding-left: 201px;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-image: url("../../images/template-icon/add_bot/book-frame_2.svg");
@@ -430,6 +436,7 @@
   &:hover {
     border: none;
     background-image: url("../../images/template-icon/add_bot/book-frame_1.svg");
+    background-color: variables.$clr-white;
     box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
     cursor: pointer;
   }

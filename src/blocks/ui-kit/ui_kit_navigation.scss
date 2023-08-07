@@ -16,6 +16,10 @@
   background-color: transparent;
   box-sizing: border-box;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 @mixin text-default() {
@@ -35,35 +39,44 @@
 
 .page {
   &__container {
-    padding: 0;
-    margin: 72px 40px 0 132px; //86+46
+    width: 100vw;
+    margin: 0;
+    padding: 0 40px 0 132px; //86+46
     padding-bottom: 82px;
-    min-height: 800px;
-
+    // min-height: 800px;
+    max-width: 1440px;
+    min-width: 320px;
+    // transition: padding-left 0.3s ease-in-out;
+    position: relative;
     &-open {
-      margin-left: 286px;
+      padding-left: 286px;
     }
   }
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
+  left: 132px;
   height: 72px;
   z-index: 1;
-  width: calc(100% - 40px - 132px);
-  margin-left: 132px;
+  width: 100%;
+  max-width: 1268px;
   box-sizing: border-box;
   border-bottom: 1px solid variables.$clr-secondary-focus;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: variables.$clr-white;
+  z-index: 1;
+
+  // transition:
+  //   left 0.3s ease-in-out,
+  //   max-width 0.3s ease-in-out;
 
   &-open {
-    margin-left: 286px;
-    width: calc(100% - 40px - 286px);
+    left: 286px;
+    max-width: 1114px;
   }
 
   &__menu {
@@ -122,14 +135,11 @@
       line-height: 15px;
       color: variables.$clr-white;
       position: absolute;
-      top: -15px;
+      top: -5px;
       right: -1px;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    &:focus {
-      outline: none;
     }
   }
 
@@ -152,18 +162,15 @@
       box-sizing: border-box;
     }
     &-name {
-      margin: 0 10px 0 12px;
+      margin: 0 14px 0 9px;
       @include text-default();
     }
 
     &-arrow {
       height: 20px;
       width: 20px;
-
-      &_up {
-        transform: rotate(0.5turn);
-      }
     }
+
     &:focus {
       outline: none;
     }
@@ -178,17 +185,19 @@
   display: flex;
   align-items: center;
   padding-left: 40px;
+  z-index: 1000;
   @include text-default();
 }
 
 .menu {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   min-width: 86px;
   max-width: 240px;
   width: 86px;
+  // transition: width 0.3s ease-in-out;
 
   &-open {
     width: 240px;
@@ -210,6 +219,7 @@
     justify-content: flex-start;
     align-items: stretch;
     position: fixed;
+    // transition: width 0.3s ease-in-out;
 
     &-open {
       width: 224px;
@@ -270,6 +280,9 @@
 
       min-width: 24px;
       margin: 11px;
+      transition:
+        min-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out;
 
       &-open {
         min-width: 0;
@@ -313,10 +326,10 @@
       font-weight: variables.$fw-600;
       font-size: variables.$fs-small;
       letter-spacing: 1px;
-      transition:
-        padding 0.3s ease-in-out,
-        margin-left 0.3s ease-in-out,
-        border-radius 0.3s ease-in-out;
+      // transition:
+      //   padding 0.3s ease-in-out,
+      //   margin-left 0.3s ease-in-out,
+      //   border-radius 0.3s ease-in-out;
 
       &:hover {
         background-color: variables.$clr-icon-hover;
@@ -389,24 +402,26 @@
 }
 
 .popup {
-  display: block;
-  position: fixed;
+  // display: block;
+  // position: fixed;
+  border: none;
+  right: 0;
 
   &__notification {
     height: 100vh;
     width: 364px;
     padding: 24px 40px 0 28px;
     top: 0;
-    right: 0;
+    left: calc(100% - 364px);
     background-color: variables.$clr-white;
     border-left: 1px solid variables.$clr-secondary-focus;
     @include boxShadow();
     z-index: 150;
-    transition: right 0.3s ease-in-out;
+    // transition: right 0.3s ease-in-out;
 
-    &-close {
-      right: -400px;
-    }
+    // &-close {
+    //   right: -400px;
+    // }
   }
 
   &__header {
@@ -478,8 +493,8 @@
   &__accaunt {
     width: 200px;
     padding: 8px 0 5px;
-    right: 26px;
-    top: 70px;
+    left: calc(100% - 270px);
+    top: 19px;
     border-radius: 10px;
     box-sizing: border-box;
     background-color: variables.$clr-white;
@@ -554,6 +569,76 @@
 
     &-close {
       display: none;
+    }
+  }
+
+  &__main {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    list-style-type: none;
+    &_news {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    &_logs {
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .page {
+    &__container {
+      margin: 0;
+      padding: 0 20px 0;
+
+      &-open {
+        // padding-left: 286px;
+      }
+    }
+  }
+
+  .menu {
+    min-width: 240px;
+    height: 64px;
+
+    &-open {
+      height: 100vh;
+      width: 240px;
+    }
+  }
+  .header {
+    border-bottom: none;
+
+    &__rate {
+      display: none;
+      &_name {
+        display: none;
+      }
+    }
+
+    &__notification {
+      display: none;
+    }
+
+    &__help {
+      display: none;
+    }
+
+    &__profile {
+      &-name {
+        display: none;
+      }
+      &-arrow {
+        display: none;
+      }
     }
   }
 }

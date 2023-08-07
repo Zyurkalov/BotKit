@@ -1,21 +1,35 @@
 import "../../blocks/ui-kit/ui_kit_navigation.scss";
+
+/* *** { CONSTANTS } *** */
 const page = document.querySelector(".page__container");
 const header = page.querySelector(".header");
 const footer = page.querySelector(".footer");
 const headerMenu = header.querySelector(".header__menu");
-
-const keyEscape = "Escape";
 
 const menu = page.querySelector(".menu");
 const menuItems = menu.querySelector(".menu__items");
 const linkThemeBlue = menu.querySelector(".link_theme_blue");
 const linkImageReverse = menu.querySelector(".link__image_reverse");
 
+// меню второго уровня
 const menuDropdown = menu.querySelector(".menu__dropdown");
 const menuDropdownArrow = menuDropdown.querySelector(".link__image_up");
 const menuDropdownItem = menu.querySelectorAll(".menu__dropdown_item");
 let menuStatus = false;
 
+// Профиль пользователя
+export const buttonOpenAccaunt = header.querySelector(".header__profile");
+export const popupAccaunt = page.querySelector(".popup__accaunt");
+// const buttonOpenAccountArrow = buttonOpenAccaunt.querySelector(".header__profile-arrow");
+// const accountElements = buttonOpenAccaunt.querySelectorAll("*");
+// const accountElementsArray = Array.from(accountElements);
+
+// Уведомления
+const buttonOpenNotification = header.querySelector(".header__notification");
+const popupNotification = page.querySelector(".popup__notification");
+// const buttonCloseNotification = popupNotification.querySelector(".popup__button-close");
+
+/* *** { FUNCTION } *** */
 // Открытие боковой навигации
 export function openMenu() {
   menu.classList.toggle("menu-open");
@@ -40,9 +54,6 @@ export function openMenu() {
   }
 }
 
-// Открытие боковой навигации по клику на бургер
-headerMenu.addEventListener("click", openMenu);
-
 // Открытие выпадающего списка внутри боковой навигации
 function toggleDropdownMenu() {
   menuDropdownItem.forEach((btn) => {
@@ -51,57 +62,64 @@ function toggleDropdownMenu() {
   menuDropdownArrow.classList.toggle("link__image_up-open");
 }
 
-// Уведомления
-const buttonOpenNotification = header.querySelector(".header__notification");
-const popupNotification = page.querySelector(".popup__notification");
-const buttonCloseNotification = popupNotification.querySelector(
-  ".popup__button-close",
-);
-
-// Открытие попапа с нотификакациями
-export function openNotification() {
-  popupNotification.classList.remove("popup__notification-close");
-  document.addEventListener("keydown", closePopupOnPressKey);
-  buttonCloseNotification.addEventListener("click", closeNotification);
-}
-buttonOpenNotification.addEventListener("click", openNotification);
-
-// Закрытие попапа с нотификакациями
-export function closeNotification() {
-  popupNotification.classList.add("popup__notification-close");
-  document.removeEventListener("keydown", closePopupOnPressKey);
-  buttonCloseNotification.removeEventListener("click", closeNotification);
-}
-
-export const closePopupOnPressKey = (e) => {
-  if (e.key === keyEscape) {
-    closeNotification();
+// закрытие popup по клику на кнопку Esc
+export function closePopupOnPressKey(e, popup) {
+  if (e.key === "Escape") {
+    closePopup(popup);
   }
-};
-
-// Профиль пользователя
-export const buttonOpenAccaunt = header.querySelector(".header__profile");
-export const popupAccaunt = page.querySelector(".popup__accaunt");
-const buttonOpenAccountArrow = buttonOpenAccaunt.querySelector(
-  ".header__profile-arrow",
-);
-const accountElements = buttonOpenAccaunt.querySelectorAll("*");
-const accountElementsArray = Array.from(accountElements);
-
-// Открытия меню в профиле
-export function openAccauntSettings() {
-  popupAccaunt.classList.toggle("popup__accaunt-close");
-  buttonOpenAccountArrow.classList.toggle("header__profile-arrow_up");
 }
-buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
 
-document.addEventListener("click", (evt) => {
-  if (
-    (evt.target !== buttonOpenAccaunt) &
-    !accountElementsArray.includes(evt.target) &
-    !popupAccaunt.classList.contains("popup__accaunt-close")
-  ) {
-    popupAccaunt.classList.add("popup__accaunt-close");
-    buttonOpenAccountArrow.classList.remove("header__profile-arrow_up");
+// открытие popup
+function openPopup(popup) {
+  popup.show();
+  document.addEventListener("keydown", (e) => closePopupOnPressKey(e, popup));
+  closePopupOnClickButton(popup, true);
+  popup.addEventListener("mouseleave", () => closePopup(popup));
+}
+
+// заурытие popup
+function closePopup(popup) {
+  popup.close();
+  document.removeEventListener("keydown", (e) =>
+    closePopupOnPressKey(e, popup),
+  );
+  closePopupOnClickButton(popup, false);
+  popup.removeEventListener("mouseleave", () => closePopup(popup));
+}
+
+// закрытие popup по клику на кнопу close
+function closePopupOnClickButton(popup, key) {
+  const buttonClose = popup.querySelector(".popup__button-close");
+  if (buttonClose != null) {
+    if (key) {
+      buttonClose.addEventListener("click", () => closePopup(popup));
+    } else {
+      buttonClose.removeEventListener("click", () => closePopup(popup));
+    }
   }
-});
+}
+
+// // Открытия меню в профиле
+// export function openAccauntSettings() {
+//   popupAccaunt.classList.toggle("popup__accaunt-close");
+//   buttonOpenAccountArrow.classList.toggle("header__profile-arrow_up");
+// }
+// buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
+
+// document.addEventListener("click", (evt) => {
+//   if (
+//     (evt.target !== buttonOpenAccaunt) &
+//     !accountElementsArray.includes(evt.target) &
+//     !popupAccaunt.classList.contains("popup__accaunt-close")
+//   ) {
+//     popupAccaunt.classList.add("popup__accaunt-close");
+//     buttonOpenAccountArrow.classList.remove("header__profile-arrow_up");
+//   }
+// });
+
+/* *** { EVENTLISTENER } *** */
+headerMenu.addEventListener("click", openMenu); // Открытие боковой навигации по клику на бургер
+buttonOpenNotification.addEventListener("click", () =>
+  openPopup(popupNotification),
+);
+buttonOpenAccaunt.addEventListener("click", () => openPopup(popupAccaunt));
