@@ -44,7 +44,7 @@
     padding: 0 40px 0 132px; //86+46
     padding-bottom: 82px;
     // min-height: 800px;
-    max-width: 1440px;
+    // max-width: 1440px;
     min-width: 320px;
     // transition: padding-left 0.3s ease-in-out;
     position: relative;
@@ -65,7 +65,7 @@
   height: 72px;
   z-index: 1;
   width: 100%;
-  max-width: 1268px;
+  // max-width: 1268px;
   box-sizing: border-box;
   border-bottom: 1px solid variables.$clr-secondary-focus;
   display: flex;
@@ -73,10 +73,6 @@
   align-items: center;
   background-color: variables.$clr-white;
   z-index: 1;
-
-  // transition:
-  //   left 0.3s ease-in-out,
-  //   max-width 0.3s ease-in-out;
 
   &-open {
     left: 286px;
