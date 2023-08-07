@@ -16,6 +16,7 @@
   font-style: normal;
   font-weight: variables.$fw-600;
 }
+
 .templates {
   &__container {
     height: 105px;
@@ -24,18 +25,21 @@
     justify-content: space-between;
     align-items: baseline;
   }
+
   &__menu {
     display: flex;
     flex-direction: row;
     gap: 6px;
     cursor: pointer;
   }
+
   &__paragraph {
     @extend .text;
     font-size: 16px;
     color: variables.$clr-gray-3;
   }
 }
+
 .section-header {
   margin-bottom: 32px;
   @extend .text;
@@ -48,9 +52,11 @@
   &_margin-s {
     margin-top: 40px;
   }
+
   &_margin-m {
     margin-top: 60px;
   }
+
   &_margin-l {
     margin-top: 102px;
   }
@@ -71,25 +77,22 @@
 
 .info-block {
   min-height: 330px;
-  // min-height: 513px;
   border-radius: 30px;
   background-color: variables.$clr-secondary-gray;
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
 }
+
 .bot-setting {
   max-height: 330px;
   min-width: 100%;
   padding: 43px 40px 36px;
   box-sizing: border-box;
-
   border-radius: 30px;
   background-color: variables.$clr-white;
   box-shadow: 0px 6px 16px 0px variables.$box-shadow;
-
   position: absolute;
   top: 0;
   right: 0;
@@ -99,28 +102,30 @@
     align-items: center;
     gap: 15px;
   }
+
   &__header {
     margin: 0;
     @extend .text;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-24;
   }
+
   &__paragraph {
     max-height: 32px;
     margin: 0 0 0 5px;
     padding: 8px 16px 6px;
-
     border-radius: 16px;
     box-sizing: border-box;
-
     @extend .button-social__caption;
     background-color: variables.$clr-blue-disabled;
     color: variables.$clr-primary-medium;
     font-weight: variables.$fw-400;
   }
+
   &__span {
     font-weight: variables.$fw-600;
   }
+
   &__ol {
     padding: 0;
     margin-top: 40px;
@@ -128,12 +133,12 @@
     display: flex;
     justify-content: space-between;
     gap: 28px;
-
     list-style: none;
     @extend .text;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-base;
   }
+
   &__list {
     min-width: calc(100% / 3 - 28px);
     width: calc(100% / 2 - 14px);
@@ -144,14 +149,17 @@
     & > p {
       margin: 0;
     }
+
     & > p > span {
       margin-left: 32px;
     }
   }
+
   &__input-box {
     border-radius: 5px;
     background-color: variables.$clr-gray;
   }
+
   &__input {
     width: 100%;
     height: 65px;
@@ -165,12 +173,12 @@
       color: variables.$clr-gray-3;
     }
   }
+
   &__button {
     width: 100%;
     height: 65px;
     border-radius: 5px;
     background-color: variables.$clr-gray;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,6 +190,7 @@
       background-color: variables.$clr-primary-gray;
       border-radius: 50%;
     }
+
     & > p {
       margin: 0;
       @extend .text;
@@ -189,24 +198,25 @@
       color: variables.$clr-gray-3;
     }
   }
+
   &__submit-box {
     width: 100%;
     display: flex;
     justify-content: flex-end;
   }
+
   &__submit {
     margin: 0;
     width: 256px;
     height: 65px;
     border-radius: 10px;
-
     @extend .text;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-base;
-
     background-color: variables.$clr-accent;
   }
 }
+
 .faq-panel {
   padding: 0 41px 40px;
   width: 100%;
@@ -215,7 +225,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
   position: absolute;
   bottom: 0;
   right: 0;
@@ -225,28 +234,30 @@
     @extend .bot-setting__header;
     font-size: variables.$fs-button-text;
   }
+
   &__btn-uncover {
     min-width: 24px;
   }
+
   &__faq {
     margin: 12px 0 0 0;
     padding: 0;
     min-height: 76px;
     width: 100%;
     list-style: none;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 29px;
   }
+
   &__list {
     width: calc(100% / 2 - 29px);
   }
+
   &__button {
     height: 100%;
     width: 100%;
-
     border: solid 2px variables.$clr-secondary-focus;
     border-radius: 10px;
     background-color: variables.$clr-secondary-gray;
@@ -254,26 +265,30 @@
     & > p {
       text-align: start;
       margin: 0 0 0 34%;
-
       @extend .text;
       font-size: variables.$fs-small;
     }
+
     &_video {
       background-image: url("../../images/template-icon/add_bot/video-frame_1.svg");
       background-repeat: no-repeat;
     }
+
     &_video:hover {
       background-image: url("../../images/template-icon/add_bot/video-frame_2.svg");
       background-repeat: no-repeat;
     }
+
     &_book {
       background-image: url("../../images/template-icon/add_bot/book-frame_2.svg");
       background-repeat: no-repeat;
     }
+
     &_book:hover {
       background-image: url("../../images/template-icon/add_bot/book-frame_1.svg");
       background-repeat: no-repeat;
     }
+
     &:hover {
       background-color: variables.$clr-white;
       border: none;
@@ -376,6 +391,7 @@
   max-height: 25px;
   max-width: 25px;
 }
+
 .hidden {
   display: none;
 }
