@@ -16,7 +16,8 @@ items.forEach((item) => {
 function canselSelectSocial(e) {
   if (e.key === "Escape") {
     items.forEach((item) => {
-      item.removeAttribute("disabled");
+      item.querySelector(".button-social__caption").classList.remove("disable");
+      item.querySelector(":hover svg rect").classList.remove("disable");
       item
         .querySelector(":hover svg rect")
         .classList.remove("button-social-active");
@@ -30,11 +31,18 @@ function selectSocial(elem) {
   elem.addEventListener("click", () => {
     items.forEach((item) => {
       if (elem.id != item.id) {
-        item.setAttribute("disabled", "");
+        // item.setAttribute("disabled", "");
+        item.querySelector(".button-social__caption").classList.add("disable");
+        item.querySelector(":hover svg rect").classList.add("disable");
       } else {
+        item
+          .querySelector(".button-social__caption")
+          .classList.remove("disable");
+        item.querySelector(":hover svg rect").classList.remove("disable");
         item
           .querySelector(":hover svg rect")
           .classList.add("button-social-active");
+        console.log(item.id);
         const socialName = elem.querySelector(
           ".button-social__caption",
         ).textContent;

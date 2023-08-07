@@ -475,8 +475,7 @@
   display: none;
 }
 
-// @media (max-width: 1024px) {
-//   .button-tutorial {
-//     padding-left: 137px;
-//   }
-// }
+.disable {
+  fill: variables.$clr-secondary-focus;
+  color: variables.$clr-secondary-focus;
+}
