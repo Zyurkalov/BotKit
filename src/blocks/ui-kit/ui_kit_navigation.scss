@@ -1,9 +1,7 @@
 @use "../variables";
-@use "../common";
-@use "utils";
+@use "../common-styles";
+@use "ui-kit-common-styles";
 @use "ui_kit_icons";
-
-// mixin
 
 @mixin boxShadow() {
   box-shadow: 0 12px 24px 0 variables.$box-shadow;
@@ -66,7 +64,6 @@
   flex-direction: row;
   align-items: center;
   background-color: variables.$clr-white;
-  z-index: 1;
   max-width: 1440px;
 
   &-open {
@@ -200,7 +197,6 @@
         display: none;
       }
     }
-
     &:focus {
       outline: none;
     }
@@ -288,7 +284,7 @@
     }
   }
 
-  &__second {
+  &__dropdown {
     &_items {
       max-height: none;
     }
@@ -348,7 +344,7 @@
       margin: 0;
     }
 
-    &_second {
+    &_dropdown {
       margin-left: 50px;
     }
   }
