@@ -9,10 +9,10 @@
       type="image/svg+xml"
       href="<%=require('../../../favicon.ico')%>"
     />
-    <title>Affiliate Program</title>
+    <title>Navigation</title>
   </head>
   <body class="page__container">
-    <nav class="menu" aria-label="Боковая навигация">
+    <nav class="menu" aria-label="Меню сайта">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -122,10 +122,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a
-            class="link link_theme_gray link_theme_gray_active"
-            href="../pp/pp.html"
-          >
+          <a class="link link_theme_gray" href="../pp/pp.html">
             <svg
               class="link__image"
               width="24"
@@ -254,21 +251,17 @@
         </li>
       </ul>
     </nav>
-    <nav class="header">
-      <button
-        class="header__menu"
-        type="button"
-        aria-label="Верхняя навигация"
-      ></button>
+    <header class="header">
+      <button class="header__menu" type="button" aria-label="menu"></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="Помощь"></button>
+      <button class="header__help" type="button" aria-label="help"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="Уведомления"
+        aria-label="notification"
       >
-        <p class="header__notification-counter">2</p>
+        <span class="header__notification-counter">2</span>
       </button>
       <button class="header__profile">
         <img
@@ -276,14 +269,14 @@
           alt="Аватар"
           src="<%=require('../../images/avatar/circle.png')%>"
         />
-        <p class="header__profile-name">User Name</p>
+        <span class="header__profile-name">User Name</span>
         <img
           alt="Стрелка вниз"
           class="header__profile-arrow"
           src="<%=require('../../images/template-icon/20x20/down.svg')%>"
         />
       </button>
-    </nav>
+    </header>
     <main class="main">
       <!-- тело страницы -->
       <section class="affiliate-program">
@@ -433,7 +426,7 @@
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
     <!-- popup -->
-    <section class="popup popup__notification popup__notification-close">
+    <dialog class="popup popup__notification">
       <div class="popup__header">
         <img
           alt="Стрелка вниз"
@@ -444,7 +437,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="Закрыть попап"
+          aria-label="close popup"
         ></button>
       </div>
       <fieldset class="popup__menu">
@@ -468,10 +461,17 @@
       </fieldset>
       <div class="popup__main">
         <!-- место под новости и логи -->
+        <!-- <ul class="popup__main_news">
+          <il class="news">новость 1</il>
+        </ul>
+
+        <ul class="popup__main_logs">
+          <il class="log">Событие 1</il>
+        </ul> -->
         <!-- конец -->
       </div>
-    </section>
-    <section class="popup popup__accaunt popup__accaunt-close">
+    </dialog>
+    <dialog class="popup popup__accaunt">
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
@@ -479,7 +479,7 @@
             alt="настройки"
             src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
+          <span class="popup__accaunt-button-text">Настройки аккаунта</span>
         </button>
         <button class="popup__accaunt-button">
           <img
@@ -487,7 +487,7 @@
             alt="Подписка и платежи"
             src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Подписка и платежи</p>
+          <span class="popup__accaunt-button-text">Подписка и платежи</span>
         </button>
         <button class="popup__accaunt-button">
           <img
@@ -495,9 +495,9 @@
             alt="выход"
             src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Выйти</p>
+          <span class="popup__accaunt-button-text">Выйти</span>
         </button>
       </div>
-    </section>
+    </dialog>
   </body>
 </html>
