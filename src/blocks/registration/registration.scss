@@ -1,6 +1,7 @@
 @use "../variables";
 @use "../common-styles";
 @use "../ui-kit/ui_kit_buttons.scss";
+@import "intl-tel-input/build/css/intlTelInput.css";
 
 .body {
   min-height: 100vh;
@@ -168,6 +169,7 @@
   background-image: url("../../images/social-icons/auth/google.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -182,6 +184,7 @@
   background-image: url("../../images/social-icons/auth/yandex.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -196,6 +199,7 @@
   background-image: url("../../images/social-icons/auth/mailru.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -210,6 +214,7 @@
   background-image: url("../../images/social-icons/auth/vk.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -224,6 +229,7 @@
   background-image: url("../../images/social-icons/auth/odnoklassniki.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -238,6 +244,7 @@
   background-image: url("../../images/social-icons/auth/facebook.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -252,6 +259,7 @@
   background-image: url("../../images/social-icons/auth/telegram.svg");
   width: 40px;
   height: 40px;
+
   @media screen and (max-width: 682px) {
     width: 34px;
     height: 34px;
@@ -658,4 +666,78 @@ input[required] {
     border-radius: 8px;
     padding: 5px 13px 5px 7px;
   }
+}
+
+//код отвечающий за выпадающий список
+.iti input,
+.iti input[type="tel"] {
+  width: 325px;
+}
+
+.iti__country {
+  position: relative;
+}
+
+.iti__country-name {
+  margin-right: 35px;
+}
+
+.iti__country-list {
+  border-radius: 20px;
+  max-height: 225px;
+  max-width: 268px;
+  white-space: normal;
+}
+.iti__selected-flag {
+  border-radius: 10px;
+  background-color: variables.$clr-primary-medium;
+  // background-color: black;
+}
+
+.iti__dial-code {
+  color: variables.$clr-primary-medium;
+  padding-right: 2px;
+  position: absolute;
+  right: 5px;
+}
+
+//код отвечающий за скролл
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: variables.$clr-primary-medium;
+  border-radius: 10px;
+}
+
+/* Alternative actions*/
+.alternative-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (max-width: 682px) {
+    margin-bottom: 30px;
+  }
+}
+
+.alternative-actions__text {
+  font-size: variables.$fs-small;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.alternative-actions__button {
+  text-decoration: underline;
+  font-weight: variables.$fw-600;
+  font-size: variables.$fs-small;
+  letter-spacing: 0.3px;
+  color: variables.$clr-white;
 }
