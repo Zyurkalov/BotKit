@@ -270,7 +270,11 @@
       >
         <p class="header__notification-counter">2</p>
       </button>
-      <button class="header__profile">
+      <button
+        class="header__profile"
+        type="button"
+        aria-label="Пользовательские настройки"
+      >
         <img
           class="header__profile-avatar"
           alt="Аватар"
@@ -288,70 +292,65 @@
     <main class="main">
       <section class="dialogues">
         <h1 class="section-header">Диалоги</h1>
-        <div class="dialogues__input-box">
+        <fieldset class="dialogues__input-box">
           <img
             class="icon icon_size_s"
             src="<%=require('../../images/template-icon/24x24/common/search.svg')%>"
             alt="Искать"
           />
           <input
-            class="field__input field__input_bg-grey general-grey-text"
+            class="field-input general-grey-text"
             type="text"
             id="field-default"
             name="field-default"
             placeholder="Поиск..."
           />
+
           <svg
-            class="icon-color icon-color_size_small"
+            class="icon-color icon-color_size-small"
+            xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             viewBox="0 0 20 20"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="filter-svgrepo-com-2 1">
-              <path
-                id="Vector"
-                d="M8.83333 14.25H3"
-                stroke="#060C23"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                id="Vector_2"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M16.3334 14.2493C16.3334 15.3999 15.4007 16.3327 14.2501 16.3327C13.0995 16.3327 12.1667 15.3999 12.1667 14.2493C12.1667 13.0979 13.0995 12.166 14.2501 12.166C15.4007 12.166 16.3334 13.0979 16.3334 14.2493Z"
-                stroke="#060C23"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                id="Vector_3"
-                d="M10.8333 5.41602H16.6666"
-                stroke="#060C23"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                id="Vector_4"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3 5.08333C3 6.23478 3.93273 7.16667 5.08333 7.16667C6.23393 7.16667 7.16667 6.23478 7.16667 5.08333C7.16667 3.93273 6.23393 3 5.08333 3C3.93273 3 3 3.93273 3 5.08333Z"
-                stroke="#060C23"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
+            <path
+              d="M8.83333 14.25H3"
+              stroke="#060C23"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16.3337 14.2493C16.3337 15.3999 15.4009 16.3327 14.2503 16.3327C13.0997 16.3327 12.167 15.3999 12.167 14.2493C12.167 13.0979 13.0997 12.166 14.2503 12.166C15.4009 12.166 16.3337 13.0979 16.3337 14.2493Z"
+              stroke="#060C23"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10.833 5.41602H16.6663"
+              stroke="#060C23"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 5.08333C3 6.23478 3.93273 7.16667 5.08333 7.16667C6.23393 7.16667 7.16667 6.23478 7.16667 5.08333C7.16667 3.93273 6.23393 3 5.08333 3C3.93273 3 3 3.93273 3 5.08333Z"
+              stroke="#060C23"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
-        </div>
+        </fieldset>
         <ul class="dialogues__ul">
           <li class="dialogues__li">
-            <button class="dialogues-box" type="button">
+            <div class="dialogues-box">
               <div class="dialogues-box__avatar">
                 <img
                   class="dialogues-box__avatar-img"
@@ -369,10 +368,10 @@
                 <p class="dialogues-box__count-message">1</p>
               </div>
               <div class="dialogues-box__selector hidden"></div>
-            </button>
+            </div>
           </li>
           <li class="dialogues__li">
-            <button class="dialogues-box" type="button">
+            <div class="dialogues-box">
               <div class="dialogues-box__avatar">
                 <img
                   class="dialogues-box__avatar-img"
@@ -390,10 +389,10 @@
                 <p class="dialogues-box__count-message hidden"></p>
               </div>
               <div class="dialogues-box__selector hidden"></div>
-            </button>
+            </div>
           </li>
           <li class="dialogues__li">
-            <button class="dialogues-box" type="button">
+            <div class="dialogues-box">
               <div class="dialogues-box__avatar">
                 <img
                   class="dialogues-box__avatar-img"
@@ -411,10 +410,10 @@
                 <p class="dialogues-box__count-message hidden"></p>
               </div>
               <div class="dialogues-box__selector"></div>
-            </button>
+            </div>
           </li>
           <li class="dialogues__li">
-            <button class="dialogues-box" type="button">
+            <div class="dialogues-box">
               <div class="dialogues-box__avatar">
                 <img
                   class="dialogues-box__avatar-img"
@@ -432,7 +431,7 @@
                 <p class="dialogues-box__count-message hidden"></p>
               </div>
               <div class="dialogues-box__selector hidden"></div>
-            </button>
+            </div>
           </li>
         </ul>
       </section>
@@ -527,9 +526,7 @@
                 <p class="cloud-box__text">Привет, как это сделать?</p>
                 <span class="cloud-box__message-date">16 мин назад</span>
               </div>
-              <span class="cloud-box__message-viewed"
-                >Просмотренно в 14:05</span
-              >
+              <span class="cloud-box-viewed">Просмотренно в 14:05</span>
             </div>
           </div>
 
@@ -546,7 +543,7 @@
               <div class="cloud-box__message-cont">
                 <p class="cloud-box__text">
                   Привет, {name}! Перейдите по ссылке
-                  <span class="cloud-box__text_span"
+                  <span class="cloud-box__text-span"
                     >https://BOTkit/file/-node-id=3A332705</span
                   >
                 </p>
@@ -555,8 +552,7 @@
                   >10 мин назад</span
                 >
               </div>
-              <span
-                class="cloud-box__message-viewed cloud-box__message-viewed_your"
+              <span class="cloud-box-viewed cloud-box-viewed_your"
                 >Просмотренно в 14:12</span
               >
             </div>
@@ -577,21 +573,21 @@
                 <span class="cloud-box__message-date">16 мин назад</span>
               </div>
             </div>
-            <span class="cloud-box__message-viewed">Просмотренно в 14:05</span>
+            <span class="cloud-box-viewed">Просмотренно в 14:05</span>
           </div>
         </div>
         <div class="chat__buttom-menu">
-          <div class="chat__input-box">
+          <fieldset class="chat__input-box">
             <input
-              class="field__input search-input general-grey-text"
+              class="field-input search-input general-grey-text"
               type="text"
-              id="field-default"
-              name="field-default"
+              id="field-search"
+              name="field-message"
               placeholder="Введите сообщение..."
             />
             <button class="chat__input-button">
               <svg
-                class="icon-color"
+                class="icon-color icon-color_size-small"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -609,37 +605,37 @@
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_size_s"
+                class="icon icon_size-small"
                 src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
                 alt="выбрать смалик"
               />
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_size_s"
+                class="icon icon_size-small"
                 src="<%=require('../../images/template-icon/24x24/common/slash.svg')%>"
                 alt="невидимое сообщение"
               />
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_size_s"
+                class="icon icon_size-small"
                 src="<%=require('../../images/template-icon/24x24/common/zap.svg')%>"
                 alt="молния"
               />
             </button>
             <button class="chat__input-button">
               <img
-                class="icon icon_size_s icon_rotate_one-eight"
+                class="icon icon_size-small icon_rotate_one-eight"
                 src="<%=require('../../images/template-icon/24x24/common/x-circle.svg')%>"
                 alt="добавить/убрать дополнительные инструменты"
               />
             </button>
-          </div>
+          </fieldset>
           <button class="button-elem">
-            <div class="button-elem__bg button-elem__bg-blue"></div>
+            <span class="button-elem__bg button-elem__bg-blue"></span>
             <svg
-              class="icon_pos-abs"
+              class="icon icon_pos-abs"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -687,7 +683,7 @@
         <div class="user-info__column">
           <div class="user-avatar">
             <img
-              class="user-avatar__img_user-info"
+              class="user-avatar__user-info"
               src="<%=require('../../images/avatar/avatar-sergey.svg')%>"
               alt="ваш аватар"
             />
@@ -733,11 +729,11 @@
               />
             </svg>
           </button>
-          <div class="window-user-info__user-info hidden"></div>
+          <div class="window-user-info__user-info"></div>
           <button class="window-user-info__btn" type="button">
             История действий
             <svg
-              class="icon_rotate_half"
+              class="rotate-revers"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -911,6 +907,8 @@
       </div>
     </section>
     <section class="popup popup__accaunt popup__accaunt-close">
+      <!-- arial-label тут не подходит. Скрыл заголовок -->
+      <h3 style="display: none">Попап</h3>
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
@@ -918,7 +916,7 @@
             alt="настройки"
             src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
+          <span class="popup__accaunt-button-text">Настройки аккаунта</span>
         </button>
         <button class="popup__accaunt-button">
           <img
@@ -926,16 +924,15 @@
             alt="Подписка и платежи"
             src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Подписка и платежи</p>
+          <span class="popup__accaunt-button-text">Подписка и платежи</span>
         </button>
         <button class="popup__accaunt-button">
           <img
             class="popup__accaunt-button-image"
             alt="выход"
             src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
-            src="<%=require('../../images/template-icon/16x16/logout-gray.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Выйти</p>
+          <span class="popup__accaunt-button-text">Выйти</span>
         </button>
       </div>
     </section>
