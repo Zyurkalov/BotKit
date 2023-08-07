@@ -15,15 +15,16 @@
 }
 
 .templates {
+  @media screen and (max-width: 360px) {
+    padding: 50px 0 0 20px;
+  }
+
   &__container {
     height: 105px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    @media screen and (max-width: 360px) {
-      padding-left: 20px;
-    }
   }
 
   &__menu {
@@ -45,8 +46,11 @@
     font-size: 16px;
     color: variables.$clr-gray-3;
   }
+}
+
+.my-bots {
   @media screen and (max-width: 360px) {
-    padding: 50px 0 0 20px;
+    padding: 60px 0 0 20px;
   }
 }
 
@@ -66,7 +70,7 @@
     margin-top: 60px;
 
     @media screen and (max-width: 360px) {
-      margin: 45px 0 0 19px;
+      margin: 0 0 20px;
     }
   }
   @media screen and (max-width: 360px) {
@@ -95,13 +99,16 @@
   &_cards {
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
   }
+
   &-close {
     height: 125px;
     overflow: hidden;
   }
+
   &-open {
     height: auto;
   }
+
   @media screen and (max-width: 360px) {
     display: flex;
     overflow-x: scroll;
@@ -173,6 +180,7 @@
   }
   @media screen and (max-width: 360px) {
     flex-direction: column;
+    padding: 0 20px 0;
   }
 }
 
