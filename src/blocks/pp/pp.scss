@@ -18,6 +18,7 @@
   margin: 32px 0;
 
   @media screen and (max-width: 360px) {
+    display: block;
     margin-top: 70px;
   }
 }
@@ -28,6 +29,10 @@
   font-weight: variables.$fw-600;
   line-height: 1.3;
   letter-spacing: -0.2px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .affiliate-program_container-copy {
@@ -42,6 +47,10 @@
   height: 65px;
   background-color: variables.$clr-gray;
   border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
 }
 
 .ref-link {
@@ -60,6 +69,12 @@
 
 .affiliate-program_payments-button {
   max-width: 188px;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 511px;
+    left: 80px;
+  }
 }
 
 .affiliate-program_copy-button {
@@ -94,6 +109,10 @@
   }
 }
 
+.main {
+  padding: 0 20px 0 20px;
+}
+
 .stats-referral__title,
 .cash__title {
   font-family: variables.$ff-secondary;
@@ -107,6 +126,10 @@
   display: grid;
   grid-template-columns: repeat(7, minmax(10px, 1fr));
   gap: 25px 8%;
+
+  @media screen and (max-width: 768px) {
+    min-width: 1200px;
+  }
 }
 
 .table-stats > .table-stats__row:nth-child(7n) {
@@ -171,6 +194,10 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(10px, 1fr));
   gap: 25px 10%;
+
+  @media screen and (max-width: 768px) {
+    min-width: 600px;
+  }
 }
 
 .table-payout-closed {

@@ -46,6 +46,7 @@
     }
     @media screen and (max-width: 360px) {
       margin: 0;
+      padding: 0;
     }
   }
 }
@@ -223,6 +224,10 @@
   align-items: center;
   padding-left: 40px;
   @include text-default();
+
+  @media screen and (max-width: 360px) {
+    justify-content: center;
+  }
 }
 
 .menu {

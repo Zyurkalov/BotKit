@@ -10,7 +10,7 @@
   margin-bottom: 32px;
 
   @media screen and (max-width: 360px) {
-    margin-top: 50px;
+    margin: 50px 0 32px 15px;
   }
 }
 
@@ -23,10 +23,20 @@
   letter-spacing: -0.2px;
   color: variables.$clr-primary-dark;
   margin: 0;
+
+  @media screen and (max-width: 360px) {
+    font-size: 24px;
+  }
 }
 
 .common-button_color_green {
   max-width: 188px;
+
+  @media screen and (max-width: 360px) {
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+  }
 }
 
 .mailing-window {
@@ -41,6 +51,14 @@
 
   &_centered {
     justify-content: center;
+  }
+}
+
+.main {
+  @media screen and (max-width: 360px) {
+    position: relative;
+    padding-bottom: 100px;
+    min-height: 700px;
   }
 }
 
@@ -155,6 +173,10 @@
 
   &_visible {
     display: block;
+
+    @media screen and (max-width: 360px) {
+      display: none;
+    }
   }
 
   &__header {
