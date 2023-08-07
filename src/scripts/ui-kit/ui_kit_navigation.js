@@ -62,18 +62,18 @@ function toggleDropdownMenu() {
   menuDropdownArrow.classList.toggle("link__image_up-open");
 }
 
-// закрытие popup по клику на кнопку Esc
-export function closePopupOnPressKey(e, popup) {
-  if (e.key === "Escape") {
-    closePopup(popup);
-  }
-}
-
 // открытие popup
-function openPopup(popup) {
-  popup.show();
+function openPopup(popup, type = null) {
+  if (type === "modal") {
+    popup.showModal();
+    popup.addEventListener("click", (e) => closePopupOnClickRect(e, popup));
+  } else {
+    popup.show();
+  }
+
   document.addEventListener("keydown", (e) => closePopupOnPressKey(e, popup));
   closePopupOnClickButton(popup, true);
+  popup.addEventListener("click", (e) => closePopupOnClickRect(e, popup));
   popup.addEventListener("mouseleave", () => closePopup(popup));
 }
 
@@ -96,6 +96,25 @@ function closePopupOnClickButton(popup, key) {
     } else {
       buttonClose.removeEventListener("click", () => closePopup(popup));
     }
+  }
+}
+
+// закрытие popup по клику на кнопку Esc
+export function closePopupOnPressKey(e, popup) {
+  if (e.key === "Escape") {
+    closePopup(popup);
+  }
+}
+
+function closePopupOnClickRect(e, popup) {
+  const rect = popup.getBoundingClientRect();
+  const isInDialog =
+    rect.top <= e.clientY &&
+    e.clientY <= rect.top + rect.height &&
+    rect.left <= e.clientX &&
+    e.clientX <= rect.left + rect.width;
+  if (!isInDialog) {
+    closePopup(popup);
   }
 }
 
@@ -122,4 +141,6 @@ headerMenu.addEventListener("click", openMenu); // Открытие боково
 buttonOpenNotification.addEventListener("click", () =>
   openPopup(popupNotification),
 );
-buttonOpenAccaunt.addEventListener("click", () => openPopup(popupAccaunt));
+buttonOpenAccaunt.addEventListener("click", () =>
+  openPopup(popupAccaunt, "modal"),
+);
