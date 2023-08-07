@@ -1,6 +1,8 @@
 import "../blocks/registration/registration.scss";
 import { authRoutes, selectors, toggleConfirmationPopup } from "./constants";
+import intlTelInput from "intl-tel-input/build/js/intlTelInput";
 
+const inputPhone = document.querySelector("#phone");
 const signInBtn = document.querySelector(selectors.regPage.signInBtn);
 const closeBtn = document.querySelector(
   selectors.confirmationPopupCloseBtn.closeBtn,
@@ -27,3 +29,16 @@ signUpBtn.addEventListener("click", (evt) => {
 
 // Закрытие попапа подтверждения по клику на крестик
 closeBtn.addEventListener("click", toggleConfirmationPopup);
+
+// выпадающий список
+intlTelInput(inputPhone, {
+  autoInsertDialCode: true,
+  autoPlaceholder: "off",
+  dropdownContainer: document.body,
+  hiddenInput: "full_number",
+  separateDialCode: true,
+  onlyCountries: ["az", "am", "by", "kz", "kg", "md", "ru", "tj", "uz", "ua"],
+  // utilsScript: "intl-tel-input/build/js/utils"
+  // "path/to/utils.js"
+  // "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});

@@ -13,6 +13,7 @@
   font-style: normal;
   font-weight: variables.$fw-600;
 }
+
 .general-grey-text {
   @extend .text;
   font-size: variables.$fs-small;
@@ -27,6 +28,10 @@
   line-height: 130%;
   letter-spacing: -0.2px;
   font-family: variables.$ff-secondary;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 ///////////// dialogues
@@ -35,11 +40,16 @@
   box-sizing: border-box;
   padding-right: 20px;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
   &__ul {
     margin: 16px 0 0;
     padding: 0;
     list-style: none;
   }
+
   &__li {
     border-bottom: solid 1px variables.$clr-secondary-cultured;
   }
@@ -51,11 +61,11 @@
     background-color: variables.$clr-secondary-gray;
   }
 }
+
 .dialogues-box {
   height: 79px;
   width: 100%;
   padding: 19px 0;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,11 +74,13 @@
   &:last-child {
     border: 0px;
   }
+
   &__avatar {
     height: 40px;
     aspect-ratio: 1/1;
     position: relative;
   }
+
   &__point {
     height: 8px;
     width: 8px;
@@ -79,6 +91,7 @@
     top: 30px;
     left: 30px;
   }
+
   &__container {
     margin: 0 0 0 16px;
     width: 100%;
@@ -88,6 +101,7 @@
     justify-content: space-between;
     text-align: start;
   }
+
   &__user {
     width: 60%;
     @extend .text;
@@ -104,9 +118,9 @@
     white-space: nowrap;
     overflow: hidden;
   }
+
   &__count-message {
     @extend .text;
-
     padding-top: 4px;
     height: 18px;
     width: 18px;
@@ -117,12 +131,12 @@
     font-size: variables.$fs-tiny;
     font-family: variables.$ff-primary;
   }
+
   &__selector {
     height: 100%;
     width: 4px;
     background-color: variables.$clr-primary-medium;
     border-radius: 2px 0 0 2px;
-
     position: absolute;
     top: 0;
     right: -20px;
@@ -134,7 +148,6 @@
   width: 51.5%;
   box-sizing: border-box;
   padding: 0 32px 0;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -142,6 +155,10 @@
   position: relative;
   border-left: solid 1px variables.$clr-secondary-cultured;
   border-right: solid 1px variables.$clr-secondary-cultured;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   &__header-box {
     margin-bottom: 20px;
@@ -151,14 +168,17 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &__icons-box {
     display: flex;
     flex-direction: row;
     gap: 12px;
   }
+
   &__dialogue-window {
     flex-grow: 1;
   }
+
   &__dialogue-cloud {
     margin-top: 46px;
     position: relative;
@@ -169,17 +189,18 @@
       flex-direction: row-reverse;
     }
   }
+
   &__dialogue-window > div:first-child {
     margin-top: 32px;
   }
+
   &__buttom-menu {
     display: flex;
     justify-content: space-between;
-    // gap: 20px;
     align-items: center;
   }
+
   &__input-box {
-    display: inline-block;
     padding: 14px 12px 14px 16px;
     height: 48px;
     background-color: variables.$clr-gray;
@@ -190,14 +211,15 @@
     align-items: center;
     flex-grow: 1;
   }
+
   &__input-button {
     min-width: 20px;
     max-height: 20px;
     object-fit: contain;
     object-position: center;
-
     margin-left: 8px;
   }
+
   &__button-stretch {
     width: 31px;
     height: 40px;
@@ -209,10 +231,10 @@
     top: 62%;
   }
 }
+
 .user-name {
   margin: 0 0 0 19px;
   flex-grow: 1;
-
   @extend .text;
   font-size: variables.$fs-base;
   font-weight: variables.$fw-500;
@@ -223,6 +245,7 @@
     padding-bottom: 4px;
   }
 }
+
 .user-avatar {
   min-width: 40px;
   min-height: 40px;
@@ -231,20 +254,20 @@
   &__user-info {
     margin-top: 40px;
     margin-bottom: 16px;
-
     width: 60px;
     height: 60px;
   }
+
   &__point {
     width: 18px;
     height: 18px;
     position: absolute;
     top: -4px;
     left: -4px;
-
     border-radius: 50%;
     background-color: variables.$clr-primary-medium;
   }
+
   &__point-img {
     filter: invert(100%) grayscale(100%) brightness(3);
     width: 12px;
@@ -252,10 +275,12 @@
     object-position: 50% 50%;
   }
 }
+
 .time-border {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__line {
     height: 1px;
     width: 38%;
@@ -271,7 +296,7 @@
   background-position: right;
   background-image: url(../../images/chat/rectangle-grey.svg);
   background-size: cover;
-  // background-color: variables.$clr-gray;
+  @extend .text;
 
   &_your {
     width: 310px;
@@ -280,33 +305,35 @@
     background-image: url(../../images/chat/rectangle-blue.svg);
     color: variables.$clr-white;
   }
-  @extend .text;
+
   &__header {
     margin: 0 0 8px 0;
     font-size: variables.$fs-tiny;
     font-family: variables.$ff-primary;
   }
+
   &__message-cont {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }
+
   &__text {
     max-width: 70%;
     margin: 0;
     flex-grow: 1;
     flex-wrap: wrap;
-
     @extend .cloud-box__header;
     font-weight: variables.$fw-400;
   }
+
   &__text-span {
     text-decoration: underline;
     cursor: pointer;
   }
+
   &__message-date {
     flex-grow: 0;
-
     @extend .cloud-box__text;
     font-size: 8px;
     min-width: 30%;
@@ -318,6 +345,7 @@
     }
   }
 }
+
 .cloud-box-viewed {
   @extend .cloud-box__message-date;
   text-align: start;
@@ -332,11 +360,13 @@
     right: 52px;
   }
 }
+
 .dialogues__input-button {
   min-width: 20px;
   min-height: 20px;
   object-fit: contain;
 }
+
 .dialogues__input-box {
   box-sizing: border-box;
   margin: 0;
@@ -346,8 +376,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // gap: 8px;
-
   background-color: variables.$clr-secondary-gray;
   border-radius: 5px;
 
@@ -355,11 +383,11 @@
     height: 48px;
   }
 }
+
 .field-input {
   padding: 0;
   outline: 0;
   appearance: none;
-
   height: 24px;
   max-width: 100%;
   position: relative;
@@ -368,6 +396,7 @@
   &_bg-grey {
     background-color: variables.$clr-secondary-gray;
   }
+
   &::placeholder {
     @extend .general-grey-text;
   }
@@ -380,27 +409,27 @@
   box-sizing: border-box;
   padding-left: 40px;
 
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
   &__column {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  // &__info-panel {
-  //   width: 100%;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  // }
+
   &__buttons-box {
     display: flex;
     width: 100%;
     position: relative;
   }
+
   &__button {
     margin-top: 32px;
     padding: 0;
     width: 50%;
     height: 35px;
-
     @extend .general-grey-text;
     font-weight: variables.$fw-600;
     border-bottom: solid 1px variables.$clr-secondary-cultured;
@@ -410,17 +439,18 @@
       color: variables.$clr-primary-medium;
     }
   }
+
   &__select {
     height: 4px;
     width: 50%;
     background-color: variables.$clr-primary-medium;
     border-radius: 2px 2px 0 0;
-
     position: absolute;
     bottom: 0;
     right: 0px;
   }
 }
+
 .window-files-empty,
 .window-user-info,
 .window-files {
@@ -428,9 +458,72 @@
   min-width: 100%;
   padding-top: 32px;
 }
+
+.window-user-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
 .window-files-empty {
   text-align: center;
 }
+///////accordeon
+.accordeon {
+  display: flex;
+  flex-direction: column;
+}
+.accordeon__heading {
+  width: 100%;
+  max-width: 250px;
+  background-color: variables.$clr-gray;
+  height: 40px;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordeon__heading-text {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: variables.$ff-primary;
+  font-size: 13px;
+  font-weight: variables.$fw-400;
+  color: variables.$clr-primary-dark;
+  padding: 4px 4px 0 0;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: 0.3px;
+  overflow: hidden;
+}
+.accordeon__content {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding-inline-start: 0;
+  padding: 0 8px;
+  transition:
+    max-height 0.2s ease-out,
+    padding 0.2s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.accordeon__content_opened {
+  padding: 24px 8px;
+}
+.accordeon__content-item {
+  display: inline-block;
+  font-family: variables.$ff-primary;
+  color: variables.$clr-primary-dark;
+  font-weight: variables.$fw-600;
+  font-size: 13px;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: 0.3px;
+}
+
 .window-user-info {
   &__btn {
     margin-bottom: 8px;
@@ -438,40 +531,42 @@
     min-width: 100%;
     height: 40px;
     border-radius: 5px;
-
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background-color: variables.$clr-gray;
     @extend .general-grey-text;
     color: variables.$clr-primary-dark;
     font-size: variables.$fs-small;
   }
+
   &__list {
     margin: 0;
-    padding: 16px 0 0;
+    padding: 16px 0 16px;
     list-style: none;
-
     @extend .general-grey-text;
     color: variables.$clr-primary-dark;
     font-weight: variables.$fw-600;
     font-size: variables.$fs-small;
   }
+
   &__list > li:last-child {
     margin-top: 12px;
   }
 }
+
 .window-files {
   display: flex;
   flex-wrap: wrap;
+
   &__headers {
     width: 80%;
     padding: 0 0 20px;
     @extend .text;
     font-size: variables.$fs-small;
   }
+
   &__btn-all {
     width: 20%;
     padding: 0 0 20px;
@@ -488,12 +583,14 @@
     @extend .text;
     font-size: variables.$fs-small;
   }
+
   &__list > li {
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
   }
+
   &__list_img {
     display: flex;
     gap: 8px;
@@ -505,9 +602,13 @@
   padding-top: 32px;
   display: flex;
   flex-direction: row;
-
   min-height: 750px;
+
+  @media screen and (max-width: 768px) {
+    padding: 82px 0 0 20px;
+  }
 }
+
 .button-elem {
   min-width: 40px;
 }
@@ -516,24 +617,31 @@
   &:hover {
     cursor: pointer;
   }
+
   & > path,
   line {
     stroke: variables.$clr-gray-3;
   }
+
   &_size-small {
     min-width: 20px;
   }
 }
+
 .icon {
   cursor: pointer;
+
   &_size-small {
     width: 20px;
     height: 20px;
   }
 }
+
 .rotate-revers {
   rotate: 180deg;
 }
+
 .hidden {
   display: none;
+  overflow: hidden;
 }

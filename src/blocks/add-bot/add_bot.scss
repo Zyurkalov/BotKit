@@ -129,6 +129,13 @@
     line-height: 31px;
     letter-spacing: 0px;
     text-align: left;
+
+    @media screen and (max-width: 360px) {
+      font-size: 18px;
+      text-align: center;
+      line-height: 23.4px;
+      max-width: 256px;
+    }
   }
 
   &__text {
@@ -142,6 +149,162 @@
     line-height: 24px;
     letter-spacing: 0.3;
     text-align: left;
+
+    @media screen and (max-width: 360px) {
+      font-size: 14px;
+      max-width: 256px;
+      text-align: center;
+    }
+  }
+
+  &__settings {
+    width: 100%;
+    padding: 40px 40px 36px;
+    border-radius: 30px;
+    background-color: variables.$clr-white;
+    box-shadow: 0px 6px 16px 0px variables.$box-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    &_header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &_body {
+      margin: 26px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      list-style-type: none;
+    }
+
+    &_item {
+      margin-right: 28px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &-titles {
+        display: flex;
+        margin: 14px 0 16px;
+      }
+    }
+
+    &_footer {
+      margin-top: 15px;
+      align-self: end;
+      max-width: 256px;
+      height: 65px;
+      font-size: variables.$fs-button-text;
+    }
+
+    &_base {
+      padding: 0 16px;
+      height: 32px;
+      border-radius: 16px;
+      background-color: variables.$clr-blue-disabled;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__help {
+    padding: 32px 40px 40px;
+
+    &_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      // margin-bottom: 16px;
+      height: 39px;
+    }
+
+    &_body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > .button-tutorial:first-child {
+        margin-right: 29px;
+      }
+    }
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  min-height: 65px;
+  max-height: 146px;
+  border-radius: 10px;
+  background-color: variables.$clr-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__pages {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+    width: 100%;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    // grid-template-rows: repeat(auto-fit, 52px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 8px;
+    row-gap: 10px;
+
+    &_load {
+      @extend .text;
+      font-size: variables.$fs-small;
+      color: variables.$clr-gray-3;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  &__page {
+    margin: 0;
+    padding: 8px;
+    height: 52px;
+    min-width: 180px;
+    max-width: 274px;
+    width: 100%;
+    @extend .text;
+    font-size: variables.$fs-small;
+    color: variables.$clr-gray-3;
+    letter-spacing: 0.7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: variables.$clr-secondary-gray;
+
+    &_load {
+      background-color: transparent;
+    }
+
+    &_image {
+      margin-right: 18px;
+    }
   }
 
   &__settings {
@@ -299,10 +462,15 @@
   opacity: 0.3;
 }
 
+.load-image {
+  opacity: 0.3;
+}
+
 .social-icon_l {
   max-height: 25px;
   max-width: 25px;
 }
+
 .hidden {
   display: none;
 }
