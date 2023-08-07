@@ -34,7 +34,6 @@
   border-radius: 30px;
   background-color: variables.$clr-secondary-gray;
   font-family: variables.$ff-secondary;
-
   &_centered {
     justify-content: center;
   }
@@ -49,18 +48,15 @@
   background-color: variables.$clr-white;
   color: variables.$clr-primary-dark;
   display: none;
-
   &_visible {
     display: block;
   }
-
-  &__header {
+  &_header {
     height: 60px;
     display: flex;
     justify-content: space-between;
     position: relative;
   }
-
   &__header-text {
     margin: 0;
     font-family: variables.$ff-secondary;
@@ -69,11 +65,9 @@
     font-weight: variables.$fw-600;
     line-height: 130%; /* 31.2px */
   }
-
   &__filter {
     display: flex;
     position: relative;
-
     font-family: variables.$ff-primary;
     font-size: variables.$fs-base;
     font-style: normal;
@@ -82,30 +76,24 @@
     letter-spacing: 0.3px;
     color: variables.$clr-gray-4;
   }
-
   &__filter-text {
     margin: 0;
   }
-
   &__filter-icon {
     height: 24px;
     width: 24px;
     margin-left: 12px;
     cursor: pointer;
-
     &_upside-down {
       transform: rotate(0.5turn);
     }
   }
-
   &__table {
     text-align: left;
     width: 100%;
   }
-
   &__columns {
     height: 33px;
-
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-base;
     font-style: normal;
@@ -113,7 +101,6 @@
     line-height: 130%; /* 20.8px */
     letter-spacing: 0.5px;
   }
-
   &__body {
     font-family: variables.$ff-primary;
     font-size: variables.$fs-small;
@@ -122,15 +109,12 @@
     line-height: 150%; /* 19.5px */
     letter-spacing: 0.3px;
   }
-
   &__row {
     height: 48px;
   }
-
   &__cell_data_launch-status {
     color: variables.$clr-success;
     font-weight: variables.$fw-600;
-
     &_rejected {
       color: variables.$clr-validation-error;
     }
@@ -141,13 +125,10 @@
   width: 100%;
   height: 187px;
   padding: 32px 40px 40px 40px;
-
   display: none;
-
   &_visible {
     display: block;
   }
-
   &__header {
     margin: 0;
     font-family: variables.$ff-secondary;
@@ -156,7 +137,6 @@
     font-weight: variables.$fw-600;
     line-height: 130%; /* 23.4px */
   }
-
   &__list {
     margin: 16px 0 0 0;
     padding: 0;
@@ -164,7 +144,6 @@
     display: flex;
     justify-content: space-between;
     gap: 29px;
-
     font-family: variables.$ff-primary;
     font-size: variables.$fs-small;
     font-style: normal;
@@ -181,7 +160,6 @@
 .mailing-list-placeholder {
   text-align: center;
   display: none;
-
   &_visible {
     display: block;
   }
