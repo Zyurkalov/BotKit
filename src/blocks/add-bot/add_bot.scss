@@ -479,3 +479,7 @@
   fill: variables.$clr-secondary-focus;
   color: variables.$clr-secondary-focus;
 }
+
+.access-key__input_nowidth {
+  max-width: none;
+}
