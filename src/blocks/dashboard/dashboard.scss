@@ -170,6 +170,12 @@
   }
 }
 
+.card {
+  @media screen and (max-width: 360px) {
+    margin-bottom: 15px;
+  }
+}
+
 .list-container {
   margin: 0;
   padding: 0;
@@ -311,6 +317,10 @@
   line-height: 150%;
   letter-spacing: 0.3px;
   opacity: 1;
+
+  @media screen and (max-width: 360px) {
+    margin-left: 15px;
+  }
 }
 
 // Модификаторы импортируемых компонентов

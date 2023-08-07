@@ -16,6 +16,10 @@
   line-height: 41.6px;
   letter-spacing: -0.2px;
   margin: 32px 0;
+
+  @media screen and (max-width: 360px) {
+    margin-top: 70px;
+  }
 }
 
 .affiliate-program__title {
@@ -48,6 +52,10 @@
   line-height: 21px;
   letter-spacing: 0.3px;
   font-weight: variables.$fw-600;
+
+  @media screen and (max-width: 360px) {
+    width: 330px;
+  }
 }
 
 .affiliate-program_payments-button {
@@ -62,6 +70,11 @@
   background-color: variables.$clr-secondary-gray;
   border-radius: 30px;
   height: 625px;
+
+  @media screen and (max-width: 360px) {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 
 .pp-window__container-closed {
@@ -74,6 +87,11 @@
   border-radius: 30px;
   box-shadow: 0px 6px 16px 0px #15123314;
   height: 327px;
+
+  @media screen and (max-width: 360px) {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 
 .stats-referral__title,
@@ -136,6 +154,11 @@
 
 .cash {
   padding: 32px 44px 40px 40px;
+
+  @media screen and (max-width: 360px) {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 
 .cash__header {
