@@ -175,7 +175,7 @@
   &__buttom-menu {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    // gap: 20px;
     align-items: center;
   }
   &__input-box {
@@ -192,7 +192,7 @@
   }
   &__input-button {
     min-width: 20px;
-    height: 20px;
+    max-height: 20px;
     object-fit: contain;
     object-position: center;
 
@@ -228,14 +228,12 @@
   min-height: 40px;
   position: relative;
 
-  &__img {
-    &_user-info {
-      margin-top: 40px;
-      margin-bottom: 16px;
+  &__user-info {
+    margin-top: 40px;
+    margin-bottom: 16px;
 
-      width: 60px;
-      height: 60px;
-    }
+    width: 60px;
+    height: 60px;
   }
   &__point {
     width: 18px;
@@ -301,11 +299,10 @@
 
     @extend .cloud-box__header;
     font-weight: variables.$fw-400;
-
-    &_span {
-      text-decoration: underline;
-      cursor: pointer;
-    }
+  }
+  &__text-span {
+    text-decoration: underline;
+    cursor: pointer;
   }
   &__message-date {
     flex-grow: 0;
@@ -320,19 +317,19 @@
       min-width: 20%;
     }
   }
-  &__message-viewed {
-    @extend .cloud-box__message-date;
-    text-align: start;
-    position: absolute;
-    bottom: -20px;
-    left: 56px;
-    max-width: 100%;
+}
+.cloud-box-viewed {
+  @extend .cloud-box__message-date;
+  text-align: start;
+  position: absolute;
+  bottom: -20px;
+  left: 56px;
+  max-width: 100%;
 
-    &_your {
-      text-align: end;
-      bottom: -20px;
-      right: 52px;
-    }
+  &_your {
+    text-align: end;
+    bottom: -20px;
+    right: 52px;
   }
 }
 .dialogues__input-button {
@@ -349,7 +346,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  // gap: 8px;
 
   background-color: variables.$clr-secondary-gray;
   border-radius: 5px;
@@ -358,7 +355,7 @@
     height: 48px;
   }
 }
-.field__input {
+.field-input {
   padding: 0;
   outline: 0;
   appearance: none;
@@ -366,10 +363,13 @@
   height: 24px;
   max-width: 100%;
   position: relative;
-  background-color: variables.$clr-gray;
+  flex-grow: 1;
 
   &_bg-grey {
     background-color: variables.$clr-secondary-gray;
+  }
+  &::placeholder {
+    @extend .general-grey-text;
   }
 }
 
@@ -520,21 +520,20 @@
   line {
     stroke: variables.$clr-gray-3;
   }
-  &_size_small {
+  &_size-small {
     min-width: 20px;
   }
 }
 .icon {
   cursor: pointer;
-  &_rotate180 {
-    rotate: 180deg;
-  }
-  &__icon_size_s {
-    min-width: 20px;
-    max-height: 20px;
+  &_size-small {
+    width: 20px;
+    height: 20px;
   }
 }
-
+.rotate-revers {
+  rotate: 180deg;
+}
 .hidden {
   display: none;
 }

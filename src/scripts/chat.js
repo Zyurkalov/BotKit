@@ -15,7 +15,7 @@ const buttonStretchIcon = buttonStretch.querySelector(".chat__button-icon");
 
 function stretchChat() {
   profileWindow.classList.toggle("hidden");
-  buttonStretchIcon.classList.toggle("icon_rotate180");
+  buttonStretchIcon.classList.toggle("rotate-revers");
 }
 function selectInfo() {
   if (buttonInfo.classList.contains("user-info__button_select")) {
