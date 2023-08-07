@@ -711,52 +711,64 @@
         </div>
         <!-- второе окно -->
         <div class="window-user-info hidden">
-          <button class="window-user-info__btn" type="button">
-            Информация о пользователе
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M12.6667 6.28027L8.00001 10.9469L3.33334 6.28027"
-                stroke="#060C23"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <div class="window-user-info__user-info"></div>
-          <button class="window-user-info__btn" type="button">
-            История действий
-            <svg
-              class="rotate-revers"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M12.6667 6.28027L8.00001 10.9469L3.33334 6.28027"
-                stroke="#060C23"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <div class="window-user-info__history">
-            <ul class="window-user-info__list">
-              <li>
-                Последнее действие: &nbsp;
-                <span class="general-grey-text">3 мин назад</span>
+          <div class="accordeon">
+            <div class="accordeon__heading">
+              <p class="accordeon__heading-text">Информация о пользователе</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordeon__heading-arrow"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M12.6667 6.28027L8.00001 10.9469L3.33334 6.28027"
+                  stroke="#060C23"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="accordeon__content">
+              <li class="accordeon__content-item">
+                Последнее действие:
+                <span class="general-grey-text"> 12.02.2021</span>
               </li>
-              <li>
-                Первое действие: &nbsp;
+              <li class="accordeon__content-item">
+                Первое действие:
+                <span class="general-grey-text">12.02.2021</span>
+              </li>
+            </ul>
+          </div>
+          <div class="accordeon">
+            <div class="accordeon__heading">
+              <p class="accordeon__heading-text">История действий</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordeon__heading-arrow"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M12.6667 6.28027L8.00001 10.9469L3.33334 6.28027"
+                  stroke="#060C23"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="accordeon__content">
+              <li class="accordeon__content-item">
+                Последнее действие:
+                <span class="general-grey-text"> 12.02.2021</span>
+              </li>
+              <li class="accordeon__content-item">
+                Первое действие:
                 <span class="general-grey-text">12.02.2021</span>
               </li>
             </ul>
