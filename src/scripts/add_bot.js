@@ -42,7 +42,6 @@ function selectSocial(elem) {
         item
           .querySelector(":hover svg rect")
           .classList.add("button-social-active");
-        console.log(item.id);
         const socialName = elem.querySelector(
           ".button-social__caption",
         ).textContent;
