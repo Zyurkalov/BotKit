@@ -414,14 +414,14 @@
 /* Кнопка пошаговая инструкция */
 .button-tutorial {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   width: 100%;
   min-width: 300px;
   max-width: 579px;
   height: 76px;
-  padding-left: 201px;
+  // padding-left: 201px;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-image: url("../../images/template-icon/add_bot/book-frame_2.svg");
