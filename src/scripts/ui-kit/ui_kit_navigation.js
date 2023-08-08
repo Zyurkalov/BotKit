@@ -20,14 +20,13 @@ let menuStatus = false;
 // Профиль пользователя
 export const buttonOpenAccaunt = header.querySelector(".header__profile");
 export const popupAccaunt = page.querySelector(".popup__accaunt");
-// const buttonOpenAccountArrow = buttonOpenAccaunt.querySelector(".header__profile-arrow");
-// const accountElements = buttonOpenAccaunt.querySelectorAll("*");
-// const accountElementsArray = Array.from(accountElements);
+const buttonOpenAccountArrow = buttonOpenAccaunt.querySelector(
+  ".header__profile-arrow",
+);
 
 // Уведомления
 const buttonOpenNotification = header.querySelector(".header__notification");
 const popupNotification = page.querySelector(".popup__notification");
-// const buttonCloseNotification = popupNotification.querySelector(".popup__button-close");
 
 /* *** { FUNCTION } *** */
 // Открытие боковой навигации
@@ -70,7 +69,9 @@ function openPopup(popup, type = null) {
   } else {
     popup.show();
   }
-
+  if (popup === popupAccaunt) {
+    buttonOpenAccountArrow.classList.add("header__profile-arrow_up");
+  }
   document.addEventListener("keydown", (e) => closePopupOnPressKey(e, popup));
   closePopupOnClickButton(popup, true);
   popup.addEventListener("click", (e) => closePopupOnClickRect(e, popup));
@@ -85,6 +86,9 @@ function closePopup(popup) {
   );
   closePopupOnClickButton(popup, false);
   popup.removeEventListener("mouseleave", () => closePopup(popup));
+  if (popup === popupAccaunt) {
+    buttonOpenAccountArrow.classList.remove("header__profile-arrow_up");
+  }
 }
 
 // закрытие popup по клику на кнопу close

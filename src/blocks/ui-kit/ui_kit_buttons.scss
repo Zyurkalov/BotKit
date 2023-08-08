@@ -299,7 +299,7 @@
     font-weight: variables.$fw-600;
     line-height: 21px;
     letter-spacing: 0.3px;
-    // color: variables.$clr-primary-dark;
+    color: variables.$clr-primary-dark;
   }
 
   &-active {
@@ -335,9 +335,6 @@
 
   &:disabled svg rect {
     fill: variables.$clr-primary-gray;
-  }
-  &:focus {
-    outline: none;
   }
 }
 
@@ -419,12 +416,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
-  min-width: 300px;
   max-width: 579px;
   height: 76px;
-  // padding-left: 201px;
   border: 2px solid variables.$clr-secondary-focus;
   border-radius: 10px;
   background-image: url("../../images/template-icon/add_bot/book-frame_2.svg");

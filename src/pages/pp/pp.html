@@ -9,10 +9,10 @@
       type="image/svg+xml"
       href="<%=require('../../../favicon.ico')%>"
     />
-    <title>Navigation</title>
+    <title>Affiliate Program</title>
   </head>
   <body class="page__container">
-    <nav class="menu" aria-label="Меню сайта">
+    <nav class="menu" aria-label="Меню">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -252,18 +252,26 @@
       </ul>
     </nav>
     <header class="header">
-      <button class="header__menu" type="button" aria-label="menu"></button>
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Развернуть меню"
+      ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
-      <button class="header__help" type="button" aria-label="help"></button>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
       <button
         class="header__notification"
         type="button"
-        aria-label="notification"
+        aria-label="Уведомления"
       >
         <span class="header__notification-counter">2</span>
       </button>
-      <button class="header__profile">
+      <button
+        class="header__profile"
+        type="button"
+        aria-label="Пользовательские настройки"
+      >
         <img
           class="header__profile-avatar"
           alt="Аватар"
@@ -437,7 +445,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="close popup"
+          aria-label="Закрыть попап"
         ></button>
       </div>
       <fieldset class="popup__menu">
@@ -461,13 +469,6 @@
       </fieldset>
       <div class="popup__main">
         <!-- место под новости и логи -->
-        <!-- <ul class="popup__main_news">
-          <il class="news">новость 1</il>
-        </ul>
-
-        <ul class="popup__main_logs">
-          <il class="log">Событие 1</il>
-        </ul> -->
         <!-- конец -->
       </div>
     </dialog>
