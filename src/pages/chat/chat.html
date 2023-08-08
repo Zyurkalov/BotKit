@@ -11,6 +11,7 @@
     />
     <title>Chat</title>
   </head>
+
   <body class="page__container">
     <nav class="menu" aria-label="Боковая навигация">
       <ul class="menu__items">
@@ -263,30 +264,30 @@
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
       <button class="header__help" type="button" aria-label="Помощь"></button>
-      <button
-        class="header__notification"
-        type="button"
-        aria-label="Уведомления"
-      >
-        <p class="header__notification-counter">2</p>
-      </button>
-      <button
-        class="header__profile"
-        type="button"
-        aria-label="Пользовательские настройки"
-      >
-        <img
-          class="header__profile-avatar"
-          alt="Аватар"
-          src="<%=require('../../images/avatar/circle.png')%>"
-        />
-        <p class="header__profile-name">User Name</p>
-        <img
-          alt="Стрелка вниз"
-          class="header__profile-arrow"
-          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
-        />
-      </button>
+      <p class="header__notification">
+        <button
+          class="header__notification-counter"
+          type="button"
+          aria-label="Уведомления"
+        >
+          2
+        </button>
+      </p>
+      <p class="header__profile-name">
+        <button class="header__profile">
+          <img
+            class="header__profile-avatar"
+            alt="Аватар"
+            src="<%=require('../../images/avatar/circle.png')%>"
+          />
+          User Name
+          <img
+            alt="Стрелка вниз"
+            class="header__profile-arrow"
+            src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+          />
+        </button>
+      </p>
     </nav>
 
     <main class="main">
