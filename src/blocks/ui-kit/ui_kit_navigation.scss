@@ -163,6 +163,7 @@
       border-radius: 50%;
       border: 2px solid variables.$clr-secondary-gray;
       box-sizing: border-box;
+      margin-right: 10px;
 
       @media screen and (max-width: 360px) {
         margin: -10px 22px 0 0;
@@ -181,6 +182,7 @@
     &-arrow {
       height: 20px;
       width: 20px;
+      margin-left: 12px;
 
       &_up {
         transform: rotate(0.5turn);
@@ -549,6 +551,12 @@
 
     &-button {
       @include button-default();
+      color: variables.$clr-primary-dark;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-400;
+      font-size: variables.$fs-small;
+      line-height: 21px;
+      letter-spacing: -1px;
       margin: 0 0 8px;
       height: 37px;
       display: flex;
@@ -572,17 +580,6 @@
         width: 24px;
         margin: 0 8px 0 16px;
         opacity: 0.4;
-      }
-
-      &-text {
-        margin: 0;
-        padding: 0;
-        color: variables.$clr-primary-dark;
-        font-family: variables.$ff-secondary;
-        font-weight: variables.$fw-400;
-        font-size: variables.$fs-small;
-        line-height: 21px;
-        letter-spacing: -1px;
       }
     }
 
