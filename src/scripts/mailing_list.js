@@ -261,3 +261,16 @@ function toggleMessageWin(evt) {
   nextDirection.classList.toggle("direction_new-padding");
   backDirection.classList.toggle("direction_new-padding");
 }
+
+const input = document.querySelector(".link-text__textarea");
+const count = document.querySelector(".link-text__count");
+
+function checkInputLetters() {
+  var charCount = input.value.length;
+
+  count.textContent = charCount + "/4096";
+}
+
+input.addEventListener("input", checkInputLetters);
+
+checkInputLetters();
