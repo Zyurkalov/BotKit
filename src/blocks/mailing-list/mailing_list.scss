@@ -427,6 +427,11 @@
   letter-spacing: 0.3px;
   color: variables.$clr-primary-dark;
   padding: 10px 12px 10px 8px;
+  cursor: pointer;
+}
+
+.activate__text:hover {
+  background-color: variables.$clr-gray;
 }
 
 .activate__text_choice {

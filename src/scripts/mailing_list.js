@@ -268,3 +268,13 @@ function checkInputLetters() {
 input.addEventListener("input", checkInputLetters);
 
 checkInputLetters();
+
+let funnelItems = document.querySelectorAll(".activate__text");
+funnelItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    funnelItems.forEach(function (item) {
+      item.classList.remove("activate__text_choice");
+    });
+    this.classList.add("activate__text_choice");
+  });
+});
