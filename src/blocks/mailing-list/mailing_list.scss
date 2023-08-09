@@ -53,6 +53,13 @@
   }
 }
 
+.mailing {
+  display: none;
+}
+.mailing-window_disable {
+  display: block;
+}
+
 .main {
   @media screen and (max-width: 360px) {
     position: relative;
@@ -215,7 +222,6 @@
   line-height: 1.5;
   letter-spacing: 0.3px;
 }
-
 
 /*Mailing add*/
 
@@ -553,8 +559,6 @@
 
 .main-box__bot {
   display: block;
-  width: 32px;
-  height: 32px;
 }
 
 .main-box__responsive {
@@ -642,4 +646,20 @@
 
 .pull-out_active {
   display: flex;
+}
+
+.page__container_new-padding {
+  margin: 72px 0 0 132px;
+}
+
+.header_new-padding {
+  margin-right: 40px;
+}
+
+.footer_new-padding {
+  margin-right: 40px;
+}
+
+.direction_new-padding {
+  margin-right: 60px;
 }

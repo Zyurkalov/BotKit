@@ -174,9 +174,9 @@ options.forEach((option) => {
   });
 });
 
-
 const createBtn = document.querySelector(".create-newsletter");
 const exitBtn = document.querySelector(".navigationBtns__btn_exit");
+
 function toggleNewsletterPage(evt) {
   evt.preventDefault();
 
@@ -198,6 +198,7 @@ const notActivateFunnel = document.querySelector(
 const funnelOption = document.querySelector(".fun-selection");
 
 function toggleActiveFunnel(evt) {
+  evt.preventDefault();
   const element = evt.target;
   const img = element.querySelector(".activate__markup");
   img.classList.add("activate__markup_active");
@@ -214,11 +215,13 @@ function toggleInActiveFunnel(element) {
 }
 
 function toggleFunOption(evt) {
-  element = evt.target;
+  evt.preventDefault();
+  const element = evt.target;
   if (element.classList.contains("activate__btn_active-funnel")) {
     funnelOption.classList.add("fun-selection_active");
   } else funnelOption.classList.remove("fun-selection_active");
 }
+
 activateFunnel.addEventListener("click", (evt) => {
   toggleActiveFunnel(evt);
   toggleInActiveFunnel(notActivateFunnel);
@@ -229,3 +232,32 @@ notActivateFunnel.addEventListener("click", (evt) => {
   toggleInActiveFunnel(activateFunnel);
   toggleFunOption(evt);
 });
+
+const nextDirection = document.querySelector(".direction_next");
+const backDirection = document.querySelector(".direction_previous");
+
+nextDirection.addEventListener("click", toggleMessageWin);
+backDirection.addEventListener("click", toggleMessageWin);
+
+function toggleMessageWin(evt) {
+  evt.preventDefault();
+  document
+    .querySelector(".message-window")
+    .classList.toggle("message-window_active");
+  document.querySelector(".pull-out").classList.toggle("pull-out_active");
+  document
+    .querySelector(".direction_next")
+    .classList.toggle("direction_active");
+  document
+    .querySelector(".direction_previous")
+    .classList.toggle("direction_active");
+
+  document
+    .querySelector(".page__container")
+    .classList.toggle("page__container_new-padding");
+  document.querySelector(".header").classList.toggle("header_new-padding");
+  document.querySelector(".footer").classList.toggle("footer_new-padding");
+
+  nextDirection.classList.toggle("direction_new-padding");
+  backDirection.classList.toggle("direction_new-padding");
+}
