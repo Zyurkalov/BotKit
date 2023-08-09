@@ -296,9 +296,9 @@
             Создать рассылку
           </button>
         </div>
-        <div class="mailing-window">
+        <section class="mailing-window">
           <!-- Показывается в случае если у пользователя есть рассылки -->
-          <section class="card mailing-list mailing-list_visible">
+          <div class="card mailing-list mailing-list_visible">
             <div class="mailing-list__header">
               <h2 class="mailing-list__header-text">Мои Рассылки</h2>
               <div class="selector mailing-list__filter">
@@ -353,7 +353,7 @@
                 </template>
               </tbody>
             </table>
-          </section>
+          </div>
           <section class="mailing-tutorials mailing-tutorials_visible">
             <h3 class="mailing-tutorials__header">Как это работает?</h3>
             <ul class="mailing-tutorials__list">
@@ -376,24 +376,24 @@
               Нажмите на кнопку “создать рассылку”
             </p>
           </section>
-        </div>
+        </section>
       </section>
 
       <!-- Mailing Add-->
 
       <section class="mailing mailing_add">
         <div class="mailing__header">
-          <h2 class="mailing__title">Рассылки</h2>
+          <h1 class="mailing__title">Рассылки</h1>
         </div>
 
         <div class="mailing-windows">
-          <section class="mailing-window">
+          <div class="mailing-window">
             <section class="card mailing-list mailing-list_visible">
               <div class="steps">
                 <span class="step">1</span>
                 <span class="step">Шаг</span>
                 <span class="step">></span>
-                <span class="step step-name">Создание рассылки</span>
+                <h2 class="step step-name">Создание рассылки</h2>
               </div>
 
               <div class="links">
@@ -443,7 +443,7 @@
               </div>
 
               <div class="link-text">
-                <h2 class="mailing-list__columns">Текст сообщения</h2>
+                <h3 class="mailing-list__columns">Текст сообщения</h3>
                 <div class="link-text__block">
                   <textarea
                     class="field__input link-text__textarea"
@@ -468,35 +468,55 @@
               </div>
 
               <div class="add-content">
-                <h2 class="mailing-list__columns">Добавить</h2>
+                <h3 class="mailing-list__columns">Добавить</h3>
 
                 <div class="add-content__buttons">
                   <button class="panel-add-bot add-content__btn" type="button">
                     <span class="panel-add-bot__circle add-content__circle">
-                      <img src="<%=require('../../images/photo.svg')%>" />
+                      <img
+                        src="<%=require('../../images/photo.svg')%>"
+                        alt="фото"
+                      />
                     </span>
-                    <p class="panel-add-bot__text add-content__text">Фото</p>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Фото</span
+                    >
                   </button>
 
                   <button class="panel-add-bot add-content__btn" type="button">
                     <span class="panel-add-bot__circle add-content__circle">
-                      <img src="<%=require('../../images/video.svg')%>" />
+                      <img
+                        src="<%=require('../../images/video.svg')%>"
+                        alt="видео"
+                      />
                     </span>
-                    <p class="panel-add-bot__text add-content__text">Видео</p>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Видео</span
+                    >
                   </button>
 
                   <button class="panel-add-bot add-content__btn" type="button">
                     <span class="panel-add-bot__circle add-content__circle">
-                      <img src="<%=require('../../images/audio.svg')%>" />
+                      <img
+                        src="<%=require('../../images/audio.svg')%>"
+                        alt="аудио"
+                      />
                     </span>
-                    <p class="panel-add-bot__text add-content__text">Аудио</p>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Аудио</span
+                    >
                   </button>
 
                   <button class="panel-add-bot add-content__btn" type="button">
                     <span class="panel-add-bot__circle add-content__circle">
-                      <img src="<%=require('../../images/btn.svg')%>" />
+                      <img
+                        src="<%=require('../../images/btn.svg')%>"
+                        alt="кнопка"
+                      />
                     </span>
-                    <p class="panel-add-bot__text add-content__text">Кнопка</p>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Кнопка</span
+                    >
                   </button>
                 </div>
 
@@ -522,7 +542,7 @@
                 </div>
 
                 <div class="activate">
-                  <h2 class="mailing-list__columns">Активировать воронку</h2>
+                  <h3 class="mailing-list__columns">Активировать воронку</h3>
 
                   <div class="activate__btn activate__btn_active-funnel">
                     <p class="activate__text">Активировать</p>
@@ -572,7 +592,7 @@
                 </div>
               </div>
             </section>
-            <section
+            <div
               class="mailing-tutorials mailing-tutorials_visible mailing-tutorials_navigation-btns"
             >
               <div class="navigation-btns">
@@ -587,11 +607,10 @@
                   Далее
                 </button>
               </div>
-            </section>
-            <!-- конец -->
-          </section>
+            </div>
+          </div>
 
-          <section class="second-window">
+          <div class="chat-window">
             <div class="pull-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -744,121 +763,118 @@
               </div>
             </section>
             <button class="direction direction_next direction_active">
-              <div class="direction__img-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                >
-                  <g filter="url(#filter0_d_1667_325863)">
-                    <circle cx="32" cy="26" r="20" fill="white" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M29.2796 20.2775C29.6524 19.9075 30.2567 19.9075 30.6295 20.2775L35.7204 25.3301C36.0932 25.7001 36.0932 26.2999 35.7204 26.6699L30.6295 31.7225C30.2567 32.0925 29.6524 32.0925 29.2796 31.7225C28.9068 31.3526 28.9068 30.7527 29.2796 30.3827L33.6955 26L29.2796 21.6173C28.9068 21.2473 28.9068 20.6474 29.2796 20.2775Z"
-                      fill="#060C23"
+              <svg
+                class="direction__img-container"
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1667_325863)">
+                  <circle cx="32" cy="26" r="20" fill="white" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M29.2796 20.2775C29.6524 19.9075 30.2567 19.9075 30.6295 20.2775L35.7204 25.3301C36.0932 25.7001 36.0932 26.2999 35.7204 26.6699L30.6295 31.7225C30.2567 32.0925 29.6524 32.0925 29.2796 31.7225C28.9068 31.3526 28.9068 30.7527 29.2796 30.3827L33.6955 26L29.2796 21.6173C28.9068 21.2473 28.9068 20.6474 29.2796 20.2775Z"
+                    fill="#060C23"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_1667_325863"
+                    x="0"
+                    y="0"
+                    width="60"
+                    height="60"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
                     />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_d_1667_325863"
-                      x="0"
-                      y="0"
-                      width="60"
-                      height="60"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dx="-2" dy="4" />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.05 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_1667_325863"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_1667_325863"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
+                    <feOffset dx="-2" dy="4" />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.05 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1667_325863"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1667_325863"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
             </button>
 
             <button class="direction direction_previous">
-              <div class="direction__img-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                >
-                  <g filter="url(#filter0_d_1760_331951)">
-                    <circle cx="32" cy="26" r="20" fill="white" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M34.7204 31.7225C34.3476 32.0925 33.7433 32.0925 33.3705 31.7225L28.2796 26.6699C27.9068 26.2999 27.9068 25.7001 28.2796 25.3301L33.3705 20.2775C33.7433 19.9075 34.3476 19.9075 34.7204 20.2775C35.0932 20.6474 35.0932 21.2473 34.7204 21.6173L30.3045 26L34.7204 30.3827C35.0932 30.7527 35.0932 31.3526 34.7204 31.7225Z"
-                      fill="#060C23"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1760_331951)">
+                  <circle cx="32" cy="26" r="20" fill="white" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M34.7204 31.7225C34.3476 32.0925 33.7433 32.0925 33.3705 31.7225L28.2796 26.6699C27.9068 26.2999 27.9068 25.7001 28.2796 25.3301L33.3705 20.2775C33.7433 19.9075 34.3476 19.9075 34.7204 20.2775C35.0932 20.6474 35.0932 21.2473 34.7204 21.6173L30.3045 26L34.7204 30.3827C35.0932 30.7527 35.0932 31.3526 34.7204 31.7225Z"
+                    fill="#060C23"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_1760_331951"
+                    x="0"
+                    y="0"
+                    width="60"
+                    height="60"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
                     />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_d_1760_331951"
-                      x="0"
-                      y="0"
-                      width="60"
-                      height="60"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dx="-2" dy="4" />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.05 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_1760_331951"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_1760_331951"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
+                    <feOffset dx="-2" dy="4" />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.05 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1760_331951"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1760_331951"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
             </button>
-          </section>
+          </div>
         </div>
       </section>
       <!-- конец -->

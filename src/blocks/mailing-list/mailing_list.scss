@@ -349,12 +349,12 @@
 .add-content__buttons {
   display: flex;
   margin-bottom: 32px;
+  gap: 20px;
 }
 
 .add-content__btn {
   width: 124px;
   height: 124px;
-  margin-right: 20px;
 
   &:hover {
     .add-content__circle {
@@ -371,10 +371,6 @@
 .add-content__circle {
   background-color: variables.$clr-primary-gray;
   border: none;
-}
-
-.add-content__btn:last-child {
-  margin: 0;
 }
 
 .add-content__text {
@@ -497,7 +493,7 @@
   display: flex;
 }
 
-.second-window {
+.chat-window {
   max-width: 296px;
   width: 100%;
   height: 651px;
@@ -660,10 +656,6 @@
 
 .footer-box__robot {
   display: inline;
-}
-
-.second-window_disable {
-  display: none;
 }
 
 .pull-out {
