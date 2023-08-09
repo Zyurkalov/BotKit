@@ -35,14 +35,12 @@
 
 .page {
   &__container {
-    padding: 0;
-    margin: 72px 40px 0 132px; //86+46
-    padding-bottom: 82px;
-    min-height: 800px;
-    max-width: 1440px;
-
+    margin: 0;
+    padding: 0 40px 0 132px;
+    min-width: 320px;
+    position: relative;
     &-open {
-      margin-left: 286px;
+      padding-left: 286px;
     }
     @media screen and (max-width: 360px) {
       margin: 0;
@@ -52,24 +50,20 @@
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
+  left: 132px;
   height: 72px;
-  z-index: 1;
-  width: calc(100% - 40px - 132px);
-  margin-left: 132px;
+  width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid variables.$clr-secondary-focus;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: variables.$clr-white;
-  max-width: 1440px;
 
   &-open {
-    margin-left: 286px;
-    width: calc(100% - 40px - 286px);
+    left: 286px;
   }
 
   &__menu {
@@ -150,9 +144,6 @@
       align-items: center;
       justify-content: center;
     }
-    &:focus {
-      outline: none;
-    }
   }
 
   &__profile {
@@ -181,6 +172,7 @@
     }
     &-name {
       @include text-default();
+      margin: 0 10px 0 12px;
 
       @media screen and (max-width: 360px) {
         display: none;
@@ -195,12 +187,6 @@
       &_up {
         transform: rotate(0.5turn);
       }
-      @media screen and (max-width: 360px) {
-        display: none;
-      }
-    }
-    &:focus {
-      outline: none;
     }
   }
   @media screen and (max-width: 360px) {
@@ -234,7 +220,6 @@
 
 .menu {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   min-width: 86px;
@@ -324,6 +309,9 @@
 
       min-width: 24px;
       margin: 11px;
+      transition:
+        min-width 0.3s ease-in-out,
+        margin 0.3s ease-in-out;
 
       &-open {
         min-width: 0;
@@ -367,10 +355,6 @@
       font-weight: variables.$fw-600;
       font-size: variables.$fs-small;
       letter-spacing: 1px;
-      transition:
-        padding 0.3s ease-in-out,
-        margin-left 0.3s ease-in-out,
-        border-radius 0.3s ease-in-out;
 
       &:hover {
         background-color: variables.$clr-icon-hover;
@@ -443,23 +427,22 @@
 }
 
 .popup {
-  display: block;
-  position: fixed;
+  border: none;
+  right: 0;
 
   &__notification {
     height: 100vh;
     width: 364px;
     padding: 24px 40px 0 28px;
+    margin: 0;
     top: 0;
-    right: 0;
+    left: calc(100% - 364px);
     background-color: variables.$clr-white;
     border-left: 1px solid variables.$clr-secondary-focus;
     @include boxShadow();
-    z-index: 150;
-    transition: right 0.3s ease-in-out;
 
-    &-close {
-      right: -400px;
+    &::backdrop {
+      background-color: transparent;
     }
   }
 
@@ -532,13 +515,18 @@
   &__accaunt {
     width: 200px;
     padding: 8px 0 5px;
-    right: 26px;
-    top: 70px;
+    margin: 0;
+    left: calc(100% - 230px);
+    top: 64px;
     border-radius: 10px;
     box-sizing: border-box;
     background-color: variables.$clr-white;
     z-index: 101;
     @include boxShadow();
+
+    &::backdrop {
+      background-color: transparent;
+    }
 
     &-container {
       width: 100%;
@@ -603,6 +591,72 @@
 
     &-close {
       display: none;
+    }
+  }
+
+  &__main {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    list-style-type: none;
+    &_news {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    &_logs {
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .page {
+    &__container {
+      margin: 0;
+      padding: 0 20px 0;
+    }
+  }
+
+  .menu {
+    min-width: 240px;
+    height: 64px;
+
+    &-open {
+      height: 100vh;
+      width: 240px;
+    }
+  }
+  .header {
+    border-bottom: none;
+
+    &__rate {
+      display: none;
+      &_name {
+        display: none;
+      }
+    }
+
+    &__notification {
+      display: none;
+    }
+
+    &__help {
+      display: none;
+    }
+
+    &__profile {
+      &-name {
+        display: none;
+      }
+      &-arrow {
+        display: none;
+      }
     }
   }
 }

@@ -11,9 +11,8 @@
     />
     <title>Dashboard</title>
   </head>
-
   <body class="page__container">
-    <nav class="menu" aria-label="Боковая навигация">
+    <nav class="menu" aria-label="Меню">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -37,10 +36,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a
-            class="link link_theme_gray link_theme_gray_active"
-            href="../dashboard/dashboard.html"
-          >
+          <a class="link link_theme_gray" href="../dashboard/dashboard.html">
             <svg
               class="link__image"
               width="24"
@@ -255,40 +251,40 @@
         </li>
       </ul>
     </nav>
-    <nav class="header">
+    <header class="header">
       <button
         class="header__menu"
         type="button"
-        aria-label="Верхняя навигация"
+        aria-label="Развернуть меню"
       ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
       <button class="header__help" type="button" aria-label="Помощь"></button>
-      <p class="header__notification">
-        <button
-          class="header__notification-counter"
-          type="button"
-          aria-label="Уведомления"
-        >
-          2
-        </button>
-      </p>
-      <p class="header__profile-name">
-        <button class="header__profile">
-          <img
-            class="header__profile-avatar"
-            alt="Аватар"
-            src="<%=require('../../images/avatar/circle.png')%>"
-          />
-          User Name
-          <img
-            alt="Стрелка вниз"
-            class="header__profile-arrow"
-            src="<%=require('../../images/template-icon/20x20/down.svg')%>"
-          />
-        </button>
-      </p>
-    </nav>
+      <button
+        class="header__notification"
+        type="button"
+        aria-label="Уведомления"
+      >
+        <span class="header__notification-counter">2</span>
+      </button>
+      <button
+        class="header__profile"
+        type="button"
+        aria-label="Пользовательские настройки"
+      >
+        <img
+          class="header__profile-avatar"
+          alt="Аватар"
+          src="<%=require('../../images/avatar/circle.png')%>"
+        />
+        <span class="header__profile-name">User Name</span>
+        <img
+          alt="Стрелка вниз"
+          class="header__profile-arrow"
+          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+        />
+      </button>
+    </header>
     <main class="main">
       <!-- тело страницы -->
       <section class="templates" aria-label="Шаблоны">
@@ -744,7 +740,7 @@
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
     <!-- popup -->
-    <section class="popup popup__notification popup__notification-close">
+    <dialog class="popup popup__notification">
       <div class="popup__header">
         <img
           alt="Стрелка вниз"
@@ -755,7 +751,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="Закрыть попап"
+          aria-label="Закрыть"
         ></button>
       </div>
       <fieldset class="popup__menu">
@@ -781,11 +777,8 @@
         <!-- место под новости и логи -->
         <!-- конец -->
       </div>
-    </section>
-    <section
-      class="popup popup__accaunt popup__accaunt-close"
-      aria-label="Меню профиля"
-    >
+    </dialog>
+    <dialog class="popup popup__accaunt">
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
@@ -812,7 +805,7 @@
           <span class="popup__accaunt-button-text">Выйти</span>
         </button>
       </div>
-    </section>
+    </dialog>
     <!--  Код попапа бота  -->
     <div class="popup-overlay add-bot-popup">
       <div class="add-bot-popup__container">
@@ -1037,12 +1030,12 @@
         <h2 class="rename-popup__title">Переименуйте файл</h2>
         <!-- Дублирование ID, оставил на всякий случай копию -->
         <!-- <input
-          class="access-key__input"
-          type="text"
-          id="access-key-default"
-          name="access-key-default"
-          placeholder="Введите ключ доступа"
-        /> -->
+              class="access-key__input"
+              type="text"
+              id="access-key-default"
+              name="access-key-default"
+              placeholder="Введите ключ доступа"
+            /> -->
         <input
           class="access-key__input"
           type="text"
@@ -1081,12 +1074,12 @@
         />
         <!-- Дублирование ID, оставил на всякий случай копию -->
         <!-- <input
-          class="access-key__input"
-          type="text"
-          id="access-key-default"
-          name="access-key-default"
-          placeholder="Добавьте e-mail пользователя"
-        /> -->
+              class="access-key__input"
+              type="text"
+              id="access-key-default"
+              name="access-key-default"
+              placeholder="Добавьте e-mail пользователя"
+            /> -->
         <div class="rename-popup__buttons">
           <button
             class="constructor__button constructor__default-button constructor__button_clr_default cancel-btn"

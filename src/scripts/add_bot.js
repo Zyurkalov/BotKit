@@ -5,152 +5,71 @@ import "./ui-kit/ui_kit_navigation";
 const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
 const items = main.querySelectorAll("." + selectors.addBotPage.buttonSocial);
-
-const infoblock = main.querySelector(".info-block");
-const messegeTitle = main.querySelector(".messege__title");
-const messegeText = main.querySelector(".messege__text");
+const itemsBox = main.querySelector(".social__items");
+const container = main.querySelectorAll(".container");
+const question = main.querySelector("#question");
 
 items.forEach((item) => {
-  // const socialName = elem.querySelector(".button-social__caption").textContent;
-  addBot(item);
+  selectSocial(item);
 });
 
-function addBot(elem) {
+function canselSelectSocial(e) {
+  if (e.key === "Escape") {
+    items.forEach((item) => {
+      item.querySelector(".button-social__caption").classList.remove("disable");
+      item.querySelector(":hover svg rect").classList.remove("disable");
+      item
+        .querySelector(":hover svg rect")
+        .classList.remove("button-social-active");
+      selectContainer();
+    });
+    document.removeEventListener("keydown", canselSelectSocial);
+  }
+}
+
+function selectSocial(elem) {
   elem.addEventListener("click", () => {
     items.forEach((item) => {
       if (elem.id != item.id) {
-        item.setAttribute("disabled", "");
+        // item.setAttribute("disabled", "");
+        item.querySelector(".button-social__caption").classList.add("disable");
+        item.querySelector(":hover svg rect").classList.add("disable");
       } else {
-        // item.classList.add("button-social-active");
+        item
+          .querySelector(".button-social__caption")
+          .classList.remove("disable");
+        item.querySelector(":hover svg rect").classList.remove("disable");
         item
           .querySelector(":hover svg rect")
           .classList.add("button-social-active");
-
-        // const ttt = item.querySelector(":hover svg rect").setAttribute("fill", "#2d88ff");
-        // ttt.setAttribute("fill", "#2d88ff");
+        const socialName = elem.querySelector(
+          ".button-social__caption",
+        ).textContent;
+        selectContainer(socialName);
       }
     });
+    document.addEventListener("keydown", canselSelectSocial);
   });
 }
 
-////// новый код
-const socialValue = {
-  facebook: {
-    name: "Facebook",
-    icon: "<%=require('../images/social-icons/facebook/default.svg')%>",
-    alt: "феисбук",
-    path: "facebook",
-    id: "#facebook-templ",
-  },
-  vk: {
-    name: "VK",
-    icon: "<%=require('../../images/social-icons/vk/default.svg')%>",
-    alt: "вконтакте",
-    path: "vk",
-    id: "#facebook-templ",
-  },
-  odnoklassniki: {
-    name: "Odnoklassniki",
-    icon: "<%=require('../../images/social-icons/odnoklassniki/default.svg')%>",
-    alt: "одноклассники",
-    path: "odnoklassniki",
-    id: "#facebook-templ",
-  },
-  telegram: {
-    name: "Telegram",
-    icon: "<%=require('../../images/social-icons/telegram/default.svg')%>",
-    alt: "телеграм",
-    path: "telegram",
-    id: "#telegram-templ",
-  },
-  viber: {
-    name: "Viber",
-    icon: "<%=require('../../images/social-icons/viber/default.svg')%>",
-    alt: "вайбер",
-    path: "viber",
-    id: "#viber-templ",
-  },
-  alisa: {
-    name: "Алиса",
-    icon: "<%=require('../../images/social-icons/alisa/default.svg')%>",
-    alt: "алиса",
-    path: "alisa",
-    id: "#telegram-templ",
-  },
-  whatsapp: {
-    name: "Whatsapp",
-    icon: "<%=require('../../images/social-icons/whatsapp/default.svg')%>",
-    alt: "ватсап",
-    path: "whatsapp",
-    id: "#viber-templ",
-  },
-  instagram: {
-    name: "Instagram",
-    icon: "<%=require('../../images/social-icons/insta/default.svg')%>",
-    alt: "инстаграм",
-    path: "insta",
-    id: "#viber-templ",
-  },
-  web: {
-    name: "Веб-сайт",
-    icon: "<%=require('../../images/social-icons/web/default.svg')%>",
-    alt: "веб-сейт",
-    path: "web",
-    id: "#telegram-templ",
-  },
-};
+itemsBox.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  itemsBox.scrollLeft += e.deltaY;
+});
 
-// function expandPanel(size) {
-//   infoblock.style.minHeight = `${size}` + "px";
-//   messegeTitle.textContent = "";
-//   messegeText.textContent = "";
-// }
-
-function createBotWindow(value) {
-  const elementTemplate = document.querySelector(value.id).content;
-  const panelElement = elementTemplate
-    .querySelector(".bot-setting")
-    .cloneNode(true);
-  const imgElement = panelElement.querySelector(".social-icon");
-  const headerElement = panelElement.querySelector(".bot-setting__header");
-
-  const container = document.querySelector(".info-block");
-  const faqPanel = container.querySelector(".faq-panel");
-  const submitBtn = panelElement.querySelector(".bot-setting__submit");
-
-  imgElement.classList.add("social-icon_" + value.path);
-  imgElement.src = value.icon;
-  imgElement.alt = value.alt;
-  headerElement.textContent = value.name;
-
-  container.prepend(panelElement);
-  faqPanel.classList.remove("hidden");
-  container.style.height = "513px";
-
-  submitBtn.addEventListener("click", () => {
-    panelElement.remove(container);
-    faqPanel.classList.add("hidden");
-    container.style.height = "330px";
+function selectContainer(id) {
+  let counter = 0;
+  container.forEach((block) => {
+    if (id === block.id) {
+      block.classList.remove("hidden");
+      counter += 1;
+    } else {
+      block.classList.add("hidden");
+      question.classList.remove("hidden");
+    }
   });
+
+  if (counter > 0) {
+    question.classList.add("hidden");
+  }
 }
-const sociaIcons = document.querySelector(".social__items");
-
-const facebookBtn = sociaIcons.querySelector("#facebook");
-const vkBtn = sociaIcons.querySelector("#vk");
-const odnoklassnikiBtn = sociaIcons.querySelector("#odnokassniki");
-const telegramBtn = sociaIcons.querySelector("#telegram");
-const viberBtn = sociaIcons.querySelector("#viber");
-const alisaBtn = sociaIcons.querySelector("#alisa");
-const whatsappBtn = sociaIcons.querySelector("#whaatsapp");
-const instagramBtn = sociaIcons.querySelector("#instagram");
-const websiteBtn = sociaIcons.querySelector("#website");
-
-// facebookBtn.addEventListener('click', createBotWindow(socialValue.facebook));
-// vkBtn.addEventListener("click", createBotWindow(socialValue.vk));
-// odnoklassnikiBtn.addEventListener("click", createBotWindow(socialValue.odnoklassniki))
-// telegramBtn.addEventListener("click", createBotWindow(socialValue.telegram));
-// viberBtn.addEventListener("click", createBotWindow(socialValue.viber));
-// alisaBtn.addEventListener("click", createBotWindow(socialValue.alisa));
-// whatsappBtn.addEventListener("click", createBotWindow(socialValue.whatsapp));
-// instagramBtn.addEventListener("click", createBotWindow(socialValue.instagram));
-// websiteBtn.addEventListener("click", createBotWindow(socialValue.web),);
