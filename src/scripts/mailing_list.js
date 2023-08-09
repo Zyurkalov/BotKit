@@ -283,13 +283,16 @@ funnelItems.forEach(function (item) {
 
 const mailingTextArea = document.querySelector(".link-text__textarea");
 const textEditor = document.querySelector(".text__actions_mailing");
+const textAreaBlock = document.querySelector(".link-text__block");
 
 document.addEventListener("click", function (e) {
   if (!mailingTextArea.contains(e.target) && !textEditor.contains(e.target)) {
     textEditor.style.display = "none";
+    textAreaBlock.style.border = "none";
   }
 });
 
 mailingTextArea.addEventListener("click", function () {
   textEditor.style.display = "block";
+  textAreaBlock.style.border = "1px solid #22ffaa";
 });

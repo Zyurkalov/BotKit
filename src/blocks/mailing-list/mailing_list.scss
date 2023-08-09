@@ -294,10 +294,6 @@
   padding: 12px 12px 8.45px 13px;
   border-radius: 10px;
   background-color: variables.$clr-gray;
-
-  &:focus-within {
-    border: 1px solid variables.$clr-accent;
-  }
 }
 
 .link-text__textarea {
