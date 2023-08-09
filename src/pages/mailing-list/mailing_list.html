@@ -376,6 +376,427 @@
           </section>
         </div>
       </section>
+
+      <!-- Mailing Add-->
+      
+      <section class="mailing mailing_add mailing-window_disable">
+        <div class="mailing__header">
+          <h2 class="mailing__title">Рассылки</h2>
+        </div>
+
+        <div class="mailing-windows">
+          <section class="mailing-window">
+            <section class="card mailing-list mailing-list_visible">
+              <div class="steps">
+                <span class="step">1</span>
+                <span class="step">Шаг</span>
+                <span class="step">></span>
+                <span class="step step-name">Создание рассылки</span>
+              </div>
+
+              <div class="links">
+                <input
+                  class="field__input links__input"
+                  type="text"
+                  id="field-default"
+                  name="field-default"
+                  placeholder="Моя рассылка 1"
+                />
+                <select class="links__list">
+                  <option value="" disabled selected>Список рассылки</option>
+                </select>
+
+                <div class="text__actions_mailing text__actions_mailing_active">
+                  <ul class="ui-kit-list text__actions">
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img"
+                        src="../../d57a561220f3cddb32bd.svg"
+                        alt="жирный шрифт"
+                      />
+                    </li>
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img"
+                        src="../../f8b0971845520f880ecf.svg"
+                        alt="курсивный шрифт"
+                      />
+                    </li>
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img"
+                        src="../../5b94889a1f2ff6b540bd.svg"
+                        alt="добавить код"
+                      />
+                    </li>
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img text__actions-img_inactive"
+                        src="../../13943e3ef8174cb46c57.svg"
+                        alt="удалить"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="link-text">
+                <h2 class="mailing-list__columns">Текст сообщения</h2>
+                <div class="link-text__block">
+                  <textarea
+                    class="field__input link-text__textarea"
+                    placeholder="Введите текст"
+                  ></textarea>
+                  <div class="link-text__elements">
+                    <p class="link-text__count">0/4096</p>
+                    <div class="link-text__icons">
+                      <img
+                        class="icon bracket link-text__icon"
+                        src="<%=require('../../images/template-icon/24x24/constructor/bracket.svg')%>"
+                        alt=""
+                      />
+                      <img
+                        class="icon emoji link-text__icon"
+                        src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="addContent">
+                <h2 class="mailing-list__columns">Добавить</h2>
+
+                <div class="addContent__buttons">
+                  <button class="panel-add-bot addContent__btn" type="button">
+                    <span class="panel-add-bot__circle addContent__circle">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.5 10C9.32843 10 10 9.32843 10 8.5C10 7.67157 9.32843 7 8.5 7C7.67157 7 7 7.67157 7 8.5C7 9.32843 7.67157 10 8.5 10Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21 15L16 10L5 21"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <p class="panel-add-bot__text addContent__text">Фото</p>
+                  </button>
+
+                  <button class="panel-add-bot addContent__btn" type="button">
+                    <span class="panel-add-bot__circle addContent__circle">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23 7L16 12L23 17V7Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M14 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H14C15.1046 19 16 18.1046 16 
+                    17V7C16 5.89543 15.1046 5 14 5Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <p class="panel-add-bot__text addContent__text">Видео</p>
+                  </button>
+
+                  <button class="panel-add-bot addContent__btn" type="button">
+                    <span class="panel-add-bot__circle addContent__circle">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 18V5L21 3V16"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6 21C7.65685 21 9 19.6569 9 18C9 16.3431 7.65685 15 6 15C4.34315 15 3 16.3431 3 18C3 19.6569 4.34315 21 6 21Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M18 19C19.6569 19 21 17.6569 21 16C21 14.3431 19.6569 13 18 13C16.3431 13 15 14.3431 15 16C15 17.6569 16.3431 19 18 19Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <p class="panel-add-bot__text addContent__text">Аудио</p>
+                  </button>
+
+                  <button class="panel-add-bot addContent__btn" type="button">
+                    <span class="panel-add-bot__circle addContent__circle">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.54671 4H20.6592C21.9779 4 23.04 
+                    5.32087 23.04 6.69458V17.5709C23.04 18.9446 
+                    21.9779 20 20.6592 20H3.54671C2.228 20 0.959961 
+                    18.9446 0.959961 17.5709V6.69458C0.959961 5.32087 
+                    2.228 4 3.54671 4ZM4.1437 6C3.26455 6 2.87996 6.40061 
+                    2.87996 7.3164V16.5C2.87996 17.4158 3.26455 18 4.1437 
+                    18H20.0622C20.9414 18 21.12 17.4158 21.12 16.5V7.3164C21.12 
+                    6.40061 20.9414 6 20.0622 6H4.1437ZM7.82066 
+                    13.9414H7.80558V14.4226H6.69126V8.69638H7.80558V11.1665H7.82066C8.10699 
+                    10.7063 8.51402 10.4761 9.04174 10.4761C9.52614 10.4761 9.89933 10.646 
+                    10.1613 10.9858C10.4232 11.3255 10.5542 11.79 10.5542 12.3793C10.5542 
+                    13.0185 10.4013 13.5317 10.0957 13.919C9.79005 14.3064 9.38146 14.5 8.86997
+                     14.5C8.4072 14.5 8.05748 14.3138 7.82066 13.9414ZM7.78818 12.3454V12.7299C7.78818 12.9725 
+                     7.85781 13.1734 7.9971 13.3326C8.1364 13.4918 8.31515 13.5714 8.53337 
+                     13.5714C8.79723 13.5714 9.00188 13.4692 9.14736 13.2649C9.29284 13.0606
+                      9.36558 12.771 9.36558 12.3962C9.36558 12.085 9.29902 11.842 9.16596 
+                      11.6671C9.03285 11.4922 8.84248 11.4047 8.59485 11.4047C8.36271 11.4047
+                       8.17023 11.4916 8.01741 11.6653C7.86459 11.839 7.78818 12.0657 7.78818
+                        12.3454ZM13.4513 14.3452C13.2858 14.4484 13.0366 14.5 12.7038 14.5C11.9145 
+                        14.5 11.5199 14.0611 11.5199 13.1833V11.4047H10.9256V10.5535H11.5199V9.72894L12.6342
+                         9.39282V10.5535H13.4513V11.4047H12.6342V12.9668C12.6342 13.3699 12.7847 13.5714
+                          13.0857 13.5714L13.4513 13.494V14.3452ZM17.76 14.4226H16.6457V12.2946C16.6457 
+                          11.7014 16.434 11.4047 16.0107 11.4047C15.8065 11.4047 15.6384 11.4833 15.5064
+                           11.6405C15.3745 11.7977 15.3085 11.9972 15.3085 12.239V14.4226H14.1942V10.5535H15.3085V11.1967H15.3236C15.5975 10.7164 15.9968 10.4761
+                            16.5215 10.4761C17.3472 10.4761 17.76 11.0053 17.76 12.0637V14.4226Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                    <p class="panel-add-bot__text addContent__text">Кнопка</p>
+                  </button>
+                </div>
+
+                <div class="file-upload file-upload_size_large">
+                  <input
+                    name="file"
+                    type="file"
+                    id="file-upload__input"
+                    class="file-upload__input"
+                  />
+                  <label class="file-upload__button" for="file-upload__input">
+                    <img
+                      class="file-upload__icon"
+                      src="../../a544763f63b7bd3d564f.svg"
+                      alt="Выбрать файл"
+                    />
+                    <span class="file-upload__text">Загрузить файл</span>
+                  </label>
+                  <span
+                    class="file-upload__input-error"
+                    id="file-upload__input-error"
+                  ></span>
+                </div>
+
+                <div class="activate">
+                  <h2 class="mailing-list__columns">Активировать воронку</h2>
+
+                  <div class="activate__btn activate__btn_active-funnel">
+                    <p class="activate__text">Активировать</p>
+                    <svg
+                      class="activate__markup"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.3337 4L6.00033 11.3333L2.66699 8"
+                        stroke="#243CBB"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="fun-selection">
+                    <p class="activate__text activate__text_choice">
+                      Воронка 1
+                    </p>
+                    <p class="activate__text">Воронка 2</p>
+                    <p class="activate__text">Воронка 3</p>
+                  </div>
+
+                  <div class="activate__btn activate__btn_not-active-funnel">
+                    <p class="activate__text">Не активировать</p>
+                    <svg
+                      class="activate__markup"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.3337 4L6.00033 11.3333L2.66699 8"
+                        stroke="#243CBB"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              class="mailing-tutorials mailing-tutorials_visible mailing-tutorials_navigationBtns"
+            >
+              <div class="navigationBtns">
+                <button
+                  class="navigationBtns__btn navigationBtns__btn navigationBtns__btn_exit"
+                >
+                  Выйти
+                </button>
+                <button
+                  class="navigationBtns__btn navigationBtns__btn_direction navigationBtns__btn_next"
+                >
+                  Далее
+                </button>
+              </div>
+            </section>
+            <!-- конец -->
+          </section>
+
+          <section class="second-window">
+            <div class="pull-out pull-out_active">
+              <img src="<%=require('../../images/pull-out-robot.svg')%>" />
+            </div>
+            <section
+              class="card mailing-list mailing-list_visible message-window"
+            >
+              <div class="title-box">
+                <p class="title-box__subtitle">Текстовый виджет</p>
+                <h2 class="title-box__title">Моя рассылка 1</h2>
+              </div>
+
+              <div class="main-box">
+                <div class="main-box__chat">
+                  <img
+                    class="main-box__bot"
+                    src="<%=require('../../images/robot.svg')%>"
+                  />
+                  <div class="main-box__responsive">
+                    <span class="main-box__prints">...</span>
+                  </div>
+                </div>
+
+                <button
+                  class="common-button common-button_color_green main-box__send-btn"
+                  type="submit"
+                >
+                  Отправить тебе
+                </button>
+              </div>
+
+              <div class="footer-box">
+                <p class="footer-box__text">
+                  Powered by
+                  <svg
+                    class="footer-box__robot"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="12"
+                    viewBox="0 0 14 12"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.59232 3.99511C3.76052 3.99511 1.46489 6.26751 1.46489 9.07067V9.58249C1.46489 10.2499 2.01147 10.791 2.68571 10.791H3.07185C3.47052 10.791 3.79598 10.4754 3.80419 10.0808L3.80963 9.81921C3.81145 9.73139 3.86128 9.65145 3.93975 9.61045C4.01823 9.56944 4.11301 9.57381 4.1873 9.62186L4.58886 9.88161C5.80608 10.669 7.37856 10.669 8.59577 9.88161L8.99733 9.62186C9.07162 9.57381 9.1664 9.56944 9.24488 9.61045C9.32336 9.65145 9.37318 9.73139 9.37501 9.81921L9.38045 10.0808C9.38865 10.4754 9.71412 10.791 10.1128 10.791H10.4989C11.1732 10.791 11.7197 10.2499 11.7197 9.58249V9.07067C11.7197 6.26751 9.42412 3.99511 6.59232 3.99511ZM0.976562 9.07067C0.976562 6.00054 3.49082 3.51172 6.59232 3.51172C9.69381 3.51172 12.2081 6.00055 12.2081 9.07067V9.58249C12.2081 10.5169 11.4429 11.2743 10.4989 11.2743H10.1128C9.50559 11.2743 9.00029 10.8351 8.90728 10.2576L8.8629 10.2863C7.48339 11.1786 5.70124 11.1786 4.32173 10.2863L4.27736 10.2576C4.18435 10.8351 3.67904 11.2743 3.07185 11.2743H2.68571C1.74177 11.2743 0.976562 10.5169 0.976562 9.58249V9.07067Z"
+                      fill="#243CBB"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.34824 2.65852C2.82048 2.78567 0 5.65671 0 9.17986V9.82553C0 11.0269 0.98384 12.0008 2.19747 12.0008H10.9873C12.201 12.0008 13.1848 11.0269 13.1848 9.82553V9.17986C13.1848 5.65671 10.3643 2.78567 6.83657 2.65852V1.69238H6.34824V2.65852ZM6.59241 3.13752C3.22122 3.13752 0.488326 5.84276 0.488326 9.17986V9.82553C0.488326 10.7599 1.25354 11.5174 2.19747 11.5174H10.9873C11.9313 11.5174 12.6965 10.7599 12.6965 9.82553V9.17986C12.6965 5.84276 9.9636 3.13752 6.59241 3.13752Z"
+                      fill="#243CBB"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.59287 0.483387C6.32317 0.483387 6.10454 0.699807 6.10454 0.966774C6.10454 1.23374 6.32317 1.45016 6.59287 1.45016C6.86256 1.45016 7.08119 1.23374 7.08119 0.966774C7.08119 0.699807 6.86256 0.483387 6.59287 0.483387ZM5.61621 0.966774C5.61621 0.43284 6.05347 0 6.59287 0C7.13226 0 7.56952 0.43284 7.56952 0.966774C7.56952 1.50071 7.13226 1.93355 6.59287 1.93355C6.05347 1.93355 5.61621 1.50071 5.61621 0.966774Z"
+                      fill="#243CBB"
+                    />
+                    <ellipse
+                      cx="4.33367"
+                      cy="7.66668"
+                      rx="0.666681"
+                      ry="0.666681"
+                      fill="#243CBB"
+                    />
+                    <ellipse
+                      cx="9.00066"
+                      cy="7.66668"
+                      rx="0.666678"
+                      ry="0.666681"
+                      fill="#243CBB"
+                    />
+                  </svg>
+                  BotKits
+                </p>
+              </div>
+            </section>
+            <button class="direction direction_next">
+              <div class="direction__img-container">
+                <img src="<%=require('../../images/next-btn.svg')%>" />
+              </div>
+            </button>
+
+            <button class="direction direction_previous direction_active">
+              <div class="direction__img-container">
+                <img src="<%=require('../../images/previous.svg')%>" />
+              </div>
+            </button>
+          </section>
+        </div>
+      </section>
       <!-- конец -->
     </main>
     <footer class="footer">
