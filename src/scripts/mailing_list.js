@@ -175,7 +175,7 @@ options.forEach((option) => {
 });
 
 const createBtn = document.querySelector(".create-newsletter");
-const exitBtn = document.querySelector(".navigationBtns__btn_exit");
+const exitBtn = document.querySelector(".navigation-btns__btn_exit");
 
 function toggleNewsletterPage(evt) {
   evt.preventDefault();
@@ -251,12 +251,6 @@ function toggleMessageWin(evt) {
   document
     .querySelector(".direction_previous")
     .classList.toggle("direction_active");
-
-  document
-    .querySelector(".page__container")
-    .classList.toggle("page__container_new-padding");
-  document.querySelector(".header").classList.toggle("header_new-padding");
-  document.querySelector(".footer").classList.toggle("footer_new-padding");
 
   nextDirection.classList.toggle("direction_new-padding");
   backDirection.classList.toggle("direction_new-padding");

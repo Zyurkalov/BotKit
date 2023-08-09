@@ -48,6 +48,7 @@
   border-radius: 30px;
   background-color: variables.$clr-secondary-gray;
   font-family: variables.$ff-secondary;
+
   &_centered {
     justify-content: center;
   }
@@ -56,6 +57,7 @@
 .mailing {
   display: none;
 }
+
 .mailing-window_disable {
   display: block;
 }
@@ -77,6 +79,7 @@
   background-color: variables.$clr-white;
   color: variables.$clr-primary-dark;
   display: none;
+
   &_visible {
     display: block;
 
@@ -85,20 +88,24 @@
       overflow-x: scroll;
     }
   }
+
   &_header {
     height: 60px;
     display: flex;
     justify-content: space-between;
     position: relative;
   }
+
   &__header-text {
     margin: 0;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-24;
     font-style: normal;
     font-weight: variables.$fw-600;
-    line-height: 130%; /* 31.2px */
+    line-height: 130%;
+    /* 31.2px */
   }
+
   &__filter {
     display: flex;
     position: relative;
@@ -106,49 +113,61 @@
     font-size: variables.$fs-base;
     font-style: normal;
     font-weight: variables.$fw-600;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
+    /* 24px */
     letter-spacing: 0.3px;
     color: variables.$clr-gray-4;
   }
+
   &__filter-text {
     margin: 0;
   }
+
   &__filter-icon {
     height: 24px;
     width: 24px;
     margin-left: 12px;
     cursor: pointer;
+
     &_upside-down {
       transform: rotate(0.5turn);
     }
   }
+
   &__table {
     text-align: left;
     width: 100%;
   }
+
   &__columns {
     height: 33px;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-base;
     font-style: normal;
     font-weight: variables.$fw-600;
-    line-height: 130%; /* 20.8px */
+    line-height: 130%;
+    /* 20.8px */
     letter-spacing: 0.5px;
   }
+
   &__body {
     font-family: variables.$ff-primary;
     font-size: variables.$fs-small;
     font-style: normal;
     font-weight: variables.$fw-400;
-    line-height: 150%; /* 19.5px */
+    line-height: 150%;
+    /* 19.5px */
     letter-spacing: 0.3px;
   }
+
   &__row {
     height: 48px;
   }
+
   &__cell_data_launch-status {
     color: variables.$clr-success;
     font-weight: variables.$fw-600;
+
     &_rejected {
       color: variables.$clr-validation-error;
     }
@@ -160,6 +179,7 @@
   height: 187px;
   padding: 32px 40px 40px 40px;
   display: none;
+
   &_visible {
     display: block;
 
@@ -167,14 +187,17 @@
       display: none;
     }
   }
+
   &__header {
     margin: 0;
     font-family: variables.$ff-secondary;
     font-size: variables.$fs-button-text;
     font-style: normal;
     font-weight: variables.$fw-600;
-    line-height: 130%; /* 23.4px */
+    line-height: 130%;
+    /* 23.4px */
   }
+
   &__list {
     margin: 16px 0 0 0;
     padding: 0;
@@ -186,7 +209,8 @@
     font-size: variables.$fs-small;
     font-style: normal;
     font-weight: variables.$fw-600;
-    line-height: 150%; /* 21px */
+    line-height: 150%;
+    /* 21px */
     letter-spacing: 0.3px;
   }
 }
@@ -198,6 +222,7 @@
 .mailing-list-placeholder {
   text-align: center;
   display: none;
+
   &_visible {
     display: block;
   }
@@ -317,42 +342,42 @@
   margin-right: 12px;
 }
 
-.addContent {
+.add-content {
   margin-top: 30px;
 }
 
-.addContent__buttons {
+.add-content__buttons {
   display: flex;
   margin-bottom: 32px;
 }
 
-.addContent__btn {
+.add-content__btn {
   width: 124px;
   height: 124px;
   margin-right: 20px;
 
   &:hover {
-    .addContent__circle {
+    .add-content__circle {
       background-color: variables.$clr-primary-medium;
       border: none;
     }
 
-    .addContent__text {
+    .add-content__text {
       color: variables.$clr-primary-dark;
     }
   }
 }
 
-.addContent__circle {
+.add-content__circle {
   background-color: variables.$clr-primary-gray;
   border: none;
 }
 
-.addContent__btn:last-child {
+.add-content__btn:last-child {
   margin: 0;
 }
 
-.addContent__text {
+.add-content__text {
   font-family: variables.$ff-primary;
   font-size: variables.$fs-small;
   line-height: 150%;
@@ -376,9 +401,11 @@
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
   margin-bottom: 16px;
 }
+
 .fun-selection_active {
   display: block;
 }
+
 .activate__btn {
   display: flex;
   justify-content: space-between;
@@ -405,6 +432,7 @@
 .activate__text_choice {
   background-color: variables.$clr-gray;
 }
+
 .activate__text_inactive {
   color: variables.$clr-gray-2;
 }
@@ -422,18 +450,18 @@
   display: block;
 }
 
-.mailing-tutorials_navigationBtns {
+.mailing-tutorials_navigation-btns {
   height: auto;
   padding-bottom: 32px;
 }
 
-.navigationBtns {
+.navigation-btns {
   display: flex;
   justify-content: right;
   width: 100%;
 }
 
-.navigationBtns__btn {
+.navigation-btns__btn {
   font-family: variables.$ff-secondary;
   font-size: variables.$fs-button-text;
   font-weight: variables.$fw-600;
@@ -448,13 +476,13 @@
   width: 100%;
 }
 
-.navigationBtns__btn_exit {
+.navigation-btns__btn_exit {
   margin-right: 12px;
   color: variables.$clr-gray-4;
   max-width: 144px;
 }
 
-.navigationBtns__btn_next {
+.navigation-btns__btn_next {
   color: variables.$clr-primary-dark;
   max-width: 188px;
   background-color: variables.$clr-accent;
@@ -477,6 +505,7 @@
   padding: 12px 0;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 
 .message-window_active {
@@ -642,24 +671,13 @@
   background: variables.$clr-primary-medium;
   box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
   margin-left: auto;
+  margin-right: -40px;
 }
 
 .pull-out_active {
   display: flex;
 }
 
-.page__container_new-padding {
-  margin: 72px 0 0 132px;
-}
-
-.header_new-padding {
-  margin-right: 40px;
-}
-
-.footer_new-padding {
-  margin-right: 40px;
-}
-
 .direction_new-padding {
-  margin-right: 60px;
+  margin-right: 20px;
 }
