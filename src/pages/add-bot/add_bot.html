@@ -9,11 +9,11 @@
       type="image/svg+xml"
       href="<%=require('../../../favicon.ico')%>"
     />
-    <title>Add Bot</title>
+    <title>Add bot</title>
   </head>
 
   <body class="page__container">
-    <nav class="menu" aria-label="Боковая навигация">
+    <nav class="menu" aria-label="Меню">
       <ul class="menu__items">
         <li class="menu__item menu__item_logo"></li>
         <li class="menu__item menu__item_bot">
@@ -252,43 +252,40 @@
         </li>
       </ul>
     </nav>
-    <nav class="header">
+    <header class="header">
       <button
         class="header__menu"
         type="button"
-        aria-label="Верхняя навигация"
+        aria-label="Развернуть меню"
       ></button>
       <p class="header__rate">Тариф</p>
       <p class="header__rate_name">Демо</p>
       <button class="header__help" type="button" aria-label="Помощь"></button>
-      <p class="header__notification">
-        <button
-          class="header__notification-counter"
-          type="button"
-          aria-label="Уведомления"
-        >
-          2
-        </button>
-      </p>
-      <p class="header__profile-name">
-        <button class="header__profile">
-          <img
-            class="header__profile-avatar"
-            alt="Аватар"
-            src="<%=require('../../images/avatar/circle.png')%>"
-          />
-          User Name
-          <img
-            alt="Стрелка вниз"
-            class="header__profile-arrow"
-            src="<%=require('../../images/template-icon/20x20/down.svg')%>"
-          />
-        </button>
-      </p>
-    </nav>
+
+      <button
+        class="header__notification"
+        type="button"
+        aria-label="Уведомления"
+      >
+        <span class="header__notification-counter">2</span>
+      </button>
+      <button class="header__profile">
+        <img
+          class="header__profile-avatar"
+          alt="Аватар"
+          src="<%=require('../../images/avatar/circle.png')%>"
+        />
+        <span class="header__profile-name">User Name</span>
+        <img
+          alt="Стрелка вниз"
+          class="header__profile-arrow"
+          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+        />
+      </button>
+    </header>
     <main class="main">
       <!-- тело страницы -->
-      <h1 class="section-header section-header_margin-l">Добавить бота</h1>
+      <h1 class="title title_h1">Добавить бота</h1>
       <ul class="social__items">
         <li class="social__item">
           <button class="button-social" type="button" id="facebook">
@@ -305,7 +302,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Facebook</p>
+            <span class="button-social__caption">Facebook</span>
           </button>
         </li>
         <li class="social__item">
@@ -325,7 +322,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">VK</p>
+            <span class="button-social__caption">VK</span>
           </button>
         </li>
         <li class="social__item">
@@ -343,7 +340,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Odnoklassniki</p>
+            <span class="button-social__caption">Odnoklassniki</span>
           </button>
         </li>
         <li class="social__item">
@@ -361,7 +358,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Telegram</p>
+            <span class="button-social__caption">Telegram</span>
           </button>
         </li>
         <li class="social__item">
@@ -404,7 +401,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Viber</p>
+            <span class="button-social__caption">Viber</span>
           </button>
         </li>
         <li class="social__item">
@@ -424,7 +421,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Алиса</p>
+            <span class="button-social__caption">Алиса</span>
           </button>
         </li>
         <li class="social__item">
@@ -446,7 +443,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Whatsapp</p>
+            <span class="button-social__caption">Whatsapp</span>
           </button>
         </li>
         <li class="social__item">
@@ -464,7 +461,7 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Instagram</p>
+            <span class="button-social__caption">Instagram</span>
           </button>
         </li>
         <li class="social__item">
@@ -482,58 +479,268 @@
                 fill="white"
               />
             </svg>
-            <p class="button-social__caption">Веб-сайт</p>
+            <span class="button-social__caption">Веб-сайт</span>
           </button>
         </li>
       </ul>
-
-      <section class="info-block">
-        <!-- вставлять template элемент сюда -->
-
-        <div class="faq-panel hidden">
-          <p class="faq-panel__header">Как это работает?</p>
-          <button class="faq-panel__btn-uncover" type="button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
-              viewBox="0 0 26 26"
-              fill="none"
-              aria-label="открыть/закрыть панель"
-            >
-              <path
-                d="M5.41671 15.7948L13 8.21147L20.5834 15.7948"
-                stroke="#BFC9D9"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <ul class="faq-panel__faq">
-            <li class="faq-panel__list">
-              <button
-                class="faq-panel__button faq-panel__button_book"
-                type="button"
-              >
-                <p>Пошаговая инструкция</p>
-              </button>
+      <!-- facebook -->
+      <section class="container container_content hidden" id="Facebook">
+        <div class="container__settings">
+          <div class="container__settings_header">
+            <img
+              class="social-icon social-icon_l"
+              src="<%=require('../../images/social-icons/facebook/hover.svg')%>"
+              alt=""
+            />
+            <h2 class="title title_h2">Facebook</h2>
+            <div class="container__settings_base">
+              <p class="text text_base">
+                Бот будет создан на основе
+                <span class="text text_base text_base-bold"> BotName </span>
+              </p>
+            </div>
+          </div>
+          <ul class="container__settings_body">
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">1 Шаг ></p>
+                <p class="title title_h3">Загрузить страницу</p>
+              </div>
+              <div class="list">
+                <ul class="list__pages">
+                  <li class="list__page list__page_load">
+                    <img
+                      class="list__page_image load-image"
+                      src="<%=require('../../images/template-icon/36x36/add.svg')%>"
+                      alt="добавить страницу"
+                    />
+                    Загрузить страницу
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="faq-panel__list">
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">2 Шаг ></p>
+                <p class="title title_h3">Название бота</p>
+              </div>
+              <input
+                class="access-key__input access-key__input_nowidth"
+                type="text"
+                placeholder="Введите ключ доступа"
+              />
               <button
-                class="faq-panel__button faq-panel__button_video"
-                type="button"
+                class="common-button common-button_color_green container__settings_footer"
+                type="submit"
               >
-                <p>Видео</p>
+                СОЗДАТЬ БОТА
               </button>
             </li>
           </ul>
         </div>
-
-        <div class="messege__block">
-          <h2 class="messege__title">К какому мессенджеру подключим бота?</h2>
-          <p class="messege__text">Выберите из предложенного списка</p>
+        <div class="container__help">
+          <div class="container__help_header">
+            <h4 class="title title_h4">Как это работает?</h4>
+            <button class="faq-panel__btn-uncover" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                aria-label="открыть/закрыть панель"
+              >
+                <path
+                  d="M5.41671 15.7948L13 8.21147L20.5834 15.7948"
+                  stroke="#BFC9D9"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="container__help_body">
+            <button class="button-tutorial" type="button">
+              Пошаговая инструкция
+            </button>
+            <button class="button-tutorial" type="button">Видео</button>
+          </div>
         </div>
+      </section>
+      <!-- * -->
+      <!-- telegram -->
+      <section class="container container_content hidden" id="Telegram">
+        <div class="container__settings">
+          <div class="container__settings_header">
+            <img
+              class="social-icon social-icon_l"
+              src="<%=require('../../images/social-icons/telegram/hover.svg')%>"
+              alt=""
+            />
+            <h2 class="title title_h2">Telegram</h2>
+            <div class="container__settings_base hidden">
+              <p class="text text_base">
+                Бот будет создан на основе
+                <span class="text text_base text_base-bold"> BotName </span>
+              </p>
+            </div>
+          </div>
+          <ul class="container__settings_body">
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">1 Шаг ></p>
+                <p class="title title_h3">Ключ доступа</p>
+              </div>
+              <input
+                class="access-key__input access-key__input_nowidth"
+                type="text"
+                placeholder="Введите ключ доступа"
+              />
+            </li>
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">2 Шаг ></p>
+                <p class="title title_h3">Название бота</p>
+              </div>
+              <input
+                class="access-key__input access-key__input_nowidth"
+                type="text"
+                placeholder="Введите ключ доступа"
+              />
+              <button
+                class="common-button common-button_color_green container__settings_footer"
+                type="submit"
+              >
+                СОЗДАТЬ БОТА
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="container__help">
+          <div class="container__help_header">
+            <h4 class="title title_h4">Как это работает?</h4>
+            <button class="faq-panel__btn-uncover" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                aria-label="открыть/закрыть панель"
+              >
+                <path
+                  d="M5.41671 15.7948L13 8.21147L20.5834 15.7948"
+                  stroke="#BFC9D9"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="container__help_body">
+            <button class="button-tutorial" type="button">
+              Пошаговая инструкция
+            </button>
+            <button class="button-tutorial" type="button">Видео</button>
+          </div>
+        </div>
+      </section>
+      <!-- * -->
+      <!-- viber -->
+      <section class="container container_content hidden" id="Viber">
+        <div class="container__settings">
+          <div class="container__settings_header">
+            <img
+              class="social-icon social-icon_l"
+              src="<%=require('../../images/social-icons/viber/hover.svg')%>"
+              alt=""
+            />
+            <h2 class="title title_h2">Viber</h2>
+            <div class="container__settings_base hidden">
+              <p class="text text_base">
+                Бот будет создан на основе
+                <span class="text text_base text_base-bold"> BotName </span>
+              </p>
+            </div>
+          </div>
+          <ul class="container__settings_body">
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">1 Шаг ></p>
+                <p class="title title_h3">Ключ доступа</p>
+              </div>
+              <input
+                class="access-key__input access-key__input_nowidth"
+                type="text"
+                placeholder="Введите ключ доступа"
+              />
+            </li>
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">2 Шаг ></p>
+                <p class="title title_h3">URI бота</p>
+              </div>
+              <input
+                class="access-key__input access-key__input_nowidth"
+                type="text"
+                placeholder="Введите ключ доступа"
+              />
+            </li>
+            <li class="container__settings_item">
+              <div class="container__settings_item-titles">
+                <p class="title title_h3 title_h3-step">3 Шаг ></p>
+                <p class="title title_h3">Название бота</p>
+              </div>
+              <input
+                class="access-key__input access-key__input_nowidth"
+                type="text"
+                placeholder="Введите ключ доступа"
+              />
+              <button
+                class="common-button common-button_color_green container__settings_footer"
+                type="submit"
+              >
+                СОЗДАТЬ БОТА
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="container__help">
+          <div class="container__help_header">
+            <h4 class="title title_h4">Как это работает?</h4>
+            <button class="faq-panel__btn-uncover" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                aria-label="открыть/закрыть панель"
+              >
+                <path
+                  d="M5.41671 15.7948L13 8.21147L20.5834 15.7948"
+                  stroke="#BFC9D9"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="container__help_body">
+            <button class="button-tutorial" type="button">
+              Пошаговая инструкция
+            </button>
+            <button class="button-tutorial" type="button">Видео</button>
+          </div>
+        </div>
+      </section>
+      <!-- * -->
+      <section class="container" id="question">
+        <h2 class="container__title">К какому мессенджеру подключим бота?</h2>
+        <p class="container__text">Выберите из предложенного списка</p>
       </section>
       <!-- конец -->
     </main>
@@ -541,7 +748,7 @@
       <p class="footer__text">&#169; 2021 BotKits</p>
     </footer>
     <!-- popup -->
-    <section class="popup popup__notification popup__notification-close">
+    <dialog class="popup popup__notification">
       <div class="popup__header">
         <img
           alt="Стрелка вниз"
@@ -552,7 +759,7 @@
         <button
           class="popup__button-close"
           type="button"
-          aria-label="Закрыть попап"
+          aria-label="Закрыть"
         ></button>
       </div>
       <fieldset class="popup__menu">
@@ -576,10 +783,17 @@
       </fieldset>
       <div class="popup__main">
         <!-- место под новости и логи -->
+        <!-- <ul class="popup__main_news">
+          <il class="news">новость 1</il>
+        </ul>
+
+        <ul class="popup__main_logs">
+          <il class="log">Событие 1</il>
+        </ul> -->
         <!-- конец -->
       </div>
-    </section>
-    <section class="popup popup__accaunt popup__accaunt-close">
+    </dialog>
+    <dialog class="popup popup__accaunt">
       <div class="popup__accaunt-container">
         <button class="popup__accaunt-button">
           <img
@@ -587,7 +801,7 @@
             alt="настройки"
             src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Настройки аккаунта</p>
+          <span class="popup__accaunt-button-text">Настройки аккаунта</span>
         </button>
         <button class="popup__accaunt-button">
           <img
@@ -595,7 +809,7 @@
             alt="Подписка и платежи"
             src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Подписка и платежи</p>
+          <span class="popup__accaunt-button-text">Подписка и платежи</span>
         </button>
         <button class="popup__accaunt-button">
           <img
@@ -603,155 +817,9 @@
             alt="выход"
             src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
           />
-          <p class="popup__accaunt-button-text">Выйти</p>
+          <span class="popup__accaunt-button-text">Выйти</span>
         </button>
       </div>
-    </section>
-
-    <!-- для лицокниги и ВК -->
-    <template id="facebook-templ">
-      <div class="bot-setting">
-        <div class="bot-setting__box-header">
-          <img class="social-icon" src="" alt="" />
-          <h2 class="bot-setting__header"></h2>
-          <p class="bot-setting__paragraph">
-            Бот будет создан на основе
-            <span class="bot-setting__span">BotName</span>
-          </p>
-        </div>
-
-        <ol class="bot-setting__ol">
-          <li class="bot-setting__list">
-            <p>1 Шаг ><span>Загрузить страницу</span></p>
-            <button class="bot-setting__button" type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M12 5V19"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M5 12H19"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <p>Загрузить страницу</p>
-            </button>
-          </li>
-          <li class="bot-setting__list">
-            <p>2 Шаг ><span>Название бота</span></p>
-            <div class="bot-setting__input-box">
-              <input
-                class="bot-setting__input"
-                type="text"
-                placeholder="Введите название"
-              />
-            </div>
-          </li>
-        </ol>
-        <div class="bot-setting__submit-box">
-          <button class="bot-setting__submit" type="submit">
-            СОЗДАТЬ БОТА
-          </button>
-        </div>
-      </div>
-    </template>
-
-    <!-- для телеги -->
-    <template id="telegram-templ">
-      <div class="bot-setting">
-        <div class="bot-setting__box-header">
-          <img class="social-icon" src="" alt="" />
-          <h2 class="bot-setting__header"></h2>
-        </div>
-
-        <ol class="bot-setting__ol">
-          <li class="bot-setting__list">
-            <p>1 Шаг ><span>Ключ доступа </span></p>
-            <div class="bot-setting__input-box">
-              <input
-                class="bot-setting__input"
-                type="password"
-                placeholder="Введите ключ доступа"
-              />
-            </div>
-          </li>
-          <li class="bot-setting__list">
-            <p>2 Шаг ><span>Название бота</span></p>
-            <div class="bot-setting__input-box">
-              <input
-                class="bot-setting__input"
-                type="text"
-                placeholder="Введите название"
-              />
-            </div>
-          </li>
-        </ol>
-        <div class="bot-setting__submit-box">
-          <button class="bot-setting__submit" type="submit">
-            СОЗДАТЬ БОТА
-          </button>
-        </div>
-      </div>
-    </template>
-
-    <!-- для вайбера -->
-    <template id="viber-templ">
-      <div class="bot-setting">
-        <div class="bot-setting__box-header">
-          <img class="social-icon" src="" alt="" />
-          <h2 class="bot-setting__header"></h2>
-        </div>
-
-        <ol class="bot-setting__ol">
-          <li class="bot-setting__list">
-            <p>1 Шаг ><span>Ключ доступа </span></p>
-            <div class="bot-setting__input-box">
-              <input
-                class="bot-setting__input"
-                type="password"
-                placeholder="Введите ключ доступа"
-              />
-            </div>
-          </li>
-          <li class="bot-setting__list">
-            <p>2 Шаг ><span>URI бота</span></p>
-            <div class="bot-setting__input-box">
-              <input
-                class="bot-setting__input"
-                type="text"
-                placeholder="Введите идентификатор"
-              />
-            </div>
-          </li>
-          <li class="bot-setting__list">
-            <p>3 Шаг ><span>Название бота</span></p>
-            <div class="bot-setting__input-box">
-              <input
-                class="bot-setting__input"
-                type="text"
-                placeholder="Введите название"
-              />
-            </div>
-          </li>
-        </ol>
-        <div class="bot-setting__submit-box">
-          <button class="bot-setting__submit" type="submit">
-            СОЗДАТЬ БОТА
-          </button>
-        </div>
-      </div>
-    </template>
+    </dialog>
   </body>
 </html>
