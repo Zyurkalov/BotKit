@@ -511,6 +511,8 @@
   }
 
   &__accaunt {
+    position: absolute;
+    display: none;
     width: 200px;
     padding: 8px 0 5px;
     margin: 0;
@@ -521,7 +523,6 @@
     background-color: variables.$clr-white;
     z-index: 101;
     @include boxShadow();
-
     &::backdrop {
       background-color: transparent;
     }
