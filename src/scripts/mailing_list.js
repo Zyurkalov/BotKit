@@ -173,3 +173,108 @@ options.forEach((option) => {
     toggleFilter();
   });
 });
+
+const createBtn = document.querySelector(".create-newsletter");
+const exitBtn = document.querySelector(".navigation-btns__btn_exit");
+
+function toggleNewsletterPage(evt) {
+  evt.preventDefault();
+
+  const myNewsletter = document.querySelector(".mailing_my-newsletter");
+  const createNewsletter = document.querySelector(".mailing_add");
+
+  myNewsletter.classList.toggle("mailing-window_disable");
+  createNewsletter.classList.toggle("mailing-window_disable");
+}
+
+createBtn.addEventListener("click", toggleNewsletterPage);
+exitBtn.addEventListener("click", toggleNewsletterPage);
+
+const activateFunnel = document.querySelector(".activate__btn_active-funnel");
+const notActivateFunnel = document.querySelector(
+  ".activate__btn_not-active-funnel",
+);
+
+const funnelOption = document.querySelector(".fun-selection");
+
+function toggleActiveFunnel(evt) {
+  evt.preventDefault();
+  const element = evt.target;
+  const img = element.querySelector(".activate__markup");
+  img.classList.add("activate__markup_active");
+
+  const text = element.querySelector(".activate__text");
+  text.classList.remove("activate__text_inactive");
+}
+
+function toggleInActiveFunnel(element) {
+  const text = element.querySelector(".activate__text");
+  text.classList.add("activate__text_inactive");
+  const img = element.querySelector(".activate__markup");
+  img.classList.remove("activate__markup_active");
+}
+
+function toggleFunOption(evt) {
+  evt.preventDefault();
+  const element = evt.target;
+  if (element.classList.contains("activate__btn_active-funnel")) {
+    funnelOption.classList.add("fun-selection_active");
+  } else funnelOption.classList.remove("fun-selection_active");
+}
+
+activateFunnel.addEventListener("click", (evt) => {
+  toggleActiveFunnel(evt);
+  toggleInActiveFunnel(notActivateFunnel);
+  toggleFunOption(evt);
+});
+notActivateFunnel.addEventListener("click", (evt) => {
+  toggleActiveFunnel(evt);
+  toggleInActiveFunnel(activateFunnel);
+  toggleFunOption(evt);
+});
+
+const nextDirection = document.querySelector(".direction_next");
+const backDirection = document.querySelector(".direction_previous");
+
+nextDirection.addEventListener("click", toggleMessageWin);
+backDirection.addEventListener("click", toggleMessageWin);
+
+function toggleMessageWin(evt) {
+  evt.preventDefault();
+  document
+    .querySelector(".message-window")
+    .classList.toggle("message-window_active");
+  document.querySelector(".pull-out").classList.toggle("pull-out_active");
+  document
+    .querySelector(".direction_next")
+    .classList.toggle("direction_active");
+  document
+    .querySelector(".direction_previous")
+    .classList.toggle("direction_active");
+
+  nextDirection.classList.toggle("direction_new-padding");
+  backDirection.classList.toggle("direction_new-padding");
+}
+
+const input = document.querySelector(".link-text__textarea");
+const count = document.querySelector(".link-text__count");
+
+function checkInputLetters() {
+  var charCount = input.value.length;
+
+  count.textContent = charCount + "/4096";
+}
+
+input.addEventListener("input", checkInputLetters);
+
+checkInputLetters();
+
+let funnelItems = document.querySelectorAll(".activate__text");
+funnelItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    funnelItems.forEach(function (item) {
+      item.classList.remove("activate__text_choice");
+    });
+    this.classList.add("activate__text_choice");
+  });
+});
