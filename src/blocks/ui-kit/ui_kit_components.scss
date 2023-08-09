@@ -308,7 +308,7 @@
 .selector__items {
   @extend .card__actions;
   width: max-content;
-  min-width: 100%;
+  min-width: 135px;
   display: block;
 
   &_dropdown {

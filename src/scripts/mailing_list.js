@@ -278,3 +278,18 @@ funnelItems.forEach(function (item) {
     this.classList.add("activate__text_choice");
   });
 });
+
+// всплывашка text-area
+
+const mailingTextArea = document.querySelector(".link-text__textarea");
+const textEditor = document.querySelector(".text__actions_mailing");
+
+document.addEventListener("click", function (e) {
+  if (!mailingTextArea.contains(e.target) && !textEditor.contains(e.target)) {
+    textEditor.style.display = "none";
+  }
+});
+
+mailingTextArea.addEventListener("click", function () {
+  textEditor.style.display = "block";
+});
