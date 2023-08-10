@@ -190,7 +190,7 @@ function openBotActionsList(event) {
     botActions.style.left = "auto";
     botActions.style.right = distanceToRightEdge + "px";
   } else {
-    botActions.style.left = event.pageX + "px";
+    botActions.style.left = event.layerX + "px";
     botActions.style.right = "auto";
   }
   botActions.style.top = event.pageY + 20 + "px";
