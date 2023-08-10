@@ -27,6 +27,9 @@ const buttonOpenAccountArrow = buttonOpenAccaunt.querySelector(
 // Уведомления
 const buttonOpenNotification = header.querySelector(".header__notification");
 const popupNotification = page.querySelector(".popup__notification");
+const notificationCloseBtn = popupNotification.querySelector(
+  ".popup__button-close",
+);
 
 /* *** { FUNCTION } *** */
 // Открытие боковой навигации
@@ -75,7 +78,7 @@ function openPopup(popup, type = null) {
   document.addEventListener("keydown", (e) => closePopupOnPressKey(e, popup));
   closePopupOnClickButton(popup, true);
   popup.addEventListener("click", (e) => closePopupOnClickRect(e, popup));
-  popup.addEventListener("mouseleave", () => closePopup(popup));
+  //  popup.addEventListener("mouseleave", () => closePopup(popup)); зачем это??
 }
 
 // заурытие popup
@@ -91,9 +94,41 @@ function closePopup(popup) {
   }
 }
 
+class ContextMenu {
+  constructor(element, closeBtn) {
+    this.node = element;
+    closeBtn ? closeBtn.addEventListener("click", this.close) : null;
+  }
+  open = () => {
+    this.node.style.display = "block";
+    this.setListeners();
+  };
+  close = () => {
+    this.node.style.display = "None";
+    this.removeListeners();
+  };
+  _onClick = (evt) => {
+    if (!evt.target.classList[0].startsWith(this.node.classList[0])) {
+      this.close();
+    }
+  };
+  _onEscPress = (evt) => {
+    if (evt.key === "Escape") {
+      this.close();
+    }
+  };
+  setListeners = () => {
+    document.addEventListener("mouseup", this._onClick);
+    document.addEventListener("keydown", this._onEscPress);
+  };
+  removeListeners = () => {
+    document.removeEventListener("mouseup", this._onClick);
+    document.removeEventListener("keydown", this._onEscPress);
+  };
+}
+
 // закрытие popup по клику на кнопу close
 function closePopupOnClickButton(popup, key) {
-  const buttonClose = popup.querySelector(".popup__button-close");
   if (buttonClose != null) {
     if (key) {
       buttonClose.addEventListener("click", () => closePopup(popup));
@@ -140,11 +175,11 @@ function closePopupOnClickRect(e, popup) {
 //   }
 // });
 
+//=======objects=================
+const profileMenu = new ContextMenu(popupAccaunt);
+const notifiCation = new ContextMenu(popupNotification, notificationCloseBtn);
+
 /* *** { EVENTLISTENER } *** */
 headerMenu.addEventListener("click", openMenu); // Открытие боковой навигации по клику на бургер
-buttonOpenNotification.addEventListener("click", () =>
-  openPopup(popupNotification),
-);
-buttonOpenAccaunt.addEventListener("click", () =>
-  openPopup(popupAccaunt, "modal"),
-);
+buttonOpenNotification.addEventListener("click", () => notifiCation.open());
+buttonOpenAccaunt.addEventListener("click", () => profileMenu.open());
