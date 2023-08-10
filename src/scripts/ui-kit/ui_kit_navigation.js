@@ -102,10 +102,12 @@ class ContextMenu {
   }
   open = () => {
     this.node.classList.add("visible");
+    this.arrow ? this._rotateArrow() : null;
     this.setListeners();
   };
   close = () => {
     this.node.classList.remove("visible");
+    this.arrow ? this._rotateArrow() : null;
     this.removeListeners();
   };
   toggle = (evt) => {
