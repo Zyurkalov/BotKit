@@ -51,7 +51,7 @@
 
 .my-bots {
   @media screen and (max-width: 360px) {
-    padding: 55px 0 0;
+    padding: 50px 0 0;
   }
 }
 
@@ -115,6 +115,7 @@
   @media screen and (max-width: 360px) {
     display: flex;
     overflow-x: scroll;
+    padding-bottom: 10px;
   }
 }
 
