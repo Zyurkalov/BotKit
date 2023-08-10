@@ -116,6 +116,10 @@
   border-radius: 30px;
   background-color: variables.$clr-secondary-gray;
 
+  @media screen and (max-width: 360px) {
+    margin-right: 20px;
+  }
+
   &_content {
     justify-content: flex-start;
     align-items: stretch;
@@ -187,6 +191,10 @@
       justify-content: space-between;
       align-items: flex-start;
       list-style-type: none;
+
+      @media screen and (max-width: 360px) {
+        flex-direction: column;
+      }
     }
 
     &_item {
@@ -222,6 +230,10 @@
       background-color: variables.$clr-blue-disabled;
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: 360px) {
+        display: none;
+      }
     }
   }
 
@@ -242,6 +254,13 @@
 
       & > .button-tutorial:first-child {
         margin-right: 29px;
+
+        @media screen and (max-width: 360px) {
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        flex-direction: column;
       }
     }
   }
