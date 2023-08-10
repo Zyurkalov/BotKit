@@ -241,6 +241,7 @@ class FunnelBtnActivate extends FunnelBtn {
   constructor(body, select) {
     super(body);
     this.select = select;
+    this.select.addEventListener("click", this._onSelectClick);
   }
   showSelect() {
     this.select.classList.add("fun-selection_active");
@@ -255,11 +256,18 @@ class FunnelBtnActivate extends FunnelBtn {
   setDisabled() {
     this.hideSelect();
     super.setDisabled();
+    this.text.innerText = "Активировать";
   }
   setNotChosen() {
     super.setNotChosen();
     this.hideSelect();
+    this.text.innerText = "Активировать";
   }
+  _onSelectClick = (evt) => {
+    const chosenText = evt.target.innerText;
+    this.text.innerText = chosenText;
+    this.hideSelect();
+  };
 }
 class FunnelsClickSync {
   constructor() {
