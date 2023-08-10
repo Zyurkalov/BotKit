@@ -205,7 +205,8 @@ class FunnelBtn {
     this.state = "notChosen";
     // this.setEventListeners()
   }
-  toggle = () => {
+  toggle() {
+    console.log("toggle original");
     switch (this.state) {
       case "notChosen":
         this.setEnabled();
@@ -217,39 +218,36 @@ class FunnelBtn {
         this.setNotChosen();
         break;
     }
-  };
-  setEnabled = () => {
+  }
+  setEnabled() {
+    console.log("original");
     this.checkBox.classList.add("activate__markup_active");
     this.text.classList.remove("activate__text_inactive");
     this.state = "enabled";
-  };
-  setDisabled = () => {
+  }
+  setDisabled() {
     this.checkBox.classList.remove("activate__markup_active");
     this.text.classList.add("activate__text_inactive");
     this.state = "disabled";
-  };
-  setNotChosen = () => {
+  }
+  setNotChosen() {
     this.text.classList.remove("activate__text_inactive");
     this.checkBox.classList.remove("activate__markup_active");
     this.state = "notChosen";
-  };
-  // setEventListeners = () =>{
-  //   this.body.addEventListener("click", this.toggle)
-  // }
+  }
 }
 
 class FunnelBtnActivate extends FunnelBtn {
   constructor(body, select) {
     super(body);
     this.select = select;
-    this.select.addEventListener("click", this.hideSelect);
   }
-  showSelect = () => {
+  showSelect() {
     this.select.classList.add("fun-selection_active");
-  };
-  hideSelect = () => {
+  }
+  hideSelect() {
     this.select.classList.remove("fun-selection_active");
-  };
+  }
   setEnabled() {
     this.showSelect();
     super.setEnabled();
@@ -257,6 +255,10 @@ class FunnelBtnActivate extends FunnelBtn {
   setDisabled() {
     this.hideSelect();
     super.setDisabled();
+  }
+  setNotChosen() {
+    super.setNotChosen();
+    this.hideSelect();
   }
 }
 class FunnelsClickSync {
