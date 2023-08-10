@@ -265,10 +265,6 @@
   left: 36px;
 }
 
-.text__actions_mailing_active {
-  display: block;
-}
-
 .links__input {
   margin-right: 24px;
   max-width: 556px;
@@ -298,15 +294,14 @@
   padding: 12px 12px 8.45px 13px;
   border-radius: 10px;
   background-color: variables.$clr-gray;
-  border: 1px solid variables.$clr-accent;
 }
 
 .link-text__textarea {
   background-color: variables.$clr-gray;
-  color: variables.$clr-gray-3;
   width: 100%;
   height: 56px;
   padding: 0;
+  outline: none;
 
   resize: none;
 }

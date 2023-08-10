@@ -186,7 +186,7 @@ function openBotActionsList(event) {
   const viewportWidth = window.innerWidth;
   const distanceToRightEdge = viewportWidth - event.pageX;
 
-  if (distanceToRightEdge < viewportWidth / 2) {
+  if (distanceToRightEdge < viewportWidth / 4) {
     botActions.style.left = "auto";
     botActions.style.right = distanceToRightEdge + "px";
   } else {

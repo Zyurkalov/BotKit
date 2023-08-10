@@ -35,6 +35,7 @@
 
 .page {
   &__container {
+    max-width: 1440px;
     margin: 0;
     padding: 0 40px 0 132px;
     min-width: 320px;
@@ -517,7 +518,6 @@
 
   &__accaunt {
     position: absolute;
-    display: none;
     width: 200px;
     padding: 8px 0 5px;
     margin: 0;
@@ -528,6 +528,11 @@
     background-color: variables.$clr-white;
     z-index: 101;
     @include boxShadow();
+
+    @media screen and (min-width: 1440px) {
+      left: 1190px;
+    }
+    
     &::backdrop {
       background-color: transparent;
     }
