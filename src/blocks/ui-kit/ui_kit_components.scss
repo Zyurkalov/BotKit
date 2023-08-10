@@ -43,6 +43,11 @@
 
     &-name {
       margin-left: 16px;
+
+      @media screen and (max-width: 360px) {
+        margin: 0;
+        font-size: variables.$fs-base;
+      }
     }
   }
 }
@@ -441,6 +446,9 @@
     line-height: 150%; /* 21px */
     letter-spacing: 0.3px;
     color: variables.$clr-gray-3;
+  }
+  @media screen and (max-width: 360px) {
+    display: none;
   }
 }
 
