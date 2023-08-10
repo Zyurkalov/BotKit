@@ -35,6 +35,7 @@
 
 .page {
   &__container {
+    max-width: 1440px;
     margin: 0;
     padding: 0 40px 0 132px;
     min-width: 320px;
@@ -526,6 +527,11 @@
     background-color: variables.$clr-white;
     z-index: 101;
     @include boxShadow();
+
+    @media screen and (min-width: 1440px) {
+      left: 1190px;
+    }
+
     &::backdrop {
       background-color: transparent;
     }
@@ -553,6 +559,12 @@
 
     &-button {
       @include button-default();
+      color: variables.$clr-primary-dark;
+      font-family: variables.$ff-secondary;
+      font-weight: variables.$fw-400;
+      font-size: variables.$fs-small;
+      line-height: 21px;
+      letter-spacing: -1px;
       margin: 0 0 8px;
       height: 37px;
       display: flex;
@@ -576,17 +588,6 @@
         width: 24px;
         margin: 0 8px 0 16px;
         opacity: 0.4;
-      }
-
-      &-text {
-        margin: 0;
-        padding: 0;
-        color: variables.$clr-primary-dark;
-        font-family: variables.$ff-secondary;
-        font-weight: variables.$fw-400;
-        font-size: variables.$fs-small;
-        line-height: 21px;
-        letter-spacing: -1px;
       }
     }
 
@@ -639,6 +640,7 @@
       width: 240px;
     }
   }
+
   .header {
     border-bottom: none;
 

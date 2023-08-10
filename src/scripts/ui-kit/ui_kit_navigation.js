@@ -170,24 +170,6 @@ function closePopupOnClickRect(e, popup) {
   }
 }
 
-// // Открытия меню в профиле
-// export function openAccauntSettings() {
-//   popupAccaunt.classList.toggle("popup__accaunt-close");
-//   buttonOpenAccountArrow.classList.toggle("header__profile-arrow_up");
-// }
-// buttonOpenAccaunt.addEventListener("click", () => openAccauntSettings());
-
-// document.addEventListener("click", (evt) => {
-//   if (
-//     (evt.target !== buttonOpenAccaunt) &
-//     !accountElementsArray.includes(evt.target) &
-//     !popupAccaunt.classList.contains("popup__accaunt-close")
-//   ) {
-//     popupAccaunt.classList.add("popup__accaunt-close");
-//     buttonOpenAccountArrow.classList.remove("header__profile-arrow_up");
-//   }
-// });
-
 //=======objects=================
 const profileMenu = new ContextMenu(popupAccaunt, null, buttonOpenAccountArrow);
 const notifiCation = new ContextMenu(popupNotification, notificationCloseBtn);

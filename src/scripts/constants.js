@@ -13,6 +13,11 @@ export const selectors = {
   confirmationPopupCloseBtn: {
     closeBtn: ".confirmation__close-btn",
   },
+  mailingListPage: {
+    textEditor: "text__actions_mailing",
+    mailingTextArea: "link-text__block",
+    visiblePopupCls: "text__actions_mailing_active",
+  },
   dashboardPage: {
     addBot: {
       popup: "add-bot-popup",
