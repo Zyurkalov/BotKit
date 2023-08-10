@@ -47,15 +47,15 @@ const botActions = document.querySelector(".card__actions_dynamic");
 
 moreButton.addEventListener("click", openBotActionsList);
 
-export function openBotActionsList(event) {
+function openBotActionsList(event) {
   const viewportWidth = window.innerWidth;
   const distanceToRightEdge = viewportWidth - event.pageX;
 
-  if (distanceToRightEdge < viewportWidth / 2) {
+  if (distanceToRightEdge < viewportWidth / 4) {
     botActions.style.left = "auto";
     botActions.style.right = distanceToRightEdge + "px";
   } else {
-    botActions.style.left = event.pageX + "px";
+    botActions.style.left = event.layerX + "px";
     botActions.style.right = "auto";
   }
   botActions.style.top = event.pageY + 20 + "px";
