@@ -95,20 +95,30 @@ function closePopup(popup) {
 }
 
 class ContextMenu {
-  constructor(element, closeBtn) {
+  constructor(element, closeBtn, arrowEl) {
     this.node = element;
-    closeBtn ? closeBtn.addEventListener("click", this.close) : null;
+    closeBtn?.addEventListener("click", this.close);
+    this.arrow = arrowEl;
   }
   open = () => {
-    this.node.style.display = "block";
+    this.node.classList.add("visible");
     this.setListeners();
   };
   close = () => {
-    this.node.style.display = "None";
+    this.node.classList.remove("visible");
     this.removeListeners();
   };
+  toggle = (evt) => {
+    evt.stopPropagation();
+    this.node.classList.contains("visible")
+      ? this.removeListeners()
+      : this.setListeners();
+    this.node.classList.toggle("visible");
+    this._rotateArrow();
+  };
+
   _onClick = (evt) => {
-    if (!evt.target.classList[0].startsWith(this.node.classList[0])) {
+    if (!evt.target.classList[0]?.startsWith(this.node.classList[0])) {
       this.close();
     }
   };
@@ -116,6 +126,9 @@ class ContextMenu {
     if (evt.key === "Escape") {
       this.close();
     }
+  };
+  _rotateArrow = () => {
+    this.arrow?.classList.toggle("rotate-reverse");
   };
   setListeners = () => {
     document.addEventListener("mouseup", this._onClick);
@@ -176,10 +189,10 @@ function closePopupOnClickRect(e, popup) {
 // });
 
 //=======objects=================
-const profileMenu = new ContextMenu(popupAccaunt);
+const profileMenu = new ContextMenu(popupAccaunt, null, buttonOpenAccountArrow);
 const notifiCation = new ContextMenu(popupNotification, notificationCloseBtn);
 
 /* *** { EVENTLISTENER } *** */
 headerMenu.addEventListener("click", openMenu); // Открытие боковой навигации по клику на бургер
-buttonOpenNotification.addEventListener("click", () => notifiCation.open());
-buttonOpenAccaunt.addEventListener("click", () => profileMenu.open());
+buttonOpenNotification.addEventListener("click", notifiCation.open);
+buttonOpenAccaunt.addEventListener("mouseup", profileMenu.toggle);

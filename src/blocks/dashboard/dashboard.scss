@@ -586,12 +586,6 @@
   stroke: variables.$clr-primary-medium;
 }
 
-//этот класс должен быть в самом ниху иначе вес меняется и ничего не работает
-.visible {
-  visibility: visible;
-  opacity: 1;
-}
-
 // rename-popup ====================================
 .rename-popup__container {
   margin: auto;
@@ -672,4 +666,9 @@
     color: variables.$clr-primary-medium;
     background-color: variables.$clr-blue-disabled;
   }
+}
+//этот класс должен быть в самом ниху иначе вес меняется и ничего не работает
+.visible {
+  visibility: visible;
+  opacity: 1;
 }

@@ -429,7 +429,7 @@
   right: 0;
 
   &__notification {
-    display: none;
+    visibility: hidden;
     position: absolute;
     height: 100vh;
     width: 364px;
@@ -515,7 +515,7 @@
 
   &__accaunt {
     position: absolute;
-    display: none;
+    visibility: hidden;
     width: 200px;
     padding: 8px 0 5px;
     margin: 0;
@@ -666,4 +666,11 @@
       }
     }
   }
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.rotate-reverse {
+  transform: rotate(0.5turn);
 }
