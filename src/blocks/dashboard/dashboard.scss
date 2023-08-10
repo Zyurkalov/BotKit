@@ -14,6 +14,10 @@
   font-weight: variables.$fw-600;
 }
 
+.header {
+  z-index: 2;
+}
+
 .templates {
   @media screen and (max-width: 360px) {
     padding: 50px 0 0 20px;
@@ -62,6 +66,7 @@
   line-height: 130%;
   letter-spacing: -0.2px;
   font-family: variables.$ff-secondary;
+  z-index: 1;
 
   &_margin-s {
     margin-top: 40px;
@@ -74,6 +79,7 @@
       margin: 0 0 20px;
     }
   }
+
   @media screen and (max-width: 360px) {
     font-size: 24px;
   }
@@ -422,7 +428,6 @@
 }
 
 .ordered-list {
-  //list-style-image: url('../../images/template-icon/24x24/variables/more.svg');
   counter-reset: custom-counter;
   list-style: none;
   margin-block-start: 0;

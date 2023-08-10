@@ -464,14 +464,17 @@
   flex-direction: column;
   row-gap: 8px;
 }
+
 .window-files-empty {
   text-align: center;
 }
+
 ///////accordeon
 .accordeon {
   display: flex;
   flex-direction: column;
 }
+
 .accordeon__heading {
   width: 100%;
   max-width: 250px;
@@ -483,6 +486,7 @@
   justify-content: space-between;
   cursor: pointer;
 }
+
 .accordeon__heading-text {
   margin: 0;
   margin-block-start: 0;
@@ -496,6 +500,7 @@
   letter-spacing: 0.3px;
   overflow: hidden;
 }
+
 .accordeon__content {
   margin: 0;
   list-style: none;
@@ -511,9 +516,11 @@
   overflow: hidden;
   box-sizing: border-box;
 }
+
 .accordeon__content_opened {
   padding: 24px 8px;
 }
+
 .accordeon__content-item {
   display: inline-block;
   font-family: variables.$ff-primary;
