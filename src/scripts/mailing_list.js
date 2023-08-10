@@ -1,6 +1,5 @@
 import "../blocks/mailing-list/mailing_list.scss";
 import "./ui-kit/ui_kit_navigation";
-import ca from "air-datepicker/locale/ca";
 
 const mailingIdSelector = ".mailing-list__cell_data_id";
 const mailingNameSelector = ".mailing-list__cell_data_name";
@@ -261,8 +260,7 @@ class FunnelBtnActivate extends FunnelBtn {
     this.text.innerText = "Активировать";
   }
   _onSelectClick = (evt) => {
-    const chosenText = evt.target.innerText;
-    this.text.innerText = chosenText;
+    this.text.innerText = evt.target.innerText;
     this.hideSelect();
   };
 }
