@@ -1,4 +1,5 @@
 import "../../blocks/ui-kit/ui_kit_components.scss";
+import { openBotActionsList } from "./ui_kit_menu_popup_opener";
 
 // Отмечаем выбранную опцию в списке с единственным выбором
 const calendarActions = Array.from(
@@ -36,32 +37,15 @@ const arrowButtonImg = arrowButton.querySelector(".ui-kit-navigation__arrow");
 
 arrowButton.addEventListener("click", openDropDownList);
 
-export function openDropDownList() {
+function openDropDownList() {
   dropDownFieldsList.classList.toggle("selector__items_dropdown_open");
   arrowButtonImg.classList.toggle("ui-kit-navigation__arrow_up");
 }
 
 // Открываем всплывающее меню для совершения действий с ботом
 const moreButton = document.querySelector(".card__more-button");
-const botActions = document.querySelector(".card__actions_dynamic");
 
 moreButton.addEventListener("click", openBotActionsList);
-
-function openBotActionsList(event) {
-  const viewportWidth = window.innerWidth;
-  const distanceToRightEdge = viewportWidth - event.pageX;
-
-  if (distanceToRightEdge < viewportWidth / 4) {
-    botActions.style.left = "auto";
-    botActions.style.right = distanceToRightEdge + "px";
-  } else {
-    botActions.style.left = event.layerX + "px";
-    botActions.style.right = "auto";
-  }
-  botActions.style.top = event.pageY + 20 + "px";
-  botActions.classList.toggle("card__actions_dynamic_open");
-}
-
 // Multiple Choice List
 
 // все галочки обычных опций
