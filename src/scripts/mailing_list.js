@@ -194,15 +194,106 @@ const activateFunnel = document.querySelector(".activate__btn_active-funnel");
 const notActivateFunnel = document.querySelector(
   ".activate__btn_not-active-funnel",
 );
-
 const funnelOption = document.querySelector(".fun-selection");
+
+class FunnelBtn {
+  constructor(body) {
+    this.body = body;
+    this.checkBox = body.querySelector(".activate__markup");
+    this.text = body.querySelector(".activate__text");
+    this.state = "notChosen";
+  }
+  // toggle() {
+  //   switch (this.state) {
+  //     case "notChosen":
+  //       this.setEnabled();
+  //       break;
+  //     case "disabled":
+  //       this.setEnabled();
+  //       break;
+  //     case "enabled":
+  //       this.setEnabled();
+  //       break;
+  //   }
+  // }
+  setEnabled() {
+    this.checkBox.classList.add("activate__markup_active");
+    this.text.classList.remove("activate__text_inactive");
+    this.state = "enabled";
+  }
+  setDisabled() {
+    this.checkBox.classList.remove("activate__markup_active");
+    this.text.classList.add("activate__text_inactive");
+    this.state = "disabled";
+  }
+  setNotChosen() {
+    this.text.classList.remove("activate__text_inactive");
+    this.checkBox.classList.remove("activate__markup_active");
+    this.state = "notChosen";
+  }
+}
+
+class FunnelBtnActivate extends FunnelBtn {
+  constructor(body, select) {
+    super(body);
+    this.select = select;
+    this.select.addEventListener("click", this._onSelectClick);
+  }
+  showSelect() {
+    this.select.classList.add("fun-selection_active");
+  }
+  hideSelect() {
+    this.select.classList.remove("fun-selection_active");
+  }
+  setEnabled() {
+    this.showSelect();
+    super.setEnabled();
+  }
+  setDisabled() {
+    this.hideSelect();
+    super.setDisabled();
+    this.text.innerText = "Активировать";
+  }
+  setNotChosen() {
+    super.setNotChosen();
+    this.hideSelect();
+    this.text.innerText = "Активировать";
+  }
+  _onSelectClick = (evt) => {
+    this.text.innerText = evt.target.innerText;
+    this.hideSelect();
+  };
+}
+class FunnelsClickSync {
+  constructor() {
+    this.activate = new FunnelBtnActivate(activateFunnel, funnelOption);
+    this.deActivate = new FunnelBtn(notActivateFunnel);
+  }
+  handleFunnelClick = (evt, funnel) => {
+    const anotherFunnel =
+      funnel instanceof FunnelBtnActivate ? this.deActivate : this.activate;
+
+    funnel.setEnabled();
+    anotherFunnel.setDisabled();
+  };
+  enable = () => {
+    this.activate.body.addEventListener("click", (evt) =>
+      this.handleFunnelClick(evt, this.activate),
+    );
+    this.deActivate.body.addEventListener("click", (evt) =>
+      this.handleFunnelClick(evt, this.deActivate),
+    );
+  };
+}
+
+const funnelsSync = new FunnelsClickSync();
+funnelsSync.enable();
 
 function toggleActiveFunnel(evt) {
   evt.preventDefault();
-  const element = evt.target;
+  const element = evt.currentTarget;
   const img = element.querySelector(".activate__markup");
   img.classList.add("activate__markup_active");
-
   const text = element.querySelector(".activate__text");
   text.classList.remove("activate__text_inactive");
 }
@@ -216,22 +307,22 @@ function toggleInActiveFunnel(element) {
 
 function toggleFunOption(evt) {
   evt.preventDefault();
-  const element = evt.target;
+  const element = evt.currentTarget;
   if (element.classList.contains("activate__btn_active-funnel")) {
     funnelOption.classList.add("fun-selection_active");
   } else funnelOption.classList.remove("fun-selection_active");
 }
 
-activateFunnel.addEventListener("click", (evt) => {
-  toggleActiveFunnel(evt);
-  toggleInActiveFunnel(notActivateFunnel);
-  toggleFunOption(evt);
-});
-notActivateFunnel.addEventListener("click", (evt) => {
-  toggleActiveFunnel(evt);
-  toggleInActiveFunnel(activateFunnel);
-  toggleFunOption(evt);
-});
+// activateFunnel.addEventListener("click", (evt) => {
+//   toggleActiveFunnel(evt);
+//   toggleInActiveFunnel(notActivateFunnel);
+//   toggleFunOption(evt);
+// });
+// notActivateFunnel.addEventListener("click", (evt) => {
+//   toggleActiveFunnel(evt);
+//   toggleInActiveFunnel(activateFunnel);
+//   toggleFunOption(evt);
+// });
 
 const nextDirection = document.querySelector(".direction_next");
 const backDirection = document.querySelector(".direction_previous");
