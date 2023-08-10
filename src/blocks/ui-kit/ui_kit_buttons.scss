@@ -233,6 +233,10 @@
     line-height: 21px;
     letter-spacing: 0.3px;
     color: variables.$clr-primary-dark;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: calc(1ch * 23);
   }
 
   &:hover {
