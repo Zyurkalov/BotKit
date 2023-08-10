@@ -47,7 +47,7 @@ const botActions = document.querySelector(".card__actions_dynamic");
 
 moreButton.addEventListener("click", openBotActionsList);
 
-export function openBotActionsList(event) {
+function openBotActionsList(event) {
   const viewportWidth = window.innerWidth;
   const distanceToRightEdge = viewportWidth - event.pageX;
 
