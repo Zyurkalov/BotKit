@@ -63,7 +63,7 @@
   font-weight: variables.$fw-600;
 
   @media screen and (max-width: 360px) {
-    width: 330px;
+    width: 80%;
   }
 }
 
@@ -72,7 +72,7 @@
 
   @media screen and (max-width: 768px) {
     position: absolute;
-    top: 511px;
+    top: 591px;
     left: 80px;
   }
 }
@@ -89,6 +89,7 @@
   @media screen and (max-width: 360px) {
     overflow: hidden;
     overflow-x: scroll;
+    margin-right: 20px;
   }
 }
 
@@ -106,6 +107,7 @@
   @media screen and (max-width: 360px) {
     overflow: hidden;
     overflow-x: scroll;
+    height: 360px;
   }
 }
 

@@ -15,10 +15,6 @@
 }
 
 .templates {
-  @media screen and (max-width: 360px) {
-    padding: 50px 0 0 20px;
-  }
-
   &__container {
     height: 105px;
     display: flex;
@@ -26,6 +22,10 @@
     justify-content: space-between;
     align-items: baseline;
     max-width: 1440px;
+
+    @media screen and (max-width: 360px) {
+      height: 85px;
+    }
   }
 
   &__menu {
@@ -51,7 +51,7 @@
 
 .my-bots {
   @media screen and (max-width: 360px) {
-    padding: 60px 0 0 20px;
+    padding: 50px 0 0;
   }
 }
 
@@ -66,6 +66,10 @@
 
   &_margin-s {
     margin-top: 40px;
+
+    @media screen and (max-width: 360px) {
+      margin: 25px 0 0;
+    }
   }
 
   &_margin-m {
@@ -111,6 +115,7 @@
   @media screen and (max-width: 360px) {
     display: flex;
     overflow-x: scroll;
+    padding-bottom: 10px;
   }
 }
 
@@ -121,6 +126,12 @@
 
 .tutorial-block {
   align-items: center;
+}
+
+.faq {
+  @media screen and (max-width: 360px) {
+    padding-right: 20px;
+  }
 }
 
 .faq-cont {
@@ -141,6 +152,7 @@
 
     @media screen and (max-width: 360px) {
       width: 100%;
+      padding: 32px 30px 32px 22px;
     }
   }
 
@@ -179,7 +191,7 @@
   }
   @media screen and (max-width: 360px) {
     flex-direction: column;
-    padding: 0 20px 0;
+    margin-top: 48px;
   }
 }
 
