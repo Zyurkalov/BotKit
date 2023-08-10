@@ -203,24 +203,21 @@ class FunnelBtn {
     this.checkBox = body.querySelector(".activate__markup");
     this.text = body.querySelector(".activate__text");
     this.state = "notChosen";
-    // this.setEventListeners()
   }
-  toggle() {
-    console.log("toggle original");
-    switch (this.state) {
-      case "notChosen":
-        this.setEnabled();
-        break;
-      case "disabled":
-        this.setEnabled();
-        break;
-      case "enabled":
-        this.setNotChosen();
-        break;
-    }
-  }
+  // toggle() {
+  //   switch (this.state) {
+  //     case "notChosen":
+  //       this.setEnabled();
+  //       break;
+  //     case "disabled":
+  //       this.setEnabled();
+  //       break;
+  //     case "enabled":
+  //       this.setEnabled();
+  //       break;
+  //   }
+  // }
   setEnabled() {
-    console.log("original");
     this.checkBox.classList.add("activate__markup_active");
     this.text.classList.remove("activate__text_inactive");
     this.state = "enabled";
@@ -278,15 +275,8 @@ class FunnelsClickSync {
     const anotherFunnel =
       funnel instanceof FunnelBtnActivate ? this.deActivate : this.activate;
 
-    funnel.toggle();
-    switch (funnel.state) {
-      case "enabled":
-        anotherFunnel.setDisabled();
-        break;
-      case "notChosen":
-        anotherFunnel.setNotChosen();
-        break;
-    }
+    funnel.setEnabled();
+    anotherFunnel.setDisabled();
   };
   enable = () => {
     this.activate.body.addEventListener("click", (evt) =>
