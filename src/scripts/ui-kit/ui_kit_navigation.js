@@ -129,16 +129,21 @@ class ContextMenu {
       this.close();
     }
   };
+  _onScroll = () => {
+    this.close();
+  };
   _rotateArrow = () => {
     this.arrow?.classList.toggle("rotate-reverse");
   };
   setListeners = () => {
     document.addEventListener("mouseup", this._onClick);
     document.addEventListener("keydown", this._onEscPress);
+    document.addEventListener("scroll", this.close);
   };
   removeListeners = () => {
     document.removeEventListener("mouseup", this._onClick);
     document.removeEventListener("keydown", this._onEscPress);
+    document.removeEventListener("scroll", this.close);
   };
 }
 
