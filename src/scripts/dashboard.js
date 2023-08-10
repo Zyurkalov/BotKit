@@ -1,6 +1,10 @@
 import "../blocks/dashboard/dashboard.scss";
 import { selectors } from "./constants";
 import "./ui-kit/ui_kit_navigation";
+import {
+  botActions,
+  openBotActionsList,
+} from "./ui-kit/ui_kit_menu_popup_opener";
 
 const page = document.querySelector("." + selectors.allPage.pageContainer);
 const main = page.querySelector("." + selectors.allPage.main);
@@ -180,22 +184,6 @@ const moreButtons = document.querySelectorAll(".card__more-button");
 const moreButtonsArray = Array.from(moreButtons);
 const moreButtonImgs = document.querySelectorAll(".card__icon");
 const moreButtonImgsArray = Array.from(moreButtonImgs);
-const botActions = document.querySelector(".card__actions_dynamic");
-
-function openBotActionsList(event) {
-  const viewportWidth = window.innerWidth;
-  const distanceToRightEdge = viewportWidth - event.pageX;
-
-  if (distanceToRightEdge < viewportWidth / 4) {
-    botActions.style.left = "auto";
-    botActions.style.right = distanceToRightEdge + "px";
-  } else {
-    botActions.style.left = event.layerX + "px";
-    botActions.style.right = "auto";
-  }
-  botActions.style.top = event.pageY + 20 + "px";
-  botActions.classList.toggle("card__actions_dynamic_open");
-}
 
 moreButtons.forEach((moreButton) => {
   moreButton.addEventListener("click", openBotActionsList);
