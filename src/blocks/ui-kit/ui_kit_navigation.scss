@@ -36,7 +36,7 @@
 .page {
   &__container {
     max-width: 1440px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 40px 0 132px;
     min-width: 320px;
     position: relative;
@@ -62,6 +62,7 @@
   flex-direction: row;
   align-items: center;
   background-color: variables.$clr-white;
+  z-index: 2;
 
   &-open {
     left: 286px;
@@ -218,12 +219,13 @@
 }
 
 .menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   min-width: 86px;
   max-width: 240px;
   width: 86px;
+  z-index: 3;
 
   &-open {
     width: 240px;
@@ -440,7 +442,7 @@
     left: calc(100% - 364px);
     background-color: variables.$clr-white;
     border-left: 1px solid variables.$clr-secondary-focus;
-    z-index: 101;
+    z-index: 3;
     @include boxShadow();
 
     &::backdrop {
@@ -525,12 +527,8 @@
     border-radius: 10px;
     box-sizing: border-box;
     background-color: variables.$clr-white;
-    z-index: 101;
+    z-index: 3;
     @include boxShadow();
-
-    @media screen and (min-width: 1440px) {
-      left: 1190px;
-    }
 
     &::backdrop {
       background-color: transparent;
@@ -542,7 +540,6 @@
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      align-content: stretch;
       justify-content: flex-start;
       position: relative;
 
