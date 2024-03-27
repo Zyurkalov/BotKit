@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="<%=require('../../../favicon.ico')%>"
+    />
+    <title>Mailing List</title>
+  </head>
+
+  <body class="page__container">
+    <nav class="menu" aria-label="Меню">
+      <ul class="menu__items">
+        <li class="menu__item menu__item_logo"></li>
+        <li class="menu__item menu__item_bot">
+          <a class="link link_theme_blue" href="../add-bot/add_bot.html">
+            <svg
+              class="link__image link__image_reverse"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 6v12M6 12h12"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text link__text_reverse">ДОБАВИТЬ БОТА</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="../dashboard/dashboard.html">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 3H3v9h7V3ZM21 3h-7v5h7V3ZM21 12h-7v9h7v-9ZM10 16H3v5h7v-5Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Дашборд</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM13 6h3a2 2 0 0 1 2 2v7M6 9v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Воронки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="link link_theme_gray"
+            href="../mailing-list/mailing_list.html"
+          >
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 14.26V18c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h7.065M11.945 13.917 2.5 5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill="#fff"
+                d="M16 4h6v6M12 14 22 4"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Рассылки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 14H3v7h7v-7ZM10 3H3v7h7V3ZM14 4h7M14 9h7M14 15h7M14 20h7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Списки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="../pp/pp.html">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 16.73V8.369M12 16.73V3.352M2.736 20.649h18.528M6 16.73v-5.017"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Статистика</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="../chat/chat.html">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 11.38a2 2 0 0 0 2 2h9l4 2.493V4.38a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v7Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.245 17.127a2 2 0 0 1-2 2H6.228l-4 2.493V11.127a2 2 0 0 1 2-2h1.629"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.747 8.127h5.506"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <p class="link__text">Диалоги</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Общий доступ</p>
+          </a>
+        </li>
+        <li class="menu__item menu__dropdown">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.894 3h7v7h-7zM2.894 14h7v7h-7zM13.894 14h7v7h-7zM17.394 2.749l3.785 2.75-1.446 4.45h-4.679l-1.446-4.45 3.786-2.75Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Мини-лендинг</p>
+            <svg
+              class="link__image_up"
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 12.5-5-5-5 5"
+                stroke="#C3D1D8"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </li>
+        <!-- меню второго уровня -->
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
+          </a>
+        </li>
+        <!-- end -->
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM3 9h18M3 15h18M9 9v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">CRM</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Развернуть меню"
+      ></button>
+      <p class="header__rate">Тариф</p>
+      <p class="header__rate_name">Демо</p>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
+      <button
+        class="header__notification"
+        type="button"
+        aria-label="Уведомления"
+      >
+        <span class="header__notification-counter">2</span>
+      </button>
+      <button
+        class="header__profile"
+        type="button"
+        aria-label="Пользовательские настройки"
+      >
+        <img
+          class="header__profile-avatar"
+          alt="Аватар"
+          src="<%=require('../../images/avatar/circle.png')%>"
+        />
+        <span class="header__profile-name">User Name</span>
+        <img
+          alt="Стрелка вниз"
+          class="header__profile-arrow"
+          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+        />
+      </button>
+    </header>
+    <main class="main">
+      <section class="mailing mailing_my-newsletter mailing-window_disable">
+        <div class="mailing__header">
+          <h1 class="mailing__title">Рассылки</h1>
+          <button
+            class="common-button common-button_color_green create-newsletter"
+          >
+            Создать рассылку
+          </button>
+        </div>
+        <section class="mailing-window">
+          <!-- Показывается в случае если у пользователя есть рассылки -->
+          <div class="card mailing-list mailing-list_visible">
+            <div class="mailing-list__header">
+              <h2 class="mailing-list__header-text">Мои Рассылки</h2>
+              <div class="selector mailing-list__filter">
+                <p class="mailing-list__filter-text">Все</p>
+                <img
+                  class="mailing-list__filter-icon"
+                  src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+                  alt="развернуть/свернуть"
+                />
+                <ul
+                  class="ui-kit-list selector__items selector__items_dropdown"
+                >
+                  <li class="selector__item">Все</li>
+                  <li class="selector__item">Запущены</li>
+                  <li class="selector__item">Отклонены</li>
+                </ul>
+              </div>
+            </div>
+            <table class="mailing-list__table">
+              <thead class="mailing-list__columns">
+                <tr>
+                  <th>ID</th>
+                  <th>Название</th>
+                  <th>Мессенджер</th>
+                  <th>Отправлено сообщений</th>
+                  <th>Конверсия</th>
+                  <th>Статус запуска</th>
+                </tr>
+              </thead>
+              <tbody class="mailing-list__body">
+                <template id="mailing-template">
+                  <tr class="mailing-list__row">
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_id"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_name"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_messenger"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_sent-messages"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_conversion"
+                    ></td>
+                    <td
+                      class="mailing-list__cell mailing-list__cell_data_launch-status"
+                    ></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+          <section class="mailing-tutorials mailing-tutorials_visible">
+            <h3 class="mailing-tutorials__header">Как это работает?</h3>
+            <ul class="mailing-tutorials__list">
+              <li class="mailing-tutorial">
+                <button class="button-tutorial" type="button">
+                  Пошаговая инструкция
+                </button>
+              </li>
+              <li class="mailing-tutorial">
+                <button class="button-tutorial" type="button">Видео</button>
+              </li>
+            </ul>
+          </section>
+          <!-- Показывается в случае если у пользователя нет рассылок -->
+          <section class="mailing-list-placeholder">
+            <h2 class="mailing-label-title">
+              Давайте скорее запустим вашу первую рассылку!
+            </h2>
+            <p class="mailing-label-subtitle">
+              Нажмите на кнопку “создать рассылку”
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <!-- Mailing Add-->
+
+      <section class="mailing mailing_add">
+        <div class="mailing__header">
+          <h1 class="mailing__title">Рассылки</h1>
+        </div>
+
+        <div class="mailing-windows">
+          <div class="mailing-window">
+            <section class="card mailing-list mailing-list_visible">
+              <div class="steps">
+                <span class="step">1</span>
+                <span class="step">Шаг</span>
+                <span class="step">></span>
+                <h2 class="step step-name">Создание рассылки</h2>
+              </div>
+
+              <div class="links">
+                <input
+                  class="field__input links__input"
+                  type="text"
+                  id="field-default"
+                  name="field-default"
+                  placeholder="Моя рассылка 1"
+                />
+                <select class="links__list">
+                  <option value="" disabled selected>Список рассылки</option>
+                </select>
+
+                <div class="text__actions_mailing">
+                  <ul class="ui-kit-list text__actions">
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img"
+                        src="<%=require('../../images/template-icon/24x24/markdown/bold.svg')%>"
+                        alt="жирный шрифт"
+                      />
+                    </li>
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img"
+                        src="<%=require('../../images/template-icon/24x24/markdown/italic.svg')%>"
+                        alt="курсивный шрифт"
+                      />
+                    </li>
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img"
+                        src="<%=require('../../images/template-icon/24x24/markdown/code.svg')%>"
+                        alt="добавить код"
+                      />
+                    </li>
+                    <li class="text__action">
+                      <img
+                        class="text__actions-img text__actions-img_inactive"
+                        src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
+                        alt="удалить"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="link-text">
+                <h3 class="mailing-list__columns">Текст сообщения</h3>
+                <div class="link-text__block">
+                  <textarea
+                    class="field__input link-text__textarea"
+                    placeholder="Введите текст"
+                  ></textarea>
+                  <div class="link-text__elements">
+                    <p class="link-text__count">0/4096</p>
+                    <div class="link-text__icons">
+                      <img
+                        class="bracket link-text__icon"
+                        src="<%=require('../../images/template-icon/24x24/constructor/bracket.svg')%>"
+                        alt="скобка"
+                      />
+                      <img
+                        class="emoji link-text__icon"
+                        src="<%=require('../../images/template-icon/24x24/constructor/emoji.svg')%>"
+                        alt="эмодзи"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="add-content">
+                <h3 class="mailing-list__columns">Добавить</h3>
+
+                <div class="add-content__buttons">
+                  <button class="panel-add-bot add-content__btn" type="button">
+                    <span class="panel-add-bot__circle add-content__circle">
+                      <img
+                        src="<%=require('../../images/photo.svg')%>"
+                        alt="фото"
+                      />
+                    </span>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Фото</span
+                    >
+                  </button>
+
+                  <button class="panel-add-bot add-content__btn" type="button">
+                    <span class="panel-add-bot__circle add-content__circle">
+                      <img
+                        src="<%=require('../../images/video.svg')%>"
+                        alt="видео"
+                      />
+                    </span>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Видео</span
+                    >
+                  </button>
+
+                  <button class="panel-add-bot add-content__btn" type="button">
+                    <span class="panel-add-bot__circle add-content__circle">
+                      <img
+                        src="<%=require('../../images/audio.svg')%>"
+                        alt="аудио"
+                      />
+                    </span>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Аудио</span
+                    >
+                  </button>
+
+                  <button class="panel-add-bot add-content__btn" type="button">
+                    <span class="panel-add-bot__circle add-content__circle">
+                      <img
+                        src="<%=require('../../images/btn.svg')%>"
+                        alt="кнопка"
+                      />
+                    </span>
+                    <span class="panel-add-bot__text add-content__text"
+                      >Кнопка</span
+                    >
+                  </button>
+                </div>
+
+                <div class="file-upload file-upload_size_large">
+                  <input
+                    name="file"
+                    type="file"
+                    id="file-upload__input"
+                    class="file-upload__input"
+                  />
+                  <label class="file-upload__button" for="file-upload__input">
+                    <img
+                      class="file-upload__icon"
+                      src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                      alt="выбрать файл"
+                    />
+                    <span class="file-upload__text">Загрузить файл</span>
+                  </label>
+                  <span
+                    class="file-upload__input-error"
+                    id="file-upload__input-error"
+                  ></span>
+                </div>
+
+                <div class="activate">
+                  <h3 class="mailing-list__columns">Активировать воронку</h3>
+
+                  <div class="activate__btn activate__btn_active-funnel">
+                    <p class="activate__text">Активировать</p>
+                    <svg
+                      class="activate__markup"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.3337 4L6.00033 11.3333L2.66699 8"
+                        stroke="#243CBB"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="fun-selection">
+                    <p class="activate__text">Воронка 1</p>
+                    <p class="activate__text">Воронка 2</p>
+                    <p class="activate__text">Воронка 3</p>
+                  </div>
+
+                  <div class="activate__btn activate__btn_not-active-funnel">
+                    <p class="activate__text">Не активировать</p>
+                    <svg
+                      class="activate__markup"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.3337 4L6.00033 11.3333L2.66699 8"
+                        stroke="#243CBB"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div
+              class="mailing-tutorials mailing-tutorials_visible mailing-tutorials_navigation-btns"
+            >
+              <div class="navigation-btns">
+                <button
+                  class="navigation-btns__btn navigation-btns__btn navigation-btns__btn_exit"
+                >
+                  Выйти
+                </button>
+                <button
+                  class="navigation-btns__btn navigation-btns__btn_direction navigation-btns__btn_next common-button common-button_color_green"
+                  type="submit"
+                  disabled=""
+                >
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-window">
+            <div class="pull-out">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="40"
+                viewBox="0 0 44 40"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1760_331964)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.897 13.5727C12.8213 13.5727 5.46397 20.8555 5.46397 29.8394V31.4798C5.46397 33.6188 7.21571 35.3528 9.37659 35.3528H10.6142C11.8919 35.3528 12.9349 34.3414 12.9612 33.0768L12.9787 32.2385C12.9845 31.957 13.1442 31.7008 13.3957 31.5694C13.6472 31.438 13.951 31.452 14.1891 31.606L15.4761 32.4385C19.3771 34.9619 24.4168 34.9619 28.3179 32.4385L29.6049 31.606C29.843 31.452 30.1467 31.438 30.3982 31.5694C30.6497 31.7008 30.8094 31.957 30.8153 32.2385L30.8327 33.0768C30.859 34.3414 31.9021 35.3528 33.1798 35.3528H34.4174C36.5782 35.3528 38.33 33.6188 38.33 31.4798V29.8394C38.33 20.8555 30.9727 13.5727 21.897 13.5727ZM3.89893 29.8394C3.89893 19.9999 11.9569 12.0234 21.897 12.0234C31.837 12.0234 39.895 19.9999 39.895 29.8394V31.4798C39.895 34.4744 37.4426 36.9021 34.4174 36.9021H33.1798C31.2338 36.9021 29.6143 35.4942 29.3162 33.6433L29.174 33.7353C24.7528 36.5952 19.0412 36.5952 14.6199 33.7353L14.4777 33.6433C14.1796 35.4942 12.5602 36.9021 10.6142 36.9021H9.37659C6.35136 36.9021 3.89893 34.4744 3.89893 31.4798V29.8394Z"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.1147 9.28976C9.80845 9.69725 0.769043 18.8987 0.769043 30.1901V32.2595C0.769043 36.1097 3.92217 39.2309 7.81176 39.2309H35.9826C39.8722 39.2309 43.0253 36.1097 43.0253 32.2595V30.1901C43.0253 18.8987 33.9859 9.69725 22.6797 9.28976V6.19336H21.1147V9.28976ZM21.8972 10.8249C11.0928 10.8249 2.33409 19.495 2.33409 30.1901V32.2595C2.33409 35.2541 4.78653 37.6817 7.81176 37.6817H35.9826C39.0079 37.6817 41.4603 35.2541 41.4603 32.2595V30.1901C41.4603 19.495 32.7016 10.8249 21.8972 10.8249Z"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.8987 2.31875C21.0343 2.31875 20.3336 3.01236 20.3336 3.86797C20.3336 4.72358 21.0343 5.41718 21.8987 5.41718C22.763 5.41718 23.4637 4.72358 23.4637 3.86797C23.4637 3.01236 22.763 2.31875 21.8987 2.31875ZM18.7686 3.86797C18.7686 2.15675 20.1699 0.769531 21.8987 0.769531C23.6274 0.769531 25.0288 2.15675 25.0288 3.86797C25.0288 5.57919 23.6274 6.9664 21.8987 6.9664C20.1699 6.9664 18.7686 5.57919 18.7686 3.86797Z"
+                    fill="white"
+                  />
+                  <ellipse
+                    cx="14.6586"
+                    cy="25.3408"
+                    rx="2.13666"
+                    ry="2.13666"
+                    fill="white"
+                  />
+                  <ellipse
+                    cx="29.6157"
+                    cy="25.3408"
+                    rx="2.13665"
+                    ry="2.13666"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1760_331964">
+                    <rect width="43.8462" height="40" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <section
+              class="card mailing-list message-window message-window_active"
+            >
+              <div class="title-box">
+                <p class="title-box__subtitle">Текстовый виджет</p>
+                <h2 class="title-box__title">Моя рассылка 1</h2>
+              </div>
+
+              <div class="main-box">
+                <div class="main-box__chat">
+                  <svg
+                    class="main-box__bot"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect width="32" height="32" fill="url(#pattern0)" />
+                    <defs>
+                      <pattern
+                        id="pattern0"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_1673_325899"
+                          transform="scale(0.0138889)"
+                        />
+                      </pattern>
+                      <image
+                        id="image0_1673_325899"
+                        width="72"
+                        height="72"
+                        xlink:href="data:image/png;base64,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"
+                      />
+                    </defs>
+                  </svg>
+
+                  <div class="main-box__responsive">
+                    <span class="main-box__prints">...</span>
+                  </div>
+                </div>
+
+                <button
+                  class="common-button common-button_color_green main-box__send-btn"
+                  type="submit"
+                >
+                  Отправить тебе
+                </button>
+              </div>
+
+              <div class="footer-box">
+                <p class="footer-box__text">
+                  Powered by
+                  <svg
+                    class="footer-box__robot"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="12"
+                    viewBox="0 0 14 12"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.59232 3.99511C3.76052 3.99511 1.46489 6.26751 1.46489 9.07067V9.58249C1.46489 10.2499 2.01147 10.791 2.68571 10.791H3.07185C3.47052 10.791 3.79598 10.4754 3.80419 10.0808L3.80963 9.81921C3.81145 9.73139 3.86128 9.65145 3.93975 9.61045C4.01823 9.56944 4.11301 9.57381 4.1873 9.62186L4.58886 9.88161C5.80608 10.669 7.37856 10.669 8.59577 9.88161L8.99733 9.62186C9.07162 9.57381 9.1664 9.56944 9.24488 9.61045C9.32336 9.65145 9.37318 9.73139 9.37501 9.81921L9.38045 10.0808C9.38865 10.4754 9.71412 10.791 10.1128 10.791H10.4989C11.1732 10.791 11.7197 10.2499 11.7197 9.58249V9.07067C11.7197 6.26751 9.42412 3.99511 6.59232 3.99511ZM0.976562 9.07067C0.976562 6.00054 3.49082 3.51172 6.59232 3.51172C9.69381 3.51172 12.2081 6.00055 12.2081 9.07067V9.58249C12.2081 10.5169 11.4429 11.2743 10.4989 11.2743H10.1128C9.50559 11.2743 9.00029 10.8351 8.90728 10.2576L8.8629 10.2863C7.48339 11.1786 5.70124 11.1786 4.32173 10.2863L4.27736 10.2576C4.18435 10.8351 3.67904 11.2743 3.07185 11.2743H2.68571C1.74177 11.2743 0.976562 10.5169 0.976562 9.58249V9.07067Z"
+                      fill="#243CBB"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.34824 2.65852C2.82048 2.78567 0 5.65671 0 9.17986V9.82553C0 11.0269 0.98384 12.0008 2.19747 12.0008H10.9873C12.201 12.0008 13.1848 11.0269 13.1848 9.82553V9.17986C13.1848 5.65671 10.3643 2.78567 6.83657 2.65852V1.69238H6.34824V2.65852ZM6.59241 3.13752C3.22122 3.13752 0.488326 5.84276 0.488326 9.17986V9.82553C0.488326 10.7599 1.25354 11.5174 2.19747 11.5174H10.9873C11.9313 11.5174 12.6965 10.7599 12.6965 9.82553V9.17986C12.6965 5.84276 9.9636 3.13752 6.59241 3.13752Z"
+                      fill="#243CBB"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.59287 0.483387C6.32317 0.483387 6.10454 0.699807 6.10454 0.966774C6.10454 1.23374 6.32317 1.45016 6.59287 1.45016C6.86256 1.45016 7.08119 1.23374 7.08119 0.966774C7.08119 0.699807 6.86256 0.483387 6.59287 0.483387ZM5.61621 0.966774C5.61621 0.43284 6.05347 0 6.59287 0C7.13226 0 7.56952 0.43284 7.56952 0.966774C7.56952 1.50071 7.13226 1.93355 6.59287 1.93355C6.05347 1.93355 5.61621 1.50071 5.61621 0.966774Z"
+                      fill="#243CBB"
+                    />
+                    <ellipse
+                      cx="4.33367"
+                      cy="7.66668"
+                      rx="0.666681"
+                      ry="0.666681"
+                      fill="#243CBB"
+                    />
+                    <ellipse
+                      cx="9.00066"
+                      cy="7.66668"
+                      rx="0.666678"
+                      ry="0.666681"
+                      fill="#243CBB"
+                    />
+                  </svg>
+                  BotKits
+                </p>
+              </div>
+            </section>
+            <button class="direction direction_next direction_active">
+              <svg
+                class="direction__img-container"
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1667_325863)">
+                  <circle cx="32" cy="26" r="20" fill="white" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M29.2796 20.2775C29.6524 19.9075 30.2567 19.9075 30.6295 20.2775L35.7204 25.3301C36.0932 25.7001 36.0932 26.2999 35.7204 26.6699L30.6295 31.7225C30.2567 32.0925 29.6524 32.0925 29.2796 31.7225C28.9068 31.3526 28.9068 30.7527 29.2796 30.3827L33.6955 26L29.2796 21.6173C28.9068 21.2473 28.9068 20.6474 29.2796 20.2775Z"
+                    fill="#060C23"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_1667_325863"
+                    x="0"
+                    y="0"
+                    width="60"
+                    height="60"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dx="-2" dy="4" />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.05 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1667_325863"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1667_325863"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+
+            <button class="direction direction_previous">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1760_331951)">
+                  <circle cx="32" cy="26" r="20" fill="white" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M34.7204 31.7225C34.3476 32.0925 33.7433 32.0925 33.3705 31.7225L28.2796 26.6699C27.9068 26.2999 27.9068 25.7001 28.2796 25.3301L33.3705 20.2775C33.7433 19.9075 34.3476 19.9075 34.7204 20.2775C35.0932 20.6474 35.0932 21.2473 34.7204 21.6173L30.3045 26L34.7204 30.3827C35.0932 30.7527 35.0932 31.3526 34.7204 31.7225Z"
+                    fill="#060C23"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_1760_331951"
+                    x="0"
+                    y="0"
+                    width="60"
+                    height="60"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dx="-2" dy="4" />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0 0.133333 0 0 0 0.05 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1760_331951"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1760_331951"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- конец -->
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&#169; 2021 BotKits</p>
+    </footer>
+    <!-- popup -->
+    <div class="popup popup__notification">
+      <div class="popup__header">
+        <img
+          alt="Стрелка вниз"
+          class="popup__header_ico"
+          src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
+        />
+        <h3 class="popup__header_title">Уведомления</h3>
+        <button
+          class="popup__button-close"
+          type="button"
+          aria-label="Закрыть"
+        ></button>
+      </div>
+      <fieldset class="popup__menu">
+        <input
+          class="popup__menu_input"
+          type="radio"
+          name="notification"
+          value="news"
+          id="news"
+          checked
+        />
+        <label class="popup__menu_label" for="news"> Новости сервиса </label>
+        <input
+          class="popup__menu_input"
+          type="radio"
+          name="notification"
+          value="logs"
+          id="logs"
+        />
+        <label class="popup__menu_label" for="logs"> Лог событий </label>
+      </fieldset>
+      <div class="popup__main">
+        <!-- место под новости и логи -->
+        <!-- конец -->
+      </div>
+    </div>
+    <div class="popup popup__accaunt">
+      <div class="popup__accaunt-container">
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image"
+            alt="настройки"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
+          />
+
+          <span class="popup__accaunt-button-text">Настройки аккаунта</span>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image"
+            alt="Подписка и платежи"
+            src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
+          />
+
+          <span class="popup__accaunt-button-text">Подписка и платежи</span>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image"
+            alt="выход"
+            src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
+          />
+
+          <span class="popup__accaunt-button-text">Выйти</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

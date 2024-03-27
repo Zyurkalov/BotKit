@@ -1,0 +1,49 @@
+@use "../vendor/normalize";
+@use "../vendor/fonts/fonts.scss";
+@use "variables";
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+input,
+button,
+fieldset,
+textarea {
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+button {
+  cursor: pointer;
+}

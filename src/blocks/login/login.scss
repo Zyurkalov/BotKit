@@ -1,0 +1,77 @@
+@use "../variables";
+@use "../common-styles";
+@use "../registration/registration";
+@use "../ui-kit/ui_kit_buttons.scss";
+
+.page {
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
+}
+
+.outer-wrapper_type_login {
+  padding-top: 0;
+}
+
+.separator_type_login {
+  margin: 0 auto 55px;
+}
+
+.inner-wrapper_type_login {
+  padding: 60px 50px 0;
+  @media screen and (max-width: 480px) {
+    padding: 40px 20px 0;
+  }
+}
+
+.form__field_size_l {
+  width: 100%;
+  max-width: 572px;
+}
+
+.form__input_size_l {
+  max-width: none;
+}
+
+.form__submit_type_login {
+  margin: 50px 0 14px;
+  @media screen and (max-width: 480px) {
+    margin: 40px 0 14px;
+  }
+}
+
+.separator_type_login {
+  margin: 10px auto 55px;
+  @media screen and (max-width: 480px) {
+    margin: 10px auto 36px;
+  }
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+}
+
+.passw-recovery {
+  margin: 0 auto;
+  list-style-type: none;
+  padding-top: 22px;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  @media screen and (max-width: 480px) {
+    padding-top: 27px;
+  }
+}
+
+.icons-container_type_login {
+  margin-bottom: 60px;
+}

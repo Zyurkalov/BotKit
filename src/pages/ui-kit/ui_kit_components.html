@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="<%=require('../../../favicon.ico')%>"
+    />
+    <title>Components</title>
+  </head>
+
+  <body class="ui-kit-body">
+    <h2 class="ui-kit__title_size_m">Common</h2>
+    <main>
+      <ul class="ui-kit-list">
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Добавление бота - название шагов
+            </h2>
+            <div class="steps">
+              <span class="step">1</span>
+              <span class="step">Шаг</span>
+              <span class="step">></span>
+              <span class="step step-name">Ключ доступа</span>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Мои боты - карточка
+            </h2>
+            <div class="card">
+              <div class="card__icons">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                  alt="телеграм"
+                />
+                <button class="card__more-button">
+                  <img
+                    class="card__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
+                    alt="показать контекстное меню"
+                  />
+                </button>
+              </div>
+              <h2 class="card__name">Салон красоты</h2>
+            </div>
+            <ul class="ui-kit-list card__actions card__actions_dynamic">
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/copy-bot.svg')%>"
+                  alt="копировать бота"
+                />Копировать бота
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
+                  alt="поделиться ботом"
+                />Общий доступ
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
+                  alt="редактировать"
+                />Редактировать
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
+                  alt="получить ссылку"
+                />Получить ссылку
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/info.svg')%>"
+                  alt="информация"
+                />Информация
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/notifications-setting.svg')%>"
+                  alt="настройка уведомлении"
+                />Настройка уведомлений
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
+                  alt="удалить"
+                />Удалить
+              </li>
+            </ul>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Информер / всплывающая подсказка - сверху
+            </h2>
+            <div class="helper">
+              <div class="helper__board">Helper</div>
+              <div class="helper__pointer"></div>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Информер / всплывающая подсказка - слева
+            </h2>
+            <div class="helper helper_aside">
+              <div class="helper__board">Helper</div>
+              <div class="helper__pointer helper__pointer_aside"></div>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">Информер</h2>
+            <div class="helper">
+              <div class="helper__board helper__board_large">
+                Сcылка скопирована
+              </div>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Список действий More - открывается из карточки Мои боты
+            </h2>
+            <ul class="ui-kit-list card__actions card__actions_static">
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/copy-bot.svg')%>"
+                  alt="копировать бота"
+                />Копировать бота
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
+                  alt="поделиться ботом"
+                />Общий доступ
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
+                  alt="редактировать"
+                />Редактировать
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
+                  alt="ссылка"
+                />Получить ссылку
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/info.svg')%>"
+                  alt="информация"
+                />Информация
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/notifications-setting.svg')%>"
+                  alt="настройка уведомлений"
+                />Настройка уведомлений
+              </li>
+              <li class="card__action">
+                <img
+                  class="card__actions-img"
+                  src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
+                  alt="удалить"
+                />Удалить
+              </li>
+            </ul>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Список действий Настройки аккаунта
+            </h2>
+            <div>
+              <ul class="ui-kit-list account__actions account__actions_open">
+                <li class="account__action">
+                  <img
+                    class="account__actions-img"
+                    src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
+                    alt="настройки аккаунта"
+                  />Настройки аккаунта
+                </li>
+                <li class="account__action">
+                  <img
+                    class="account__actions-img"
+                    src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
+                    alt="подписка и платежи"
+                  />Подписка и платежи
+                </li>
+                <li class="account__action">
+                  <img
+                    class="account__actions-img"
+                    src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
+                    alt="выйти"
+                  />Выйти
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Рассылки - панель редактора текста
+            </h2>
+            <div>
+              <ul class="ui-kit-list text__actions">
+                <li class="text__action">
+                  <img
+                    class="text__actions-img"
+                    src="<%=require('../../images/template-icon/24x24/markdown/bold.svg')%>"
+                    alt="жирный шрифт"
+                  />
+                </li>
+                <li class="text__action">
+                  <img
+                    class="text__actions-img"
+                    src="<%=require('../../images/template-icon/24x24/markdown/italic.svg')%>"
+                    alt="курсивный шрифт"
+                  />
+                </li>
+                <li class="text__action">
+                  <img
+                    class="text__actions-img"
+                    src="<%=require('../../images/template-icon/24x24/markdown/code.svg')%>"
+                    alt="добавить код"
+                  />
+                </li>
+                <li class="text__action">
+                  <img
+                    class="text__actions-img text__actions-img_inactive"
+                    src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
+                    alt="удалить"
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Список выбора простой текст
+            </h2>
+            <div>
+              <ul class="ui-kit-list calendar__actions calendar__actions_open">
+                <li class="calendar__action">Без повтора</li>
+                <li class="calendar__action">Каждый день</li>
+                <li class="calendar__action">Каждую неделю</li>
+                <li class="calendar__action">Каждую каждый месяц</li>
+                <li class="calendar__action">Каждую каждый год</li>
+                <li class="calendar__action">Свой вариант</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="section section-ui-kit-demonstration">
+            <h2 class="ui-kit__title_size_s section__title">
+              Поле с выпадающим списком
+            </h2>
+            <div class="selector selector_color_gray">
+              <div class="selector__current-value-preview">
+                <p class="selector__current-value">Переменная</p>
+                <button
+                  type="button"
+                  class="ui-kit-navigation__arrow-toggle-icon"
+                >
+                  <div class="ui-kit-navigation__arrow"></div>
+                </button>
+              </div>
+              <ul class="ui-kit-list selector__items selector__items_dropdown">
+                <li class="selector__item">Переменная 1</li>
+                <li class="selector__item">Переменная 2</li>
+                <li class="selector__item">Переменная 3</li>
+                <li class="selector__item">Переменная 4</li>
+                <li class="selector__item">Переменная 5</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">Calendar</h2>
+            <div class="popup calendar">
+              <input type="text" class="calendar__chosen-date" value="" />
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Scrollable Single Choice Options List
+            </h2>
+            <div class="popup popup_scrollable">
+              <ul class="ui-kit-list selector__items">
+                <li class="selector__item">Afghanistan</li>
+                <li class="selector__item">Albania</li>
+                <li class="selector__item">Algeria</li>
+                <li class="selector__item">Andorra</li>
+                <li class="selector__item">Angola</li>
+                <li class="selector__item">Antigua</li>
+                <li class="selector__item">Argentina</li>
+                <li class="selector__item">Armenia</li>
+                <li class="selector__item">Australia</li>
+                <li class="selector__item">Austria</li>
+                <li class="selector__item">Azerbaijan</li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Static Multiple Choice Options List
+            </h2>
+            <div>
+              <ul class="ui-kit-list selector__items">
+                <li class="selector__item selector__item-all">
+                  Все пользователи
+                  <img
+                    class="selector__checkmark-for-all"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                    alt="галочка"
+                  />
+                </li>
+                <li class="selector__item">
+                  Список 1
+                  <img
+                    class="selector__checkmark"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                    alt="галочка"
+                  />
+                </li>
+                <li class="selector__item">
+                  Список 2
+                  <img
+                    class="selector__checkmark"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                    alt="галочка"
+                  />
+                </li>
+                <li class="selector__item">
+                  Список 3
+                  <img
+                    class="selector__checkmark"
+                    src="<%=require('../../images/template-icon/24x24/common/check.svg')%>"
+                    alt="галочка"
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              Weekdays Choice Options List
+            </h2>
+            <ul class="ui-kit-list weekdays">
+              <button class="weekdays__weekday" type="button">Пн</button>
+              <button class="weekdays__weekday" type="button">Вт</button>
+              <button class="weekdays__weekday" type="button">Ср</button>
+              <button class="weekdays__weekday" type="button">Чт</button>
+              <button class="weekdays__weekday" type="button">Пт</button>
+              <button class="weekdays__weekday" type="button">Сб</button>
+              <button class="weekdays__weekday" type="button">Вс</button>
+            </ul>
+          </section>
+        </li>
+
+        <li>
+          <section class="section">
+            <h2 class="ui-kit__title_size_s section__title">
+              File Upload Buttons
+            </h2>
+            <ul class="ui-kit-list upload-buttons">
+              <div class="file-upload file-upload_size_large">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div class="file-upload file-upload_size_medium">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div class="file-upload file-upload_size_small">
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                ></span>
+              </div>
+
+              <div
+                class="file-upload file-upload_size_large file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+
+              <div
+                class="file-upload file-upload_size_medium file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+
+              <div
+                class="file-upload file-upload_size_small file-upload_invalid"
+              >
+                <input
+                  name="file"
+                  type="file"
+                  id="file-upload__input"
+                  class="file-upload__input"
+                />
+                <label class="file-upload__button" for="file-upload__input">
+                  <img
+                    class="file-upload__icon"
+                    src="<%=require('../../images/template-icon/24x24/common/upload-grey.svg')%>"
+                    alt="выбрать файл"
+                  />
+                  <span class="file-upload__text">Загрузить файл</span>
+                </label>
+                <span
+                  class="file-upload__input-error"
+                  id="file-upload__input-error"
+                  >Размер файла не должен превышать 20 Мб</span
+                >
+              </div>
+            </ul>
+          </section>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

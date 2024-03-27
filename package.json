@@ -1,0 +1,56 @@
+{
+  "name": "botkit",
+  "version": "0.0.1",
+  "description": "Chat bot commercial project.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "prepare": "husky install"
+  },
+  "author": "Valeriia Evstratova",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2",
+    "air-datepicker": "^3.4.0",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.1",
+    "prettier": "3.0.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.64.0",
+    "sass-loader": "^13.3.2",
+    "scss-loader": "^0.0.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "air-datepicker": "^3.4.0",
+    "core-js": "^3.32.0",
+    "glob": "^10.3.3",
+    "intl-tel-input": "^18.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

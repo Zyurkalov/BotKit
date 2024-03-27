@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="<%=require('../../../favicon.ico')%>"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body class="page__container">
+    <nav class="menu" aria-label="Меню">
+      <ul class="menu__items">
+        <li class="menu__item menu__item_logo"></li>
+        <li class="menu__item menu__item_bot">
+          <a class="link link_theme_blue" href="../add-bot/add_bot.html">
+            <svg
+              class="link__image link__image_reverse"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 6v12M6 12h12"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text link__text_reverse">ДОБАВИТЬ БОТА</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="../dashboard/dashboard.html">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 3H3v9h7V3ZM21 3h-7v5h7V3ZM21 12h-7v9h7v-9ZM10 16H3v5h7v-5Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Дашборд</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM13 6h3a2 2 0 0 1 2 2v7M6 9v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Воронки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="link link_theme_gray"
+            href="../mailing-list/mailing_list.html"
+          >
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 14.26V18c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h7.065M11.945 13.917 2.5 5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill="#fff"
+                d="M16 4h6v6M12 14 22 4"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Рассылки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 14H3v7h7v-7ZM10 3H3v7h7V3ZM14 4h7M14 9h7M14 15h7M14 20h7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Списки</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="../pp/pp.html">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 16.73V8.369M12 16.73V3.352M2.736 20.649h18.528M6 16.73v-5.017"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Статистика</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="../chat/chat.html">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 11.38a2 2 0 0 0 2 2h9l4 2.493V4.38a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v7Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.245 17.127a2 2 0 0 1-2 2H6.228l-4 2.493V11.127a2 2 0 0 1 2-2h1.629"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10.747 8.127h5.506"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <p class="link__text">Диалоги</p>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Общий доступ</p>
+          </a>
+        </li>
+        <li class="menu__item menu__dropdown">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.894 3h7v7h-7zM2.894 14h7v7h-7zM13.894 14h7v7h-7zM17.394 2.749l3.785 2.75-1.446 4.45h-4.679l-1.446-4.45 3.786-2.75Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">Мини-лендинг</p>
+            <svg
+              class="link__image_up"
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 12.5-5-5-5 5"
+                stroke="#C3D1D8"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </li>
+        <!-- меню второго уровня -->
+        <li class="menu__item menu__dropdown_item">
+          <a class="link link_theme_gray menu__dropdown_link" href="#">
+            <p class="link__text link__text_dropdown">Caйт + Vk</p>
+          </a>
+        </li>
+        <!-- end -->
+        <li class="menu__item">
+          <a class="link link_theme_gray" href="#">
+            <svg
+              class="link__image"
+              width="24"
+              height="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM3 9h18M3 15h18M9 9v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="link__text">CRM</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <button
+        class="header__menu"
+        type="button"
+        aria-label="Развернуть меню"
+      ></button>
+      <p class="header__rate">Тариф</p>
+      <p class="header__rate_name">Демо</p>
+      <button class="header__help" type="button" aria-label="Помощь"></button>
+      <button
+        class="header__notification"
+        type="button"
+        aria-label="Уведомления"
+      >
+        <span class="header__notification-counter">2</span>
+      </button>
+      <button
+        class="header__profile"
+        type="button"
+        aria-label="Пользовательские настройки"
+      >
+        <img
+          class="header__profile-avatar"
+          alt="Аватар"
+          src="<%=require('../../images/avatar/circle.png')%>"
+        />
+        <span class="header__profile-name">User Name</span>
+        <img
+          alt="Стрелка вниз"
+          class="header__profile-arrow"
+          src="<%=require('../../images/template-icon/20x20/down.svg')%>"
+        />
+      </button>
+    </header>
+    <main class="main">
+      <!-- тело страницы -->
+      <section class="templates" aria-label="Шаблоны">
+        <div class="templates__container">
+          <p class="section-header section-header_margin-s">Шаблоны</p>
+          <button class="templates__menu">
+            <span class="templates__paragraph">Все шаблоны</span>
+            <img
+              class="templates__menu-arrow"
+              src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+              alt="Все шаблоны"
+            />
+          </button>
+        </div>
+
+        <ul class="content-list content-list_templates content-list-close">
+          <li class="answering-machine">
+            <button
+              class="answering-machine__button"
+              type="button"
+              aria-label="добавить бота-автоответчика"
+            >
+              <span class="answering-machine__button-plus">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <p class="answering-machine__caption">Бот автоответчик</p>
+          </li>
+          <li class="answering-machine">
+            <button
+              class="answering-machine__button answering-machine__button_food"
+              type="button"
+              aria-label="добавить бота-доставка еды"
+            >
+              <span class="answering-machine__button-plus">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <p class="answering-machine__caption">Доставка еды</p>
+          </li>
+          <li class="answering-machine">
+            <button
+              class="answering-machine__button answering-machine__button_demo-bot"
+              type="button"
+              aria-label="попробовать, демо бот"
+            >
+              <span class="answering-machine__button-plus">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <p class="answering-machine__caption">Демо бот</p>
+          </li>
+          <li class="answering-machine">
+            <button
+              class="answering-machine__button answering-machine__button_poll"
+              type="button"
+              aria-label="добавить бота-опросы"
+            >
+              <span class="answering-machine__button-plus">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <p class="answering-machine__caption">Опрос</p>
+          </li>
+          <li class="answering-machine">
+            <button
+              class="answering-machine__button answering-machine__button_lead"
+              type="button"
+              aria-label="добавить бота-лидогенерация"
+            >
+              <span class="answering-machine__button-plus">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <p class="answering-machine__caption">Лидогенерация/HR ре...</p>
+          </li>
+          <li class="answering-machine">
+            <button
+              class="answering-machine__button answering-machine__button_learning"
+              type="button"
+              aria-label="добавить бота-оналин школа"
+            >
+              <span class="answering-machine__button-plus">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#CCD4E0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <p class="answering-machine__caption">Онлайн школа/Вебинар</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="my-bots">
+        <h1 class="section-header section-header_margin-m">Мои Боты</h1>
+        <ul class="content-list content-list_cards">
+          <li class="card">
+            <div class="card__icons">
+              <img
+                class="card__icon card__icon_size_m"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                alt="телеграмм"
+              />
+              <button class="card__more-button">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
+                  alt="добавить"
+                />
+              </button>
+            </div>
+            <h2 class="card__name">Салон красоты</h2>
+          </li>
+          <li class="card">
+            <div class="card__icons">
+              <img
+                class="card__icon card__icon_size_m"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                alt="телеграм"
+              />
+              <button class="card__more-button">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
+                  alt="показать контекстное меню"
+                />
+              </button>
+            </div>
+            <h2 class="card__name">Запись клиентов для консультации</h2>
+          </li>
+          <li class="card">
+            <div class="card__icons">
+              <img
+                class="card__icon card__icon_size_m"
+                src="<%=require('../../images/social-icons/auth/telegram.svg')%>"
+                alt="телеграм"
+              />
+              <button class="card__more-button">
+                <img
+                  class="card__icon"
+                  src="<%=require('../../images/template-icon/24x24/common/more.svg')%>"
+                  alt="показать контекстное меню"
+                />
+              </button>
+            </div>
+            <h2 class="card__name">Опрос клиентов для проведения встречи</h2>
+          </li>
+          <li class="card">
+            <button class="panel-add-bot" type="button">
+              <span class="panel-add-bot__circle">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 5V19"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12H19"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="panel-add-bot__text">Добавить бота</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="ui-kit-list card__actions card__actions_dynamic">
+          <li class="card__action">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/copy-bot.svg')%>"
+              alt="копировать бота"
+            />Копировать бота
+          </li>
+          <li class="card__action card__action_share" id="share-button-more">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/share.svg')%>"
+              alt="поделиться ботом"
+            />Общий доступ
+          </li>
+          <li class="card__action card__action_rename" id="edit-button-more">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/edit.svg')%>"
+              alt="редактировать"
+            />Редактировать
+          </li>
+          <li class="card__action card__action_link" id="link-button-more">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/link.svg')%>"
+              alt="получить ссылку"
+            />Получить ссылку
+          </li>
+          <li class="card__action card__action_info">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/info.svg')%>"
+              alt="информация"
+            />Информация
+          </li>
+          <li class="card__action card__action_notifications">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/notifications-setting.svg')%>"
+              alt="настройка уведомлений"
+            />Настройка уведомлений
+          </li>
+          <li class="card__action">
+            <img
+              class="card__actions-img"
+              src="<%=require('../../images/template-icon/24x24/drop_down/trash.svg')%>"
+              alt="удалить"
+            />Удалить
+          </li>
+        </ul>
+      </section>
+
+      <section class="faq" aria-label="Частные вопросы">
+        <div class="faq-cont">
+          <div class="faq-cont__how-to-start">
+            <h3 class="faq-cont__header">С чего начать?</h3>
+            <ul class="video-list">
+              <li class="video-list__container">
+                <button class="button-video">
+                  <span
+                    class="button-video__bg button-video__bg_poster-one"
+                  ></span>
+                  <span class="icon-container">
+                    <img
+                      class="icon-container__icon"
+                      src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+                      alt="проигрывать видео"
+                    />
+                  </span>
+                </button>
+                <span class="video-heading"
+                  >Подключение и основные параметры</span
+                >
+              </li>
+              <li class="video-list__container">
+                <button class="button-video">
+                  <span
+                    class="button-video__bg button-video__bg_poster-two"
+                  ></span>
+                  <span class="icon-container">
+                    <img
+                      class="icon-container__icon"
+                      src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+                      alt="проигрывать видео"
+                    />
+                  </span>
+                </button>
+                <p class="video-heading">Настраиваем простую рассылку</p>
+              </li>
+              <li class="video-list__container">
+                <button class="button-video">
+                  <span
+                    class="button-video__bg button-video__bg_poster-three"
+                  ></span>
+                  <span class="icon-container">
+                    <img
+                      class="icon-container__icon"
+                      src="<%=require('../../images/template-icon/24x24/common/play-bold.svg')%>"
+                      alt="проигрывать видео"
+                    />
+                  </span>
+                </button>
+                <p class="video-heading">Начало работы с блок&#8209;схемами</p>
+              </li>
+            </ul>
+          </div>
+          <div class="faq-cont__knowledge-base">
+            <h3 class="faq-cont__header">База знаний</h3>
+            <p class="faq-cont__description">
+              Узнай, как создать чат бота. Примеры и описание опций сервиса!
+            </p>
+            <button class="button-container">
+              <img
+                class="button-container__chevron-big button-container__chevron-big_rotation"
+                src="<%=require('../../images/template-icon/24x24/common/chevron-big.svg')%>"
+                alt="спрятать панель"
+              />
+            </button>
+            <ul class="list-container">
+              <li>
+                <span class="list-container__span">></span>
+                <p class="list-container__paragraph">Начало работы в сервисе</p>
+              </li>
+              <li>
+                <span class="list-container__span">></span>
+                <p class="list-container__paragraph">Конфигурации</p>
+              </li>
+              <li>
+                <span class="list-container__span">></span>
+                <p class="list-container__paragraph">Блок схемы</p>
+              </li>
+              <li>
+                <span class="list-container__span">></span>
+                <p class="list-container__paragraph">Статистика</p>
+              </li>
+              <li>
+                <span class="list-container__span">></span>
+                <p class="list-container__paragraph">Рассылка</p>
+              </li>
+              <li>
+                <span class="list-container__span">></span>
+                <p class="list-container__paragraph">Диалоги</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- конец -->
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&#169; 2021 BotKits</p>
+    </footer>
+    <!-- popup -->
+    <div class="popup popup__notification">
+      <div class="popup__header">
+        <img
+          alt="Стрелка вниз"
+          class="popup__header_ico"
+          src="<%=require('../../images/template-icon/24x24/common/notifications-black.svg')%>"
+        />
+        <h3 class="popup__header_title">Уведомления</h3>
+        <button
+          class="popup__button-close"
+          type="button"
+          aria-label="Закрыть"
+        ></button>
+      </div>
+      <fieldset class="popup__menu">
+        <input
+          class="popup__menu_input"
+          type="radio"
+          name="notification"
+          value="news"
+          id="news"
+          checked
+        />
+        <label class="popup__menu_label" for="news"> Новости сервиса </label>
+        <input
+          class="popup__menu_input"
+          type="radio"
+          name="notification"
+          value="logs"
+          id="logs"
+        />
+        <label class="popup__menu_label" for="logs"> Лог событий </label>
+      </fieldset>
+      <div class="popup__main">
+        <!-- место под новости и логи -->
+        <!-- конец -->
+      </div>
+    </div>
+    <div class="popup popup__accaunt">
+      <div class="popup__accaunt-container">
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image"
+            alt="настройки"
+            src="<%=require('../../images/template-icon/24x24/drop_down/settings.svg')%>"
+          />
+          <span class="popup__accaunt-button-text">Настройки аккаунта</span>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image"
+            alt="Подписка и платежи"
+            src="<%=require('../../images/template-icon/24x24/drop_down/payment.svg')%>"
+          />
+          <span class="popup__accaunt-button-text">Подписка и платежи</span>
+        </button>
+        <button class="popup__accaunt-button">
+          <img
+            class="popup__accaunt-button-image"
+            alt="выход"
+            src="<%=require('../../images/template-icon/24x24/drop_down/log-out.svg')%>"
+          />
+          <span class="popup__accaunt-button-text">Выйти</span>
+        </button>
+      </div>
+    </div>
+    <!--  Код попапа бота  -->
+    <div class="popup-overlay add-bot-popup">
+      <div class="add-bot-popup__container">
+        <button type="button" class="add-bot-popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <img
+          class="machine"
+          src="<%=require('../../images/bot-icon/answering-machine.svg')%>"
+          alt="бот автоответчик"
+          width="88"
+          height="88"
+        />
+        <h2 class="add-bot-popup__title">Бот автоответчик</h2>
+        <p class="add-bot-popup__content">
+          Бот ответит стандартным сообщением на запрос от человека. Подходит для
+          всех мессенджеров. Шаблон возможно изменить под ваши цели.
+        </p>
+        <ol class="ordered-list">
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+          <li class="ordered-list__item">Что настроено в шаблоне</li>
+        </ol>
+        <div class="add-bot-popup__controls">
+          <button class="add-bot-popup__cancel-btn" type="submit">
+            отмена
+          </button>
+          <button
+            class="common-button common-button_color_green add-bot-popup__submit-btn"
+            type="submit"
+          >
+            добавить бота
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- попап информация о подключении   -->
+    <div
+      class="popup-overlay more-actions-popup more-actions-popup_type_connection"
+    >
+      <div class="more-actions-popup__container">
+        <div class="more-actions-popup__notification-wrapper">
+          <p class="more-actions-popup__notification-text">
+            Ключ доступа скопирован
+          </p>
+        </div>
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="more-actions-popup__title">Информация о подключении</h2>
+        <ul class="more-actions-popup__content">
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">Название канала</h3>
+            <p class="more-actions-popup__item-text">ChanelName</p>
+          </li>
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">Ключ доступа</h3>
+            <div class="more-actions-popup__item-wrapper">
+              <p class="more-actions-popup__item-text">
+                1842016250:AAF8uWUV1wE9B8XxZvfbmRiZkmh1tWXu-Ns
+              </p>
+              <button class="button-elem-copy copy-btn" type="button">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5 2H8.6C8.2 2 7.8 2.2 7.5 2.5C7.2 2.8 7 3.2 7 3.6V16.4C7 16.8 7.2 17.2 7.5 17.5C7.8 17.8 8.2 18 8.6 18H18.4C18.8 18 19.2 17.8 19.5 17.5C19.8 17.2 20 16.8 20 16.4V6.5L15.5 2Z"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 7.60001V20.4C3 20.8 3.2 21.2 3.5 21.5C3.8 21.8 4.2 22 4.6 22H14.4"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 2V7H20"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- попап Настройка уведомлений   -->
+    <div
+      class="popup-overlay more-actions-popup more-actions-popup_type_notifications"
+    >
+      <div class="more-actions-popup__container">
+        <div class="more-actions-popup__notification-wrapper">
+          <p class="more-actions-popup__notification-text">
+            Ключ доступа скопирован
+          </p>
+        </div>
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="more-actions-popup__title">Настройка уведомлений</h2>
+        <ul class="more-actions-popup__content">
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">
+              Подписаться на уведомления
+            </h3>
+            <div class="more-actions-popup__item-wrapper">
+              <p class="more-actions-popup__item-text">
+                /notify 60a280e3f7b15d37975ccb69
+              </p>
+              <button class="button-elem-copy copy-btn" type="button">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5 2H8.6C8.2 2 7.8 2.2 7.5 2.5C7.2 2.8 7 3.2 7 3.6V16.4C7 16.8 7.2 17.2 7.5 17.5C7.8 17.8 8.2 18 8.6 18H18.4C18.8 18 19.2 17.8 19.5 17.5C19.8 17.2 20 16.8 20 16.4V6.5L15.5 2Z"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 7.60001V20.4C3 20.8 3.2 21.2 3.5 21.5C3.8 21.8 4.2 22 4.6 22H14.4"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 2V7H20"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="more-actions-popup__item">
+            <h3 class="more-actions-popup__item-title">
+              Отписаться от уведомлений
+            </h3>
+            <div class="more-actions-popup__item-wrapper">
+              <p class="more-actions-popup__item-text">
+                /disable_notify 60a280e3f7b15d37975ccb69
+              </p>
+              <button class="button-elem-copy copy-btn" type="button">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5 2H8.6C8.2 2 7.8 2.2 7.5 2.5C7.2 2.8 7 3.2 7 3.6V16.4C7 16.8 7.2 17.2 7.5 17.5C7.8 17.8 8.2 18 8.6 18H18.4C18.8 18 19.2 17.8 19.5 17.5C19.8 17.2 20 16.8 20 16.4V6.5L15.5 2Z"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 7.60001V20.4C3 20.8 3.2 21.2 3.5 21.5C3.8 21.8 4.2 22 4.6 22H14.4"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 2V7H20"
+                    stroke="#A6B3C9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--rename-popup-->
+    <div class="popup-overlay rename-popup">
+      <div class="rename-popup__container">
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="rename-popup__title">Переименуйте файл</h2>
+        <!-- Дублирование ID, оставил на всякий случай копию -->
+        <!-- <input
+              class="access-key__input"
+              type="text"
+              id="access-key-default"
+              name="access-key-default"
+              placeholder="Введите ключ доступа"
+            /> -->
+        <input
+          class="access-key__input"
+          type="text"
+          name="access-key-default"
+          placeholder="Введите ключ доступа"
+        />
+        <div class="rename-popup__buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default cancel-btn"
+          >
+            ОТМЕНА
+          </button>
+          <button class="common-button common-button_color_blue" type="submit">
+            Переименовать
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- share-popup-->
+    <div class="popup-overlay share-popup">
+      <div class="rename-popup__container">
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="rename-popup__title">Поделитесь доступом к боту</h2>
+        <input
+          class="access-key__input"
+          type="text"
+          name="access-key-default"
+          placeholder="Добавьте e-mail пользователя"
+        />
+        <!-- Дублирование ID, оставил на всякий случай копию -->
+        <!-- <input
+              class="access-key__input"
+              type="text"
+              id="access-key-default"
+              name="access-key-default"
+              placeholder="Добавьте e-mail пользователя"
+            /> -->
+        <div class="rename-popup__buttons">
+          <button
+            class="constructor__button constructor__default-button constructor__button_clr_default cancel-btn"
+          >
+            ОТМЕНА
+          </button>
+          <button
+            class="common-button common-button_color_blue share-popup__share-button"
+            type="submit"
+          >
+            Поделиться
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- link-popup-->
+    <div class="popup-overlay link-popup">
+      <div class="rename-popup__container">
+        <div class="more-actions-popup__notification-wrapper">
+          <p class="more-actions-popup__notification-text">
+            Ссылка скопирована
+          </p>
+        </div>
+        <button type="button" class="popup__close-btn">
+          <img
+            class="icon close"
+            src="<%=require('../../images/template-icon/24x24/drop_down/close.svg')%>"
+            alt="закрыть окно"
+          />
+        </button>
+        <h2 class="rename-popup__title">Скопируйте ссылку</h2>
+        <input
+          class="access-key__input"
+          type="text"
+          id="access-key-default"
+          name="access-key-default"
+          placeholder="Введите ключ доступа"
+        />
+        <div class="rename-popup__buttons">
+          <button
+            class="common-button common-button_color_blue link-popup__link-button copy-btn"
+            type="submit"
+          >
+            Скопировать ссылку
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
